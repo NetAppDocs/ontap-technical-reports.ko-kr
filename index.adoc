@@ -3,7 +3,7 @@ layout: landing-page
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
 permalink: index.html 
-summary: 이 기술 보고서에서는 ONTAP와 권장 사례를 개괄적으로 설명합니다 
+summary: ONTAP 기술 보고서는 다양한 에코시스템 내에서 또는 다양한 프로토콜을 통해 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트와 ONTAP 기능에 대한 권장 사례를 제공합니다. 
 ---
 = ONTAP 기술 보고서
 :hardbreaks:
