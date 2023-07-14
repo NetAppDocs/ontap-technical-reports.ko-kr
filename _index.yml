@@ -1,0 +1,121 @@
+---
+indexpage:
+  lead: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
+    제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
+  tiles:
+  - title: 애플리케이션 및 데이터베이스 기술 보고서
+    links:
+    - title: ONTAP를 사용하는 Microsoft SQL Server
+      url: apps-dbs.html
+    - title: AFF A 시리즈 및 C-Series에서 Oracle 데이터베이스 성능
+      url: apps-dbs.html
+    - title: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능 가상화
+      url: apps-dbs.html
+    - title: ONTAP 기반의 Oracle 데이터베이스
+      url: apps-dbs.html
+    - title: 추가 애플리케이션 및 데이터베이스 기술 보고서
+      url: apps-dbs.html
+  - title: 비즈니스 연속성 기술 보고서
+    links:
+    - title: SnapMirror 비즈니스 연속성(SM-BC)
+      url: business-continuity.html
+    - title: MetroCluster 솔루션 아키텍처 및 설계
+      url: business-continuity.html
+    - title: MetroCluster IP를 선택합니다
+      url: business-continuity.html
+    - title: MetroCluster FC를 참조하십시오
+      url: business-continuity.html
+    - title: 추가 비즈니스 연속성 기술 보고서
+      url: business-continuity.html
+  - title: 데이터 보호 및 재해 복구 기술 보고서
+    links:
+    - title: SnapMirror 비동기식 구성 및 모범 사례
+      url: data-protection-disaster-recovery.html
+    - title: SnapMirror Synchronous 구성 및 모범 사례
+      url: data-protection-disaster-recovery.html
+    - title: SnapLock를 사용한 규정 준수 WORM 스토리지
+      url: data-protection-disaster-recovery.html
+    - title: 추가 데이터 보호 및 재해 복구 기술 보고서
+      url: data-protection-disaster-recovery.html
+  - title: FlexCache 및 FlexGroup 볼륨 기술 보고서
+    links:
+    - title: FlexCache 볼륨
+      url: nas-containers.html
+    - title: FlexGroup 볼륨 구현 및 모범 사례
+      url: nas-containers.html
+    - title: 데이터 보호 및 백업 ONTAP FlexGroup 볼륨
+      url: nas-containers.html
+    - title: 추가 FlexCache 및 FlexGroup 볼륨 기술 보고서
+      url: nas-containers.html
+  - title: NAS 기술 보고서
+    links:
+    - title: NetApp ONTAP에서의 NFS 모범 사례 및 구현
+      url: nas.html
+    - title: ONTAP의 멀티프로토콜 NAS 개요 및 모범 사례
+      url: nas.html
+    - title: S3 in ONTAP 모범 사례
+      url: nas.html
+    - title: 서비스 모범 사례의 이름을 말하십시오
+      url: nas.html
+    - title: ONTAP에서 NFS Kerberos
+      url: nas.html
+    - title: 추가 NAS 기술 보고서
+      url: nas.html
+  - title: 네트워킹 기술 보고서
+    links:
+    - title: ONTAP를 통한 BGP/VIP
+      url: networking.html
+  - title: SAN 기술 보고서
+    links:
+    - title: ONTAP의 최신 SAN 모범 사례
+      url: san.html
+    - title: NVMe-oF(NVMe over Fabrics)를 사용하여 최신 SAN 구현 및 구성
+      url: san.html
+    - title: ONTAP AFF ASA(All SAN 어레이) 시스템
+      url: san.html
+  - title: 보안 기술 보고서
+    links:
+    - title: 보안 강화 가이드
+      url: security-hardening-guides.html
+    - title: 랜섬웨어용 NetApp 솔루션
+      url: security.html
+    - title: NetApp와 제로 트러스트
+      url: security.html
+    - title: NetApp SnapLock를 사용한 규정 준수 WORM 스토리지
+      url: security.html
+    - title: 인증(SSH, MFA)
+      url: security.html
+    - title: ONTAP의 보안 멀티 테넌시
+      url: security.html
+    - title: 추가 보안 기술 보고서
+      url: security.html
+  - title: SnapCenter 기술 보고서
+    links:
+    - title: Oracle용 SnapCenter
+      url: snapcenter.html
+    - title: Microsoft SQL용 SnapCenter
+      url: snapcenter.html
+    - title: 가상화용 SnapCenter
+      url: snapcenter.html
+    - title: SnapCenter 서비스
+      url: snapcenter.html
+    - title: 추가 SnapCenter 기술 보고서
+      url: snapcenter.html
+  - title: 계층화 기술 보고서
+    links:
+    - title: FabricPool 모범 사례
+      url: tiering.html
+    - title: FabricPool 및 StorageGRID 권장 사항
+      url: tiering.html
+    - title: FabricPool를 통한 데이터베이스 스토리지 계층화
+      url: tiering.html
+  - title: 가상화 기술 보고서
+    links:
+    - title: ONTAP용 VMware vSphere
+      url: virtualization.html
+    - title: ONTAP을 사용하는 VMware vSphere 가상 볼륨(VVol)
+      url: virtualization.html
+    - title: ONTAP를 사용하는 VMware 사이트 복구 관리자
+      url: virtualization.html
+    - title: 추가 가상화 기술 보고서
+      url: virtualization.html

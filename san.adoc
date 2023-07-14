@@ -1,0 +1,38 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, SAN, NVMe, NVMeoF, NVMeoTCP, NVMeoFC, iSCSI, fibre channel, fiber channel, igroups, namespaces, namespace, LUN, subsystem, best practices, best-practices 
+permalink: san.html 
+summary: 이러한 기술 보고서에서는 ONTAP의 블록 프로토콜과 권장 사례를 개괄적으로 설명합니다. 
+---
+= SAN 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP SAN 스토리지는 조직의 미션 크리티컬 데이터베이스 및 기타 SAN 워크로드에 고가용성을 제공하는 단순화된 SAN 환경을 제공합니다. ONTAP SAN은 Oracle, SAP 및 Microsoft SQL Server 데이터베이스와의 동급 최고의 데이터 서비스 통합 및 VMware 및 기타 주요 하이퍼바이저와 함께 엔터프라이즈 데이터베이스 애플리케이션의 가치 창출 시간을 단축합니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/san-management/index.html["ONTAP SAN 스토리지 관리"] 제품 설명서.
+
+====
+link:https://www.netapp.com/pdf.html?item=/media/10680-tr4080.pdf["TR-4080: ONTAP의 최신 SAN 모범 사례"^]
+ONTAP의 블록 프로토콜과 권장 사항에 대해 자세히 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/10681-tr4684.pdf["TR-4684: NVMe-oF(NVMe over Fabrics)를 사용하여 최신 SAN 구현 및 구성"^]
+NVMe over Fabrics 전송(NVMe over Fibre Channel 및 NVMe over TCP)을 구축하고 구성하는 방법을 알아보십시오. 이 플레이북에서는 설계, 구축, 구성, 관리 지침, 그리고 NVMe 프로토콜 및 전송을 사용하여 가용성이 높은 최신 SAN 솔루션을 구축하는 데 필요한 권장 지침이 포함되어 있습니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/10379-tr4515.pdf["TR-4515: ONTAP AFF ASA(All SAN 어레이) 시스템"^]
+NetApp AFF ASA(All SAN 어레이) 시스템에 대해 알아보고 항상 사용 가능한 비즈니스 크리티컬 SAN 구성에 대한 권장 사례를 기반으로 구축하는 방법을 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/85671-tr-4968.pdf["TR-4968: NetApp All-SAN 어레이의 데이터 가용성 및 무결성"^]
+모든 SAN 어레이 시스템의 다양한 데이터 보호 및 데이터 무결성 기능이 어떻게 작동하면서 애플리케이션 가동 시간을 극대화하고 SAN 네트워크를 설계, 구현 및 관리하는 데 권장되는 방법을 익히는지 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/9222-nva-1145-design.pdf["최신 SAN 클라우드 연결 플래시 솔루션"^]
+이 NetApp 검증 아키텍처는 NetApp, VMware 및 Broadcom에서 공동으로 설계 및 검증되었습니다. 최신 Brocade, Emulex 및 VMware vSphere 기술 솔루션과 NetApp All-Flash 스토리지를 함께 사용하여 엔터프라이즈 SAN 스토리지 및 데이터 보호에 대한 새로운 표준을 정립하고 있으며 이는 탁월한 비즈니스 가치를 이끌어내는 데 도움이 됩니다.

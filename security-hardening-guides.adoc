@@ -1,0 +1,42 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, MFA, best practices, best-practices 
+permalink: security-hardening-guides.html 
+summary: 이 기술 보고서에서는 NetApp ONTAP 및 기타 ONTAP 관련 제품을 강화하는 방법에 대해 안내합니다. 
+---
+= 보안 강화 가이드
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이러한 기술 보고서에서는 NetApp ONTAP 및 다른 NetApp 제품의 보안 강화 방법에 대한 지침을 제공합니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/security-encryption/index.html["ONTAP 보안 및 데이터 암호화"] 제품 설명서.
+
+====
+
+
+== 강화 가이드
+
+link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["TR-4569: NetApp ONTAP 보안 강화 가이드"^]
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp ONTAP를 구성하는 방법을 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/82393-tr-4957.pdf["TR-4957: NetApp SnapCenter 보안 강화 가이드"^]
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp SnapCenter 소프트웨어를 구성하는 방법을 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/83591-tr-4963.pdf["TR-4963: 보안 강화 가이드: BlueXP Cloud Backup for Applications"^]
+조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp 클라우드 백업 for Applications를 구성하는 방법을 알아보십시오.
+
+link:https://netapp.com/pdf.html?item=/media/78654-tr-4943.pdf["TR-4943: NetApp Active IQ Unified Manager 보안 강화 가이드"^]
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Active IQ Unified Manager를 구성하는 방법을 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/78941-tr-4945.pdf["TR-4945: NetApp Manageability SDK에 대한 보안 강화 가이드"^]
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Manageability SDK(NMSDK)를 구성하는 방법에 대해 알아보십시오.

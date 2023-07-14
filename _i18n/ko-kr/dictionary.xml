@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="f1574d51fcf9f775687f0113052df518" category="summary">이 기술 보고서에서는 ONTAP와 권장 사례를 개괄적으로 설명합니다</block>
+  <block id="4434424bd2c1011098a508e85df56b94" category="doc">ONTAP 기술 보고서</block>
+  <block id="f282b1ca0090a5b43997888b90926fdd" category="summary">이 기술 보고서에서는 NetApp ONTAP를 사용한 업계 솔루션 및 권장 사례를 개괄적으로 설명합니다</block>
+  <block id="0fa7990fb9bf5e1fa283be0a561304a6" category="doc">산업 솔루션 기술 보고서</block>
+  <block id="26ae15834646723cf4e06c663b022301" category="paragraph">NetApp은 전략적 파트너십을 기반으로 더욱 강화된 산업별 데이터 스토리지 솔루션을 통해 중요한 비즈니스 과제를 해결합니다.</block>
+  <block id="81f1b99be9951f3725aa3dd62766099e" category="section-title">EDA</block>
+  <block id="9f6aab3394fa8b4a4f3eb0e262dd21db" category="inline-link-macro">ONTAP의 전자 설계 자동화 모범 사례</block>
+  <block id="3a1fdccffa19c5f75d7d0b2a93f15be5" category="paragraph"><block ref="2e8967ffa6047b33da404da465d1bcb8" category="inline-link-macro-rx"></block>
+EDA FlexGroup(전자 설계 자동화) 워크로드를 위한 NetApp ONTAP의 권장 사례 및 구현 팁에 대해 알아보십시오. 이 볼륨은 EDA 환경에서 메타데이터 오버헤드가 높은 워크로드를 처리하는 데 이상적입니다.</block>
+  <block id="4ee2a6c7bb7c40af94c5a15dbf7eb673" category="section-title">의료</block>
+  <block id="d2c6faba375945c91d8cf73d6f6ca162" category="inline-link-macro">Epic의 NetApp 모범 사례</block>
+  <block id="763c6d557424cd5410b097e2ef5ad14f" category="paragraph"><block ref="062fe4e0bf537e79be483776e016a832" category="inline-link-macro-rx"></block>
+Epic은 의료 업계를 위한 소프트웨어를 만듭니다. NetApp 스토리지를 Epic 소프트웨어 환경과 통합하는 권장 사례에 대해 알아보십시오.</block>
+  <block id="9b1eab3e2899aca826b58a36a874e5b0" category="inline-link-macro">대형 병원의 FlexPod-Epic</block>
+  <block id="18f58e71750388907b31229ac6ebd222" category="paragraph"><block ref="e78b211429277e404b3d491603512f3a" category="inline-link-macro-rx"></block>
+대형 병원용 FlexPod 솔루션에서 EHR을 설정하는 데 대한 스토리지 레이아웃 및 모범 사례와 함께 Intersystem 데이터베이스를 통한 전자 의무 기록(EHR) 애플리케이션의 필요성을 입증하는 FlexPod의 엔드 투 엔드 성능 기능에 대해 알아보십시오.</block>
+  <block id="6d263f04aad3f85fa2e7faaee5ac4e9d" category="summary">이 기술 보고서에서는 NetApp ONTAP의 FlexCache 및 FlexGroup 볼륨을 개괄적으로 비롯하여 모범 사례 권장사항을 제공합니다</block>
+  <block id="fdf48fe142acd462c4ab95bcf98e4fbb" category="doc">FlexCache 및 FlexGroup 볼륨 기술 보고서</block>
+  <block id="3b4e058a74be4665fcca8ff48d6dc163" category="paragraph">NetApp NAS 솔루션은 데이터 관리를 단순화하며 비용을 최적화하는 동시에 규모 확장에 대비할 수 있도록 지원합니다. ONTAP NAS 솔루션은 유니파이드 아키텍처 내에서 무중단 운영과 검증된 효율성, 무한한 확장성을 제공합니다. ONTAP을 기반으로 하는 스케일아웃 NAS는 대규모 ONTAP 에코시스템을 활용하여 혁신을 주도하고 공격적인 미래 혁신을 위한 비전을 실현할 수 있습니다.</block>
+  <block id="56674dc1c3b7f21d2e8981a01422e234" category="inline-link-macro">ONTAP FlexCache 볼륨</block>
+  <block id="18d80ba7c6a59ce977a2c00296df28a2" category="inline-link-macro">ONTAP FlexGroup 볼륨</block>
+  <block id="7837941a662d78b9d8c119c2745e0f04" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="ac44a4894062679db1dbbf1a364248d3" category="inline-link-macro-rx"></block> 및 <block ref="75e0ca8e6d4eeabe4dff066082d6af48" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="f24ce81f056d5acd59788df7f5ab36a1" category="section-title">FlexCache</block>
+  <block id="7d8308267015e1192f8f54543c1cff58" category="inline-link-macro">TR-4743: ONTAP의 FlexCache</block>
+  <block id="c961d9be8d19d4a797bcb8379b8d53da" category="paragraph"><block ref="dcccffffe1593858762c9997c1787d46" category="inline-link-macro-rx"></block>
+FlexCache는 동일하거나 다른 ONTAP 클러스터에서 볼륨의 쓰기 가능한 스파스 복제본을 생성하는 캐싱 기술입니다. 데이터 및 파일을 사용자와 더 가까운 곳에 제공하여 더 적은 설치 공간으로 더 빠른 처리량을 얻을 수 있습니다. FlexCache 사용 방법, 권장 사례, 제한 및 설계 및 구현 고려 사항에 대해 알아보십시오.</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="section-title">FlexGroup 볼륨</block>
+  <block id="005e8b273d9247c834522a5865fba55a" category="inline-link-macro">TR-4571a: FlexGroup의 10대 모범 사례</block>
+  <block id="88c689e951f21e04438921c1a8f89c53" category="paragraph"><block ref="e57f10ccb2fbbeb4438b60c102c4cbf0" category="inline-link-macro-rx"></block>
+이 기술 보고서는 빠른 사용을 위한 TR-4571:NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드의 요약 버전입니다.</block>
+  <block id="af1445adb596e3036441303b3f225364" category="inline-link-macro">TR-4557: NetApp ONTAP FlexGroup 볼륨 - 기술 개요</block>
+  <block id="3649786d1f84e11756db92f2cd48a240" category="paragraph"><block ref="cc2f82cb4a64554dd07d5530f932405a" category="inline-link-macro-rx"></block>
+메타데이터 집약적인 워크로드에서 예측 가능하고 지연 시간이 짧은 성능과 무한 확장성을 결합한 ONTAP 스케일아웃 NAS 컨테이너인 FlexGroup 볼륨에 대해 알아보십시오.</block>
+  <block id="222369aa30ed4d2b01e2ad3c4826e38f" category="inline-link-macro">TR-4571: NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드</block>
+  <block id="b42d52921e30b7b641b9b5fd0146b053" category="paragraph"><block ref="aa86589b7ac63727c91bf2f5e5311f75" category="inline-link-macro-rx"></block>
+FlexGroup 볼륨, 권장 사례 및 구현 팁에 대해 알아보십시오. FlexGroup 볼륨은 메타데이터가 많은 워크로드에서 거의 무제한의 용량과 예측 가능하고 짧은 지연 시간의 성능을 결합한 ONTAP 스케일아웃 NAS 컨테이너의 발전된 형태입니다.</block>
+  <block id="11df1ae4cc30239b7ebc7d18218d82e6" category="inline-link-macro">TR-4678: FlexGroup 볼륨의 데이터 보호 및 백업</block>
+  <block id="60695b7d01c0b1ec5b9aeea5bf59425a" category="paragraph"><block ref="c583ab426d51a7f6ffbad70f1b57d890" category="inline-link-macro-rx"></block>
+스냅샷 복사본, SnapMirror, 기타 데이터 보호 및 백업 솔루션을 포함한 FlexGroup 볼륨의 데이터 보호 및 백업에 대해 알아보십시오.</block>
+  <block id="571f90010469258dc9123581bdf16ec3" category="summary">이 기술 보고서는 NetApp ONTAP에서의 네트워킹에 대한 개요와 권장 사례를 제공합니다.</block>
+  <block id="dfe7b9eae127da474304b2b1052a7b0f" category="doc">네트워킹 기술 보고서</block>
+  <block id="e1b09d2161399043758e3e473f4dc1e9" category="paragraph">ONTAP는 가장 까다로운 스케일 아웃 애플리케이션을 충족할 수 있도록 다양한 네트워킹 기능과 구성을 제공합니다. 네트워킹 기능 및 기능을 사용하여 안정적이고 안전한 데이터 액세스를 구축할 수 있습니다.</block>
+  <block id="bc3096e2f4208ca95bf08527d9c73da7" category="inline-link-macro">ONTAP 네트워크 관리</block>
+  <block id="cae5757656de5f91ff9b4d6f16d9ae5d" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="996a4fa021c2f1eaacde86eea2fd5b4f" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="b4c6053c4413d462a98923fab1f2343d" category="inline-link-macro">TR-4949: 데이터 센터에서 ONTAP를 사용하는 BGP/VIP</block>
+  <block id="d13178c03cfb1660f7474d4a18fb7385" category="paragraph"><block ref="b42253f83b28ed50b4dd2afb0ffd5857" category="inline-link-macro-rx"></block>
+ONTAP에서 기본적인 BGP 구성을 빠르게 구축하는 방법을 알아보십시오.</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="5edbe8c55546db896b55871b44a39263" category="cell">* 날짜 *</block>
+  <block id="ae87ca47fc6a4ea8603da91e026c5217" category="cell">* TR 번호 *</block>
+  <block id="b4656b8766fb7422ebb96caa6deb93eb" category="cell">* 제목 *</block>
+  <block id="b96941ac46daa357b1782f017746a57b" category="cell">* 변경에 대한 설명 *</block>
+  <block id="f0ab89fb7bcc73913d8bf0c4ddd2549c" category="cell">2023년 7월 12일</block>
+  <block id="382b0f5185773fa0f67a8ed8056c7759" category="cell">해당 없음</block>
+  <block id="0db377921f4ce762c62526131097968f" category="cell">일반</block>
+  <block id="94a5eb50257297b554fd3ac8b6dfe79e" category="cell">ONTAP 기술 보고서 저장소의 초기 릴리즈</block>
+  <block id="beceafe114136722547c2e21a52b7725" category="summary">이러한 기술 보고서에서는 NetApp ONTAP의 스토리지 효율성과 권장 사례를 개괄적으로 설명합니다.</block>
+  <block id="f1e9cbc9c76c4f1ca7cfbe583e5ed01c" category="doc">스토리지 효율성 기술 보고서</block>
+  <block id="d401056dcf3a145a85c351448d6d841c" category="paragraph">ONTAP은 포괄적인 스토리지 효율성 기능 포트폴리오를 제공합니다. 인라인 데이터 압축, 중복제거, 컴팩션이 상호 연동되어 스토리지 비용을 절감하고 데이터를 최대한 저장합니다. 공간 효율적인 NetApp 스냅샷 복사본, 씬 프로비저닝, 복제, 클론 복제 기술을 활용하여 절감 효과를 몇 배로 누릴 수 있습니다.</block>
+  <block id="bfc5190da5606e58d3f1a2d5713aaba1" category="inline-link-macro">중복 제거 설명서</block>
+  <block id="7d2fb3c47804b86865442a67f3070883" category="inline-link-macro">압축 문서</block>
+  <block id="ea3625644fab5ac0fcdbae62959fe6f3" category="inline-link-macro">온도에 민감한 스토리지 효율성 문서</block>
+  <block id="f99b2c942072f5eb17ace287e83ae2e8" category="inline-link-macro">컴팩션 문서</block>
+  <block id="2fdba2a70966e6bc2578788130372ab6" category="paragraph">중복 제거에 대한 절차 설명서는 에서 찾을 수 있습니다 <block ref="7e02c89f92c52a16d49cb22080a2ce2e" category="inline-link-macro-rx"></block>
+압축에 대한 절차 설명서는 에서 찾을 수 있습니다 <block ref="1973f0105a3aeb05f1a78ee4266ba307" category="inline-link-macro-rx"></block>
+온도에 민감한 스토리지 효율성에 대한 절차 문서는 에서 찾을 수 있습니다 <block ref="019f0bdfafc6cc6e89282933ca8f80c0" category="inline-link-macro-rx"></block>
+컴팩션에 대한 절차 설명서는 에서 찾을 수 있습니다 <block ref="3acd0d263d43c56e4642c32f39a44e7d" category="inline-link-macro-rx"></block></block>
+  <block id="2946aa49d1184bc896de6ca7b37142fe" category="summary">ONTAP 기술 보고서의 최신 변경 사항 로그</block>
+  <block id="49b88f18105e07dbad27bd4e62c7f28c" category="doc">ONTAP 기술 보고서 변경 로그</block>
+  <block id="adce6a073b604329f03bda6b7b9ec913" category="paragraph">ONTAP 기술 보고서의 최신 변경 사항 가장 최근의 변경 사항이 먼저 나열됩니다.</block>
+  <block id="512deac3022399f47149b53237225707" category="open-title">모든 변경 사항</block>
+  <block id="7ad7be62d0bdc93deb35e6cb0da16cf6" category="summary">이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다</block>
+  <block id="35c42caf14b9f812a74246f401f4a9a9" category="doc">애플리케이션 및 데이터베이스 기술 보고서</block>
+  <block id="e2063b7bef20a99d1924626bcc9e3aa7" category="paragraph">ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle 및 PostgreSQL에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.</block>
+  <block id="78898e52fcbdc5337204a384f2456d4f" category="section-title">Microsoft SQL Server를 참조하십시오</block>
+  <block id="0502e6755528910223db364699e71622" category="inline-link-macro">TR-4590: ONTAP를 사용하는 Microsoft SQL Server에 대한 모범 사례 가이드</block>
+  <block id="463e4a799ee233502c3bbb0b6374c6b0" category="paragraph"><block ref="99de55c4c3e3e73145e414bc6b81b05c" category="inline-link-macro-rx"></block>
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.</block>
+  <block id="341a003a31c42c0cef0190e68c763b92" category="inline-link-macro">TR-4714: SnapCenter를 사용하는 Microsoft SQL Server의 모범 사례</block>
+  <block id="90b44124faaed2f05284342f168bcd69" category="paragraph"><block ref="48bef8095e185c0391e2bfeabbd16700" category="inline-link-macro-rx"></block>
+SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법에 대해 자세히 알아보십시오.</block>
+  <block id="62a004b95946bb97541afa471dcca73a" category="section-title">MySQL</block>
+  <block id="e30a807fdb99340178c0bc53b24ac3b2" category="inline-link-macro">ONTAP 기반 MySQL 데이터베이스</block>
+  <block id="051ec17116a6065c836cc2db0b070841" category="paragraph"><block ref="63cee4c601937a667e7d540ed75c9cbf" category="inline-link-macro-rx"></block>
+MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.</block>
+  <block id="30162ed78b6c10f731411f2fc440c24f" category="section-title">오라클</block>
+  <block id="a23b0f6840eece1bcfc1a2ce047e740e" category="inline-link-macro">TR-3633: ONTAP 기반 Oracle 데이터베이스</block>
+  <block id="a41f7d9052bf4182682f619168a52269" category="paragraph"><block ref="5cbc519d39d68c3a34942c12528dc6aa" category="inline-link-macro-rx"></block>
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.</block>
+  <block id="42b90160721ba6196a556c6ad89fdb6d" category="inline-link-macro">TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능</block>
+  <block id="9669cfadd2c20a01f05013292717eaf0" category="paragraph"><block ref="6c6ae3741e49f449a73f7df54eba7a62" category="inline-link-macro-rx"></block>
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 베어 메탈 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실질적인 차이점을 모두 살펴봅니다.</block>
+  <block id="34406693b9151b494d47dcd55a1757d7" category="inline-link-macro">TR-4971: AFF A-Series 및 C-Series에서 가상화된 Oracle 데이터베이스 성능</block>
+  <block id="41e330e2e21a5a25fdbd3005d3282061" category="paragraph"><block ref="4952dcbaf377c648429390f6f24c3cb5" category="inline-link-macro-rx"></block>
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, 파이버 채널 FC(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.</block>
+  <block id="cbdc263e8f614279db88bb4ac39bea33" category="inline-link-macro">TR-4591: Oracle 데이터 보호: 백업, 복구, 복제 및 재해 복구</block>
+  <block id="2cfcb3c52aa4da37a5ade8efb2698cb6" category="paragraph"><block ref="a34c6cbdebe7369d30197e0b49695e63" category="inline-link-macro-rx"></block>
+스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.</block>
+  <block id="591da82cedca4486269083d381f07df7" category="inline-link-macro">TR-4592: MetroCluster 기반 Oracle</block>
+  <block id="7fb0da57ce1a365cd473cb78a5c9874d" category="paragraph"><block ref="244f6bd2e8281768e78200ce9e6ed8d7" category="inline-link-macro-rx"></block>
+MetroCluster 동기식 복제 기능에서 Oracle 데이터베이스를 운영하는 데 권장되는 방법, 테스트 절차 및 기타 고려 사항에 대해 알아보십시오.</block>
+  <block id="1209bff58f1e24aef718b4733993d134" category="inline-link-macro">TR-4534: Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션</block>
+  <block id="d2c37ecb83e590a249516b3f411c1123" category="paragraph"><block ref="5144852944118f9b9f0eaa7b6f98706d" category="inline-link-macro-rx"></block>
+마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.</block>
+  <block id="e26db0138fc05145ed94ee1f1cd92b64" category="inline-link-macro">TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화</block>
+  <block id="6ea3c6416acaabdf419275588df7f764" category="paragraph"><block ref="0f6da34639ae3a472dc5fdf06f6c7519" category="inline-link-macro-rx"></block>
+Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.</block>
+  <block id="df1217c57234952b108fdf8edeea9c1f" category="inline-link-macro">TR-4899: SnapMirror 비즈니스 연속성을 통해 Oracle 데이터베이스에 영향을 미치지 않는 애플리케이션 페일오버</block>
+  <block id="b72e09398681a9062ccd0090b9726391" category="paragraph"><block ref="9ac6d7d78a5408ebec6295c5b91049c1" category="inline-link-macro-rx"></block>
+SnapMirror 비즈니스 연속성(SM-BC)과 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공합니다. Oracle RAC의 스토리지 구성 요소로 SM-BC가 포함된 AFF 스토리지 시스템의 구성 지침과 권장 사례에 대해 알아보십시오.</block>
+  <block id="20edcec83b5ec5c0064ad8013e36923e" category="inline-link-macro">TR-4876: ONTAP 솔루션 및 구축 모범 사례를 활용한 Oracle Multitenancy</block>
+  <block id="37cf945b6fa0182e1288122764b0e5c0" category="paragraph"><block ref="1285e23f10a9e18278d2c6e638032a3f" category="inline-link-macro-rx"></block>
+ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와 ONTAP 소프트웨어의 기능을 모두 최대한 활용하여 Oracle 멀티 테넌트 데이터베이스를 프로비저닝, 관리 및 보호하는 방법에 대한 솔루션 권장 사례에 대해 알아보십시오.</block>
+  <block id="399bd1ee587245ecac6f39beaa99886f" category="section-title">PostgreSQL</block>
+  <block id="a35a98b9afc7144da919629a5c06a948" category="inline-link-macro">TR-4770: ONTAP에서 PostgreSQL 데이터베이스</block>
+  <block id="06dfbd657fe18ba4c823ec3a750f2fe0" category="paragraph"><block ref="e09245bca75b3cf45cd5016133d826fd" category="inline-link-macro-rx"></block>
+PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.</block>
+  <block id="38d8bbc60e04ec3f712089a191e11bc0" category="summary">이 기술 보고서에서는 NetApp ONTAP의 비즈니스 연속성에 대한 개요와 권장 사례를 제공합니다</block>
+  <block id="96323bdc332765b9211ff3f9ba1e5e21" category="doc">무중단 업무 운영 기술 보고서</block>
+  <block id="af1ff78198ebe07ec4e7f54b33766c19" category="paragraph">NetApp은 애플리케이션 및 데이터 위치를 합리화하여 비용 대비 성능을 비용 효율적으로 개선하는 다양한 솔루션을 제공합니다. 데이터 보호, 복제 및 지속적인 가용성: ONTAP 데이터 관리는 Set-it-and-for-get-it 정책 관리로 데이터 보호를 단순화하는 동시에 MetroCluster 및 SnapMirror 비즈니스 연속성을 통해 비즈니스 연속성을 제공합니다.</block>
+  <block id="39b0dc37ea1ddd4007baaf5cc0073251" category="inline-link-macro">ONTAP SnapMirror 비즈니스 연속성</block>
+  <block id="18f57d600a92c92b9c8e184c2871790b" category="inline-link-macro">ONTAP MetroCluster</block>
+  <block id="7c6c52011182351a302482a52746b200" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="dcfc6b38559c4256190664addc167f09" category="inline-link-macro-rx"></block> 및 <block ref="c3546ed1acbc93cc8865ba8cc6d620ce" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="704de765250161b4c06ce64f26a08d82" category="section-title">SnapMirror 비즈니스 연속성(SM-BC)</block>
+  <block id="9c24652fa5c48bb02fb4d94e586e451a" category="inline-link-macro">TR-4878: SnapMirror 비즈니스 연속성(SM-BC)</block>
+  <block id="5786362dce5c9f77bbc57e94b44f3e27" category="paragraph"><block ref="7fe3405091906f7f62069f8d3521e969" category="inline-link-macro-rx"></block>
+SnapMirror 비즈니스 연속성(SM-BC)은 가장 중요한 비즈니스 애플리케이션의 RPO 0 및 RTO 0 요구사항을 충족하기 위해 AFF 또는 ASA(All SAN Array) 스토리지 시스템에서 실행 중인 ONTAP에 사용할 수 있는 애플리케이션 레벨의 세분화 기능을 갖춘 지속적으로 사용 가능한 스토리지 솔루션입니다.</block>
+  <block id="1749d12df3df2319d3eee218a277ff83" category="section-title">MetroCluster</block>
+  <block id="8cfbc6352d8ced5b800023a1d24ac804" category="inline-link-macro">TR-4705: NetApp MetroCluster 솔루션 아키텍처 및 설계</block>
+  <block id="4c51a3fcdb358ea77ba4e6480c162f6a" category="paragraph"><block ref="4f2a5ddc71107b4c5210f0d334a301b5" category="inline-link-macro-rx"></block>
+이 문서에서는 ONTAP의 MetroCluster 기능에 대한 고급 아키텍처 및 설계 개념에 대해 설명합니다.</block>
+  <block id="577971aa0199b86832dd14a0bc065722" category="inline-link-macro">TR-4689: NetApp MetroCluster IP</block>
+  <block id="f7359ddc38932bd9c6b16b1c7ac6b76e" category="paragraph">* MetroCluster IP *
+<block ref="702aece58417da0f07683c0a2bc2de04" category="inline-link-macro-rx"></block>
+MetroCluster는 FAS 및 AFF 시스템에서 실행되는 ONTAP를 위한 지속적으로 사용 가능한 스토리지 솔루션입니다. MetroCluster IP는 이더넷 기반 백엔드 스토리지 패브릭을 사용하는 최신 혁신입니다. MetroCluster IP는 가장 중요한 비즈니스 애플리케이션의 요구 사항을 충족하는 고도로 이중화된 구성을 제공합니다. MetroCluster IP는 ONTAP에 포함되어 있으며 ONTAP 스토리지를 사용하는 클라이언트 및 서버에 NAS 및 SAN 연결을 제공합니다.</block>
+  <block id="fa0e3cb985e828073f466cabcba86492" category="inline-link-macro">TR-4375: NetApp MetroCluster FC</block>
+  <block id="e99f8b0ccb185a35ae5bd9c697f58a81" category="paragraph">* MetroCluster FC *
+<block ref="1bface5a173eefb1d9e7e7b00b6f5d8f" category="inline-link-macro-rx"></block>
+MetroCluster는 지리적으로 분산된 데이터 센터 전반에서 미션 크리티컬 애플리케이션에 지속적인 데이터 가용성을 제공합니다. MetroCluster FC의 권장 사례, 설계 결정 및 지원 구성에 대해 알아보십시오.</block>
+  <block id="a0ace60e8f2589435d73a5159489ac7d" category="summary">이러한 기술 보고서에서는 ONTAP의 블록 프로토콜과 권장 사례를 개괄적으로 설명합니다.</block>
+  <block id="f561be93a75a6e4c6d439a560d15164f" category="doc">SAN 기술 보고서</block>
+  <block id="c79fa2df92442991a55f6be038bb5114" category="paragraph">ONTAP SAN 스토리지는 조직의 미션 크리티컬 데이터베이스 및 기타 SAN 워크로드에 고가용성을 제공하는 단순화된 SAN 환경을 제공합니다. ONTAP SAN은 Oracle, SAP 및 Microsoft SQL Server 데이터베이스와의 동급 최고의 데이터 서비스 통합 및 VMware 및 기타 주요 하이퍼바이저와 함께 엔터프라이즈 데이터베이스 애플리케이션의 가치 창출 시간을 단축합니다.</block>
+  <block id="53406d96a5f4726851003f28cf19b334" category="inline-link-macro">ONTAP SAN 스토리지 관리</block>
+  <block id="6c561e9ad0e5d8beb4da6bc8a25ee4f9" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="5a9e569dab2e143552c7ac844d930ecd" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="d8f8ef9eac52f90ae281cff715a78e2a" category="inline-link-macro">TR-4080: ONTAP의 최신 SAN 모범 사례</block>
+  <block id="5ffd37546dbc0282bffe2fe8fc8ab27e" category="paragraph"><block ref="b80f5820b911f23b33b74abe59254363" category="inline-link-macro-rx"></block>
+ONTAP의 블록 프로토콜과 권장 사항에 대해 자세히 알아보십시오.</block>
+  <block id="3b87036714b3136acc2aae7890fd7edb" category="inline-link-macro">TR-4684: NVMe-oF(NVMe over Fabrics)를 사용하여 최신 SAN 구현 및 구성</block>
+  <block id="34b05cb5d6ec578656c90adeba7715e5" category="paragraph"><block ref="63fc1db08e0f9d5d706220043515ab72" category="inline-link-macro-rx"></block>
+NVMe over Fabrics 전송(NVMe over Fibre Channel 및 NVMe over TCP)을 구축하고 구성하는 방법을 알아보십시오. 이 플레이북에서는 설계, 구축, 구성, 관리 지침, 그리고 NVMe 프로토콜 및 전송을 사용하여 가용성이 높은 최신 SAN 솔루션을 구축하는 데 필요한 권장 지침이 포함되어 있습니다.</block>
+  <block id="44f86414cc6f7a3896ef5aa684186663" category="inline-link-macro">TR-4515: ONTAP AFF ASA(All SAN 어레이) 시스템</block>
+  <block id="8d04a09f4edabba7e258cb663e9829ed" category="paragraph"><block ref="cc723865ccc14ae6d193059ca8789d74" category="inline-link-macro-rx"></block>
+NetApp AFF ASA(All SAN 어레이) 시스템에 대해 알아보고 항상 사용 가능한 비즈니스 크리티컬 SAN 구성에 대한 권장 사례를 기반으로 구축하는 방법을 알아보십시오.</block>
+  <block id="84d69011a1a493b2795f8b571a8773b1" category="inline-link-macro">TR-4968: NetApp All-SAN 어레이의 데이터 가용성 및 무결성</block>
+  <block id="656b37e505cd401fd574ca1e26892980" category="paragraph"><block ref="7792d8e3bf5a58bae4d6e0bf568b517e" category="inline-link-macro-rx"></block>
+모든 SAN 어레이 시스템의 다양한 데이터 보호 및 데이터 무결성 기능이 어떻게 작동하면서 애플리케이션 가동 시간을 극대화하고 SAN 네트워크를 설계, 구현 및 관리하는 데 권장되는 방법을 익히는지 알아보십시오.</block>
+  <block id="fe83fd7d45f7be55d765cb2b115c666d" category="inline-link-macro">최신 SAN 클라우드 연결 플래시 솔루션</block>
+  <block id="3ef9730cf9c17847b70c58d7c55144cc" category="paragraph"><block ref="8d388e2f02e965345906f5a745587ecc" category="inline-link-macro-rx"></block>
+이 NetApp 검증 아키텍처는 NetApp, VMware 및 Broadcom에서 공동으로 설계 및 검증되었습니다. 최신 Brocade, Emulex 및 VMware vSphere 기술 솔루션과 NetApp All-Flash 스토리지를 함께 사용하여 엔터프라이즈 SAN 스토리지 및 데이터 보호에 대한 새로운 표준을 정립하고 있으며 이는 탁월한 비즈니스 가치를 이끌어내는 데 도움이 됩니다.</block>
+  <block id="6a173235ab64d5d06707df64873fa354" category="summary">이 기술 보고서에서는 NFS, SMB/CIFS, S3, NetApp ONTAP의 네임 서비스 및 권장 사례를 개괄적으로 설명합니다.</block>
+  <block id="0af6d102577c3307d735ff1218d6ee2d" category="doc">NAS 기술 보고서</block>
+  <block id="0e53196a230ad7e6cf13fbecfe1dd427" category="paragraph">NetApp NAS 솔루션은 데이터 관리를 단순화하며 비용을 최적화하는 동시에 규모 확장에 대비할 수 있도록 지원합니다. ONTAP NAS 솔루션은 유니파이드 아키텍처 내에서 무중단 운영, 효율성 및 원활한 확장성을 제공합니다. NetApp ONTAP을 기반으로 하는 스케일아웃 NAS는 대규모 ONTAP 에코시스템을 활용하여 혁신을 주도하고 공격적인 미래 혁신을 위한 비전을 실현할 수 있습니다.</block>
+  <block id="057b0a61093f8c5a3fd2cb091c2487ed" category="inline-link-macro">ONTAP NAS 스토리지 관리</block>
+  <block id="1dada3966fa9b53bf1d2ec70e7bd1f65" category="inline-link-macro">ONTAP S3 스토리지 관리</block>
+  <block id="5a3ffa46086f85debc0cf0a6e5bbbbfb" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="83cae19a650bef8958f6b01f7aed4a21" category="inline-link-macro-rx"></block> 및 <block ref="b9b5b9fe9b782e93a435188e6d407d2b" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="1d1a594959ec615f56516f5d0f5e8ddb" category="section-title">NFS 를 참조하십시오</block>
+  <block id="0898b9840a5d2d5955aad2c775228fd4" category="inline-link-macro">TR-4067: ONTAP의 NFS 모범 사례 및 구축 가이드</block>
+  <block id="ec478fa590b1d0c14e6b148d56990a21" category="paragraph"><block ref="fe159189c16fecab70e72088e682cdf8" category="inline-link-macro-rx"></block>
+ONTAP의 NFS에 대한 기본 개념, 지원 정보, 구성 팁 및 권장 사항에 대해 알아보십시오.</block>
+  <block id="553c92e7874fa63f8f6f58b7abd50a7d" category="inline-link-macro">TR-4962: NFSv4.2 확장 속성</block>
+  <block id="0587b623fc4592b3c3112e13d0b0791c" category="paragraph"><block ref="42ab4ac24d9459ab46e3ff1a3e13ce9f" category="inline-link-macro-rx"></block>
+ONTAP 9.12.1 이상에서 NFSv4.2 확장 속성을 설정하고 사용하는 방법에 대해 알아봅니다.</block>
+  <block id="b4fdd997b1f33e0d4c6964444c2bf399" category="section-title">중소기업</block>
+  <block id="161bcf67f10aeddc88947ca8eba37a36" category="inline-link-macro">TR-4740: SMB 3.0 멀티채널</block>
+  <block id="3aae488ae0897b3d1cd2f5bf951bc4e2" category="paragraph"><block ref="e69edbb99e7b0a08c0d80cdb9b3c52fe" category="inline-link-macro-rx"></block>
+Microsoft는 SMB1과 SMB2의 성능 및 안정성 한계를 해결함으로써 SMB3 프로토콜의 개선을 목표로 SMB 3.0 프로토콜에 멀티채널을 도입했습니다. ONTAP의 기능, 권장 사례 및 성능 테스트 결과를 비롯한 멀티채널 기능에 대해 알아보십시오.</block>
+  <block id="b4d3d77640c4649a696af2753732310f" category="section-title">멀티 프로토콜</block>
+  <block id="ae95c4eea6863c98f4e29c1bc8be36cf" category="inline-link-macro">TR-4887: ONTAP의 다중 프로토콜 NAS 개요 및 모범 사례</block>
+  <block id="255795c6dd40ee8f8b4105a7655ea56c" category="paragraph"><block ref="223707e6f9b8bb9fdf879bae05a91603" category="inline-link-macro-rx"></block>
+ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프로토콜 환경에 대한 권장 사례에 대해 알아보십시오.</block>
+  <block id="1716834171e243de0f898a67621b6624" category="section-title">ONTAP S3</block>
+  <block id="12d693aa0c15330c6f5d608b0a1eb6c3" category="inline-link-macro">TR-4814:S3(ONTAP 모범 사례</block>
+  <block id="8a9f413c7d192f7ee13320a2b74b4ecc" category="paragraph"><block ref="3f5613d82639ca68ec10bef37723bdeb" category="inline-link-macro-rx"></block>
+ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하는 데 권장되는 방법과 ONTAP를 네이티브 S3 애플리케이션을 사용하는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.</block>
+  <block id="a4273e3e312edbc9d5bd7c188aecc370" category="section-title">네임 서비스</block>
+  <block id="98c6ad5dad288854428df19a0833d709" category="inline-link-macro">TR-4523: ONTAP에서 DNS 로드 밸런싱</block>
+  <block id="7a50564c3d71f025f2e39ea6c508a8ab" category="paragraph"><block ref="ea931303ddc872579ef3f1a3e7507b66" category="inline-link-macro-rx"></block>
+ONTAP의 DNS, 다양한 구성 방법 및 권장 방법을 포함하여 DNS 로드 밸런싱 방법론과 함께 사용하도록 ONTAP를 구성하는 방법에 대해 알아봅니다.</block>
+  <block id="6696b5e4d08c4c3bfd459461b2ca84b5" category="inline-link-macro">TR-4668: 서비스 모범 사례 가이드를 이름하십시오</block>
+  <block id="5f97342b6fb7811b83dbfb9c49a09b50" category="paragraph"><block ref="0b7d0f0e5c65fbcddfa73f20625a69a6" category="inline-link-macro-rx"></block>
+ONTAP에서 CIFS/SMB 및 NFS와 같은 NAS(Network-Attached Storage) 솔루션을 구축할 때 권장되는 방법, 제한 및 고려 사항에 대해 알아보십시오.</block>
+  <block id="bb043e71d34b3b9dfd3bad20d9c16b5a" category="inline-link-macro">TR-4835: ONTAP 멀티 프로토콜 NAS ID 관리에서 LDAP를 구성하는 방법</block>
+  <block id="09068a06885fda7046fee2ad16301b78" category="paragraph"><block ref="5a7459e114584b8a20abd6ae45de5bf6" category="inline-link-macro-rx"></block>
+멀티 프로토콜 NAS를 위해 ONTAP에서 LDAP(Lightweight Directory Access Protocol) ID 관리를 구성하는 방법에 대해 알아봅니다.</block>
+  <block id="afe45a61e31b932515e82be3679e3b92" category="section-title">NAS 보안</block>
+  <block id="61eb0e8494826dc8f30af9122fd97664" category="inline-link-macro">TR-4616: ONTAP에서 NFS Kerberos</block>
+  <block id="3f52878b58a2645e25e183e375dd5448" category="paragraph"><block ref="1e0f751e9df6eb5b34a05b582da4605a" category="inline-link-macro-rx"></block>
+Active Directory 및 RHEL(Red Hat Enterprise Linux) 클라이언트의 구성 단계를 포함하여 ONTAP에서 NFS Kerberos에 대해 알아보십시오.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">상표</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, NetApp 로고, NetApp 상표 페이지에 나열된 마크는 NetApp Inc.의 상표입니다. 기타 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">특허</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">NetApp 소유 특허 목록은 다음 사이트에서 확인할 수 있습니다.</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">개인 정보 보호 정책</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">오픈 소스</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="aaa93d65d9b66a1eedd61c9e919edb2b" category="summary">이 기술 보고서에서는 NetApp ONTAP 및 기타 ONTAP 관련 제품을 강화하는 방법에 대해 안내합니다.</block>
+  <block id="ff8c9f0959eb84d21416835c3f9c89d6" category="doc">보안 강화 가이드</block>
+  <block id="2d2a7ff295edf2e9b43944ddd4d5de56" category="paragraph">이러한 기술 보고서에서는 NetApp ONTAP 및 다른 NetApp 제품의 보안 강화 방법에 대한 지침을 제공합니다.</block>
+  <block id="b0c4a88dd72cd3fbda5a208cb1a3144d" category="inline-link-macro">ONTAP 보안 및 데이터 암호화</block>
+  <block id="e574d7c876885d39755e7d1bc4ae649e" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="3e8d3a4b0bb1c244f96701a010228216" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="d0880bbafb975bde57898f147e117781" category="section-title">강화 가이드</block>
+  <block id="6eca5c80f314351da24d27dbbeb934fa" category="inline-link-macro">TR-4569: NetApp ONTAP 보안 강화 가이드</block>
+  <block id="f4992bf9be0782c19e6fdb45bbc6f038" category="paragraph"><block ref="df6160c2a0bec26bee907d0f07aed808" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp ONTAP를 구성하는 방법을 알아보십시오.</block>
+  <block id="4b7d52b632284033085bcb2442dcb916" category="inline-link-macro">TR-4957: NetApp SnapCenter 보안 강화 가이드</block>
+  <block id="11de28f8883d2023258fafb8ee5fb4df" category="paragraph"><block ref="32cda38a3dba662f660e5eca3be0043a" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp SnapCenter 소프트웨어를 구성하는 방법을 알아보십시오.</block>
+  <block id="9346238909f4f9394991d628232a7547" category="inline-link-macro">TR-4963: 보안 강화 가이드: BlueXP Cloud Backup for Applications</block>
+  <block id="dc26de9620ef6e9b8ebe1fb3a333146e" category="paragraph"><block ref="f32c1dcda6d159b978bd858df5e23d46" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp 클라우드 백업 for Applications를 구성하는 방법을 알아보십시오.</block>
+  <block id="338edca147b749d2e7e81c74aa391922" category="inline-link-macro">TR-4943: NetApp Active IQ Unified Manager 보안 강화 가이드</block>
+  <block id="8e56a85eceedd9e65ceac8c4efabdc75" category="paragraph"><block ref="60ad041e7e2571bfebeac3e3fdd7c828" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Active IQ Unified Manager를 구성하는 방법을 알아보십시오.</block>
+  <block id="bac414868cd7485036c09f5a0308f48d" category="inline-link-macro">TR-4945: NetApp Manageability SDK에 대한 보안 강화 가이드</block>
+  <block id="d80d38301db19a713832e209fae78f8a" category="paragraph"><block ref="c20bd99e94e089451b6683712f330245" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Manageability SDK(NMSDK)를 구성하는 방법에 대해 알아보십시오.</block>
+  <block id="4cdfcb5df3012db4f5dcd87c2a866d39" category="summary">이러한 기술 보고서에서는 ONTAP의 데이터 보호 및 재해 복구와 권장 방법에 대해 간략하게 설명합니다</block>
+  <block id="339f0c38a7aefd01263baff2a76136bd" category="doc">데이터 보호 및 재해 복구 기술 보고서</block>
+  <block id="640a931ad10a56e7b2dad62839580278" category="paragraph">SnapMirror는 Data Fabric 전반에서 사용하기 쉬운 비용 효율적인 통합 복제 솔루션입니다. LAN 또는 WAN을 통해 데이터를 고속으로 복제합니다. 가상 환경과 기존 환경 모두에서 Microsoft Exchange, Microsoft SQL Server, Oracle 등과 같은 비즈니스 크리티컬 애플리케이션의 데이터 가용성을 높이고 신속한 데이터 복제를 실현할 수 있습니다. 하나 이상의 ONTAP 스토리지 시스템에 데이터를 복제하고 2차 데이터를 지속적으로 업데이트함으로써 데이터가 최신 상태로 유지되고 필요할 때마다 사용할 수 있으며 외부 복제 서버가 필요하지 않습니다.</block>
+  <block id="e929f18d03c9b3408ed199c7a251f892" category="inline-link-macro">ONTAP 데이터 보호 및 재해 복구</block>
+  <block id="8563657a010dce40d25506a29a567684" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="2089aef874de39b0eb380c0ce9752ab5" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="794cb725c5631ad99b5b7c000307f0df" category="section-title">SnapMirror를 참조하십시오</block>
+  <block id="e541c47871b0172db0f7a3347bd9fa3e" category="inline-link-macro">TR-4015: SnapMirror 비동기식 구성 및 모범 사례</block>
+  <block id="bada89365ae9d33e741590bb2571b41e" category="paragraph">* SnapMirror 비동기식 *
+<block ref="41700dcb38c244f95d1971f0a45e2526" category="inline-link-macro-rx"></block>
+볼륨, 일관성 그룹 및 스토리지 가상 머신(SVM 재해 복구)의 SnapMirror 비동기(SM-A) 복제를 구성하기 위한 권장 사례에 대해 알아보십시오.</block>
+  <block id="d8446ce616f102b3add1ef4349269b73" category="inline-link-macro">TR-4678: 데이터 보호 및 백업 ONTAP FlexGroup 볼륨</block>
+  <block id="4013fe18538ca0b8b6f3c16d80af7b4e" category="paragraph"><block ref="53731792c038b59cf0605dcb77387367" category="inline-link-macro-rx"></block>
+FlexGroup 볼륨에 대한 권장 데이터 보호 및 백업에 대해 알아보십시오. 이 플레이북에서는 스냅샷 복사본, SnapMirror, 기타 데이터 보호 및 백업 솔루션이 포함되어 있습니다.</block>
+  <block id="a7b1a6225d127a55e37eefd3e4b1d545" category="inline-link-macro">TR-4733: SnapMirror Synchronous 구성 및 모범 사례</block>
+  <block id="93646e973d4c5948ecbcf0654e3e77b8" category="paragraph">* SnapMirror Synchronous *
+<block ref="2340258309d7cdd01df38cc98a87a3ea" category="inline-link-macro-rx"></block>
+SnapMirror Synchronous(SM-S) 복제를 구성하는 데 권장되는 방법에 대해 알아보십시오.</block>
+  <block id="f12586dc1277168d3c0c6459b75b89b2" category="inline-link-macro">TR-4832: ONTAP 9.7용 NetApp SnapMirror를 사용한 데이터 센터 재해 복구 3개</block>
+  <block id="305d42e5bcf1d720993f502a36555674" category="paragraph">* SnapMirror 3데이터 센터 DR *
+<block ref="5d46547177c28e1bf2a00909523bac82" category="inline-link-macro-rx"></block>
+복제에 ONTAP SnapMirror 기술을 사용하는 3개 데이터 센터 재해 복구 구성에 대해 알아보십시오.</block>
+  <block id="84fb4414ca0766388d0fcb128ca503f2" category="section-title">SnapMirror를 사용하여 애플리케이션 및 인프라 통합</block>
+  <block id="fa363beb233b27c4cdc010827133de31" category="inline-link-macro">TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
+  <block id="1f0a55b00fe1a6c8836e3a3a55d4269e" category="paragraph"><block ref="336e83eb84c6d77dadefcf86f46bb14d" category="inline-link-macro-rx"></block>
+ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 최신 제품 정보 및 권장 방법을 포함하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)에 권장되는 ONTAP 솔루션에 대해 알아보십시오.</block>
+  <block id="9ef869565a4d7fd5d1234aaa1d61ab22" category="summary">이러한 기술 보고서에서는 SnapCenter with NetApp ONTAP에 대한 개요와 권장 사례를 제공합니다.</block>
+  <block id="da994c44eacde8f5cafe8883779cb695" category="doc">SnapCenter 기술 보고서</block>
+  <block id="87a2d2335b0146f51df29bf7aa03f72c" category="paragraph">SnapCenter은 애플리케이션 정합성이 보장되는 데이터 보호 및 클론 관리를 위한 유니파이드 플랫폼을 제공합니다. SnapCenter는 애플리케이션 통합 워크플로우를 활용해 백업, 복원, 클론 라이프사이클 관리를 단순화합니다. SnapCenter는 스토리지 기반 데이터 관리를 활용하여 성능과 가용성을 향상하고 테스트 및 개발 시간을 단축합니다.</block>
+  <block id="5c014f8939a89da0166a347a0237cf4f" category="inline-link-macro">SnapCenter</block>
+  <block id="919a0b7beff248d639fe6c4ae7ca5b0c" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="7935f4ebc292f6492522899b619f020e" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="f6967390d49d08c53cc88d3cdf42eb92" category="section-title">Oracle용 SnapCenter</block>
+  <block id="86fc900399fdd68e52d9705ec116494c" category="inline-link-macro">TR-4700: Oracle 데이터베이스 모범 사례를 위한 SnapCenter 플러그인</block>
+  <block id="5eccb29d61db9f44b772cf14b52a5281" category="paragraph"><block ref="997217bdef3f2324957d91e5a61f1595" category="inline-link-macro-rx"></block>
+NetApp SnapCenter는 Oracle의 일관된 데이터 보호를 위한 확장 가능한 통합 플랫폼으로, 중앙 집중식 제어 및 감독을 통해 복잡한 작업을 자동화합니다. SnapCenter를 사용하여 Oracle 데이터베이스를 구축하는 데 권장되는 방법에 대해 알아보십시오.</block>
+  <block id="9caa022ffa5eb0757a1a86c936148e7f" category="inline-link-macro">TR-4964: SnapCenter 서비스를 사용하여 Oracle 데이터베이스 백업, 복원 및 클론 복제</block>
+  <block id="8edb16adeb3bfbbb14cfbd3ce193c823" category="paragraph"><block ref="469c3721dec8aacaaf4d487d09c5b2f1" category="inline-link-macro-rx"></block>
+ONTAP 스토리지와 EC2 컴퓨팅 인스턴스를 위해 Amazon FSx에 구축된 Oracle 데이터베이스를 백업, 복원 및 클론 복제하도록 SnapCenter 서비스를 설정하는 방법에 대해 알아보십시오. SnapCenter 서비스는 설정 및 사용이 훨씬 간편하지만 SnapCenter 인터페이스를 통해 사용할 수 있는 주요 기능을 제공합니다.</block>
+  <block id="42ae18b2764764698f69b07e734dad40" category="section-title">Microsoft SQL Server용 SnapCenter</block>
+  <block id="8995957312e937e739e91f52a206a035" category="inline-link-macro">TR-4714: NetApp SnapCenter를 사용하는 Microsoft SQL Server의 모범 사례</block>
+  <block id="62b66809334b4fdc52ecdf06f725fdf5" category="paragraph"><block ref="09e9d7e5e027ca70dda5aee1aed560b4" category="inline-link-macro-rx"></block>
+SnapCenter를 사용하여 NetApp 스토리지에 Microsoft SQL Server를 성공적으로 구축하여 데이터를 보호하는 방법에 대해 알아보십시오.</block>
+  <block id="4e7c5a50f3152a19bafdf38cff0da40c" category="section-title">Microsoft Exchange Server용 SnapCenter</block>
+  <block id="2af54c7b508b16288b16a9671650d630" category="inline-link-macro">TR-4681: NetApp SnapCenter를 사용하는 Microsoft Exchange Server에 대한 모범 사례</block>
+  <block id="39ce280703547e3222925611b66fd655" category="paragraph"><block ref="7919192a74ca5bbb876e0b81b84fc1a2" category="inline-link-macro-rx"></block>
+데이터 보호를 위해 SnapCenter를 사용하여 NetApp 스토리지에 Microsoft Exchange Server를 성공적으로 구축하는 방법에 대해 알아보십시오.</block>
+  <block id="d9aefea329e9863d1871e70d2effa716" category="section-title">SAP HANA용 SnapCenter</block>
+  <block id="042f7a2c227ce333d4132cb3d2f72c1a" category="inline-link-macro">TR-4926: NetApp ONTAP용 Amazon FSx 기반 SAP HANA - SnapCenter를 통한 백업 및 복구</block>
+  <block id="3ae5b19ed340d43acae0689efc380c35" category="paragraph"><block ref="048dd5cbef51620c12692ed5e05c07cd" category="inline-link-macro-rx"></block>
+NetApp ONTAP 및 SnapCenter용 Amazon FSx에서 SAP HANA 데이터 보호를 위한 권장 사례를 확인하십시오. 이 플레이북에서는 SnapCenter 개념, 구성 권장사항, 구성, 백업 작업, 복원 및 복구 작업을 수행할 수 있습니다.</block>
+  <block id="659990413ee7b19b6e7d5d4d82f2dc08" category="inline-link-macro">TR-4667: SnapCenter를 사용하여 SAP HANA 시스템 복사 및 클론 작업 자동화</block>
+  <block id="a1549107aa8ce711a75b6b549cfef410" category="paragraph"><block ref="9f976d6dddf1476622ebd9a4a5e3241b" category="inline-link-macro-rx"></block>
+SnapCenter 스토리지 클론 복제와 사전 클론 복제 및 사후 클론 복제 작업을 유연하게 정의하는 옵션을 통해 SAP Basis 관리자는 SAP 시스템 복사, 클론 복제 또는 업데이트 작업을 가속화 및 자동화할 수 있습니다. 지금 알아보기 운영 스토리지 또는 2차 스토리지에서 SnapCenter 스냅샷 백업을 선택하면 논리적 손상, 재해 복구 테스트 또는 SAP QA 시스템 업데이트 등 가장 중요한 사용 사례를 해결할 수 있습니다.</block>
+  <block id="8c751a81b08e28340991aae9438e1aeb" category="inline-link-macro">TR-4719: SnapCenter를 통해 SAP HANA 시스템 복제 백업 및 복구</block>
+  <block id="98a5f4caa4ea3e9ca0aa2266a7bbbc21" category="paragraph"><block ref="5bc114932295ab09dec0d5f5304f15ed" category="inline-link-macro-rx"></block>
+SAP HANA 시스템 복제 환경에서 SnapCenter 기술과 SAP HANA 플러그인을 사용하여 백업 및 복구를 수행하는 방법에 대해 알아보십시오.</block>
+  <block id="1bc114744e557579b581fd004451cd4c" category="inline-link-macro">TR-4667: SnapCenter를 사용하여 SAP HANA 시스템 복사 및 클론 작업 자동화</block>
+  <block id="125f09c0c055b03b22bea9b00bb18560" category="paragraph"><block ref="652c814e87d9d52f2543c9f35bb0117c" category="inline-link-macro-rx"></block>
+스토리지 계층에서 애플리케이션 정합성이 보장된 NetApp 스냅샷 백업을 생성하는 기능은 시스템 복사본 및 시스템 클론 복제 작업을 위한 기반입니다. 스토리지 기반 스냅샷 백업은 SAP HANA용 NetApp SnapCenter 플러그인과 SAP HANA 데이터베이스에서 제공하는 인터페이스를 사용하여 생성됩니다. SnapCenter는 SAP HANA 백업 카탈로그에 Snapshot 백업을 등록하여 복원 및 복구뿐만 아니라 클론 복제 작업에 백업을 사용할 수 있습니다.</block>
+  <block id="4b9ad91fc0a75f4acb6eccfa4fb75d2e" category="section-title">SnapCenter 강화 가이드</block>
+  <block id="c511972d73075c967f583bc9b4110754" category="paragraph"><block ref="32cda38a3dba662f660e5eca3be0043a" category="inline-link-macro-rx"></block>
+조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 SnapCenter를 구성하는 방법을 알아보십시오.</block>
+  <block id="141350544bb9055d329f2c611da39532" category="summary">이러한 기술 보고서에서는 NetApp ONTAP의 계층화 개요를 제공하고 권장 사례를 제공합니다.</block>
+  <block id="f887aa58f254d680de7bd891d2be7d1a" category="doc">계층화 기술 보고서</block>
+  <block id="6f6a139045eae112c22973735a0e9109" category="paragraph">FabricPool 데이터 계층화 솔루션을 사용하면 플래시 시스템에 대한 기업의 전반적인 사용자 경험이 개선되는 동시에 스토리지 효율성을 위해 애플리케이션을 재설계해야 하는 불편도 없습니다. FabricPool를 사용하면 스토리지 설치 공간과 시스템 환경의 관련 비용을 줄일 수 있습니다. 활성 데이터는 고성능 SSD에 유지됩니다. 비활성 데이터는 스토리지 효율성을 유지하면서 저비용 오브젝트 스토리지로 계층화되어 있습니다.</block>
+  <block id="990ddb1a4a5333b31f268a30646a04db" category="inline-link-macro">ONTAP FabricPool</block>
+  <block id="d78bbea9f2f3a40b75f9b857fb2f6850" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="9f02b1f102d9449a407132c4b67ab5fc" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="c3528a5e48bbe189e76cf8d737aa5961" category="inline-link-macro">TR-4598: FabricPool 모범 사례</block>
+  <block id="76d11b8139c65fed86f8e4bfa70f3fd7" category="paragraph"><block ref="78cdb5bbeac0d9402b94c9aa73c4e381" category="inline-link-macro-rx"></block>
+FabricPool의 기능, 요구사항, 구축 및 권장 사례에 대해 알아보십시오.</block>
+  <block id="7b624859ee034d906f2af23282ba2bda" category="inline-link-macro">TR-4826: NetApp FabricPool with StorageGRID 권장 가이드</block>
+  <block id="f92a2aace3f4f550a29c1e261b8cea4c" category="paragraph"><block ref="40dd16c966d1cc5966a2a4cddee6f90a" category="inline-link-macro-rx"></block>
+StorageGRID를 ONTAP 구성 요소 FabricPool의 용량 계층으로 구축 및 사이징하는 데 권장되는 Best Practice에 대해 알아보십시오. 또한 StorageGRID를 사용할 때의 핵심 기능, 요구사항, 구축 및 권장 사항도 다룹니다.</block>
+  <block id="fabfc4c4100955619fafaf57bd923d20" category="inline-link-macro">TR-4695: NetApp FabricPool를 통한 데이터베이스 스토리지 계층화</block>
+  <block id="640155b403e7ef849c9f178367dec7ea" category="paragraph"><block ref="2273714473900c20e86c804e06d807e4" category="inline-link-macro-rx"></block>
+Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.</block>
+  <block id="afe5567d4585c6b672134af6bf96570a" category="summary">이러한 기술 보고서에서는 NetApp ONTAP의 보안 개요와 권장 사례를 제공합니다.</block>
+  <block id="e6bd708199eed7d8bf33ef8308be0b3e" category="doc">보안 기술 보고서</block>
+  <block id="786a25f6930c9ae71ad21603f498741d" category="paragraph">ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하고 있습니다. ONTAP의 최신 릴리즈에는 조직이 하이브리드 클라우드 전체에서 데이터를 보호하고, 랜섬웨어 공격을 방지하고, 업계 권장 사례를 준수하는 데 매우 중요한 새로운 보안 기능이 다수 포함되어 있습니다. 이러한 새로운 기능은 조직의 Zero Trust 모델 전환도 지원합니다.</block>
+  <block id="232a2b16a1710c0ed1d16548ba8bb8f1" category="section-title">랜섬웨어</block>
+  <block id="afd7e2b4105b3c0f637124474c6780aa" category="inline-link-macro">TR-4572: 랜섬웨어용 NetApp 솔루션</block>
+  <block id="df81339197d6de37b537d325e629a34e" category="paragraph"><block ref="a2efee7226a0c9a1c73909308a4929db" category="inline-link-macro-rx"></block>
+랜섬웨어의 발전 과정 및 랜섬웨어에 대한 NetApp 솔루션을 사용하여 공격을 식별하고, 확산을 방지하고, 가능한 한 빨리 복구하는 방법에 대해 알아보십시오. 이 문서에 제공된 지침과 솔루션은 조직이 사이버 복원력 있는 솔루션을 보유하면서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 설계되었습니다.</block>
+  <block id="4806108c30efbcea3566bdb35a79396c" category="inline-link-macro">TR-4526: NetApp SnapLock를 사용한 규정 준수 WORM 스토리지</block>
+  <block id="6e10a9f29ea4d83a086b7ceba4cc08f6" category="paragraph"><block ref="bfdf2cce49faba7e8af63e592a46208a" category="inline-link-macro-rx"></block>
+많은 기업에서는 규정 준수 요구 사항을 충족하거나 단순히 데이터 보호 전략에 다른 계층을 추가하기 위해 WORM(Write Once, Read Many) 데이터 스토리지를 사용하고 있습니다. ONTAP에서 WORM 솔루션인 SnapLock를 WORM 데이터 스토리지가 필요한 환경에 통합하는 방법에 대해 알아보십시오.</block>
+  <block id="95708632a08675f7e77e5312ce2c047c" category="section-title">제로 트러스트</block>
+  <block id="bbcfb10585a3382302149f55fb634e3a" category="inline-link-macro">TR-4829: NetApp and Zero Trust</block>
+  <block id="dbc994b1de7c805f4c68c6a884d9974a" category="paragraph"><block ref="ede7b56a16d5b347f860a68734d83076" category="inline-link-macro-rx"></block>
+제로 트러스트는 일반적으로 마이크로 코어 및 주변 장치(MCAP)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세그먼트 게이트웨이라고 하는 제어 기능으로 보호하는 네트워크 중심 접근 방식이었습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취합니다. 이 접근 방식은 스토리지 관리 시스템이 고객 데이터 액세스를 보호하고 모니터링하기 위한 세분화 게이트웨이가 됩니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.</block>
+  <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">다단계 인증</block>
+  <block id="c7c6fadf35a14d865d768c5f30ccec0b" category="inline-link-macro">TR-4647: ONTAP 모범 사례 및 구현 가이드의 다중 요소 인증</block>
+  <block id="51c9464c6f30a83c1321f77012016e78" category="paragraph"><block ref="d26c196c7d19a03267c0e824fa346801" category="inline-link-macro-rx"></block>
+System Manager, Active IQ Unified Manager 및 ONTAP SSH(Secure Shell) CLI 인증을 사용하여 관리 액세스에 대한 ONTAP의 다단계 인증 기능에 대해 알아보십시오.</block>
+  <block id="c41edc3403838216ae8382379649686f" category="inline-link-macro">TR-4717: 공통 액세스 카드를 사용한 ONTAP SSH 인증</block>
+  <block id="4a0b79142cd1283fe648d5f9b8ca0284" category="paragraph"><block ref="e6d466dae325761fdf17effaef5b5e4b" category="inline-link-macro-rx"></block>
+ONTAP에서 CAC(Common Access Card)에 저장된 공개 키를 통해 ONTAP 스토리지 관리자를 인증하기 위해 ActivClient 소프트웨어와 함께 타사 SSH 클라이언트를 구성 및 테스트하는 방법을 알아봅니다.</block>
+  <block id="e95bb6f1e85d1ffe0eb983fd5e0fbde8" category="section-title">멀티 테넌시</block>
+  <block id="93b3bc1e3c197dc14688f9ee00b8bb8e" category="inline-link-macro">TR-4160: ONTAP의 보안 멀티 테넌시</block>
+  <block id="8ecbdd8d6e9d57ad3f5be58c0823ac45" category="paragraph"><block ref="5fe469fe43532b17bdd7eb62280b71c3" category="inline-link-macro-rx"></block>
+설계 고려 사항 및 권장 사례를 비롯하여 ONTAP에서 스토리지 VM을 사용하여 보안 멀티 테넌시를 구현하는 방법에 대해 알아보십시오.</block>
+  <block id="8db7df66ab1d7ab5f1dc947acdb5fae4" category="section-title">로깅</block>
+  <block id="4f86fd480a3b60659d82af4d7287d57a" category="inline-link-macro">TR-4303: ONTAP에 로그인</block>
+  <block id="c83e6b39f1cca70bbfa00b39765be54d" category="paragraph"><block ref="39270507302c9a1a0cecf47a1d5be1e9" category="inline-link-macro-rx"></block>
+ONTAP에서 생성된 다양한 로그, 제공되는 기능 및 로그를 보고 액세스하는 방법을 알아봅니다.</block>
+  <block id="3bacfbd563fe308a0fb610ff1388a915" category="section-title">표준</block>
+  <block id="3b386de8bb010d73cc3b37f57c64bcca" category="inline-link-macro">TR-4401: PCI-DSS 4.0 및 ONTAP</block>
+  <block id="ff509aae4c832c9d671ad2c3c199be87" category="paragraph"><block ref="9de31aaed92d032a38ce5211a576a07f" category="inline-link-macro-rx"></block>
+PCI DSS 4.0 표준에 따라 시스템을 검증하고 NetApp ONTAP 시스템에 적용하는 제어 요구 사항을 충족하는 방법에 대해 알아보십시오.</block>
+  <block id="6a5e95f0afdff4e3a4cfd057c3a6e798" category="summary">이 기술 보고서는 NetApp ONTAP를 사용하는 VMware 가상화 솔루션의 개요와 권장 사항을 제공합니다.</block>
+  <block id="d01695fdd0427fa016f08f6f745e046e" category="doc">가상화 기술 보고서</block>
+  <block id="526a48425b1c96f69a1c08c7254591ce" category="paragraph">NetApp 가상화 솔루션은 서버에서 최대의 가치를 제공하는 데 도움이 됩니다. 혁신적인 고성능 ONTAP 플래시 시스템을 기반으로 하는 응답 속도가 빠른 가상 서버 인프라를 통해 데이터에 훨씬 더 빠르게 액세스할 수 있습니다. 가상 인프라가 수 페타바이트의 데이터까지 중단 없이 확장됨에 따라 여러 워크로드에 대한 공유 액세스에 필요한 성능을 제공할 수 있습니다. ONTAP은 주요 파트너십, 구축 지침, 애플리케이션 통합, 우수한 설계를 통해 가상 서버 인프라 구축을 간소화하고 복잡성을 줄이도록 지원합니다. ONTAP는 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 권장 모범 사례와 솔루션을 제공합니다.</block>
+  <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="inline-link-macro">VMware vSphere용 ONTAP 툴</block>
+  <block id="0688ce32a57a2bf996e248aacbe6bd49" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="a3e8683995371a8fc111bdec419c54d3" category="inline-link-macro-rx"></block> 제품 설명서.</block>
+  <block id="952fd691754e388c7b7ba473cf410aff" category="inline-link-macro">TR-4597: ONTAP용 VMware vSphere</block>
+  <block id="b50253aa14007552d86fdd9d1b36e939" category="paragraph"><block ref="1f119af838b672bfb4d24c9efb5e89df" category="inline-link-macro-rx"></block>
+ ONTAP는 거의 20년 동안 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하면서 관리를 단순화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 구축을 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보 및 권장 사례를 비롯하여 vSphere용 ONTAP 솔루션에 대해 소개합니다.</block>
+  <block id="be7078ced01754e29e7276ca5a01643f" category="inline-link-macro">TR-4400: NetApp ONTAP를 통해 VVOL(VMware vSphere 가상 볼륨)을 이동합니다</block>
+  <block id="a1873f1f39ecbc9a43ac55a7cde36eba" category="paragraph"><block ref="7f01827b62504629dd7e09834e30244a" category="inline-link-macro-rx"></block>
+ONTAP는 20년 이상 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 본 문서에서는 최신 제품 정보 및 사용 사례와 권장 사례 및 기타 정보를 비롯하여 VMware VVOL(vSphere 가상 볼륨)을 위한 ONTAP 기능을 다루며 구축 간소화 및 오류 감소를 위한 방법에 대해 설명합니다.</block>
+  <block id="b5a6695eb02f52042cab8cce0f6d66bf" category="inline-link-macro">TR-4900: NetApp ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
+  <block id="d27914df04970951d214a1afb786ba99" category="paragraph"><block ref="7648c06ceebcbe7d14c2674d6d8c1c1c" category="inline-link-macro-rx"></block>
+ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 최신 제품 정보 및 권장 방법을 비롯하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)을 위한 ONTAP 솔루션을 소개합니다.</block>
+  <block id="1406aa071af210d31c6a2951fe66ddcc" category="inline-link-macro">ONTAP 및 vSphere 자동화 소개</block>
+  <block id="3df39f30fd49044efd7eb0a5d2e9defd" category="paragraph"><block ref="6102aa7afe3360417ea8c52b1c680d4c" category="inline-link-macro-rx"></block>
+자동화는 VMware ESX의 첫 날부터 VMware 환경을 관리하는 데 있어 필수적인 요소입니다. 코드로 인프라를 구축하고 프라이빗 클라우드 운영으로 사례를 확장하는 기능은 확장, 유연성, 셀프 프로비저닝 및 효율성에 관한 문제를 해결하는 데 도움이 됩니다. 이 문서에서는 ONTAP 및 VMware vSphere 환경의 자동화를 위한 ONTAP 솔루션을 소개합니다.</block>
+  <block id="777794440aa1ad0d5dfc51e1f00e6b65" category="inline-link-macro">WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안</block>
+  <block id="99ad633b114011ffc24a1aff8fe05a6f" category="paragraph"><block ref="94a3c7bfa85a246e1150f40c159e5ff2" category="inline-link-macro-rx"></block>
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
+  <block id="a3d8d5aab8801e818f1ef65d0656ac6f" category="inline-link-macro">WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안</block>
+  <block id="01d5c6f5ce1a6fed30deb2d15c6cd55d" category="paragraph"><block ref="92224c43e8ec1baf3b9f7b0cf2e9a167" category="inline-link-macro-rx"></block>
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
+  <block id="6d4e2f1f073dd653734779d5d0cf0f77" category="sidebar">ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를 제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.</block>
+  <block id="0abe2bf261d0e67218108321d4d12f80" category="sidebar">ONTAP를 사용하는 Microsoft SQL Server</block>
+  <block id="781ca1fc048eb6987f2bc84c0cfe89d2" category="sidebar">AFF A 시리즈 및 C-Series에서 Oracle 데이터베이스 성능</block>
+  <block id="a6a168fa8021b0302c7d52eda6a33f25" category="sidebar">AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능 가상화</block>
+  <block id="9eaca569c6f5ca3388f5613da3aa008c" category="sidebar">ONTAP 기반의 Oracle 데이터베이스</block>
+  <block id="f764824b813fdd72c94db78f7fb3b24b" category="sidebar">추가 애플리케이션 및 데이터베이스 기술 보고서</block>
+  <block id="f15b6d4df033d13872ca3938921e3677" category="sidebar">비즈니스 연속성 기술 보고서</block>
+  <block id="556eda250d1f196adc09c3afcd396b84" category="sidebar">MetroCluster 솔루션 아키텍처 및 설계</block>
+  <block id="4767099b22895a8101a1cba45d8cf6e9" category="sidebar">MetroCluster IP를 선택합니다</block>
+  <block id="eab1124b93650078ec1e8e3092712538" category="sidebar">MetroCluster FC를 참조하십시오</block>
+  <block id="745e09dfe45dd426c5e73339b93791a9" category="sidebar">추가 비즈니스 연속성 기술 보고서</block>
+  <block id="c5c30671213f4d20d0d3e001be835fff" category="sidebar">SnapMirror 비동기식 구성 및 모범 사례</block>
+  <block id="b151fa9d3a99ac1198c348082841dadb" category="sidebar">SnapMirror Synchronous 구성 및 모범 사례</block>
+  <block id="db43ac1a3df915eac1e2b05048e0ff14" category="sidebar">SnapLock를 사용한 규정 준수 WORM 스토리지</block>
+  <block id="35b0462c5bb2a4fdc39750037610b26b" category="sidebar">추가 데이터 보호 및 재해 복구 기술 보고서</block>
+  <block id="31947de3fc855dce40846d2cb60d48c4" category="sidebar">FlexCache 및 FlexGroup 볼륨 기술 보고서</block>
+  <block id="098a9352bab68d0361bda3b31e3eaf76" category="sidebar">FlexCache 볼륨</block>
+  <block id="98128573f1e72d145cae478573fe7e78" category="sidebar">FlexGroup 볼륨 구현 및 모범 사례</block>
+  <block id="0a66e21020f14b45688f8e77b7e20b00" category="sidebar">데이터 보호 및 백업 ONTAP FlexGroup 볼륨</block>
+  <block id="3f163a3114d2b0e94dec2a4a43c4029d" category="sidebar">추가 FlexCache 및 FlexGroup 볼륨 기술 보고서</block>
+  <block id="a432199853e48c5637c242251f95c704" category="sidebar">NetApp ONTAP에서의 NFS 모범 사례 및 구현</block>
+  <block id="3dbf10ae4bfa4c7836a27c5cb585c0bd" category="sidebar">ONTAP의 멀티프로토콜 NAS 개요 및 모범 사례</block>
+  <block id="58a229be829dc9196abdaff6a4a26864" category="sidebar">S3 in ONTAP 모범 사례</block>
+  <block id="31ca7aa5951254f3675ee33de50f7780" category="sidebar">서비스 모범 사례의 이름을 말하십시오</block>
+  <block id="fd4fb5e4cf43e214576dfc0e251fb50d" category="sidebar">ONTAP에서 NFS Kerberos</block>
+  <block id="0908ed986c402b0d82409382576f03e5" category="sidebar">추가 NAS 기술 보고서</block>
+  <block id="6fce9db621e9f4b6fd60e707035ec03a" category="sidebar">ONTAP를 통한 BGP/VIP</block>
+  <block id="b8bc0e6a162c69f8935ea868dd0979e9" category="sidebar">ONTAP의 최신 SAN 모범 사례</block>
+  <block id="127df462941ca837507ee75e016f4b04" category="sidebar">NVMe-oF(NVMe over Fabrics)를 사용하여 최신 SAN 구현 및 구성</block>
+  <block id="e668c61f387e7319a559126e87ff0207" category="sidebar">ONTAP AFF ASA(All SAN 어레이) 시스템</block>
+  <block id="80bed208c8c2b2b37854ecf2fcf63939" category="sidebar">랜섬웨어용 NetApp 솔루션</block>
+  <block id="63ab8aaa1f35361bdf5c84b3d1dd4765" category="sidebar">NetApp와 제로 트러스트</block>
+  <block id="2b1882b52bf0c1c3070f8c109bac0cb8" category="sidebar">NetApp SnapLock를 사용한 규정 준수 WORM 스토리지</block>
+  <block id="318a48e62d72677582dc9f48f0d4d7ed" category="sidebar">인증(SSH, MFA)</block>
+  <block id="3346583295d2f989677e5eaa1cec935e" category="sidebar">ONTAP의 보안 멀티 테넌시</block>
+  <block id="78c62b440b6934886ff35073f6d2d20e" category="sidebar">추가 보안 기술 보고서</block>
+  <block id="7e5dd2fcf84a948c9fc94ed527184b65" category="sidebar">Microsoft SQL용 SnapCenter</block>
+  <block id="85b5ea7ba0f09e645b16f4e67a103712" category="sidebar">가상화용 SnapCenter</block>
+  <block id="fed6fa1f1b675c268f8b78258e2545a7" category="sidebar">SnapCenter 서비스</block>
+  <block id="4afeaf632b42b8ab98eecc7c4d0904b3" category="sidebar">추가 SnapCenter 기술 보고서</block>
+  <block id="6dc00e1bbdeea3ffaca45fe746b95325" category="sidebar">FabricPool 모범 사례</block>
+  <block id="ac5ffae4eb77272a6c60f806c6f27c44" category="sidebar">FabricPool 및 StorageGRID 권장 사항</block>
+  <block id="14307b8dac57f5d364e4c656a61f7214" category="sidebar">FabricPool를 통한 데이터베이스 스토리지 계층화</block>
+  <block id="2bdc87f51d413e6d2fa23dd26238501f" category="sidebar">ONTAP용 VMware vSphere</block>
+  <block id="0dca6505dd29defef873a6ae40e5ba67" category="sidebar">ONTAP을 사용하는 VMware vSphere 가상 볼륨(VVol)</block>
+  <block id="2d90ac09cbf108bddad31dd341f8614e" category="sidebar">ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
+  <block id="16d877785afd5e8f401c4bd07d5afe32" category="sidebar">추가 가상화 기술 보고서</block>
+</blocks>

@@ -1,0 +1,45 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+permalink: business-continuity.html 
+summary: 이 기술 보고서에서는 NetApp ONTAP의 비즈니스 연속성에 대한 개요와 권장 사례를 제공합니다 
+---
+= 무중단 업무 운영 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp은 애플리케이션 및 데이터 위치를 합리화하여 비용 대비 성능을 비용 효율적으로 개선하는 다양한 솔루션을 제공합니다. 데이터 보호, 복제 및 지속적인 가용성: ONTAP 데이터 관리는 Set-it-and-for-get-it 정책 관리로 데이터 보호를 단순화하는 동시에 MetroCluster 및 SnapMirror 비즈니스 연속성을 통해 비즈니스 연속성을 제공합니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/smbc/index.html["ONTAP SnapMirror 비즈니스 연속성"] 및 link:https://docs.netapp.com/us-en/ontap-metrocluster/index.html["ONTAP MetroCluster"] 제품 설명서.
+
+====
+
+
+== SnapMirror 비즈니스 연속성(SM-BC)
+
+link:https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: SnapMirror 비즈니스 연속성(SM-BC)"^]
+SnapMirror 비즈니스 연속성(SM-BC)은 가장 중요한 비즈니스 애플리케이션의 RPO 0 및 RTO 0 요구사항을 충족하기 위해 AFF 또는 ASA(All SAN Array) 스토리지 시스템에서 실행 중인 ONTAP에 사용할 수 있는 애플리케이션 레벨의 세분화 기능을 갖춘 지속적으로 사용 가능한 스토리지 솔루션입니다.
+
+
+
+== MetroCluster
+
+link:https://www.netapp.com/pdf.html?item=/media/13480-tr4705.pdf["TR-4705: NetApp MetroCluster 솔루션 아키텍처 및 설계"^]
+이 문서에서는 ONTAP의 MetroCluster 기능에 대한 고급 아키텍처 및 설계 개념에 대해 설명합니다.
+
+* MetroCluster IP *
+link:http://www.netapp.com/us/media/tr-4689.pdf["TR-4689: NetApp MetroCluster IP"^]
+MetroCluster는 FAS 및 AFF 시스템에서 실행되는 ONTAP를 위한 지속적으로 사용 가능한 스토리지 솔루션입니다. MetroCluster IP는 이더넷 기반 백엔드 스토리지 패브릭을 사용하는 최신 혁신입니다. MetroCluster IP는 가장 중요한 비즈니스 애플리케이션의 요구 사항을 충족하는 고도로 이중화된 구성을 제공합니다. MetroCluster IP는 ONTAP에 포함되어 있으며 ONTAP 스토리지를 사용하는 클라이언트 및 서버에 NAS 및 SAN 연결을 제공합니다.
+
+* MetroCluster FC *
+link:https://www.netapp.com/pdf.html?item=/media/13482-tr4375.pdf["TR-4375: NetApp MetroCluster FC"^]
+MetroCluster는 지리적으로 분산된 데이터 센터 전반에서 미션 크리티컬 애플리케이션에 지속적인 데이터 가용성을 제공합니다. MetroCluster FC의 권장 사례, 설계 결정 및 지원 구성에 대해 알아보십시오.

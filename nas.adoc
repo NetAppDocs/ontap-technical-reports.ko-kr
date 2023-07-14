@@ -1,0 +1,74 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, NAS, best practices, best-practices 
+permalink: nas.html 
+summary: 이 기술 보고서에서는 NFS, SMB/CIFS, S3, NetApp ONTAP의 네임 서비스 및 권장 사례를 개괄적으로 설명합니다. 
+---
+= NAS 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp NAS 솔루션은 데이터 관리를 단순화하며 비용을 최적화하는 동시에 규모 확장에 대비할 수 있도록 지원합니다. ONTAP NAS 솔루션은 유니파이드 아키텍처 내에서 무중단 운영, 효율성 및 원활한 확장성을 제공합니다. NetApp ONTAP을 기반으로 하는 스케일아웃 NAS는 대규모 ONTAP 에코시스템을 활용하여 혁신을 주도하고 공격적인 미래 혁신을 위한 비전을 실현할 수 있습니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/nas-management/index.html["ONTAP NAS 스토리지 관리"] 및 link:https://docs.netapp.com/us-en/ontap/object-storage-management/index.html["ONTAP S3 스토리지 관리"] 제품 설명서.
+
+====
+
+
+== NFS 를 참조하십시오
+
+link:https://www.netapp.com/pdf.html?item=/media/10720-tr-4067.pdf["TR-4067: ONTAP의 NFS 모범 사례 및 구축 가이드"^]
+ONTAP의 NFS에 대한 기본 개념, 지원 정보, 구성 팁 및 권장 사항에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/84595-tr-4962.pdf["TR-4962: NFSv4.2 확장 속성"^]
+ONTAP 9.12.1 이상에서 NFSv4.2 확장 속성을 설정하고 사용하는 방법에 대해 알아봅니다.
+
+
+
+== 중소기업
+
+link:https://www.netapp.com/pdf.html?item=/media/17136-tr4740.pdf["TR-4740: SMB 3.0 멀티채널"^]
+Microsoft는 SMB1과 SMB2의 성능 및 안정성 한계를 해결함으로써 SMB3 프로토콜의 개선을 목표로 SMB 3.0 프로토콜에 멀티채널을 도입했습니다. ONTAP의 기능, 권장 사례 및 성능 테스트 결과를 비롯한 멀티채널 기능에 대해 알아보십시오.
+
+
+
+== 멀티 프로토콜
+
+link:https://www.netapp.com/pdf.html?item=/media/27436-tr-4887.pdf["TR-4887: ONTAP의 다중 프로토콜 NAS 개요 및 모범 사례"^]
+ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프로토콜 환경에 대한 권장 사례에 대해 알아보십시오.
+
+
+
+== ONTAP S3
+
+link:https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf["TR-4814:S3(ONTAP 모범 사례"^]
+ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하는 데 권장되는 방법과 ONTAP를 네이티브 S3 애플리케이션을 사용하는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.
+
+
+
+== 네임 서비스
+
+link:https://www.netapp.com/pdf.html?item=/media/19370-tr-4523.pdf["TR-4523: ONTAP에서 DNS 로드 밸런싱"^]
+ONTAP의 DNS, 다양한 구성 방법 및 권장 방법을 포함하여 DNS 로드 밸런싱 방법론과 함께 사용하도록 ONTAP를 구성하는 방법에 대해 알아봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/16328-tr-4668.pdf["TR-4668: 서비스 모범 사례 가이드를 이름하십시오"^]
+ONTAP에서 CIFS/SMB 및 NFS와 같은 NAS(Network-Attached Storage) 솔루션을 구축할 때 권장되는 방법, 제한 및 고려 사항에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/19423-tr-4835.pdf["TR-4835: ONTAP 멀티 프로토콜 NAS ID 관리에서 LDAP를 구성하는 방법"^]
+멀티 프로토콜 NAS를 위해 ONTAP에서 LDAP(Lightweight Directory Access Protocol) ID 관리를 구성하는 방법에 대해 알아봅니다.
+
+
+
+== NAS 보안
+
+link:https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["TR-4616: ONTAP에서 NFS Kerberos"^]
+Active Directory 및 RHEL(Red Hat Enterprise Linux) 클라이언트의 구성 단계를 포함하여 ONTAP에서 NFS Kerberos에 대해 알아보십시오.

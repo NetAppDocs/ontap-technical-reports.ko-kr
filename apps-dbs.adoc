@@ -1,0 +1,73 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+permalink: apps-dbs.html 
+summary: 이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다 
+---
+= 애플리케이션 및 데이터베이스 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle 및 PostgreSQL에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.
+
+
+
+== Microsoft SQL Server를 참조하십시오
+
+link:https://www.netapp.com/pdf.html?item=/media/8585-tr4590.pdf["TR-4590: ONTAP를 사용하는 Microsoft SQL Server에 대한 모범 사례 가이드"^]
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/12400-tr4714.pdf["TR-4714: SnapCenter를 사용하는 Microsoft SQL Server의 모범 사례"^]
+SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법에 대해 자세히 알아보십시오.
+
+
+
+== MySQL
+
+link:https://www.netapp.com/pdf.html?item=/media/16423-tr-4722pdf.pdf["ONTAP 기반 MySQL 데이터베이스"^]
+MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.
+
+
+
+== 오라클
+
+link:https://www.netapp.com/pdf.html?item=/media/8744-tr3633pdf.pdf["TR-3633: ONTAP 기반 Oracle 데이터베이스"^]
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/85630-tr-4969.pdf["TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능"^]
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 베어 메탈 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실질적인 차이점을 모두 살펴봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/85629-tr-4971.pdf["TR-4971: AFF A-Series 및 C-Series에서 가상화된 Oracle 데이터베이스 성능"^]
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, 파이버 채널 FC(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/19666-tr-4591.pdf["TR-4591: Oracle 데이터 보호: 백업, 복구, 복제 및 재해 복구"^]
+스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/8583-tr4592.pdf["TR-4592: MetroCluster 기반 Oracle"^]
+MetroCluster 동기식 복제 기능에서 Oracle 데이터베이스를 운영하는 데 권장되는 방법, 테스트 절차 및 기타 고려 사항에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/19750-tr-4534.pdf["TR-4534: Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션"^]
+마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/9138-tr4695.pdf["TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화"^]
+Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/40384-tr-4899.pdf["TR-4899: SnapMirror 비즈니스 연속성을 통해 Oracle 데이터베이스에 영향을 미치지 않는 애플리케이션 페일오버"^]
+SnapMirror 비즈니스 연속성(SM-BC)과 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공합니다. Oracle RAC의 스토리지 구성 요소로 SM-BC가 포함된 AFF 스토리지 시스템의 구성 지침과 권장 사례에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/21901-tr-4876.pdf["TR-4876: ONTAP 솔루션 및 구축 모범 사례를 활용한 Oracle Multitenancy"^]
+ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와 ONTAP 소프트웨어의 기능을 모두 최대한 활용하여 Oracle 멀티 테넌트 데이터베이스를 프로비저닝, 관리 및 보호하는 방법에 대한 솔루션 권장 사례에 대해 알아보십시오.
+
+
+
+== PostgreSQL
+
+link:https://www.netapp.com/pdf.html?item=/media/17140-tr4770.pdf["TR-4770: ONTAP에서 PostgreSQL 데이터베이스"^]
+PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.

@@ -1,0 +1,35 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+permalink: industry-solutions.html 
+summary: 이 기술 보고서에서는 NetApp ONTAP를 사용한 업계 솔루션 및 권장 사례를 개괄적으로 설명합니다 
+---
+= 산업 솔루션 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp은 전략적 파트너십을 기반으로 더욱 강화된 산업별 데이터 스토리지 솔루션을 통해 중요한 비즈니스 과제를 해결합니다.
+
+
+
+== EDA
+
+link:https://www.netapp.com/pdf.html?item=/media/19368-tr-4617.pdf["ONTAP의 전자 설계 자동화 모범 사례"^]
+EDA FlexGroup(전자 설계 자동화) 워크로드를 위한 NetApp ONTAP의 권장 사례 및 구현 팁에 대해 알아보십시오. 이 볼륨은 EDA 환경에서 메타데이터 오버헤드가 높은 워크로드를 처리하는 데 이상적입니다.
+
+
+
+== 의료
+
+link:https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf["Epic의 NetApp 모범 사례"^]
+Epic은 의료 업계를 위한 소프트웨어를 만듭니다. NetApp 스토리지를 Epic 소프트웨어 환경과 통합하는 권장 사례에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/86527-tr-4975.pdf["대형 병원의 FlexPod-Epic"^]
+대형 병원용 FlexPod 솔루션에서 EHR을 설정하는 데 대한 스토리지 레이아웃 및 모범 사례와 함께 Intersystem 데이터베이스를 통한 전자 의무 기록(EHR) 애플리케이션의 필요성을 입증하는 FlexPod의 엔드 투 엔드 성능 기능에 대해 알아보십시오.

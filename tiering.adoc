@@ -1,0 +1,31 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+permalink: tiering.html 
+summary: 이러한 기술 보고서에서는 NetApp ONTAP의 계층화 개요를 제공하고 권장 사례를 제공합니다. 
+---
+= 계층화 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+
+
+[role="lead"]
+FabricPool 데이터 계층화 솔루션을 사용하면 플래시 시스템에 대한 기업의 전반적인 사용자 경험이 개선되는 동시에 스토리지 효율성을 위해 애플리케이션을 재설계해야 하는 불편도 없습니다. FabricPool를 사용하면 스토리지 설치 공간과 시스템 환경의 관련 비용을 줄일 수 있습니다. 활성 데이터는 고성능 SSD에 유지됩니다. 비활성 데이터는 스토리지 효율성을 유지하면서 저비용 오브젝트 스토리지로 계층화되어 있습니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/fabricpool/index.html["ONTAP FabricPool"] 제품 설명서.
+
+====
+link:https://www.netapp.com/pdf.html?item=/media/17239-tr4598.pdf["TR-4598: FabricPool 모범 사례"^]
+FabricPool의 기능, 요구사항, 구축 및 권장 사례에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/19403-tr-4826.pdf["TR-4826: NetApp FabricPool with StorageGRID 권장 가이드"^]
+StorageGRID를 ONTAP 구성 요소 FabricPool의 용량 계층으로 구축 및 사이징하는 데 권장되는 Best Practice에 대해 알아보십시오. 또한 StorageGRID를 사용할 때의 핵심 기능, 요구사항, 구축 및 권장 사항도 다룹니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/9138-tr4695.pdf["TR-4695: NetApp FabricPool를 통한 데이터베이스 스토리지 계층화"^]
+Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.

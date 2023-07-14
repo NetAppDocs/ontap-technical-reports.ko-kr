@@ -1,0 +1,49 @@
+---
+layout: landing-page 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+permalink: data-protection-disaster-recovery.html 
+summary: 이러한 기술 보고서에서는 ONTAP의 데이터 보호 및 재해 복구와 권장 방법에 대해 간략하게 설명합니다 
+---
+= 데이터 보호 및 재해 복구 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapMirror는 Data Fabric 전반에서 사용하기 쉬운 비용 효율적인 통합 복제 솔루션입니다. LAN 또는 WAN을 통해 데이터를 고속으로 복제합니다. 가상 환경과 기존 환경 모두에서 Microsoft Exchange, Microsoft SQL Server, Oracle 등과 같은 비즈니스 크리티컬 애플리케이션의 데이터 가용성을 높이고 신속한 데이터 복제를 실현할 수 있습니다. 하나 이상의 ONTAP 스토리지 시스템에 데이터를 복제하고 2차 데이터를 지속적으로 업데이트함으로써 데이터가 최신 상태로 유지되고 필요할 때마다 사용할 수 있으며 외부 복제 서버가 필요하지 않습니다.
+
+[NOTE]
+====
+이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/data-protection-disaster-recovery/index.html["ONTAP 데이터 보호 및 재해 복구"] 제품 설명서.
+
+====
+
+
+== SnapMirror를 참조하십시오
+
+* SnapMirror 비동기식 *
+link:https://www.netapp.com/pdf.html?item=/media/17229-tr4015.pdf["TR-4015: SnapMirror 비동기식 구성 및 모범 사례"^]
+볼륨, 일관성 그룹 및 스토리지 가상 머신(SVM 재해 복구)의 SnapMirror 비동기(SM-A) 복제를 구성하기 위한 권장 사례에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/17064-tr4678.pdf["TR-4678: 데이터 보호 및 백업 ONTAP FlexGroup 볼륨"^]
+FlexGroup 볼륨에 대한 권장 데이터 보호 및 백업에 대해 알아보십시오. 이 플레이북에서는 스냅샷 복사본, SnapMirror, 기타 데이터 보호 및 백업 솔루션이 포함되어 있습니다.
+
+* SnapMirror Synchronous *
+link:https://www.netapp.com/pdf.html?item=/media/17174-tr4733.pdf["TR-4733: SnapMirror Synchronous 구성 및 모범 사례"^]
+SnapMirror Synchronous(SM-S) 복제를 구성하는 데 권장되는 방법에 대해 알아보십시오.
+
+* SnapMirror 3데이터 센터 DR *
+link:https://www.netapp.com/pdf.html?item=/media/19369-tr-4832.pdf["TR-4832: ONTAP 9.7용 NetApp SnapMirror를 사용한 데이터 센터 재해 복구 3개"^]
+복제에 ONTAP SnapMirror 기술을 사용하는 3개 데이터 센터 재해 복구 구성에 대해 알아보십시오.
+
+
+
+== SnapMirror를 사용하여 애플리케이션 및 인프라 통합
+
+link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html["TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자"]
+ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 최신 제품 정보 및 권장 방법을 포함하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)에 권장되는 ONTAP 솔루션에 대해 알아보십시오.
