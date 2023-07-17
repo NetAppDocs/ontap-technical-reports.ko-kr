@@ -11,29 +11,29 @@ sidebar:
   entries:
   - title: ONTAP 기술 보고서
     url: "/index.html"
-  - title: 애플리케이션 및 데이터베이스 기술 보고서
+  - title: 제공합니다
     url: "/apps-dbs.html"
-  - title: 무중단 업무 운영 기술 보고서
+  - title: 비즈니스 연속성
     url: "/business-continuity.html"
-  - title: 데이터 보호 및 재해 복구 기술 보고서
+  - title: 데이터 보호 및 재해 복구
     url: "/data-protection-disaster-recovery.html"
-  - title: FlexCache 및 FlexGroup 볼륨 기술 보고서
+  - title: FlexCache 및 FlexGroup 볼륨
     url: "/nas-containers.html"
-  - title: NAS 기술 보고서
+  - title: NAS
     url: "/nas.html"
-  - title: 네트워킹 기술 보고서
+  - title: 네트워킹
     url: "/networking.html"
-  - title: SAN 기술 보고서
+  - title: 산
     url: "/san.html"
-  - title: 보안 기술 보고서
+  - title: 보안
     url: "/security.html"
   - title: 보안 강화 가이드
     url: "/security-hardening-guides.html"
-  - title: SnapCenter 기술 보고서
+  - title: SnapCenter
     url: "/snapcenter.html"
-  - title: 계층화 기술 보고서
+  - title: 계층화
     url: "/tiering.html"
-  - title: 가상화 기술 보고서
+  - title: 포함되었습니다
     url: "/virtualization.html"
   - title: 법적 고지
     url: "/legal-notices.html"

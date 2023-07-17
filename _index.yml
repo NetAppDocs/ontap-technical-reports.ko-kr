@@ -3,7 +3,7 @@ indexpage:
   lead: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
     제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
   tiles:
-  - title: 애플리케이션 및 데이터베이스 기술 보고서
+  - title: 제공합니다
     links:
     - title: ONTAP를 사용하는 Microsoft SQL Server
       url: apps-dbs.html
@@ -15,7 +15,7 @@ indexpage:
       url: apps-dbs.html
     - title: 추가 애플리케이션 및 데이터베이스 기술 보고서
       url: apps-dbs.html
-  - title: 비즈니스 연속성 기술 보고서
+  - title: 비즈니스 연속성
     links:
     - title: SnapMirror 비즈니스 연속성(SM-BC)
       url: business-continuity.html
@@ -27,7 +27,7 @@ indexpage:
       url: business-continuity.html
     - title: 추가 비즈니스 연속성 기술 보고서
       url: business-continuity.html
-  - title: 데이터 보호 및 재해 복구 기술 보고서
+  - title: 데이터 보호 및 재해 복구
     links:
     - title: SnapMirror 비동기식 구성 및 모범 사례
       url: data-protection-disaster-recovery.html
@@ -37,7 +37,7 @@ indexpage:
       url: data-protection-disaster-recovery.html
     - title: 추가 데이터 보호 및 재해 복구 기술 보고서
       url: data-protection-disaster-recovery.html
-  - title: FlexCache 및 FlexGroup 볼륨 기술 보고서
+  - title: FlexCache 및 FlexGroup 볼륨
     links:
     - title: FlexCache 볼륨
       url: nas-containers.html
@@ -47,7 +47,7 @@ indexpage:
       url: nas-containers.html
     - title: 추가 FlexCache 및 FlexGroup 볼륨 기술 보고서
       url: nas-containers.html
-  - title: NAS 기술 보고서
+  - title: NAS
     links:
     - title: NetApp ONTAP에서의 NFS 모범 사례 및 구현
       url: nas.html
@@ -61,11 +61,11 @@ indexpage:
       url: nas.html
     - title: 추가 NAS 기술 보고서
       url: nas.html
-  - title: 네트워킹 기술 보고서
+  - title: 네트워킹
     links:
     - title: ONTAP를 통한 BGP/VIP
       url: networking.html
-  - title: SAN 기술 보고서
+  - title: 산
     links:
     - title: ONTAP의 최신 SAN 모범 사례
       url: san.html
@@ -73,7 +73,7 @@ indexpage:
       url: san.html
     - title: ONTAP AFF ASA(All SAN 어레이) 시스템
       url: san.html
-  - title: 보안 기술 보고서
+  - title: 보안
     links:
     - title: 보안 강화 가이드
       url: security-hardening-guides.html
@@ -89,7 +89,7 @@ indexpage:
       url: security.html
     - title: 추가 보안 기술 보고서
       url: security.html
-  - title: SnapCenter 기술 보고서
+  - title: SnapCenter
     links:
     - title: Oracle용 SnapCenter
       url: snapcenter.html
@@ -101,7 +101,7 @@ indexpage:
       url: snapcenter.html
     - title: 추가 SnapCenter 기술 보고서
       url: snapcenter.html
-  - title: 계층화 기술 보고서
+  - title: 계층화
     links:
     - title: FabricPool 모범 사례
       url: tiering.html
@@ -109,7 +109,7 @@ indexpage:
       url: tiering.html
     - title: FabricPool를 통한 데이터베이스 스토리지 계층화
       url: tiering.html
-  - title: 가상화 기술 보고서
+  - title: 포함되었습니다
     links:
     - title: ONTAP용 VMware vSphere
       url: virtualization.html

@@ -369,7 +369,6 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="a6a168fa8021b0302c7d52eda6a33f25" category="sidebar">AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능 가상화</block>
   <block id="9eaca569c6f5ca3388f5613da3aa008c" category="sidebar">ONTAP 기반의 Oracle 데이터베이스</block>
   <block id="f764824b813fdd72c94db78f7fb3b24b" category="sidebar">추가 애플리케이션 및 데이터베이스 기술 보고서</block>
-  <block id="f15b6d4df033d13872ca3938921e3677" category="sidebar">비즈니스 연속성 기술 보고서</block>
   <block id="556eda250d1f196adc09c3afcd396b84" category="sidebar">MetroCluster 솔루션 아키텍처 및 설계</block>
   <block id="4767099b22895a8101a1cba45d8cf6e9" category="sidebar">MetroCluster IP를 선택합니다</block>
   <block id="eab1124b93650078ec1e8e3092712538" category="sidebar">MetroCluster FC를 참조하십시오</block>
@@ -378,7 +377,6 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="b151fa9d3a99ac1198c348082841dadb" category="sidebar">SnapMirror Synchronous 구성 및 모범 사례</block>
   <block id="db43ac1a3df915eac1e2b05048e0ff14" category="sidebar">SnapLock를 사용한 규정 준수 WORM 스토리지</block>
   <block id="35b0462c5bb2a4fdc39750037610b26b" category="sidebar">추가 데이터 보호 및 재해 복구 기술 보고서</block>
-  <block id="31947de3fc855dce40846d2cb60d48c4" category="sidebar">FlexCache 및 FlexGroup 볼륨 기술 보고서</block>
   <block id="098a9352bab68d0361bda3b31e3eaf76" category="sidebar">FlexCache 볼륨</block>
   <block id="98128573f1e72d145cae478573fe7e78" category="sidebar">FlexGroup 볼륨 구현 및 모범 사례</block>
   <block id="0a66e21020f14b45688f8e77b7e20b00" category="sidebar">데이터 보호 및 백업 ONTAP FlexGroup 볼륨</block>
@@ -411,4 +409,15 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="2d90ac09cbf108bddad31dd341f8614e" category="sidebar">ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
   <block id="16d877785afd5e8f401c4bd07d5afe32" category="sidebar">추가 가상화 기술 보고서</block>
   <block id="606ae2d52250c5830b4f47feec9aadee" category="summary">ONTAP 기술 보고서는 다양한 에코시스템 내에서 또는 다양한 프로토콜을 통해 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트와 ONTAP 기능에 대한 권장 사례를 제공합니다.</block>
+  <block id="16eb034c60d3efff32199367e1dacd1f" category="sidebar">제공합니다</block>
+  <block id="3c2615f951be2a520d1b872deaa1da54" category="sidebar">비즈니스 연속성</block>
+  <block id="03c39d763ca15978d9ef16c2ba5fe98a" category="sidebar">데이터 보호 및 재해 복구</block>
+  <block id="4a86e7f91bacee45f7da12b91e420cf6" category="sidebar">FlexCache 및 FlexGroup 볼륨</block>
+  <block id="c07ee5debf5f3a3fef16c1ee5e8e4942" category="sidebar">NAS</block>
+  <block id="a5fa5746370b608090b994a97b49e98b" category="sidebar">네트워킹</block>
+  <block id="62a0282d39568be094470486eaf70c4f" category="sidebar">산</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="sidebar">보안</block>
+  <block id="337c62c6b6eb7319bae58701105e889c" category="sidebar">계층화</block>
+  <block id="ea4c55be196897a16d86999f5c16d582" category="sidebar">포함되었습니다</block>
+  <block id="1a5c3601eda1cd38072323e418968743" category="sidebar">비즈니스 연속성</block>
 </blocks>
