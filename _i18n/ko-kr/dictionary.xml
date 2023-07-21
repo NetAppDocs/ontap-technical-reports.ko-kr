@@ -149,9 +149,6 @@ ONTAP의 블록 프로토콜과 권장 사항에 대해 자세히 알아보십�
   <block id="3b87036714b3136acc2aae7890fd7edb" category="inline-link-macro">TR-4684: NVMe-oF(NVMe over Fabrics)를 사용하여 최신 SAN 구현 및 구성</block>
   <block id="34b05cb5d6ec578656c90adeba7715e5" category="paragraph"><block ref="63fc1db08e0f9d5d706220043515ab72" category="inline-link-macro-rx"></block>
 NVMe over Fabrics 전송(NVMe over Fibre Channel 및 NVMe over TCP)을 구축하고 구성하는 방법을 알아보십시오. 이 플레이북에서는 설계, 구축, 구성, 관리 지침, 그리고 NVMe 프로토콜 및 전송을 사용하여 가용성이 높은 최신 SAN 솔루션을 구축하는 데 필요한 권장 지침이 포함되어 있습니다.</block>
-  <block id="44f86414cc6f7a3896ef5aa684186663" category="inline-link-macro">TR-4515: ONTAP AFF ASA(All SAN 어레이) 시스템</block>
-  <block id="8d04a09f4edabba7e258cb663e9829ed" category="paragraph"><block ref="cc723865ccc14ae6d193059ca8789d74" category="inline-link-macro-rx"></block>
-NetApp AFF ASA(All SAN 어레이) 시스템에 대해 알아보고 항상 사용 가능한 비즈니스 크리티컬 SAN 구성에 대한 권장 사례를 기반으로 구축하는 방법을 알아보십시오.</block>
   <block id="84d69011a1a493b2795f8b571a8773b1" category="inline-link-macro">TR-4968: NetApp All-SAN 어레이의 데이터 가용성 및 무결성</block>
   <block id="656b37e505cd401fd574ca1e26892980" category="paragraph"><block ref="7792d8e3bf5a58bae4d6e0bf568b517e" category="inline-link-macro-rx"></block>
 모든 SAN 어레이 시스템의 다양한 데이터 보호 및 데이터 무결성 기능이 어떻게 작동하면서 애플리케이션 가동 시간을 극대화하고 SAN 네트워크를 설계, 구현 및 관리하는 데 권장되는 방법을 익히는지 알아보십시오.</block>
@@ -420,4 +417,35 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="337c62c6b6eb7319bae58701105e889c" category="sidebar">계층화</block>
   <block id="ea4c55be196897a16d86999f5c16d582" category="sidebar">포함되었습니다</block>
   <block id="1a5c3601eda1cd38072323e418968743" category="sidebar">비즈니스 연속성</block>
+  <block id="47f5c5f7b80224cb7832ed3973296f38" category="inline-link-macro">TR-4614: SnapCenter를 통한 SAP HANA 백업 및 복구</block>
+  <block id="e48dd22947ca3e3c59533cfe21966b66" category="paragraph"><block ref="ee3dd6e7b456c60745112ed79c67a7f3" category="inline-link-macro-rx"></block>
+SnapCenter는 SAP HANA 및 기타 데이터베이스를 위한 애플리케이션 정합성 보장 데이터 보호를 위한 확장 가능한 유니파이드 플랫폼입니다. SnapCenter는 중앙 집중식 제어 및 감독을 지원하면서 사용자가 애플리케이션별 백업, 복원 및 클론 작업을 관리할 수 있는 기능을 위임합니다. 데이터베이스 및 스토리지 관리자는 SnapCenter를 사용하여 다양한 애플리케이션과 데이터베이스의 백업, 복원, 클론 복제 작업을 관리하는 단일 툴에 대해 알아보십시오.</block>
+  <block id="86083f3ea21c2385b4f013aae3c57858" category="section-title">SAP HANA를 참조하십시오</block>
+  <block id="c1f86b21768b0c2bda31208d2625279e" category="inline-link-macro">TR-4435: NFS를 포함한 NetApp AFF 시스템 기반 SAP HANA</block>
+  <block id="dc602b9de9712db4a40b66aea2e8f2c3" category="paragraph"><block ref="a21ac9d982ea66b5d284054ce4548ed0" category="inline-link-macro-rx"></block>
+권장 사례 및 NFS를 포함한 AFF 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.</block>
+  <block id="0db6b81db5bd35e1eef1e83e154c3cb5" category="inline-link-macro">TR-4436: 파이버 채널 프로토콜을 지원하는 NetApp AFF 시스템 기반 SAP HANA</block>
+  <block id="d0de7a409d27ea92210e47fbd05c24c1" category="paragraph"><block ref="2d054d2c04367ef468912c670a8d2ce8" category="inline-link-macro-rx"></block>
+권장 사례 및 파이버 채널이 포함된 AFF 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.</block>
+  <block id="84455e90e60d0b0d1deaff9373ea535c" category="inline-link-macro">TR-4290: NFS를 포함한 NetApp FAS 시스템 기반 SAP HANA</block>
+  <block id="0c69946545ea6ca466e526b7bf31c477" category="paragraph"><block ref="727fecd76120e1a50d497a6c3bd25ddb" category="inline-link-macro-rx"></block>
+권장 사례 및 NFS를 포함한 FAS 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.</block>
+  <block id="9ad1252efd02f64c4626ec8190a60492" category="inline-link-macro">TR-4384: 파이버 채널 프로토콜을 지원하는 NetApp FAS 시스템 기반 SAP HANA</block>
+  <block id="c80b89e2fe66b479a0ed46733a23a96d" category="paragraph"><block ref="c7cfc3ca5d87060bfe1001abc9ef2aa3" category="inline-link-macro-rx"></block>
+권장 사례 및 파이버 채널이 포함된 FAS 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.</block>
+  <block id="f20a40b88879c634d62a1183049bd409" category="inline-link-macro">TR-4821: IBM 전원 시스템 기반 SAP HANA 및 NFS를 사용하는 NetApp AFF 시스템</block>
+  <block id="3e1ed0fd71baabfdbc39df6d61e03e20" category="paragraph"><block ref="ded8796b2cc871b8278207edbd04b7c1" category="inline-link-macro-rx"></block>
+IBM Power Systems는 SAP HANA와 같은 데이터 집약적인 미션 크리티컬 워크로드를 위해 설계되었습니다. IBM Power Systems는 뛰어난 가상화 및 유연성, 빠른 프로비저닝, 경제적인 확장성, 가동 시간 극대화와 같은 4가지 주요 기능을 제공하여 SAP HANA 구축을 단순화하고 속도를 높입니다. AFF 제품군은 TDI(Tailored Data Center Integration) 프로젝트에서 SAP HANA 사용 인증을 받았으며 IBM Power Systems를 완벽하게 보완합니다. 이 문서에서는 AFF 제품군 및 IBM Power Systems와 함께 ONTAP를 사용하여 NAS(NFS) 스토리지를 설정하는 데 권장되는 방법을 설명합니다.</block>
+  <block id="6ae22037e85e7a2f333a4d44077ec9d8" category="inline-link-macro">TR-4646: 스토리지 복제를 통한 SAP HANA 재해 복구</block>
+  <block id="d3c06956954f03cca1c7f84d179c6cc4" category="paragraph"><block ref="bd79df69ac16e4d0f7b6d65eb71a6e51" category="inline-link-macro-rx"></block>
+이 문서에서는 SAP HANA의 재해 복구 보호 옵션에 대해 간략하게 설명합니다. 여기에는 자세한 설정 정보와 동기 및 비동기 SnapMirror 스토리지 복제를 기반으로 한 3개 사이트 재해 복구 솔루션의 사용 사례 설명이 포함됩니다. 설명된 솔루션에서는 SAP HANA 플러그인을 통해 SnapCenter를 사용하여 데이터베이스 정합성을 관리합니다.</block>
+  <block id="1fbffe17a8eff2e35f983208f5b90aef" category="inline-link-macro">TR-4711: NetApp 스토리지 시스템 및 Commvault 소프트웨어를 사용한 SAP HANA 백업 및 복구</block>
+  <block id="dc26c4f72d256e6178f1b44ac24e7aa0" category="paragraph"><block ref="87f7ce4a5fa09aab58403dad28513cb5" category="inline-link-macro-rx"></block>
+이 문서에서는 SAP HANA용 NetApp 및 Commvault 솔루션의 디자인에 대해 설명하며 Commvault IntelliSnap 스냅샷 관리 기술 및 스냅샷 기술이 포함되어 있습니다. 이 솔루션은 NetApp 스토리지와 Commvault 데이터 보호 제품군을 기반으로 합니다.</block>
+  <block id="f0e2318cd32c61c7c602d5745e21791b" category="inline-link-macro">TR-4953: Ansible을 사용한 NetApp SAP 환경 관리 통합</block>
+  <block id="6a611bd6ca7e4de2fd21142da6811f26" category="paragraph"><block ref="1cdb47bacf8817310f3298c929095e09" category="inline-link-macro-rx"></block>
+SAP LaMa(Landscape Management)를 사용하면 SAP 시스템 관리자가 전체 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 비롯한 SAP 시스템 작업을 자동화할 수 있습니다. NetApp은 SAP LaMa가 SAP LaMa Automation Studio를 통해 NetApp Snapshot 및 FlexClone과 같은 기술에 액세스할 수 있도록 다양한 Ansible 모듈을 제공합니다. 이러한 기술을 통해 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 간소화 및 가속화할 수 있습니다. 이러한 통합은 사내에서 NetApp 스토리지 솔루션을 실행하는 고객 또는 Amazon Web Services, Microsoft Azure 또는 Google Cloud Platform과 같은 퍼블릭 클라우드 공급자가 제공하는 NetApp 스토리지 서비스를 사용하는 고객이 사용할 수 있습니다. 이 문서에서는 Ansible 자동화를 사용하여 SAP 시스템 복사, 클론 복제, 업데이트 작업을 위한 NetApp 스토리지 기능을 갖춘 SAP LaMa 구성을 설명합니다.</block>
+  <block id="8133b664c0921de8f7cfeb9e67c3402e" category="inline-link-macro">TR-4929: Libelle SystemCopy를 사용하여 SAP 시스템 복사 작업 자동화</block>
+  <block id="9143872d236b7cca7533460e44b8a327" category="paragraph"><block ref="ffb1313e66756ffd9b41011c2867b2a0" category="inline-link-macro-rx"></block>
+Libelle SystemCopy는 완전히 자동화된 시스템 및 가로 복사본을 생성하는 프레임워크 기반 소프트웨어 솔루션입니다. 버튼 하나로 QA 및 테스트 시스템을 새로운 생산 데이터로 업데이트할 수 있습니다. Libelle SystemCopy는 기존의 모든 데이터베이스와 운영 체제를 지원하며 모든 플랫폼에 고유한 복사 메커니즘을 제공하지만 동시에 NetApp Snapshot 복사본 및 NetApp FlexClone 볼륨과 같은 백업/복원 절차나 스토리지 도구를 통합합니다.</block>
 </blocks>

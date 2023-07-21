@@ -50,6 +50,9 @@ link:https://www.netapp.com/es/pdf.html?item=/es/media/12398-tr-4681.pdf["TR-468
 
 == SAP HANA용 SnapCenter
 
+link:https://docs.netapp.com/us-en/netapp-solutions-sap/backup/saphana-br-scs-overview.html["TR-4614: SnapCenter를 통한 SAP HANA 백업 및 복구"]
+SnapCenter는 SAP HANA 및 기타 데이터베이스를 위한 애플리케이션 정합성 보장 데이터 보호를 위한 확장 가능한 유니파이드 플랫폼입니다. SnapCenter는 중앙 집중식 제어 및 감독을 지원하면서 사용자가 애플리케이션별 백업, 복원 및 클론 작업을 관리할 수 있는 기능을 위임합니다. 데이터베이스 및 스토리지 관리자는 SnapCenter를 사용하여 다양한 애플리케이션과 데이터베이스의 백업, 복원, 클론 복제 작업을 관리하는 단일 툴에 대해 알아보십시오.
+
 link:https://docs.netapp.com/us-en/netapp-solutions-sap/backup/amazon-fsx-overview.html["TR-4926: NetApp ONTAP용 Amazon FSx 기반 SAP HANA - SnapCenter를 통한 백업 및 복구"]
 NetApp ONTAP 및 SnapCenter용 Amazon FSx에서 SAP HANA 데이터 보호를 위한 권장 사례를 확인하십시오. 이 플레이북에서는 SnapCenter 개념, 구성 권장사항, 구성, 백업 작업, 복원 및 복구 작업을 수행할 수 있습니다.
 
