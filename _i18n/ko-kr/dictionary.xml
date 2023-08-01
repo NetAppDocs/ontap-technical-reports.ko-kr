@@ -60,7 +60,6 @@ ONTAP에서 기본적인 BGP 구성을 빠르게 구축하는 방법을 알아�
 컴팩션에 대한 절차 설명서는 에서 찾을 수 있습니다 <block ref="3acd0d263d43c56e4642c32f39a44e7d" category="inline-link-macro-rx"></block></block>
   <block id="7ad7be62d0bdc93deb35e6cb0da16cf6" category="summary">이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다</block>
   <block id="35c42caf14b9f812a74246f401f4a9a9" category="doc">애플리케이션 및 데이터베이스 기술 보고서</block>
-  <block id="e2063b7bef20a99d1924626bcc9e3aa7" category="paragraph">ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle 및 PostgreSQL에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="section-title">Microsoft SQL Server를 참조하십시오</block>
   <block id="0502e6755528910223db364699e71622" category="inline-link-macro">TR-4590: ONTAP를 사용하는 Microsoft SQL Server에 대한 모범 사례 가이드</block>
   <block id="463e4a799ee233502c3bbb0b6374c6b0" category="paragraph"><block ref="99de55c4c3e3e73145e414bc6b81b05c" category="inline-link-macro-rx"></block>
@@ -348,9 +347,6 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="01d5c6f5ce1a6fed30deb2d15c6cd55d" category="paragraph"><block ref="92224c43e8ec1baf3b9f7b0cf2e9a167" category="inline-link-macro-rx"></block>
 이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
   <block id="6d4e2f1f073dd653734779d5d0cf0f77" category="sidebar">ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를 제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.</block>
-  <block id="0abe2bf261d0e67218108321d4d12f80" category="sidebar">ONTAP를 사용하는 Microsoft SQL Server</block>
-  <block id="781ca1fc048eb6987f2bc84c0cfe89d2" category="sidebar">AFF A 시리즈 및 C-Series에서 Oracle 데이터베이스 성능</block>
-  <block id="a6a168fa8021b0302c7d52eda6a33f25" category="sidebar">AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능 가상화</block>
   <block id="9eaca569c6f5ca3388f5613da3aa008c" category="sidebar">ONTAP 기반의 Oracle 데이터베이스</block>
   <block id="f764824b813fdd72c94db78f7fb3b24b" category="sidebar">추가 애플리케이션 및 데이터베이스 기술 보고서</block>
   <block id="556eda250d1f196adc09c3afcd396b84" category="sidebar">MetroCluster 솔루션 아키텍처 및 설계</block>
@@ -435,43 +431,10 @@ SAP LaMa(Landscape Management)를 사용하면 SAP 시스템 관리자가 전체
   <block id="8133b664c0921de8f7cfeb9e67c3402e" category="inline-link-macro">TR-4929: Libelle SystemCopy를 사용하여 SAP 시스템 복사 작업 자동화</block>
   <block id="9143872d236b7cca7533460e44b8a327" category="paragraph"><block ref="ffb1313e66756ffd9b41011c2867b2a0" category="inline-link-macro-rx"></block>
 Libelle SystemCopy는 완전히 자동화된 시스템 및 가로 복사본을 생성하는 프레임워크 기반 소프트웨어 솔루션입니다. 버튼 하나로 QA 및 테스트 시스템을 새로운 생산 데이터로 업데이트할 수 있습니다. Libelle SystemCopy는 기존의 모든 데이터베이스와 운영 체제를 지원하며 모든 플랫폼에 고유한 복사 메커니즘을 제공하지만 동시에 NetApp Snapshot 복사본 및 NetApp FlexClone 볼륨과 같은 백업/복원 절차나 스토리지 도구를 통합합니다.</block>
-  <block id="6de6f1db3c6d9273da9d8e254b666753" category="paragraph">이 제품에 사용된 타사 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
-  <block id="253b40ae359ba25b56231803430c4873" category="section-title">ONTAP</block>
-  <block id="856c8958afd787f748a4a025f649154a" category="inline-link-macro">ONTAP 9.13.1 참고 사항</block>
-  <block id="b22b3b2970d843f99e7e6904bea05207" category="inline-link-macro">ONTAP 9.12.1에 대한 고지 사항</block>
-  <block id="0358f41254df2d512849db5a04b7e3d4" category="inline-link-macro">ONTAP 9.12.0 참고 사항</block>
-  <block id="28f1290102a277ef2fd452d558c74219" category="inline-link-macro">ONTAP 9.11.1에 대한 고지 사항</block>
-  <block id="57b07f14c8eb4660f94a86d29d53362d" category="inline-link-macro">ONTAP 9.10.1에 대한 고지 사항</block>
-  <block id="396712eb9c1644241047ac30619b2b3e" category="inline-link-macro">ONTAP 9.10.0에 대한 고지 사항</block>
-  <block id="1e6000d4849ef9f3e08d1d9908e9f163" category="inline-link-macro">ONTAP 9.9.1에 대한 참고 사항</block>
-  <block id="6f408b9c999245c7aa32bc9cb1a020f6" category="inline-link-macro">ONTAP 9.8에 대한 고지 사항</block>
-  <block id="04b0bd5b1b4d414fdde93f809162d36d" category="inline-link-macro">ONTAP 9.7의 알림 사항</block>
-  <block id="0c1d7dffcba488555d5eb39b8991e822" category="inline-link-macro">ONTAP 9.6 고지 사항</block>
-  <block id="a11ac6880e72412c0f54ae19bea3d191" category="inline-link-macro">ONTAP 9.5 알림</block>
-  <block id="e49c3c01b15761b5f011d0bd2a0661a3" category="inline-link-macro">ONTAP 9.4 고지 사항</block>
-  <block id="bf7dcf6467a8a03b05b2d37d31d6eccd" category="inline-link-macro">ONTAP 9.3 공지 사항</block>
-  <block id="0328352fdfda84af6968462d1a67d3a6" category="inline-link-macro">ONTAP 9.2 관련 고지 사항</block>
-  <block id="83904100c7d6fe0102e8b2b5bd8ec4bb" category="inline-link-macro">ONTAP 9.1에 대한 참고 사항</block>
-  <block id="5672f5979be77bb31dd559817c9e1e76" category="paragraph"><block ref="f7a2b1db149ed9886af0ce846dbc3e14" category="inline-link-macro-rx"></block>
-<block ref="b349c509ad858348b30db7e73307e3aa" category="inline-link-macro-rx"></block>
-<block ref="0dce234dfded58bd461541473b86e42a" category="inline-link-macro-rx"></block>
-<block ref="9760ec4df13f0afbdfec88ae16c871ae" category="inline-link-macro-rx"></block>
-<block ref="b6dab2933dfb92cf0c1355707a4aec7c" category="inline-link-macro-rx"></block>
-<block ref="1b7c80b26162b03bd0addd587f70df55" category="inline-link-macro-rx"></block>
-<block ref="14faf912aa42102a6628af4551e02583" category="inline-link-macro-rx"></block>
-<block ref="a90f36d649d3be5d386cc3563ab044fb" category="inline-link-macro-rx"></block>
-<block ref="2cd65b4a044075cfd9ad4a91f42fdff4" category="inline-link-macro-rx"></block>
-<block ref="5e764cc3fdcc19ff667796e414159bdc" category="inline-link-macro-rx"></block>
-<block ref="561451f09c7bca700ea0d7833cd9e92e" category="inline-link-macro-rx"></block>
-<block ref="d23d341a344216fbf99a91152429d49c" category="inline-link-macro-rx"></block>
-<block ref="b35e8fbd7b0369b23734510994911ec4" category="inline-link-macro-rx"></block>
-<block ref="41d4305cf7a6acb595086f123121a781" category="inline-link-macro-rx"></block>
-<block ref="ea685649fabe77da53e843fec56f72b8" category="inline-link-macro-rx"></block></block>
-  <block id="9f875be69c7685bab2118b783273f9cb" category="section-title">MCC IP를 위한 ONTAP 중재자</block>
-  <block id="9c737a80c28b60fa0a89b239e49754be" category="inline-link-macro">9.9.1 MCC IP에 대한 ONTAP 중재자를 위한 고지 사항</block>
-  <block id="fa29a7a0592293de2c9dcc278d56bc7e" category="inline-link-macro">9.8 MCC IP용 ONTAP 중재자 공지</block>
-  <block id="186313e86066c6c03d059adfc998c283" category="inline-link-macro">9.7 MCC IP에 대한 ONTAP 중재자를 위한 고지 사항</block>
-  <block id="da86bbce92dc808c91ba1376c176a12f" category="paragraph"><block ref="03dc7d738ea465fbcf752653ce5a8a9f" category="inline-link-macro-rx"></block>
-<block ref="ddd7bb6791d512b6bbd035245f183b42" category="inline-link-macro-rx"></block>
-<block ref="2f9e1ae374fcd81bbb2bbbd4546951d9" category="inline-link-macro-rx"></block></block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
+  <block id="b40ff77cb48a86ef1345e1d3bf483086" category="paragraph">ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle, PostgreSQL 및 SAP HANA에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.</block>
+  <block id="fbba95a66fd7e4b84d1367060a08fd25" category="sidebar">ONTAP 기반 Microsoft SQL Server 데이터베이스</block>
+  <block id="d4ae77cd65c244ceb4277b27553d6931" category="sidebar">ONTAP의 MySQL 데이터베이스</block>
+  <block id="10907e7ac5ab6e5235a23898a2331b31" category="sidebar">ONTAP의 PostgreSQL 데이터베이스</block>
+  <block id="58be4918f9d0ced977d0da75ca36c36f" category="sidebar">ONTAP 기반 SAP HANA</block>
 </blocks>

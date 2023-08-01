@@ -14,7 +14,7 @@ summary: 이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터
 
 
 [role="lead"]
-ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle 및 PostgreSQL에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.
+ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle, PostgreSQL 및 SAP HANA에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.
 
 
 

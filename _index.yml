@@ -5,13 +5,15 @@ indexpage:
   tiles:
   - title: 제공합니다
     links:
-    - title: ONTAP를 사용하는 Microsoft SQL Server
+    - title: ONTAP 기반 Microsoft SQL Server 데이터베이스
       url: apps-dbs.html
-    - title: AFF A 시리즈 및 C-Series에서 Oracle 데이터베이스 성능
-      url: apps-dbs.html
-    - title: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능 가상화
+    - title: ONTAP의 MySQL 데이터베이스
       url: apps-dbs.html
     - title: ONTAP 기반의 Oracle 데이터베이스
+      url: apps-dbs.html
+    - title: ONTAP의 PostgreSQL 데이터베이스
+      url: apps-dbs.html
+    - title: ONTAP 기반 SAP HANA
       url: apps-dbs.html
     - title: 추가 애플리케이션 및 데이터베이스 기술 보고서
       url: apps-dbs.html
