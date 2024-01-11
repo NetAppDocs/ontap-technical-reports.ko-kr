@@ -311,10 +311,6 @@ ONTAP에서 CAC(Common Access Card)에 저장된 공개 키를 통해 ONTAP 스�
   <block id="93b3bc1e3c197dc14688f9ee00b8bb8e" category="inline-link-macro">TR-4160: ONTAP의 보안 멀티 테넌시</block>
   <block id="8ecbdd8d6e9d57ad3f5be58c0823ac45" category="paragraph"><block ref="5fe469fe43532b17bdd7eb62280b71c3" category="inline-link-macro-rx"></block>
 설계 고려 사항 및 권장 사례를 비롯하여 ONTAP에서 스토리지 VM을 사용하여 보안 멀티 테넌시를 구현하는 방법에 대해 알아보십시오.</block>
-  <block id="8db7df66ab1d7ab5f1dc947acdb5fae4" category="section-title">로깅</block>
-  <block id="4f86fd480a3b60659d82af4d7287d57a" category="inline-link-macro">TR-4303: ONTAP에 로그인</block>
-  <block id="c83e6b39f1cca70bbfa00b39765be54d" category="paragraph"><block ref="39270507302c9a1a0cecf47a1d5be1e9" category="inline-link-macro-rx"></block>
-ONTAP에서 생성된 다양한 로그, 제공되는 기능 및 로그를 보고 액세스하는 방법을 알아봅니다.</block>
   <block id="3bacfbd563fe308a0fb610ff1388a915" category="section-title">표준</block>
   <block id="3b386de8bb010d73cc3b37f57c64bcca" category="inline-link-macro">TR-4401: PCI-DSS 4.0 및 ONTAP</block>
   <block id="ff509aae4c832c9d671ad2c3c199be87" category="paragraph"><block ref="9de31aaed92d032a38ce5211a576a07f" category="inline-link-macro-rx"></block>
@@ -482,4 +478,5 @@ NetApp AFF A-Series 및 C-Series 시스템을 사용하는 Microsoft SQL Server�
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="9678a7dcb872318bf33163b8a1ba5331" category="sidebar">ONTAP 기술 보고서</block>
 </blocks>
