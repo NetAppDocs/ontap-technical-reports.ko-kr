@@ -44,5 +44,5 @@ link:https://www.netapp.com/pdf.html?item=/media/19369-tr-4832.pdf["TR-4832: ONT
 
 == SnapMirror를 사용하여 애플리케이션 및 인프라 통합
 
-link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsrm-ontap9_1._introduction_to_srm_with_ontap.html["TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자"]
+link:link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/srm/overview.html["TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자"]
 ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 최신 제품 정보 및 권장 방법을 포함하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)에 권장되는 ONTAP 솔루션에 대해 알아보십시오.

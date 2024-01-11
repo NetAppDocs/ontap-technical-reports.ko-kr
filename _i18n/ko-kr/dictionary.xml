@@ -61,35 +61,12 @@ ONTAP에서 기본적인 BGP 구성을 빠르게 구축하는 방법을 알아�
   <block id="7ad7be62d0bdc93deb35e6cb0da16cf6" category="summary">이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다</block>
   <block id="35c42caf14b9f812a74246f401f4a9a9" category="doc">애플리케이션 및 데이터베이스 기술 보고서</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="section-title">Microsoft SQL Server를 참조하십시오</block>
-  <block id="0502e6755528910223db364699e71622" category="inline-link-macro">TR-4590: ONTAP를 사용하는 Microsoft SQL Server에 대한 모범 사례 가이드</block>
-  <block id="463e4a799ee233502c3bbb0b6374c6b0" category="paragraph"><block ref="99de55c4c3e3e73145e414bc6b81b05c" category="inline-link-macro-rx"></block>
-스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.</block>
   <block id="341a003a31c42c0cef0190e68c763b92" category="inline-link-macro">TR-4714: SnapCenter를 사용하는 Microsoft SQL Server의 모범 사례</block>
   <block id="90b44124faaed2f05284342f168bcd69" category="paragraph"><block ref="48bef8095e185c0391e2bfeabbd16700" category="inline-link-macro-rx"></block>
 SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법에 대해 자세히 알아보십시오.</block>
   <block id="62a004b95946bb97541afa471dcca73a" category="section-title">MySQL</block>
-  <block id="e30a807fdb99340178c0bc53b24ac3b2" category="inline-link-macro">ONTAP 기반 MySQL 데이터베이스</block>
-  <block id="051ec17116a6065c836cc2db0b070841" category="paragraph"><block ref="63cee4c601937a667e7d540ed75c9cbf" category="inline-link-macro-rx"></block>
-MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.</block>
   <block id="30162ed78b6c10f731411f2fc440c24f" category="section-title">오라클</block>
-  <block id="a23b0f6840eece1bcfc1a2ce047e740e" category="inline-link-macro">TR-3633: ONTAP 기반 Oracle 데이터베이스</block>
-  <block id="a41f7d9052bf4182682f619168a52269" category="paragraph"><block ref="5cbc519d39d68c3a34942c12528dc6aa" category="inline-link-macro-rx"></block>
-스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.</block>
-  <block id="42b90160721ba6196a556c6ad89fdb6d" category="inline-link-macro">TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능</block>
-  <block id="9669cfadd2c20a01f05013292717eaf0" category="paragraph"><block ref="6c6ae3741e49f449a73f7df54eba7a62" category="inline-link-macro-rx"></block>
-ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 베어 메탈 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실질적인 차이점을 모두 살펴봅니다.</block>
   <block id="34406693b9151b494d47dcd55a1757d7" category="inline-link-macro">TR-4971: AFF A-Series 및 C-Series에서 가상화된 Oracle 데이터베이스 성능</block>
-  <block id="41e330e2e21a5a25fdbd3005d3282061" category="paragraph"><block ref="4952dcbaf377c648429390f6f24c3cb5" category="inline-link-macro-rx"></block>
-ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, 파이버 채널 FC(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.</block>
-  <block id="cbdc263e8f614279db88bb4ac39bea33" category="inline-link-macro">TR-4591: Oracle 데이터 보호: 백업, 복구, 복제 및 재해 복구</block>
-  <block id="2cfcb3c52aa4da37a5ade8efb2698cb6" category="paragraph"><block ref="a34c6cbdebe7369d30197e0b49695e63" category="inline-link-macro-rx"></block>
-스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.</block>
-  <block id="591da82cedca4486269083d381f07df7" category="inline-link-macro">TR-4592: MetroCluster 기반 Oracle</block>
-  <block id="7fb0da57ce1a365cd473cb78a5c9874d" category="paragraph"><block ref="244f6bd2e8281768e78200ce9e6ed8d7" category="inline-link-macro-rx"></block>
-MetroCluster 동기식 복제 기능에서 Oracle 데이터베이스를 운영하는 데 권장되는 방법, 테스트 절차 및 기타 고려 사항에 대해 알아보십시오.</block>
-  <block id="1209bff58f1e24aef718b4733993d134" category="inline-link-macro">TR-4534: Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션</block>
-  <block id="d2c37ecb83e590a249516b3f411c1123" category="paragraph"><block ref="5144852944118f9b9f0eaa7b6f98706d" category="inline-link-macro-rx"></block>
-마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.</block>
   <block id="e26db0138fc05145ed94ee1f1cd92b64" category="inline-link-macro">TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화</block>
   <block id="6ea3c6416acaabdf419275588df7f764" category="paragraph"><block ref="0f6da34639ae3a472dc5fdf06f6c7519" category="inline-link-macro-rx"></block>
 Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.</block>
@@ -100,9 +77,6 @@ SnapMirror 비즈니스 연속성(SM-BC)과 Oracle RAC(Real Application Cluster)
   <block id="37cf945b6fa0182e1288122764b0e5c0" category="paragraph"><block ref="1285e23f10a9e18278d2c6e638032a3f" category="inline-link-macro-rx"></block>
 ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와 ONTAP 소프트웨어의 기능을 모두 최대한 활용하여 Oracle 멀티 테넌트 데이터베이스를 프로비저닝, 관리 및 보호하는 방법에 대한 솔루션 권장 사례에 대해 알아보십시오.</block>
   <block id="399bd1ee587245ecac6f39beaa99886f" category="section-title">PostgreSQL</block>
-  <block id="a35a98b9afc7144da919629a5c06a948" category="inline-link-macro">TR-4770: ONTAP에서 PostgreSQL 데이터베이스</block>
-  <block id="06dfbd657fe18ba4c823ec3a750f2fe0" category="paragraph"><block ref="e09245bca75b3cf45cd5016133d826fd" category="inline-link-macro-rx"></block>
-PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.</block>
   <block id="38d8bbc60e04ec3f712089a191e11bc0" category="summary">이 기술 보고서에서는 NetApp ONTAP의 비즈니스 연속성에 대한 개요와 권장 사례를 제공합니다</block>
   <block id="96323bdc332765b9211ff3f9ba1e5e21" category="doc">무중단 업무 운영 기술 보고서</block>
   <block id="af1ff78198ebe07ec4e7f54b33766c19" category="paragraph">NetApp은 애플리케이션 및 데이터 위치를 합리화하여 비용 대비 성능을 비용 효율적으로 개선하는 다양한 솔루션을 제공합니다. 데이터 보호, 복제 및 지속적인 가용성: ONTAP 데이터 관리는 Set-it-and-for-get-it 정책 관리로 데이터 보호를 단순화하는 동시에 MetroCluster 및 SnapMirror 비즈니스 연속성을 통해 비즈니스 연속성을 제공합니다.</block>
@@ -234,8 +208,6 @@ SnapMirror Synchronous(SM-S) 복제를 구성하는 데 권장되는 방법에 �
 복제에 ONTAP SnapMirror 기술을 사용하는 3개 데이터 센터 재해 복구 구성에 대해 알아보십시오.</block>
   <block id="84fb4414ca0766388d0fcb128ca503f2" category="section-title">SnapMirror를 사용하여 애플리케이션 및 인프라 통합</block>
   <block id="fa363beb233b27c4cdc010827133de31" category="inline-link-macro">TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
-  <block id="1f0a55b00fe1a6c8836e3a3a55d4269e" category="paragraph"><block ref="336e83eb84c6d77dadefcf86f46bb14d" category="inline-link-macro-rx"></block>
-ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 최신 제품 정보 및 권장 방법을 포함하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)에 권장되는 ONTAP 솔루션에 대해 알아보십시오.</block>
   <block id="9ef869565a4d7fd5d1234aaa1d61ab22" category="summary">이러한 기술 보고서에서는 SnapCenter with NetApp ONTAP에 대한 개요와 권장 사례를 제공합니다.</block>
   <block id="da994c44eacde8f5cafe8883779cb695" category="doc">SnapCenter 기술 보고서</block>
   <block id="87a2d2335b0146f51df29bf7aa03f72c" category="paragraph">SnapCenter은 애플리케이션 정합성이 보장되는 데이터 보호 및 클론 관리를 위한 유니파이드 플랫폼을 제공합니다. SnapCenter는 애플리케이션 통합 워크플로우를 활용해 백업, 복원, 클론 라이프사이클 관리를 단순화합니다. SnapCenter는 스토리지 기반 데이터 관리를 활용하여 성능과 가용성을 향상하고 테스트 및 개발 시간을 단축합니다.</block>
@@ -321,26 +293,15 @@ PCI DSS 4.0 표준에 따라 시스템을 검증하고 NetApp ONTAP 시스템에
   <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="inline-link-macro">VMware vSphere용 ONTAP 툴</block>
   <block id="0688ce32a57a2bf996e248aacbe6bd49" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="a3e8683995371a8fc111bdec419c54d3" category="inline-link-macro-rx"></block> 제품 설명서.</block>
   <block id="952fd691754e388c7b7ba473cf410aff" category="inline-link-macro">TR-4597: ONTAP용 VMware vSphere</block>
-  <block id="b50253aa14007552d86fdd9d1b36e939" category="paragraph"><block ref="1f119af838b672bfb4d24c9efb5e89df" category="inline-link-macro-rx"></block>
- ONTAP는 거의 20년 동안 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하면서 관리를 단순화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 구축을 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보 및 권장 사례를 비롯하여 vSphere용 ONTAP 솔루션에 대해 소개합니다.</block>
   <block id="be7078ced01754e29e7276ca5a01643f" category="inline-link-macro">TR-4400: NetApp ONTAP를 통해 VVOL(VMware vSphere 가상 볼륨)을 이동합니다</block>
-  <block id="a1873f1f39ecbc9a43ac55a7cde36eba" category="paragraph"><block ref="7f01827b62504629dd7e09834e30244a" category="inline-link-macro-rx"></block>
-ONTAP는 20년 이상 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 본 문서에서는 최신 제품 정보 및 사용 사례와 권장 사례 및 기타 정보를 비롯하여 VMware VVOL(vSphere 가상 볼륨)을 위한 ONTAP 기능을 다루며 구축 간소화 및 오류 감소를 위한 방법에 대해 설명합니다.</block>
   <block id="b5a6695eb02f52042cab8cce0f6d66bf" category="inline-link-macro">TR-4900: NetApp ONTAP를 사용하는 VMware 사이트 복구 관리자</block>
-  <block id="d27914df04970951d214a1afb786ba99" category="paragraph"><block ref="7648c06ceebcbe7d14c2674d6d8c1c1c" category="inline-link-macro-rx"></block>
-ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 최신 제품 정보 및 권장 방법을 비롯하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)을 위한 ONTAP 솔루션을 소개합니다.</block>
   <block id="1406aa071af210d31c6a2951fe66ddcc" category="inline-link-macro">ONTAP 및 vSphere 자동화 소개</block>
   <block id="3df39f30fd49044efd7eb0a5d2e9defd" category="paragraph"><block ref="6102aa7afe3360417ea8c52b1c680d4c" category="inline-link-macro-rx"></block>
 자동화는 VMware ESX의 첫 날부터 VMware 환경을 관리하는 데 있어 필수적인 요소입니다. 코드로 인프라를 구축하고 프라이빗 클라우드 운영으로 사례를 확장하는 기능은 확장, 유연성, 셀프 프로비저닝 및 효율성에 관한 문제를 해결하는 데 도움이 됩니다. 이 문서에서는 ONTAP 및 VMware vSphere 환경의 자동화를 위한 ONTAP 솔루션을 소개합니다.</block>
   <block id="777794440aa1ad0d5dfc51e1f00e6b65" category="inline-link-macro">WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안</block>
-  <block id="99ad633b114011ffc24a1aff8fe05a6f" category="paragraph"><block ref="94a3c7bfa85a246e1150f40c159e5ff2" category="inline-link-macro-rx"></block>
-이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
   <block id="a3d8d5aab8801e818f1ef65d0656ac6f" category="inline-link-macro">WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안</block>
-  <block id="01d5c6f5ce1a6fed30deb2d15c6cd55d" category="paragraph"><block ref="92224c43e8ec1baf3b9f7b0cf2e9a167" category="inline-link-macro-rx"></block>
-이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
   <block id="6d4e2f1f073dd653734779d5d0cf0f77" category="sidebar">ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를 제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.</block>
   <block id="9eaca569c6f5ca3388f5613da3aa008c" category="sidebar">ONTAP 기반의 Oracle 데이터베이스</block>
-  <block id="f764824b813fdd72c94db78f7fb3b24b" category="sidebar">추가 애플리케이션 및 데이터베이스 기술 보고서</block>
   <block id="556eda250d1f196adc09c3afcd396b84" category="sidebar">MetroCluster 솔루션 아키텍처 및 설계</block>
   <block id="4767099b22895a8101a1cba45d8cf6e9" category="sidebar">MetroCluster IP를 선택합니다</block>
   <block id="eab1124b93650078ec1e8e3092712538" category="sidebar">MetroCluster FC를 참조하십시오</block>
@@ -396,36 +357,8 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="e48dd22947ca3e3c59533cfe21966b66" category="paragraph"><block ref="ee3dd6e7b456c60745112ed79c67a7f3" category="inline-link-macro-rx"></block>
 SnapCenter는 SAP HANA 및 기타 데이터베이스를 위한 애플리케이션 정합성 보장 데이터 보호를 위한 확장 가능한 유니파이드 플랫폼입니다. SnapCenter는 중앙 집중식 제어 및 감독을 지원하면서 사용자가 애플리케이션별 백업, 복원 및 클론 작업을 관리할 수 있는 기능을 위임합니다. 데이터베이스 및 스토리지 관리자는 SnapCenter를 사용하여 다양한 애플리케이션과 데이터베이스의 백업, 복원, 클론 복제 작업을 관리하는 단일 툴에 대해 알아보십시오.</block>
   <block id="86083f3ea21c2385b4f013aae3c57858" category="section-title">SAP HANA를 참조하십시오</block>
-  <block id="c1f86b21768b0c2bda31208d2625279e" category="inline-link-macro">TR-4435: NFS를 포함한 NetApp AFF 시스템 기반 SAP HANA</block>
-  <block id="dc602b9de9712db4a40b66aea2e8f2c3" category="paragraph"><block ref="a21ac9d982ea66b5d284054ce4548ed0" category="inline-link-macro-rx"></block>
-권장 사례 및 NFS를 포함한 AFF 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.</block>
-  <block id="0db6b81db5bd35e1eef1e83e154c3cb5" category="inline-link-macro">TR-4436: 파이버 채널 프로토콜을 지원하는 NetApp AFF 시스템 기반 SAP HANA</block>
-  <block id="d0de7a409d27ea92210e47fbd05c24c1" category="paragraph"><block ref="2d054d2c04367ef468912c670a8d2ce8" category="inline-link-macro-rx"></block>
-권장 사례 및 파이버 채널이 포함된 AFF 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.</block>
-  <block id="84455e90e60d0b0d1deaff9373ea535c" category="inline-link-macro">TR-4290: NFS를 포함한 NetApp FAS 시스템 기반 SAP HANA</block>
-  <block id="0c69946545ea6ca466e526b7bf31c477" category="paragraph"><block ref="727fecd76120e1a50d497a6c3bd25ddb" category="inline-link-macro-rx"></block>
-권장 사례 및 NFS를 포함한 FAS 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.</block>
-  <block id="9ad1252efd02f64c4626ec8190a60492" category="inline-link-macro">TR-4384: 파이버 채널 프로토콜을 지원하는 NetApp FAS 시스템 기반 SAP HANA</block>
-  <block id="c80b89e2fe66b479a0ed46733a23a96d" category="paragraph"><block ref="c7cfc3ca5d87060bfe1001abc9ef2aa3" category="inline-link-macro-rx"></block>
-권장 사례 및 파이버 채널이 포함된 FAS 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.</block>
-  <block id="f20a40b88879c634d62a1183049bd409" category="inline-link-macro">TR-4821: IBM 전원 시스템 기반 SAP HANA 및 NFS를 사용하는 NetApp AFF 시스템</block>
-  <block id="3e1ed0fd71baabfdbc39df6d61e03e20" category="paragraph"><block ref="ded8796b2cc871b8278207edbd04b7c1" category="inline-link-macro-rx"></block>
-IBM Power Systems는 SAP HANA와 같은 데이터 집약적인 미션 크리티컬 워크로드를 위해 설계되었습니다. IBM Power Systems는 뛰어난 가상화 및 유연성, 빠른 프로비저닝, 경제적인 확장성, 가동 시간 극대화와 같은 4가지 주요 기능을 제공하여 SAP HANA 구축을 단순화하고 속도를 높입니다. AFF 제품군은 TDI(Tailored Data Center Integration) 프로젝트에서 SAP HANA 사용 인증을 받았으며 IBM Power Systems를 완벽하게 보완합니다. 이 문서에서는 AFF 제품군 및 IBM Power Systems와 함께 ONTAP를 사용하여 NAS(NFS) 스토리지를 설정하는 데 권장되는 방법을 설명합니다.</block>
-  <block id="6ae22037e85e7a2f333a4d44077ec9d8" category="inline-link-macro">TR-4646: 스토리지 복제를 통한 SAP HANA 재해 복구</block>
-  <block id="d3c06956954f03cca1c7f84d179c6cc4" category="paragraph"><block ref="bd79df69ac16e4d0f7b6d65eb71a6e51" category="inline-link-macro-rx"></block>
-이 문서에서는 SAP HANA의 재해 복구 보호 옵션에 대해 간략하게 설명합니다. 여기에는 자세한 설정 정보와 동기 및 비동기 SnapMirror 스토리지 복제를 기반으로 한 3개 사이트 재해 복구 솔루션의 사용 사례 설명이 포함됩니다. 설명된 솔루션에서는 SAP HANA 플러그인을 통해 SnapCenter를 사용하여 데이터베이스 정합성을 관리합니다.</block>
-  <block id="1fbffe17a8eff2e35f983208f5b90aef" category="inline-link-macro">TR-4711: NetApp 스토리지 시스템 및 Commvault 소프트웨어를 사용한 SAP HANA 백업 및 복구</block>
-  <block id="dc26c4f72d256e6178f1b44ac24e7aa0" category="paragraph"><block ref="87f7ce4a5fa09aab58403dad28513cb5" category="inline-link-macro-rx"></block>
-이 문서에서는 SAP HANA용 NetApp 및 Commvault 솔루션의 디자인에 대해 설명하며 Commvault IntelliSnap 스냅샷 관리 기술 및 스냅샷 기술이 포함되어 있습니다. 이 솔루션은 NetApp 스토리지와 Commvault 데이터 보호 제품군을 기반으로 합니다.</block>
-  <block id="f0e2318cd32c61c7c602d5745e21791b" category="inline-link-macro">TR-4953: Ansible을 사용한 NetApp SAP 환경 관리 통합</block>
-  <block id="6a611bd6ca7e4de2fd21142da6811f26" category="paragraph"><block ref="1cdb47bacf8817310f3298c929095e09" category="inline-link-macro-rx"></block>
-SAP LaMa(Landscape Management)를 사용하면 SAP 시스템 관리자가 전체 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 비롯한 SAP 시스템 작업을 자동화할 수 있습니다. NetApp은 SAP LaMa가 SAP LaMa Automation Studio를 통해 NetApp Snapshot 및 FlexClone과 같은 기술에 액세스할 수 있도록 다양한 Ansible 모듈을 제공합니다. 이러한 기술을 통해 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 간소화 및 가속화할 수 있습니다. 이러한 통합은 사내에서 NetApp 스토리지 솔루션을 실행하는 고객 또는 Amazon Web Services, Microsoft Azure 또는 Google Cloud Platform과 같은 퍼블릭 클라우드 공급자가 제공하는 NetApp 스토리지 서비스를 사용하는 고객이 사용할 수 있습니다. 이 문서에서는 Ansible 자동화를 사용하여 SAP 시스템 복사, 클론 복제, 업데이트 작업을 위한 NetApp 스토리지 기능을 갖춘 SAP LaMa 구성을 설명합니다.</block>
-  <block id="8133b664c0921de8f7cfeb9e67c3402e" category="inline-link-macro">TR-4929: Libelle SystemCopy를 사용하여 SAP 시스템 복사 작업 자동화</block>
-  <block id="9143872d236b7cca7533460e44b8a327" category="paragraph"><block ref="ffb1313e66756ffd9b41011c2867b2a0" category="inline-link-macro-rx"></block>
-Libelle SystemCopy는 완전히 자동화된 시스템 및 가로 복사본을 생성하는 프레임워크 기반 소프트웨어 솔루션입니다. 버튼 하나로 QA 및 테스트 시스템을 새로운 생산 데이터로 업데이트할 수 있습니다. Libelle SystemCopy는 기존의 모든 데이터베이스와 운영 체제를 지원하며 모든 플랫폼에 고유한 복사 메커니즘을 제공하지만 동시에 NetApp Snapshot 복사본 및 NetApp FlexClone 볼륨과 같은 백업/복원 절차나 스토리지 도구를 통합합니다.</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">통지 파일은 NetApp 소프트웨어에 사용된 타사의 저작권 및 라이센스에 대한 정보를 제공합니다.</block>
   <block id="b40ff77cb48a86ef1345e1d3bf483086" category="paragraph">ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기술을 위한 데이터 관리 및 데이터 보호의 기초입니다. 다음 기술 보고서는 Microsoft SQL Server, MySQL, Oracle, PostgreSQL 및 SAP HANA에 대한 NetApp 권장 사례 및 구현 절차에 대한 지침을 제공합니다.</block>
-  <block id="fbba95a66fd7e4b84d1367060a08fd25" category="sidebar">ONTAP 기반 Microsoft SQL Server 데이터베이스</block>
   <block id="d4ae77cd65c244ceb4277b27553d6931" category="sidebar">ONTAP의 MySQL 데이터베이스</block>
   <block id="10907e7ac5ab6e5235a23898a2331b31" category="sidebar">ONTAP의 PostgreSQL 데이터베이스</block>
   <block id="58be4918f9d0ced977d0da75ca36c36f" category="sidebar">ONTAP 기반 SAP HANA</block>
@@ -479,4 +412,53 @@ NetApp AFF A-Series 및 C-Series 시스템을 사용하는 Microsoft SQL Server�
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="9678a7dcb872318bf33163b8a1ba5331" category="sidebar">ONTAP 기술 보고서</block>
+  <block id="51d43324da11cb76e350d1d7832f1f5d" category="paragraph"><block ref="73c02c6f40f40d1bef9f5051354cdf50" category="inline-link-macro-rx"></block>
+ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 최신 제품 정보 및 권장 방법을 포함하여 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하는 VMware의 업계 최고 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)에 권장되는 ONTAP 솔루션에 대해 알아보십시오.</block>
+  <block id="9aa5016539f88d8f1972a16ce9babd34" category="paragraph">SQL Server는 Microsoft의 데이터 플랫폼의 토대로서, 인메모리 기술을 통해 업무상 중요한 성능을 제공하고 온프레미스 또는 클라우드의 모든 데이터에 대한 보다 빠른 인사이트를 제공합니다.</block>
+  <block id="9b69ac51cee72ab028bfee99876e67a5" category="inline-link-macro">ONTAP 지원 Microsoft SQL Server에 대한 모범 사례</block>
+  <block id="bb3e80567e53a62889b16f8a28330951" category="paragraph"><block ref="527e556c0f65d9b68f95a689b5242b3a" category="inline-link-macro-rx"></block>
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.</block>
+  <block id="01752505b04bc5ba6ef1dfc307d41db3" category="admonition">이 문서는 이전에 게시된 기술 보고서_TR-4590: ONTAP를 사용하여 Microsoft SQL Server에 대한 모범 사례 가이드를 대체합니다</block>
+  <block id="b8301a5618a0750aa5ab5ebd84843cb4" category="paragraph">이 문서에서는 구성 요구 사항을 설명하고 ONTAP에서 MySQL을 구축하기 위한 튜닝 및 스토리지 구성에 대한 지침을 제공합니다.</block>
+  <block id="8fe2282d597ef2dd4851aef737ac5967" category="inline-link-macro">NetApp ONTAP 기반 MySQL 데이터베이스 모범 사례</block>
+  <block id="7bd19fbc30d8f49261360781c911284a" category="paragraph"><block ref="47c03dd388e0f4b64be263f54ad24b5f" category="inline-link-macro-rx"></block>
+MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.</block>
+  <block id="7bbcda330178e017d30732686ba60cb8" category="admonition">이 문서는 이전에 게시된 기술 보고서 _TR-4722: NetApp ONTAP 모범 사례에 기반한 MySQL 데이터베이스를 대체합니다</block>
+  <block id="528b35962f1679204260ddef6800eece" category="paragraph">ONTAP는 Oracle 데이터베이스를 위해 설계되었습니다. 지난 수십 년 동안 ONTAP은 관계형 데이터베이스 I/O의 고유한 요구사항에 맞게 최적화되었으며, Oracle 데이터베이스의 필요에 따라 여러 ONTAP 기능이 특별히 개발되었으며, 심지어 Oracle Inc. 자체의 요청도 있었습니다.</block>
+  <block id="a3b05f83bbfee49b66505969e477cbe1" category="paragraph"><block ref="30e7d832d52a563e9b30c621ab684820" category="inline-link-macro-rx"></block>
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link-macro">ONTAP을 사용한 Oracle 데이터 보호</block>
+  <block id="7a5adbc575db65bc9ae1a4ce77988bcf" category="paragraph"><block ref="adf9ac111f5363156456a3b0381301b7" category="inline-link-macro-rx"></block>
+스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.</block>
+  <block id="00783c075f877e6e69c64079296967ed" category="inline-link-macro">ONTAP을 사용한 Oracle 재해 복구</block>
+  <block id="b093f406bd8f2e9d2522b1b7e0018877" category="paragraph"><block ref="9ef14a83b083a4fd127511b5f3f8fa91" category="inline-link-macro-rx"></block>
+MetroCluster 및 SnapMirror 비즈니스 연속성에서 Oracle 데이터베이스 운영을 위한 권장 사례, 테스트 절차 및 기타 고려 사항에 관해 알아보십시오.</block>
+  <block id="c37c1629ee55e6d553c16bbab86adbde" category="inline-link-macro">Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션</block>
+  <block id="8553ace3da488a0677a7e85102fb4f4f" category="paragraph"><block ref="54a095218d238127515ece6155a02c41" category="inline-link-macro-rx"></block>
+마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.</block>
+  <block id="e4f5be46ae4ba14b76a89bda7881372b" category="admonition">위에 링크된 문서는 이전에 게시된 기술 보고서를 대체합니다_TR-3633: ONTAP 기반 Oracle 데이터베이스, TR-4591: Oracle 데이터 보호: 백업, 복구, 복제, TR-4592: MetroCluster 기반 Oracle, TR-4534: Oracle 데이터베이스를 NetApp 스토리지 시스템으로 마이그레이션 _</block>
+  <block id="e9fdc3c5ca7c79c691c7346ca380acc3" category="inline-link-macro">TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스 성능 사용</block>
+  <block id="1618301be2b0df44a706d7f377805004" category="paragraph"><block ref="1f934d5f57a5250d03419c74843c6682" category="inline-link-macro-rx"></block>
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 베어 메탈 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실질적인 차이점을 모두 살펴봅니다.</block>
+  <block id="e88f5baa8d002228558bbb68f54af4a1" category="paragraph"><block ref="4952dcbaf377c648429390f6f24c3cb5" category="inline-link-macro-rx"></block>
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.</block>
+  <block id="69b19eb816b6aa3a4cf6ced850ae07c0" category="paragraph">PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. NetApp ONTAP는 PostgreSQL 데이터베이스를 실행할 때 탁월한 선택으로 신뢰성, 고성능 및 효율적인 데이터 관리 기능을 제공합니다.</block>
+  <block id="23c3aa00d9e3e310482ad2f6bf882d8d" category="inline-link-macro">ONTAP 모범 사례에 기반한 PostgreSQL 데이터베이스</block>
+  <block id="7a683ff5651b05979e1f4d485a8c2ea2" category="paragraph"><block ref="1b3f5db610dfbb814d0074c80a2fc154" category="inline-link-macro-rx"></block>
+PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.</block>
+  <block id="a94a42eca1830870728b000728f0404b" category="admonition">이 문서는 ONTAP 모범 사례 기반의 이전에 게시된 기술 보고서 TR-4770: PostgreSQL 데이터베이스를 대체합니다.</block>
+  <block id="2c1b27a986b5e37a810d61f72b23ee4b" category="paragraph">SAP 솔루션의 구성, 관리 및 자동화에 대한 Best Practice는 NetApp SAP 솔루션 페이지에서 확인할 수 있습니다.</block>
+  <block id="79e3a796ebb97492e0ca65b735e63753" category="inline-link-macro">ONTAP 기반 SAP HANA 데이터베이스 솔루션</block>
+  <block id="ada0578499f1a7909dee7f18bbd44352" category="paragraph"><block ref="ada0578499f1a7909dee7f18bbd44352" category="inline-link-macro-rx"></block></block>
+  <block id="b95930318a2f91ec4d45f0fd7e0d3780" category="paragraph"><block ref="55ea95c307f7d48d1b66f99b3d58fd2c" category="inline-link-macro-rx"></block>
+ ONTAP는 거의 20년 동안 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하면서 관리를 단순화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 구축을 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보 및 권장 사례를 비롯하여 vSphere용 ONTAP 솔루션에 대해 소개합니다.</block>
+  <block id="f687545e7021e47ad2ad47b77c6a77c0" category="paragraph"><block ref="7b22df97815eb5c18e8311555800e216" category="inline-link-macro-rx"></block>
+ONTAP는 20년 이상 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 본 문서에서는 최신 제품 정보 및 사용 사례와 권장 사례 및 기타 정보를 비롯하여 VMware VVOL(vSphere 가상 볼륨)을 위한 ONTAP 기능을 다루며 구축 간소화 및 오류 감소를 위한 방법에 대해 설명합니다.</block>
+  <block id="855f561053661f6b6c149d7f4efb3ccd" category="paragraph"><block ref="ed605e08075d0f81fac176559934ed0d" category="inline-link-macro-rx"></block>
+ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 VMware의 업계 최고 수준의 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)을 위한 ONTAP 솔루션을 소개합니다. 최신 제품 정보와 권장 사례를 통해 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화합니다.</block>
+  <block id="2c18550d81a29bce4177077d36bb753f" category="paragraph"><block ref="bdbecb1d49bff31e06c4e311d3cda21d" category="inline-link-macro-rx"></block>
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
+  <block id="c1ae4f225c294477261f42a0dd304f82" category="paragraph"><block ref="1613985e7ad5ae2de87c7552845ae65e" category="inline-link-macro-rx"></block>
+이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
+  <block id="a440b0e78204c6f9b29a7d388e209033" category="sidebar">ONTAP 기반 Microsoft SQL Server</block>
 </blocks>

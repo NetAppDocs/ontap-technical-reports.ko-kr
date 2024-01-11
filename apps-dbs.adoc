@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
+keywords: Databases, Applications, Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
 permalink: apps-dbs.html 
 summary: 이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다 
 ---
@@ -20,11 +20,16 @@ ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기
 
 == Microsoft SQL Server를 참조하십시오
 
+SQL Server는 Microsoft의 데이터 플랫폼의 토대로서, 인메모리 기술을 통해 업무상 중요한 성능을 제공하고 온프레미스 또는 클라우드의 모든 데이터에 대한 보다 빠른 인사이트를 제공합니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/mssql/overview.html["ONTAP 지원 Microsoft SQL Server에 대한 모범 사례"]
+스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.
+
+
+NOTE: 이 문서는 이전에 게시된 기술 보고서_TR-4590: ONTAP를 사용하여 Microsoft SQL Server에 대한 모범 사례 가이드를 대체합니다
+
 link:https://www.netapp.com/pdf.html?item=/media/88704-tr-4976-virtualized-microsoft-sql-server-performance-on-netapp-aff-a-series-and-c-series.pdf["TR-4976: NetApp AFF A-Series 및 C-Series 시스템에서 가상화된 Microsoft SQL Server의 성능"^]
 NetApp AFF A-Series 및 C-Series 시스템을 사용하는 Microsoft SQL Server의 성능 특성과 워크로드에 따라 올바른 시스템을 선택하는 방법에 대해 알아보십시오.
-
-link:https://www.netapp.com/pdf.html?item=/media/8585-tr4590.pdf["TR-4590: ONTAP를 사용하는 Microsoft SQL Server에 대한 모범 사례 가이드"^]
-스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.
 
 link:https://www.netapp.com/pdf.html?item=/media/12400-tr4714.pdf["TR-4714: SnapCenter를 사용하는 Microsoft SQL Server의 모범 사례"^]
 SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법에 대해 자세히 알아보십시오.
@@ -33,30 +38,40 @@ SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토�
 
 == MySQL
 
-link:https://www.netapp.com/pdf.html?item=/media/16423-tr-4722pdf.pdf["ONTAP 기반 MySQL 데이터베이스"^]
+이 문서에서는 구성 요구 사항을 설명하고 ONTAP에서 MySQL을 구축하기 위한 튜닝 및 스토리지 구성에 대한 지침을 제공합니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/mysql/overview.html["NetApp ONTAP 기반 MySQL 데이터베이스 모범 사례"]
 MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.
+
+
+NOTE: 이 문서는 이전에 게시된 기술 보고서 _TR-4722: NetApp ONTAP 모범 사례에 기반한 MySQL 데이터베이스를 대체합니다
 
 
 
 == 오라클
 
-link:https://www.netapp.com/pdf.html?item=/media/8744-tr3633pdf.pdf["TR-3633: ONTAP 기반 Oracle 데이터베이스"^]
+ONTAP는 Oracle 데이터베이스를 위해 설계되었습니다. 지난 수십 년 동안 ONTAP은 관계형 데이터베이스 I/O의 고유한 요구사항에 맞게 최적화되었으며, Oracle 데이터베이스의 필요에 따라 여러 ONTAP 기능이 특별히 개발되었으며, 심지어 Oracle Inc. 자체의 요청도 있었습니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/overview.html["ONTAP 기반의 Oracle 데이터베이스"]
 스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.
 
-link:https://www.netapp.com/pdf.html?item=/media/85630-tr-4969.pdf["TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스의 성능"^]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/dp/oracle-data-protection-introduction.html["ONTAP을 사용한 Oracle 데이터 보호"]
+스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/dr/oracle-dr-overview.html["ONTAP을 사용한 Oracle 재해 복구"]
+MetroCluster 및 SnapMirror 비즈니스 연속성에서 Oracle 데이터베이스 운영을 위한 권장 사례, 테스트 절차 및 기타 고려 사항에 관해 알아보십시오.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/migration/oracle-migration-overview.html["Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션"]
+마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.
+
+
+NOTE: 위에 링크된 문서는 이전에 게시된 기술 보고서를 대체합니다_TR-3633: ONTAP 기반 Oracle 데이터베이스, TR-4591: Oracle 데이터 보호: 백업, 복구, 복제, TR-4592: MetroCluster 기반 Oracle, TR-4534: Oracle 데이터베이스를 NetApp 스토리지 시스템으로 마이그레이션 _
+
+link:https://www.netapp.com/pdf.html?item=/media/85630-tr-4969.pdf["TR-4969: AFF A-Series 및 C-Series에서 Oracle 데이터베이스 성능 사용"^]
 ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 베어 메탈 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실질적인 차이점을 모두 살펴봅니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/85629-tr-4971.pdf["TR-4971: AFF A-Series 및 C-Series에서 가상화된 Oracle 데이터베이스 성능"^]
-ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, 파이버 채널 FC(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.
-
-link:https://www.netapp.com/pdf.html?item=/media/19666-tr-4591.pdf["TR-4591: Oracle 데이터 보호: 백업, 복구, 복제 및 재해 복구"^]
-스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.
-
-link:https://www.netapp.com/pdf.html?item=/media/8583-tr4592.pdf["TR-4592: MetroCluster 기반 Oracle"^]
-MetroCluster 동기식 복제 기능에서 Oracle 데이터베이스를 운영하는 데 권장되는 방법, 테스트 절차 및 기타 고려 사항에 대해 알아보십시오.
-
-link:https://www.netapp.com/pdf.html?item=/media/19750-tr-4534.pdf["TR-4534: Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션"^]
-마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.
+ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토리지 어레이에서 LUN 가져오기 등의 기본 기능을 갖춘 강력한 데이터 관리 플랫폼입니다. 최대 24개의 노드를 함께 클러스터링할 수 있으며 NFS(Network File System), SMB(Server Message Block), iSCSI, FC(Fibre Channel) 및 NVMe(Nonvolatile Memory Express) 프로토콜을 통해 데이터를 동시에 제공할 수 있습니다. 또한 Snapshot 기술은 수만 건의 온라인 백업과 완전하게 작동하는 데이터베이스 클론을 생성하기 위한 기반입니다. ONTAP의 풍부한 기능 세트 외에 데이터베이스 규모, 성능 요구사항, 데이터 보호 요구사항 등 다양한 사용자 요구사항이 있습니다. A-Series와 C-Series를 비롯한 AFF 스토리지 시스템을 사용한 가상 데이터베이스 성능에 대해 알아보고 두 AFF 옵션 간의 최대 성능과 실제 차이점을 살펴봅니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/9138-tr4695.pdf["TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화"^]
 Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.
@@ -71,51 +86,18 @@ ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와
 
 == PostgreSQL
 
-link:https://www.netapp.com/pdf.html?item=/media/17140-tr4770.pdf["TR-4770: ONTAP에서 PostgreSQL 데이터베이스"^]
+PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. NetApp ONTAP는 PostgreSQL 데이터베이스를 실행할 때 탁월한 선택으로 신뢰성, 고성능 및 효율적인 데이터 관리 기능을 제공합니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/postgres/overview.html["ONTAP 모범 사례에 기반한 PostgreSQL 데이터베이스"]
 PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.
+
+
+NOTE: 이 문서는 ONTAP 모범 사례 기반의 이전에 게시된 기술 보고서 TR-4770: PostgreSQL 데이터베이스를 대체합니다.
 
 
 
 == SAP HANA를 참조하십시오
 
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/bp/saphana_aff_nfs_introduction.html["TR-4435: NFS를 포함한 NetApp AFF 시스템 기반 SAP HANA"]
-권장 사례 및 NFS를 포함한 AFF 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.
+SAP 솔루션의 구성, 관리 및 자동화에 대한 Best Practice는 NetApp SAP 솔루션 페이지에서 확인할 수 있습니다.
 
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/bp/saphana_aff_fc_introduction.html["TR-4436: 파이버 채널 프로토콜을 지원하는 NetApp AFF 시스템 기반 SAP HANA"]
-권장 사례 및 파이버 채널이 포함된 AFF 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/bp/saphana-fas-nfs_introduction.html["TR-4290: NFS를 포함한 NetApp FAS 시스템 기반 SAP HANA"]
-권장 사례 및 NFS를 포함한 FAS 시스템에서 SAP HANA를 운영할 때의 기타 고려 사항에 대해 알아보십시오.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/bp/saphana_fas_fc_introduction.html["TR-4384: 파이버 채널 프로토콜을 지원하는 NetApp FAS 시스템 기반 SAP HANA"]
-권장 사례 및 파이버 채널이 포함된 FAS 시스템에서 SAP HANA를 운영할 때 고려해야 할 기타 사항에 대해 알아보십시오.
-
-link:https://www.netapp.com/pdf.html?item=/media/19887-TR-4821.pdf["TR-4821: IBM 전원 시스템 기반 SAP HANA 및 NFS를 사용하는 NetApp AFF 시스템"^]
-IBM Power Systems는 SAP HANA와 같은 데이터 집약적인 미션 크리티컬 워크로드를 위해 설계되었습니다. IBM Power Systems는 뛰어난 가상화 및 유연성, 빠른 프로비저닝, 경제적인 확장성, 가동 시간 극대화와 같은 4가지 주요 기능을 제공하여 SAP HANA 구축을 단순화하고 속도를 높입니다. AFF 제품군은 TDI(Tailored Data Center Integration) 프로젝트에서 SAP HANA 사용 인증을 받았으며 IBM Power Systems를 완벽하게 보완합니다. 이 문서에서는 AFF 제품군 및 IBM Power Systems와 함께 ONTAP를 사용하여 NAS(NFS) 스토리지를 설정하는 데 권장되는 방법을 설명합니다.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/backup/saphana-br-scs-overview.html["TR-4614: SnapCenter를 통한 SAP HANA 백업 및 복구"]
-SnapCenter는 SAP HANA 및 기타 데이터베이스를 위한 애플리케이션 정합성 보장 데이터 보호를 위한 확장 가능한 유니파이드 플랫폼입니다. SnapCenter는 중앙 집중식 제어 및 감독을 지원하면서 사용자가 애플리케이션별 백업, 복원 및 클론 작업을 관리할 수 있는 기능을 위임합니다. 데이터베이스 및 스토리지 관리자는 SnapCenter를 사용하여 다양한 애플리케이션과 데이터베이스의 백업, 복원, 클론 복제 작업을 관리하는 단일 툴에 대해 알아보십시오.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/backup/amazon-fsx-overview.html["TR-4926: NetApp ONTAP용 Amazon FSx 기반 SAP HANA - SnapCenter를 통한 백업 및 복구"]
-NetApp ONTAP 및 SnapCenter용 Amazon FSx에서 SAP HANA 데이터 보호를 위한 권장 사례를 확인하십시오. 이 플레이북에서는 SnapCenter 개념, 구성 권장사항, 구성, 백업 작업, 복원 및 복구 작업을 수행할 수 있습니다.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/lifecycle/sc-copy-clone-introduction.html["TR-4667: SnapCenter를 사용하여 SAP HANA 시스템 복사 및 클론 작업 자동화"]
-SnapCenter 스토리지 클론 복제와 사전 클론 복제 및 사후 클론 복제 작업을 유연하게 정의하는 옵션을 통해 SAP Basis 관리자는 SAP 시스템 복사, 클론 복제 또는 업데이트 작업을 가속화 및 자동화할 수 있습니다. 지금 알아보기 운영 스토리지 또는 2차 스토리지에서 SnapCenter 스냅샷 백업을 선택하면 논리적 손상, 재해 복구 테스트 또는 SAP QA 시스템 업데이트 등 가장 중요한 사용 사례를 해결할 수 있습니다.
-
-link:https://www.netapp.com/pdf.html?item=/media/17030-tr4719.pdf["TR-4719: SnapCenter를 통해 SAP HANA 시스템 복제 백업 및 복구"^]
-SAP HANA 시스템 복제 환경에서 SnapCenter 기술과 SAP HANA 플러그인을 사용하여 백업 및 복구를 수행하는 방법에 대해 알아보십시오.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/lifecycle/sc-copy-clone-introduction.html["TR-4667: SnapCenter를 사용하여 SAP HANA 시스템 복사 및 클론 작업 자동화"]
-스토리지 계층에서 애플리케이션 정합성이 보장된 NetApp 스냅샷 백업을 생성하는 기능은 시스템 복사본 및 시스템 클론 복제 작업을 위한 기반입니다. 스토리지 기반 스냅샷 백업은 SAP HANA용 NetApp SnapCenter 플러그인과 SAP HANA 데이터베이스에서 제공하는 인터페이스를 사용하여 생성됩니다. SnapCenter는 SAP HANA 백업 카탈로그에 Snapshot 백업을 등록하여 복원 및 복구뿐만 아니라 클론 복제 작업에 백업을 사용할 수 있습니다.
-
-link:https://www.netapp.com/pdf.html?item=/media/8584-tr4646pdf.pdf["TR-4646: 스토리지 복제를 통한 SAP HANA 재해 복구"^]
-이 문서에서는 SAP HANA의 재해 복구 보호 옵션에 대해 간략하게 설명합니다. 여기에는 자세한 설정 정보와 동기 및 비동기 SnapMirror 스토리지 복제를 기반으로 한 3개 사이트 재해 복구 솔루션의 사용 사례 설명이 포함됩니다. 설명된 솔루션에서는 SAP HANA 플러그인을 통해 SnapCenter를 사용하여 데이터베이스 정합성을 관리합니다.
-
-link:https://www.netapp.com/pdf.html?item=/media/17050-tr4711pdf.pdf["TR-4711: NetApp 스토리지 시스템 및 Commvault 소프트웨어를 사용한 SAP HANA 백업 및 복구"^]
-이 문서에서는 SAP HANA용 NetApp 및 Commvault 솔루션의 디자인에 대해 설명하며 Commvault IntelliSnap 스냅샷 관리 기술 및 스냅샷 기술이 포함되어 있습니다. 이 솔루션은 NetApp 스토리지와 Commvault 데이터 보호 제품군을 기반으로 합니다.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/lifecycle/lama-ansible-introduction.html["TR-4953: Ansible을 사용한 NetApp SAP 환경 관리 통합"]
-SAP LaMa(Landscape Management)를 사용하면 SAP 시스템 관리자가 전체 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 비롯한 SAP 시스템 작업을 자동화할 수 있습니다. NetApp은 SAP LaMa가 SAP LaMa Automation Studio를 통해 NetApp Snapshot 및 FlexClone과 같은 기술에 액세스할 수 있도록 다양한 Ansible 모듈을 제공합니다. 이러한 기술을 통해 SAP 시스템의 클론 복제, 복사 및 업데이트 작업을 간소화 및 가속화할 수 있습니다. 이러한 통합은 사내에서 NetApp 스토리지 솔루션을 실행하는 고객 또는 Amazon Web Services, Microsoft Azure 또는 Google Cloud Platform과 같은 퍼블릭 클라우드 공급자가 제공하는 NetApp 스토리지 서비스를 사용하는 고객이 사용할 수 있습니다. 이 문서에서는 Ansible 자동화를 사용하여 SAP 시스템 복사, 클론 복제, 업데이트 작업을 위한 NetApp 스토리지 기능을 갖춘 SAP LaMa 구성을 설명합니다.
-
-link:https://docs.netapp.com/us-en/netapp-solutions-sap/lifecycle/libelle-sc-overview.html["TR-4929: Libelle SystemCopy를 사용하여 SAP 시스템 복사 작업 자동화"]
-Libelle SystemCopy는 완전히 자동화된 시스템 및 가로 복사본을 생성하는 프레임워크 기반 소프트웨어 솔루션입니다. 버튼 하나로 QA 및 테스트 시스템을 새로운 생산 데이터로 업데이트할 수 있습니다. Libelle SystemCopy는 기존의 모든 데이터베이스와 운영 체제를 지원하며 모든 플랫폼에 고유한 복사 메커니즘을 제공하지만 동시에 NetApp Snapshot 복사본 및 NetApp FlexClone 볼륨과 같은 백업/복원 절차나 스토리지 도구를 통합합니다.
+link:https://docs.netapp.com/us-en/netapp-solutions-sap/["ONTAP 기반 SAP HANA 데이터베이스 솔루션"]

@@ -5,18 +5,16 @@ indexpage:
   tiles:
   - title: 제공합니다
     links:
-    - title: ONTAP 기반 Microsoft SQL Server 데이터베이스
-      url: apps-dbs.html
+    - title: ONTAP 기반 Microsoft SQL Server
+      url: apps-dbs.html#microsoft-sql-server
     - title: ONTAP의 MySQL 데이터베이스
-      url: apps-dbs.html
+      url: apps-dbs.html#mysql
     - title: ONTAP 기반의 Oracle 데이터베이스
-      url: apps-dbs.html
+      url: apps-dbs.html#oracle
     - title: ONTAP의 PostgreSQL 데이터베이스
-      url: apps-dbs.html
+      url: apps-dbs.html#postgresql
     - title: ONTAP 기반 SAP HANA
-      url: apps-dbs.html
-    - title: 추가 애플리케이션 및 데이터베이스 기술 보고서
-      url: apps-dbs.html
+      url: apps-dbs.html#sap-hana
   - title: 비즈니스 연속성
     links:
     - title: SnapMirror 비즈니스 연속성(SM-BC)
