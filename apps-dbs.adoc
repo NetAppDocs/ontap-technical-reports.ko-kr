@@ -55,7 +55,7 @@ ONTAP는 Oracle 데이터베이스를 위해 설계되었습니다. 지난 수�
 link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html["ONTAP 기반의 Oracle 데이터베이스"]
 스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-introduction.html["ONTAP을 사용한 Oracle 데이터 보호"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-overview.html["ONTAP을 사용한 Oracle 데이터 보호"]
 스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.
 
 link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dr-overview.html["ONTAP을 사용한 Oracle 재해 복구"]

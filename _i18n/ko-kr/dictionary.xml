@@ -443,8 +443,6 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
 MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.</block>
   <block id="f5c54c33c88e0585ee80e87ca3197073" category="paragraph"><block ref="4342e369cb6f1d964722ca0d02f1386e" category="inline-link-macro-rx"></block>
 스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.</block>
-  <block id="d9aed574544bc03e259a4405706be41b" category="paragraph"><block ref="c655069b4f1dd03de49e67de429d75a7" category="inline-link-macro-rx"></block>
-스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.</block>
   <block id="7f682b39f7484c77db73063e07feb42c" category="paragraph"><block ref="a2a9fdf9b575841ff3ebbf6a46a0d6a8" category="inline-link-macro-rx"></block>
 MetroCluster 및 SnapMirror 비즈니스 연속성에서 Oracle 데이터베이스 운영을 위한 권장 사례, 테스트 절차 및 기타 고려 사항에 관해 알아보십시오.</block>
   <block id="217012d66e394711c10af45660913535" category="paragraph"><block ref="219a1452b62030a0afffbbfaf92a0a13" category="inline-link-macro-rx"></block>
@@ -461,4 +459,6 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
 이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
   <block id="b02eab33effe45ad95bb024ee01bf111" category="paragraph"><block ref="2d9c6af5124ecdcd73f23abea0e29951" category="inline-link-macro-rx"></block>
 이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.</block>
+  <block id="e74dea5ebe0bf602183d15a978202e4a" category="paragraph"><block ref="ccbfbdd26305051b6ddb45fe28dfc4cd" category="inline-link-macro-rx"></block>
+스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.</block>
 </blocks>
