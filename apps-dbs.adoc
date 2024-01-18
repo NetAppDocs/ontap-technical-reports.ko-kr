@@ -22,7 +22,7 @@ ONTAP은 많은 엔터프라이즈 애플리케이션 및 데이터베이스 기
 
 SQL Server는 Microsoft의 데이터 플랫폼의 토대로서, 인메모리 기술을 통해 업무상 중요한 성능을 제공하고 온프레미스 또는 클라우드의 모든 데이터에 대한 보다 빠른 인사이트를 제공합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/mssql/overview.html["ONTAP 지원 Microsoft SQL Server에 대한 모범 사례"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/mssql/mssql-overview.html["ONTAP 지원 Microsoft SQL Server에 대한 모범 사례"]
 스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Microsoft SQL Server를 성공적으로 구축하는 방법을 알아보십시오.
 
 
@@ -40,7 +40,7 @@ SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토�
 
 이 문서에서는 구성 요구 사항을 설명하고 ONTAP에서 MySQL을 구축하기 위한 튜닝 및 스토리지 구성에 대한 지침을 제공합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/mysql/overview.html["NetApp ONTAP 기반 MySQL 데이터베이스 모범 사례"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/mysql/mysql-overview.html["NetApp ONTAP 기반 MySQL 데이터베이스 모범 사례"]
 MySQL 및 MariaDB 및 Percona 등의 변종은 많은 엔터프라이즈 애플리케이션에 널리 사용됩니다. 이러한 애플리케이션은 글로벌 소셜 네트워킹 사이트, 대규모 전자 상거래 시스템, 수천 개의 데이터베이스 인스턴스를 포함하는 SMB 호스팅 시스템에 이르기까지 다양합니다. ONTAP에서 MySQL을 배포하기 위한 구성 요구 사항 및 튜닝 및 스토리지 구성에 대한 지침을 알아보십시오.
 
 
@@ -52,16 +52,16 @@ NOTE: 이 문서는 이전에 게시된 기술 보고서 _TR-4722: NetApp ONTAP 
 
 ONTAP는 Oracle 데이터베이스를 위해 설계되었습니다. 지난 수십 년 동안 ONTAP은 관계형 데이터베이스 I/O의 고유한 요구사항에 맞게 최적화되었으며, Oracle 데이터베이스의 필요에 따라 여러 ONTAP 기능이 특별히 개발되었으며, 심지어 Oracle Inc. 자체의 요청도 있었습니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/overview.html["ONTAP 기반의 Oracle 데이터베이스"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-overview.html["ONTAP 기반의 Oracle 데이터베이스"]
 스토리지 관리자와 데이터베이스 관리자가 ONTAP 스토리지에 Oracle을 성공적으로 구축할 수 있도록 지원하는 권장 사례에 대해 알아보십시오.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/dp/oracle-data-protection-introduction.html["ONTAP을 사용한 Oracle 데이터 보호"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-introduction.html["ONTAP을 사용한 Oracle 데이터 보호"]
 스토리지 관리자 및 데이터베이스 관리자가 ONTAP 스토리지에서 Oracle에 대한 재해 복구를 성공적으로 백업, 복구, 복제 및 제공할 수 있도록 지원하는 권장 방법에 대해 알아보십시오.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/dr/oracle-dr-overview.html["ONTAP을 사용한 Oracle 재해 복구"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dr-overview.html["ONTAP을 사용한 Oracle 재해 복구"]
 MetroCluster 및 SnapMirror 비즈니스 연속성에서 Oracle 데이터베이스 운영을 위한 권장 사례, 테스트 절차 및 기타 고려 사항에 관해 알아보십시오.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/migration/oracle-migration-overview.html["Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-migration-overview.html["Oracle 데이터베이스를 ONTAP 스토리지 시스템으로 마이그레이션"]
 마이그레이션 전략 계획의 전반적인 고려 사항, 데이터 이동이 이루어지는 세 가지 수준, 사용 가능한 여러 가지 절차에 대해 자세히 알아보십시오.
 
 
@@ -88,7 +88,7 @@ ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와
 
 PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. NetApp ONTAP는 PostgreSQL 데이터베이스를 실행할 때 탁월한 선택으로 신뢰성, 고성능 및 효율적인 데이터 관리 기능을 제공합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/postgres/overview.html["ONTAP 모범 사례에 기반한 PostgreSQL 데이터베이스"]
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/postgres/postgres-overview.html["ONTAP 모범 사례에 기반한 PostgreSQL 데이터베이스"]
 PostgreSQL에는 PostgreSQL, PostgreSQL Plus 및 EDB Postgres Advanced Server(EPAS)가 포함된 변종이 함께 제공됩니다. PostgreSQL은 일반적으로 다중 계층 애플리케이션을 위한 백엔드 데이터베이스로 구축됩니다. 일반적인 미들웨어 패키지(PHP, Java, Python, Tcl/Tk, ODBC, 또한 JDBC는 오픈 소스 데이터베이스 관리 시스템에서 널리 사용되고 있습니다. ONTAP에서 PostgreSQL을 구축하기 위한 구성 요구 사항과 튜닝 및 스토리지 구성에 대한 지침을 알아봅니다.
 
 
