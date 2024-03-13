@@ -57,6 +57,13 @@ link:https://www.netapp.com/pdf.html?item=/media/16886-tr-4160.pdf["TR-4160: ONT
 
 
 
+== 로깅
+
+link:https://www.netapp.com/pdf.html?item=/media/103610-tr-4303i-0514-logging-in-clustered-dot.pdf["TR-4303: ONTAP에 로그인"^]
+ONTAP에서 생성된 다양한 로그, 제공되는 기능 및 로그를 보고 액세스하는 방법을 알아봅니다.
+
+
+
 == 표준
 
 link:https://www.netapp.com/pdf.html?item=/media/17180-tr4401.pdf["TR-4401: PCI-DSS 4.0 및 ONTAP"^]
