@@ -35,3 +35,6 @@ link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-tools.h
 
 link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-snapcenter.html["WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안"]
 이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
+
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html["TR-4568: Windows Server에 대한 NetApp 배포 지침 및 스토리지 모범 사례"]
+Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가상 데스크톱 인프라, 액세스 보호, 정보 보호, 웹 서비스, 응용 프로그램 플랫폼 인프라 등. 이 문서에서는 Microsoft Windows를 중심으로 배포를 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보와 권장 사례를 비롯하여 Hyper-V 가상화 기술에 특히 중점을 두고 있습니다.

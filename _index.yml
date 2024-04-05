@@ -121,5 +121,7 @@ indexpage:
       url: virtualization.html
     - title: ONTAP를 사용하는 VMware 사이트 복구 관리자
       url: virtualization.html
+    - title: Microsoft Windows Server(Hyper-V)
+      url: virtualization.html
     - title: 추가 가상화 기술 보고서
       url: virtualization.html
