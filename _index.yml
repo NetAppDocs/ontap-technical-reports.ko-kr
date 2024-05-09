@@ -117,6 +117,8 @@ indexpage:
     links:
     - title: ONTAP용 VMware vSphere
       url: virtualization.html
+    - title: VMware vSphere용 ONTAP 툴에 대한 보안 강화 가이드
+      url: virtualization.html
     - title: ONTAP을 사용하는 VMware vSphere 가상 볼륨(VVol)
       url: virtualization.html
     - title: ONTAP를 사용하는 VMware 사이트 복구 관리자
