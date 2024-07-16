@@ -84,7 +84,7 @@ indexpage:
     - title: 랜섬웨어용 NetApp 솔루션
       url: security.html
     - title: NetApp와 제로 트러스트
-      url: security.html
+      url: https://docs.netapp.com/us-en/ontap/zero-trust/zero-trust-overview.html
     - title: NetApp SnapLock를 사용한 규정 준수 WORM 스토리지
       url: security.html
     - title: 인증(SSH, MFA)

@@ -35,8 +35,7 @@ link:https://www.netapp.com/pdf.html?item=/media/6158-tr4526.pdf["TR-4526: NetAp
 
 == 제로 트러스트
 
-link:https://www.netapp.com/pdf.html?item=/media/19756-tr-4829.pdf["TR-4829: NetApp and Zero Trust"^]
-제로 트러스트는 일반적으로 마이크로 코어 및 주변 장치(MCAP)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세그먼트 게이트웨이라고 하는 제어 기능으로 보호하는 네트워크 중심 접근 방식이었습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취합니다. 이 접근 방식은 스토리지 관리 시스템이 고객 데이터 액세스를 보호하고 모니터링하기 위한 세분화 게이트웨이가 됩니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.
+link:https://docs.netapp.com/us-en/ontap/zero-trust/zero-trust-overview.html["NetApp와 제로 트러스트"] 제로 트러스트는 네트워크 중심의 접근 방식으로 MCAP(마이크로 코어 및 경계)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세분화 게이트웨이라고 하는 제어 기능을 사용해 왔습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취하며 스토리지 관리 시스템이 세분화 게이트웨이가 되어 고객 데이터의 액세스를 보호하고 모니터링합니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.
 
 
 

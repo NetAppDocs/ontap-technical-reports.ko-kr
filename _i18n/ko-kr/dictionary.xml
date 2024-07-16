@@ -259,7 +259,6 @@ StorageGRID를 ONTAP 구성 요소 FabricPool의 용량 계층으로 구축 및 
 Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.</block>
   <block id="afe5567d4585c6b672134af6bf96570a" category="summary">이러한 기술 보고서에서는 NetApp ONTAP의 보안 개요와 권장 사례를 제공합니다.</block>
   <block id="e6bd708199eed7d8bf33ef8308be0b3e" category="doc">보안 기술 보고서</block>
-  <block id="786a25f6930c9ae71ad21603f498741d" category="paragraph">ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하고 있습니다. ONTAP의 최신 릴리즈에는 조직이 하이브리드 클라우드 전체에서 데이터를 보호하고, 랜섬웨어 공격을 방지하고, 업계 권장 사례를 준수하는 데 매우 중요한 새로운 보안 기능이 다수 포함되어 있습니다. 이러한 새로운 기능은 조직의 Zero Trust 모델 전환도 지원합니다.</block>
   <block id="232a2b16a1710c0ed1d16548ba8bb8f1" category="section-title">랜섬웨어</block>
   <block id="afd7e2b4105b3c0f637124474c6780aa" category="inline-link-macro">TR-4572: 랜섬웨어용 NetApp 솔루션</block>
   <block id="df81339197d6de37b537d325e629a34e" category="paragraph"><block ref="a2efee7226a0c9a1c73909308a4929db" category="inline-link-macro-rx"></block>
@@ -268,9 +267,6 @@ Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양�
   <block id="6e10a9f29ea4d83a086b7ceba4cc08f6" category="paragraph"><block ref="bfdf2cce49faba7e8af63e592a46208a" category="inline-link-macro-rx"></block>
 많은 기업에서는 규정 준수 요구 사항을 충족하거나 단순히 데이터 보호 전략에 다른 계층을 추가하기 위해 WORM(Write Once, Read Many) 데이터 스토리지를 사용하고 있습니다. ONTAP에서 WORM 솔루션인 SnapLock를 WORM 데이터 스토리지가 필요한 환경에 통합하는 방법에 대해 알아보십시오.</block>
   <block id="95708632a08675f7e77e5312ce2c047c" category="section-title">제로 트러스트</block>
-  <block id="bbcfb10585a3382302149f55fb634e3a" category="inline-link-macro">TR-4829: NetApp and Zero Trust</block>
-  <block id="dbc994b1de7c805f4c68c6a884d9974a" category="paragraph"><block ref="ede7b56a16d5b347f860a68734d83076" category="inline-link-macro-rx"></block>
-제로 트러스트는 일반적으로 마이크로 코어 및 주변 장치(MCAP)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세그먼트 게이트웨이라고 하는 제어 기능으로 보호하는 네트워크 중심 접근 방식이었습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취합니다. 이 접근 방식은 스토리지 관리 시스템이 고객 데이터 액세스를 보호하고 모니터링하기 위한 세분화 게이트웨이가 됩니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.</block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">다단계 인증</block>
   <block id="c7c6fadf35a14d865d768c5f30ccec0b" category="inline-link-macro">TR-4647: ONTAP 모범 사례 및 구현 가이드의 다중 요소 인증</block>
   <block id="51c9464c6f30a83c1321f77012016e78" category="paragraph"><block ref="d26c196c7d19a03267c0e824fa346801" category="inline-link-macro-rx"></block>
@@ -467,8 +463,8 @@ ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환�
   <block id="11001fb821f9ba1fb2e3a93608a688cb" category="paragraph"><block ref="c141febea7d2bd403fd12cb6dd24d35c" category="inline-link-macro-rx"></block>
 Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가상 데스크톱 인프라, 액세스 보호, 정보 보호, 웹 서비스, 응용 프로그램 플랫폼 인프라 등. 이 문서에서는 Microsoft Windows를 중심으로 배포를 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보와 권장 사례를 비롯하여 Hyper-V 가상화 기술에 특히 중점을 두고 있습니다.</block>
   <block id="b0da974886af36b76614baf1f4df0289" category="sidebar">Microsoft Windows Server(Hyper-V)</block>
-  <block id="ea80e7a221b7d29abbf2b1def0f49eff" category="inline-link-macro">Security Hardening Guide for ONTAP Tools for VMware 를 참조하십시오</block>
-  <block id="f0363ce68d8f8c316c89e502fa07f4a6" category="paragraph"><block ref="5b7528c0e47af54726e633b3e59db241" category="inline-link-macro-rx"></block>
-조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 VMware vSphere용 ONTAP 툴을 구성하는 방법에 대해 알아보십시오.</block>
   <block id="47d29daaa26fbfa9c9a069d4cd023ac1" category="sidebar">VMware vSphere용 ONTAP 툴에 대한 보안 강화 가이드</block>
+  <block id="afe5eececc3992e7e8e44f347b2bbc31" category="paragraph"><block ref="0b6b331794436048d74957e0e33c82da" category="inline-link-macro-rx"></block> 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 VMware vSphere용 ONTAP 툴을 구성하는 방법에 대해 알아보십시오.</block>
+  <block id="616a596fed976ac186fb4ab027a61a06" category="paragraph">ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하고 있습니다. ONTAP의 최신 릴리즈에는 조직이 하이브리드 클라우드 전체에서 데이터를 보호하고, 랜섬웨어 공격을 방지하고, 업계 권장 사례를 준수하는 데 매우 중요한 새로운 보안 기능이 다수 포함되어 있습니다. 이러한 새로운 기능은 조직의 Zero Trust 모델 전환도 지원합니다.</block>
+  <block id="2158f5b864e69e6da6a479c8dfd0d7c3" category="paragraph"><block ref="f37660acb14ff92b1690c18e493ff86b" category="inline-link-macro-rx"></block> 제로 트러스트는 네트워크 중심의 접근 방식으로 MCAP(마이크로 코어 및 경계)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세분화 게이트웨이라고 하는 제어 기능을 사용해 왔습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취하며 스토리지 관리 시스템이 세분화 게이트웨이가 되어 고객 데이터의 액세스를 보호하고 모니터링합니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.</block>
 </blocks>
