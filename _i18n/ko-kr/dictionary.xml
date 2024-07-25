@@ -170,8 +170,6 @@ Active Directory 및 RHEL(Red Hat Enterprise Linux) 클라이언트의 구성 �
   <block id="e574d7c876885d39755e7d1bc4ae649e" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="3e8d3a4b0bb1c244f96701a010228216" category="inline-link-macro-rx"></block> 제품 설명서.</block>
   <block id="d0880bbafb975bde57898f147e117781" category="section-title">강화 가이드</block>
   <block id="6eca5c80f314351da24d27dbbeb934fa" category="inline-link-macro">TR-4569: NetApp ONTAP 보안 강화 가이드</block>
-  <block id="f4992bf9be0782c19e6fdb45bbc6f038" category="paragraph"><block ref="df6160c2a0bec26bee907d0f07aed808" category="inline-link-macro-rx"></block>
-조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp ONTAP를 구성하는 방법을 알아보십시오.</block>
   <block id="4b7d52b632284033085bcb2442dcb916" category="inline-link-macro">TR-4957: NetApp SnapCenter 보안 강화 가이드</block>
   <block id="11de28f8883d2023258fafb8ee5fb4df" category="paragraph"><block ref="32cda38a3dba662f660e5eca3be0043a" category="inline-link-macro-rx"></block>
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp SnapCenter 소프트웨어를 구성하는 방법을 알아보십시오.</block>
@@ -467,4 +465,5 @@ Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가�
   <block id="afe5eececc3992e7e8e44f347b2bbc31" category="paragraph"><block ref="0b6b331794436048d74957e0e33c82da" category="inline-link-macro-rx"></block> 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 VMware vSphere용 ONTAP 툴을 구성하는 방법에 대해 알아보십시오.</block>
   <block id="616a596fed976ac186fb4ab027a61a06" category="paragraph">ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하고 있습니다. ONTAP의 최신 릴리즈에는 조직이 하이브리드 클라우드 전체에서 데이터를 보호하고, 랜섬웨어 공격을 방지하고, 업계 권장 사례를 준수하는 데 매우 중요한 새로운 보안 기능이 다수 포함되어 있습니다. 이러한 새로운 기능은 조직의 Zero Trust 모델 전환도 지원합니다.</block>
   <block id="2158f5b864e69e6da6a479c8dfd0d7c3" category="paragraph"><block ref="f37660acb14ff92b1690c18e493ff86b" category="inline-link-macro-rx"></block> 제로 트러스트는 네트워크 중심의 접근 방식으로 MCAP(마이크로 코어 및 경계)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세분화 게이트웨이라고 하는 제어 기능을 사용해 왔습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취하며 스토리지 관리 시스템이 세분화 게이트웨이가 되어 고객 데이터의 액세스를 보호하고 모니터링합니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.</block>
+  <block id="56a039847999d09d030634c93d94d482" category="paragraph"><block ref="e061895df87abfcd5ea0e2dd38821d28" category="inline-link-macro-rx"></block> 조직이 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp ONTAP를 구성하는 방법에 대해 알아보십시오.</block>
 </blocks>
