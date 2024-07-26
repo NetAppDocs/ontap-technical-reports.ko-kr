@@ -76,8 +76,7 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
 link:https://www.netapp.com/pdf.html?item=/media/9138-tr4695.pdf["TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화"^]
 Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.
 
-link:https://www.netapp.com/pdf.html?item=/media/40384-tr-4899.pdf["TR-4899: SnapMirror 비즈니스 연속성을 통해 Oracle 데이터베이스에 영향을 미치지 않는 애플리케이션 페일오버"^]
-SnapMirror 비즈니스 연속성(SM-BC)과 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공합니다. Oracle RAC의 스토리지 구성 요소로 SM-BC가 포함된 AFF 스토리지 시스템의 구성 지침과 권장 사례에 대해 알아보십시오.
+link:https://www.netapp.com/pdf.html?item=/media/40384-tr-4899.pdf["TR-4899: SnapMirror 액티브 동기화를 사용하여 Oracle 데이터베이스 운영에 영향을 미치지 않음 애플리케이션 페일오버"^] SnapMirror 액티브 동기식(이전의 SM-BC) 및 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공할 수 있습니다. Oracle RAC의 스토리지 구성 요소로 SnapMirror Active Sync를 사용하는 AFF 스토리지 어레이의 구성 지침 및 권장 사례에 대해 알아보십시오.
 
 link:https://www.netapp.com/pdf.html?item=/media/21901-tr-4876.pdf["TR-4876: ONTAP 솔루션 및 구축 모범 사례를 활용한 Oracle Multitenancy"^]
 ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와 ONTAP 소프트웨어의 기능을 모두 최대한 활용하여 Oracle 멀티 테넌트 데이터베이스를 프로비저닝, 관리 및 보호하는 방법에 대한 솔루션 권장 사례에 대해 알아보십시오.

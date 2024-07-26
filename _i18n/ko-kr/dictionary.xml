@@ -69,23 +69,13 @@ SnapCenter 기술을 사용하여 데이터 보호를 지원하는 ONTAP 스토�
   <block id="e26db0138fc05145ed94ee1f1cd92b64" category="inline-link-macro">TR-4695: FabricPool를 통한 데이터베이스 스토리지 계층화</block>
   <block id="6ea3c6416acaabdf419275588df7f764" category="paragraph"><block ref="0f6da34639ae3a472dc5fdf06f6c7519" category="inline-link-macro-rx"></block>
 Oracle RDBMS(관계형 데이터베이스 관리 시스템)를 비롯한 다양한 데이터베이스를 사용하는 FabricPool의 이점과 구성 옵션에 대해 알아봅니다.</block>
-  <block id="df1217c57234952b108fdf8edeea9c1f" category="inline-link-macro">TR-4899: SnapMirror 비즈니스 연속성을 통해 Oracle 데이터베이스에 영향을 미치지 않는 애플리케이션 페일오버</block>
-  <block id="b72e09398681a9062ccd0090b9726391" category="paragraph"><block ref="9ac6d7d78a5408ebec6295c5b91049c1" category="inline-link-macro-rx"></block>
-SnapMirror 비즈니스 연속성(SM-BC)과 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공합니다. Oracle RAC의 스토리지 구성 요소로 SM-BC가 포함된 AFF 스토리지 시스템의 구성 지침과 권장 사례에 대해 알아보십시오.</block>
   <block id="20edcec83b5ec5c0064ad8013e36923e" category="inline-link-macro">TR-4876: ONTAP 솔루션 및 구축 모범 사례를 활용한 Oracle Multitenancy</block>
   <block id="37cf945b6fa0182e1288122764b0e5c0" category="paragraph"><block ref="1285e23f10a9e18278d2c6e638032a3f" category="inline-link-macro-rx"></block>
 ONTAP 스토리지를 사용하여 Oracle 멀티 테넌트 데이터베이스와 ONTAP 소프트웨어의 기능을 모두 최대한 활용하여 Oracle 멀티 테넌트 데이터베이스를 프로비저닝, 관리 및 보호하는 방법에 대한 솔루션 권장 사례에 대해 알아보십시오.</block>
   <block id="399bd1ee587245ecac6f39beaa99886f" category="section-title">PostgreSQL</block>
   <block id="38d8bbc60e04ec3f712089a191e11bc0" category="summary">이 기술 보고서에서는 NetApp ONTAP의 비즈니스 연속성에 대한 개요와 권장 사례를 제공합니다</block>
   <block id="96323bdc332765b9211ff3f9ba1e5e21" category="doc">무중단 업무 운영 기술 보고서</block>
-  <block id="af1ff78198ebe07ec4e7f54b33766c19" category="paragraph">NetApp은 애플리케이션 및 데이터 위치를 합리화하여 비용 대비 성능을 비용 효율적으로 개선하는 다양한 솔루션을 제공합니다. 데이터 보호, 복제 및 지속적인 가용성: ONTAP 데이터 관리는 Set-it-and-for-get-it 정책 관리로 데이터 보호를 단순화하는 동시에 MetroCluster 및 SnapMirror 비즈니스 연속성을 통해 비즈니스 연속성을 제공합니다.</block>
-  <block id="39b0dc37ea1ddd4007baaf5cc0073251" category="inline-link-macro">ONTAP SnapMirror 비즈니스 연속성</block>
   <block id="18f57d600a92c92b9c8e184c2871790b" category="inline-link-macro">ONTAP MetroCluster</block>
-  <block id="7c6c52011182351a302482a52746b200" category="paragraph">이러한 기술 보고서는 에서 확장됩니다 <block ref="dcfc6b38559c4256190664addc167f09" category="inline-link-macro-rx"></block> 및 <block ref="c3546ed1acbc93cc8865ba8cc6d620ce" category="inline-link-macro-rx"></block> 제품 설명서.</block>
-  <block id="704de765250161b4c06ce64f26a08d82" category="section-title">SnapMirror 비즈니스 연속성(SM-BC)</block>
-  <block id="9c24652fa5c48bb02fb4d94e586e451a" category="inline-link-macro">TR-4878: SnapMirror 비즈니스 연속성(SM-BC)</block>
-  <block id="5786362dce5c9f77bbc57e94b44f3e27" category="paragraph"><block ref="7fe3405091906f7f62069f8d3521e969" category="inline-link-macro-rx"></block>
-SnapMirror 비즈니스 연속성(SM-BC)은 가장 중요한 비즈니스 애플리케이션의 RPO 0 및 RTO 0 요구사항을 충족하기 위해 AFF 또는 ASA(All SAN Array) 스토리지 시스템에서 실행 중인 ONTAP에 사용할 수 있는 애플리케이션 레벨의 세분화 기능을 갖춘 지속적으로 사용 가능한 스토리지 솔루션입니다.</block>
   <block id="1749d12df3df2319d3eee218a277ff83" category="section-title">MetroCluster</block>
   <block id="8cfbc6352d8ced5b800023a1d24ac804" category="inline-link-macro">TR-4705: NetApp MetroCluster 솔루션 아키텍처 및 설계</block>
   <block id="4c51a3fcdb358ea77ba4e6480c162f6a" category="paragraph"><block ref="4f2a5ddc71107b4c5210f0d334a301b5" category="inline-link-macro-rx"></block>
@@ -298,7 +288,6 @@ PCI DSS 4.0 표준에 따라 시스템을 검증하고 NetApp ONTAP 시스템에
   <block id="556eda250d1f196adc09c3afcd396b84" category="sidebar">MetroCluster 솔루션 아키텍처 및 설계</block>
   <block id="4767099b22895a8101a1cba45d8cf6e9" category="sidebar">MetroCluster IP를 선택합니다</block>
   <block id="eab1124b93650078ec1e8e3092712538" category="sidebar">MetroCluster FC를 참조하십시오</block>
-  <block id="745e09dfe45dd426c5e73339b93791a9" category="sidebar">추가 비즈니스 연속성 기술 보고서</block>
   <block id="c5c30671213f4d20d0d3e001be835fff" category="sidebar">SnapMirror 비동기식 구성 및 모범 사례</block>
   <block id="b151fa9d3a99ac1198c348082841dadb" category="sidebar">SnapMirror Synchronous 구성 및 모범 사례</block>
   <block id="db43ac1a3df915eac1e2b05048e0ff14" category="sidebar">SnapLock를 사용한 규정 준수 WORM 스토리지</block>
@@ -466,4 +455,14 @@ Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가�
   <block id="616a596fed976ac186fb4ab027a61a06" category="paragraph">ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하고 있습니다. ONTAP의 최신 릴리즈에는 조직이 하이브리드 클라우드 전체에서 데이터를 보호하고, 랜섬웨어 공격을 방지하고, 업계 권장 사례를 준수하는 데 매우 중요한 새로운 보안 기능이 다수 포함되어 있습니다. 이러한 새로운 기능은 조직의 Zero Trust 모델 전환도 지원합니다.</block>
   <block id="2158f5b864e69e6da6a479c8dfd0d7c3" category="paragraph"><block ref="f37660acb14ff92b1690c18e493ff86b" category="inline-link-macro-rx"></block> 제로 트러스트는 네트워크 중심의 접근 방식으로 MCAP(마이크로 코어 및 경계)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세분화 게이트웨이라고 하는 제어 기능을 사용해 왔습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취하며 스토리지 관리 시스템이 세분화 게이트웨이가 되어 고객 데이터의 액세스를 보호하고 모니터링합니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.</block>
   <block id="56a039847999d09d030634c93d94d482" category="paragraph"><block ref="e061895df87abfcd5ea0e2dd38821d28" category="inline-link-macro-rx"></block> 조직이 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp ONTAP를 구성하는 방법에 대해 알아보십시오.</block>
+  <block id="c7829f629f3055286ada7794ca794cf8" category="inline-link-macro">TR-4899: SnapMirror 액티브 동기화를 사용하여 Oracle 데이터베이스 운영에 영향을 미치지 않음 애플리케이션 페일오버</block>
+  <block id="cedd348454f1f9667db3e89a651bdc45" category="paragraph"><block ref="e193433d9852787148d6bfe70e72ce80" category="inline-link-macro-rx"></block> SnapMirror 액티브 동기식(이전의 SM-BC) 및 Oracle RAC(Real Application Cluster)는 사이트 운영 중단 및 실제 재해 발생 시에도 투명한 애플리케이션 페일오버(TAF)와 연속성을 제공할 수 있습니다. Oracle RAC의 스토리지 구성 요소로 SnapMirror Active Sync를 사용하는 AFF 스토리지 어레이의 구성 지침 및 권장 사례에 대해 알아보십시오.</block>
+  <block id="7bdf3df5c52772427d684241666dda12" category="paragraph">NetApp은 애플리케이션 및 데이터 위치를 합리화하여 비용 대비 성능을 비용 효율적으로 개선하는 다양한 솔루션을 제공합니다. 데이터 보호, 복제 및 지속적인 가용성: ONTAP 데이터 관리는 set-it-and-for-get-it 정책 관리로 데이터 보호를 단순화하는 동시에 MetroCluster 및 SnapMirror 활성 동기화를 통해 비즈니스 연속성을 제공합니다.</block>
+  <block id="574cb45b1bf07bb44acd3de641840a4b" category="inline-link-macro">ONTAP SnapMirror 활성 동기화</block>
+  <block id="d47c49799806bec64465b383db014b54" category="paragraph">이러한 기술 보고서는 및 제품 설명서에 대해 자세히 <block ref="84fa0d1714185699150766ccc4696a58" category="inline-link-macro-rx"></block> <block ref="c3546ed1acbc93cc8865ba8cc6d620ce" category="inline-link-macro-rx"></block> 설명합니다.</block>
+  <block id="0dfa6915a212660244fd00959d91d3cf" category="section-title">SnapMirror 활성 동기식(이전의 SM-BC)</block>
+  <block id="2e8ac1c0380452780be33d178e20a254" category="inline-link-macro">TR-4878: SnapMirror 액티브 동기화</block>
+  <block id="090b3022d203896fbe5e649fe4e00563" category="paragraph"><block ref="d2c109124f2b9db130918a5c3429109e" category="inline-link-macro-rx"></block> SnapMirror 액티브 동기화는 AFF 또는 ASA(All SAN 어레이) 스토리지 시스템에서 실행되는 ONTAP에 사용할 수 있는 애플리케이션 레벨 세분화를 갖춘 지속적인 스토리지 솔루션으로, 가장 중요한 비즈니스 애플리케이션의 RPO 0 및 RTO 0 요구사항을 충족합니다.</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="sidebar">SnapMirror 활성 동기화</block>
+  <block id="84b4efc4ad7afb4d75b9901868fc3167" category="sidebar">추가 비즈니스 연속성 기술 보고서</block>
 </blocks>
