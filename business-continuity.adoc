@@ -34,9 +34,7 @@ link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["TR-4
 link:https://www.netapp.com/pdf.html?item=/media/13480-tr4705.pdf["TR-4705: NetApp MetroCluster 솔루션 아키텍처 및 설계"^]
 이 문서에서는 ONTAP의 MetroCluster 기능에 대한 고급 아키텍처 및 설계 개념에 대해 설명합니다.
 
-* MetroCluster IP *
-link:http://www.netapp.com/us/media/tr-4689.pdf["TR-4689: NetApp MetroCluster IP"^]
-MetroCluster는 FAS 및 AFF 시스템에서 실행되는 ONTAP를 위한 지속적으로 사용 가능한 스토리지 솔루션입니다. MetroCluster IP는 이더넷 기반 백엔드 스토리지 패브릭을 사용하는 최신 혁신입니다. MetroCluster IP는 가장 중요한 비즈니스 애플리케이션의 요구 사항을 충족하는 고도로 이중화된 구성을 제공합니다. MetroCluster IP는 ONTAP에 포함되어 있으며 ONTAP 스토리지를 사용하는 클라이언트 및 서버에 NAS 및 SAN 연결을 제공합니다.
+* MetroCluster IP * link:https://www.netapp.com/pdf.html?item=/media/13481-tr4689pdf.pdf["TR-4689: NetApp MetroCluster IP"^] MetroCluster는 FAS 및 AFF 시스템에서 실행되는 ONTAP를 위한 지속적인 가용성 스토리지 솔루션입니다. MetroCluster IP는 이더넷 기반 백엔드 스토리지 패브릭을 사용하는 최신 혁신입니다. MetroCluster IP는 가장 중요한 비즈니스 애플리케이션의 요구 사항을 충족하는 고도로 이중화된 구성을 제공합니다. MetroCluster IP는 ONTAP에 포함되어 있으며 ONTAP 스토리지를 사용하는 클라이언트 및 서버에 NAS 및 SAN 연결을 제공합니다.
 
 * MetroCluster FC *
 link:https://www.netapp.com/pdf.html?item=/media/13482-tr4375.pdf["TR-4375: NetApp MetroCluster FC"^]

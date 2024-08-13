@@ -45,6 +45,8 @@ indexpage:
     links:
     - title: FlexCache 볼륨
       url: nas-containers.html
+    - title: FlexCache 다시 쓰기
+      url: https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-overview.html
     - title: FlexGroup 볼륨 구현 및 모범 사례
       url: nas-containers.html
     - title: 데이터 보호 및 백업 ONTAP FlexGroup 볼륨

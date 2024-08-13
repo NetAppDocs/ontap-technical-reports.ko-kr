@@ -30,6 +30,12 @@ FlexCache는 동일하거나 다른 ONTAP 클러스터에서 볼륨의 쓰기 �
 
 
 
+== FlexCache 다시 쓰기
+
+link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-back-overview.html["FlexCache 다시 쓰기"^] ONTAP 9.15.1에 도입된 FlexCache Write-Back은 캐시에서 쓰는 대체 작업 모드입니다. Write-back을 사용하면 데이터가 오리진으로 전달될 때까지 기다리지 않고 캐시의 안정적인 스토리지에 쓰기를 커밋하고 클라이언트에서 이를 확인할 수 있습니다. 데이터는 비동기적으로 오리진으로 다시 플러시됩니다. 그 결과, 특정 워크로드 및 환경에서 거의 로컬에 가까운 속도로 쓰기를 수행할 수 있는 전 세계적으로 분산된 파일 시스템이 탄생하여 탁월한 성능 이점을 제공합니다.
+
+
+
 == FlexGroup 볼륨
 
 link:https://www.netapp.com/pdf.html?item=/media/17251-tr4571a.pdf["TR-4571a: FlexGroup의 10대 모범 사례"^]
