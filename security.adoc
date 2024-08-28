@@ -25,8 +25,7 @@ ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하
 
 == 랜섬웨어
 
-link:https://www.netapp.com/pdf.html?item=/media/7334-tr4572.pdf["TR-4572: 랜섬웨어용 NetApp 솔루션"^]
-랜섬웨어의 발전 과정 및 랜섬웨어에 대한 NetApp 솔루션을 사용하여 공격을 식별하고, 확산을 방지하고, 가능한 한 빨리 복구하는 방법에 대해 알아보십시오. 이 문서에 제공된 지침과 솔루션은 조직이 사이버 복원력 있는 솔루션을 보유하면서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 설계되었습니다.
+link:https://docs.netapp.com/us-en/ontap/ransomware-solutions/ransomware-overview.html["TR-4572: 랜섬웨어용 NetApp 솔루션"^] 랜섬웨어의 진화 과정을 알아보고, 랜섬웨어용 NetApp 솔루션을 사용하여 공격을 식별하고, 확산을 방지하고, 최대한 빠르게 복구하는 방법을 살펴보십시오. 이 문서에 제공된 지침과 솔루션은 조직이 사이버 복원력 있는 솔루션을 보유하면서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 설계되었습니다.
 
 link:https://www.netapp.com/pdf.html?item=/media/6158-tr4526.pdf["TR-4526: NetApp SnapLock를 사용한 규정 준수 WORM 스토리지"^]
 많은 기업에서는 규정 준수 요구 사항을 충족하거나 단순히 데이터 보호 전략에 다른 계층을 추가하기 위해 WORM(Write Once, Read Many) 데이터 스토리지를 사용하고 있습니다. ONTAP에서 WORM 솔루션인 SnapLock를 WORM 데이터 스토리지가 필요한 환경에 통합하는 방법에 대해 알아보십시오.
