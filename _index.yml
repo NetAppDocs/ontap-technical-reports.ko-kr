@@ -83,6 +83,8 @@ indexpage:
     links:
     - title: 보안 강화 가이드
       url: security-hardening-guides.html
+    - title: ONTAP 사이버 소산
+      url: https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html
     - title: 랜섬웨어용 NetApp 솔루션
       url: https://docs.netapp.com/us-en/ontap/ransomware-solutions/ransomware-overview.html
     - title: NetApp와 제로 트러스트

@@ -44,5 +44,10 @@ link:https://www.netapp.com/pdf.html?item=/media/19369-tr-4832.pdf["TR-4832: ONT
 
 == SnapMirror를 사용하여 애플리케이션 및 인프라 통합
 
-link:link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자"]
-ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하기 위한 최신 제품 정보 및 권장 사례를 비롯하여 업계 최고의 VMware DR(재해 복구) 소프트웨어인 VMware SRM(사이트 복구 관리자)에 대한 권장 ONTAP 솔루션에 대해 알아보십시오.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["TR-4900: ONTAP를 사용하는 VMware 사이트 복구 관리자"] ONTAP은 2002년에 현대적인 데이터 센터에 선보인 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 관리 작업을 간소화하는 동시에 비용을 절감할 수 있는 혁신적인 기능을 지속적으로 추가하고 있습니다. 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화하기 위한 최신 제품 정보 및 권장 사례를 비롯하여 업계 최고의 VMware DR(재해 복구) 소프트웨어인 VMware SRM(사이트 복구 관리자)에 대한 권장 ONTAP 솔루션에 대해 알아보십시오.
+
+
+
+== ONTAP 사이버 소산
+
+link:https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html["ONTAP 사이버 소산"^] NetApp의 ONTAP 기반 사이버 저장소는 가장 중요한 데이터 자산을 보호하는 포괄적이고 유연한 솔루션을 제공합니다. ONTAP은 강력한 강화 방법론을 통해 논리적 공기 흐름을 활용하여 진화하는 사이버 위협에 맞서 복원력을 갖춘 격리된 보안 스토리지 환경을 만들 수 있도록 지원합니다. ONTAP을 사용하면 스토리지 인프라의 민첩성과 효율성을 유지하면서 데이터의 기밀성, 무결성, 가용성을 보장할 수 있습니다.

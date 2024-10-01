@@ -18,9 +18,15 @@ ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하
 
 [NOTE]
 ====
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/security-encryption/index.html["ONTAP 보안 및 데이터 암호화"] 제품 설명서.
+이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/security-encryption/index.html["ONTAP 보안 및 데이터 암호화"^]설명합니다.
 
 ====
+
+
+== ONTAP 사이버 소산
+
+link:https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html["ONTAP 사이버 소산"^] NetApp의 ONTAP 기반 사이버 저장소는 가장 중요한 데이터 자산을 보호하는 포괄적이고 유연한 솔루션을 제공합니다. ONTAP은 강력한 강화 방법론을 통해 논리적 공기 흐름을 활용하여 진화하는 사이버 위협에 맞서 복원력을 갖춘 격리된 보안 스토리지 환경을 만들 수 있도록 지원합니다. ONTAP을 사용하면 스토리지 인프라의 민첩성과 효율성을 유지하면서 데이터의 기밀성, 무결성, 가용성을 보장할 수 있습니다.
+
 
 
 == 랜섬웨어
