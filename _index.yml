@@ -3,7 +3,7 @@ indexpage:
   title: ONTAP 기술 보고서
   summary: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
     제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
-  keywords: ONTAP 9, ONTAP, Technical Reports, TR,
+  keywords: ONTAP 9, ONTAP, Technical Reports, TR
   lead: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
     제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
   tiles:
@@ -19,28 +19,20 @@ indexpage:
       url: apps-dbs.html#postgresql
     - title: ONTAP 기반 SAP HANA
       url: apps-dbs.html#sap-hana
-  - title: 비즈니스 연속성
+    - title: ONTAP에서 성공
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/epic/epic-overview.html
+  - title: 데이터 보호, 재해 복구, 비즈니스 연속성
     links:
-    - title: SnapMirror 활성 동기화
-      url: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html
-    - title: MetroCluster 솔루션 아키텍처 및 설계
-      url: business-continuity.html
-    - title: MetroCluster IP를 선택합니다
-      url: business-continuity.html
-    - title: MetroCluster FC를 참조하십시오
-      url: business-continuity.html
-    - title: 추가 비즈니스 연속성 기술 보고서
-      url: business-continuity.html
-  - title: 데이터 보호 및 재해 복구
-    links:
-    - title: SnapMirror 비동기식 구성 및 모범 사례
-      url: data-protection-disaster-recovery.html
-    - title: SnapMirror Synchronous 구성 및 모범 사례
+    - title: SnapMirror 구성 및 모범 사례
       url: data-protection-disaster-recovery.html
     - title: SnapLock를 사용한 규정 준수 WORM 스토리지
       url: data-protection-disaster-recovery.html
-    - title: 추가 데이터 보호 및 재해 복구 기술 보고서
-      url: data-protection-disaster-recovery.html
+    - title: SnapMirror 활성 동기화
+      url: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html
+    - title: MetroCluster IP 및 FC
+      url: business-continuity.html
+    - title: 추가 비즈니스 연속성 기술 보고서
+      url: business-continuity.html
   - title: FlexCache 및 FlexGroup 볼륨
     links:
     - title: FlexCache 볼륨
@@ -67,10 +59,6 @@ indexpage:
       url: nas.html
     - title: 추가 NAS 기술 보고서
       url: nas.html
-  - title: 네트워킹
-    links:
-    - title: ONTAP를 통한 BGP/VIP
-      url: networking.html
   - title: 산
     links:
     - title: ONTAP의 최신 SAN 모범 사례
@@ -89,11 +77,7 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap/ransomware-solutions/ransomware-overview.html
     - title: NetApp와 제로 트러스트
       url: https://docs.netapp.com/us-en/ontap/zero-trust/zero-trust-overview.html
-    - title: NetApp SnapLock를 사용한 규정 준수 WORM 스토리지
-      url: security.html
     - title: 인증(SSH, MFA)
-      url: security.html
-    - title: ONTAP의 보안 멀티 테넌시
       url: security.html
     - title: 추가 보안 기술 보고서
       url: security.html
