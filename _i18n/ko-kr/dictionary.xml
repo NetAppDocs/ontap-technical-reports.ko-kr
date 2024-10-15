@@ -456,4 +456,6 @@ Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가�
   <block id="6393d669ce30abc667ac49b55f562310" category="sidebar">데이터 보호, 재해 복구, 비즈니스 연속성</block>
   <block id="64af762eb6280d5cce6eda4b03a6e65c" category="sidebar">SnapMirror 구성 및 모범 사례</block>
   <block id="0d59051e1739c44ad573da05fecfe0e1" category="sidebar">MetroCluster IP 및 FC</block>
+  <block id="b845152aee89efdb663c0e7c1522d7bf" category="inline-link-macro">MetroCluster Tiebreaker 호스트 및 데이터베이스에 대한 보안 강화 가이드</block>
+  <block id="ee1c2b388c2a8f940cf512d5f930d4f5" category="paragraph"><block ref="3ba6a3982660c818149aaeadc40d89b3" category="inline-link-macro-rx"></block> 조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp MetroCluster Tiebreaker 호스트 및 데이터베이스를 구성하는 방법에 대해 알아보십시오.</block>
 </blocks>

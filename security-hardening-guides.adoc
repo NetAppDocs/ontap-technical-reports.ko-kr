@@ -40,3 +40,5 @@ link:https://netapp.com/pdf.html?item=/media/78654-tr-4943.pdf["TR-4943: NetApp 
 
 link:https://www.netapp.com/pdf.html?item=/media/78941-tr-4945.pdf["TR-4945: NetApp Manageability SDK에 대한 보안 강화 가이드"^]
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Manageability SDK(NMSDK)를 구성하는 방법에 대해 알아보십시오.
+
+link:https://docs.netapp.com/us-en/ontap-metrocluster/tiebreaker/install_security.html["MetroCluster Tiebreaker 호스트 및 데이터베이스에 대한 보안 강화 가이드"^] 조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp MetroCluster Tiebreaker 호스트 및 데이터베이스를 구성하는 방법에 대해 알아보십시오.
