@@ -125,8 +125,6 @@ Microsoft는 SMB1과 SMB2의 성능 및 안정성 한계를 해결함으로써 S
 ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프로토콜 환경에 대한 권장 사례에 대해 알아보십시오.</block>
   <block id="1716834171e243de0f898a67621b6624" category="section-title">ONTAP S3</block>
   <block id="12d693aa0c15330c6f5d608b0a1eb6c3" category="inline-link-macro">TR-4814:S3(ONTAP 모범 사례</block>
-  <block id="8a9f413c7d192f7ee13320a2b74b4ecc" category="paragraph"><block ref="3f5613d82639ca68ec10bef37723bdeb" category="inline-link-macro-rx"></block>
-ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하는 데 권장되는 방법과 ONTAP를 네이티브 S3 애플리케이션을 사용하는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.</block>
   <block id="a4273e3e312edbc9d5bd7c188aecc370" category="section-title">네임 서비스</block>
   <block id="98c6ad5dad288854428df19a0833d709" category="inline-link-macro">TR-4523: ONTAP에서 DNS 로드 밸런싱</block>
   <block id="7a50564c3d71f025f2e39ea6c508a8ab" category="paragraph"><block ref="ea931303ddc872579ef3f1a3e7507b66" category="inline-link-macro-rx"></block>
@@ -458,4 +456,5 @@ Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가�
   <block id="0d59051e1739c44ad573da05fecfe0e1" category="sidebar">MetroCluster IP 및 FC</block>
   <block id="b845152aee89efdb663c0e7c1522d7bf" category="inline-link-macro">MetroCluster Tiebreaker 호스트 및 데이터베이스에 대한 보안 강화 가이드</block>
   <block id="ee1c2b388c2a8f940cf512d5f930d4f5" category="paragraph"><block ref="3ba6a3982660c818149aaeadc40d89b3" category="inline-link-macro-rx"></block> 조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp MetroCluster Tiebreaker 호스트 및 데이터베이스를 구성하는 방법에 대해 알아보십시오.</block>
+  <block id="3e0f59fca19e9a4d246c3e746b14f879" category="paragraph"><block ref="e2f5d130ca2d9c5351a2d7cbfddc082b" category="inline-link-macro-rx"></block> ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하기 위한 권장 사례와 ONTAP를 네이티브 S3 애플리케이션이 있는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.</block>
 </blocks>

@@ -49,8 +49,7 @@ ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프
 
 == ONTAP S3
 
-link:https://www.netapp.com/pdf.html?item=/media/17219-tr4814.pdf["TR-4814:S3(ONTAP 모범 사례"^]
-ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하는 데 권장되는 방법과 ONTAP를 네이티브 S3 애플리케이션을 사용하는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.
+link:https://docs.netapp.com/us-en/ontap/s3-config/index.html["TR-4814:S3(ONTAP 모범 사례"^] ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하기 위한 권장 사례와 ONTAP를 네이티브 S3 애플리케이션이 있는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.
 
 
 

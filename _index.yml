@@ -52,7 +52,7 @@ indexpage:
     - title: ONTAP의 멀티프로토콜 NAS 개요 및 모범 사례
       url: nas.html
     - title: S3 in ONTAP 모범 사례
-      url: nas.html
+      url: https://docs.netapp.com/us-en/ontap/s3-config/index.html
     - title: 서비스 모범 사례의 이름을 말하십시오
       url: nas.html
     - title: ONTAP에서 NFS Kerberos
