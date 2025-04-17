@@ -27,9 +27,17 @@ sidebar:
   - title: 산
     url: "/san.html"
   - title: 보안
-    url: "/security.html"
-  - title: 보안 강화 가이드
-    url: "/security-hardening-guides.html"
+    entries:
+    - title: 개요
+      url: "/security.html"
+    - section: ransomware-solutions
+    - section: zero-trust
+    - section: abac
+  - title: 보안 강화
+    entries:
+    - title: 개요
+      url: "/security-hardening-guides.html"
+    - section: ontap-security-hardening
   - title: SnapCenter
     url: "/snapcenter.html"
   - title: 계층화

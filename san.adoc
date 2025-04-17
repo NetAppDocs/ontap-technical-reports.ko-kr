@@ -1,10 +1,10 @@
 ---
+permalink: san.html 
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, SAN, NVMe, NVMeoF, NVMeoTCP, NVMeoFC, iSCSI, fibre channel, fiber channel, igroups, namespaces, namespace, LUN, subsystem, best practices, best-practices 
-permalink: san.html 
 summary: 이러한 기술 보고서에서는 ONTAP의 블록 프로토콜과 권장 사례를 개괄적으로 설명합니다. 
 ---
-= SAN 기술 보고서
+= ONTAP SAN 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,11 +14,11 @@ summary: 이러한 기술 보고서에서는 ONTAP의 블록 프로토콜과 권
 
 
 [role="lead"]
-ONTAP SAN 스토리지는 조직의 미션 크리티컬 데이터베이스 및 기타 SAN 워크로드에 고가용성을 제공하는 단순화된 SAN 환경을 제공합니다. ONTAP SAN은 Oracle, SAP 및 Microsoft SQL Server 데이터베이스와의 동급 최고의 데이터 서비스 통합 및 VMware 및 기타 주요 하이퍼바이저와 함께 엔터프라이즈 데이터베이스 애플리케이션의 가치 창출 시간을 단축합니다.
+ONTAP SAN 스토리지는 조직의 미션 크리티컬 데이터베이스와 기타 SAN 워크로드에 고가용성을 제공하는 단순한 SAN 경험을 제공합니다. ONTAP SAN은 Oracle, SAP 및 Microsoft SQL Server 데이터베이스와의 동급 최고의 데이터 서비스 통합 및 VMware 및 기타 주요 하이퍼바이저와 함께 엔터프라이즈 데이터베이스 애플리케이션의 가치 창출 시간을 단축합니다.
 
 [NOTE]
 ====
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/san-management/index.html["ONTAP SAN 스토리지 관리"] 제품 설명서.
+이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/san-management/index.html["ONTAP SAN 스토리지 관리"^]설명합니다.
 
 ====
 link:https://www.netapp.com/pdf.html?item=/media/10680-tr4080.pdf["TR-4080: ONTAP의 최신 SAN 모범 사례"^]

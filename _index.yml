@@ -74,9 +74,9 @@ indexpage:
     - title: ONTAP 사이버 소산
       url: https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html
     - title: 랜섬웨어용 NetApp 솔루션
-      url: https://docs.netapp.com/us-en/ontap/ransomware-solutions/ransomware-overview.html
+      url: "/ransomware-solutions/ransomware-overview.html"
     - title: NetApp와 제로 트러스트
-      url: https://docs.netapp.com/us-en/ontap/zero-trust/zero-trust-overview.html
+      url: "/zero-trust/zero-trust-overview.html"
     - title: 인증(SSH, MFA)
       url: security.html
     - title: 추가 보안 기술 보고서

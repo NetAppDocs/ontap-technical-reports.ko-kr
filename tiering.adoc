@@ -1,10 +1,10 @@
 ---
+permalink: tiering.html 
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
-permalink: tiering.html 
 summary: 이러한 기술 보고서에서는 NetApp ONTAP의 계층화 개요를 제공하고 권장 사례를 제공합니다. 
 ---
-= 계층화 기술 보고서
+= ONTAP 계층화 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ FabricPool 데이터 계층화 솔루션을 사용하면 스토리지 효율성�
 
 [NOTE]
 ====
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/fabricpool/index.html["ONTAP FabricPool"] 제품 설명서.
+이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/fabricpool/index.html["ONTAP FabricPool"^]설명합니다.
 
 ====
 link:https://www.netapp.com/pdf.html?item=/media/17239-tr4598.pdf["TR-4598: FabricPool 모범 사례"^]

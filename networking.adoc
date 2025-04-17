@@ -1,10 +1,10 @@
 ---
+permalink: networking.html 
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
-permalink: networking.html 
 summary: 이 기술 보고서는 NetApp ONTAP에서의 네트워킹에 대한 개요와 권장 사례를 제공합니다. 
 ---
-= 네트워킹 기술 보고서
+= ONTAP 네트워킹 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ ONTAP는 가장 까다로운 스케일 아웃 애플리케이션을 충족할 �
 
 [NOTE]
 ====
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/network-management/index.html["ONTAP 네트워크 관리"] 제품 설명서.
+이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/network-management/index.html["ONTAP 네트워크 관리"^]설명합니다.
 
 ====
 link:https://www.netapp.com/pdf.html?item=/media/79703-TR-4949.pdf["TR-4949: 데이터 센터에서 ONTAP를 사용하는 BGP/VIP"^]

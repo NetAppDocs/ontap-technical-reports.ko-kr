@@ -1,10 +1,10 @@
 ---
+permalink: virtualization.html 
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, VMware, vVols, SRM, SRA, Site Recovery Manager, OTV, ONTAP Tools for VMware, SnapCenter for VMware, SnapCenter, RCU, VSC, Virtual Storage Console, best practices, best-practices 
-permalink: virtualization.html 
 summary: 이 기술 보고서는 NetApp ONTAP를 사용하는 VMware 가상화 솔루션의 개요와 권장 사항을 제공합니다. 
 ---
-= 가상화 기술 보고서
+= ONTAP 가상화 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,25 +16,18 @@ summary: 이 기술 보고서는 NetApp ONTAP를 사용하는 VMware 가상화 �
 [role="lead"]
 NetApp 가상화 솔루션은 서버에서 최대의 가치를 제공하는 데 도움이 됩니다. 혁신적인 고성능 ONTAP 플래시 시스템을 기반으로 하는 응답 속도가 빠른 가상 서버 인프라를 통해 데이터에 훨씬 더 빠르게 액세스할 수 있습니다. 가상 인프라가 수 페타바이트의 데이터까지 중단 없이 확장됨에 따라 여러 워크로드에 대한 공유 액세스에 필요한 성능을 제공할 수 있습니다. ONTAP은 주요 파트너십, 구축 지침, 애플리케이션 통합, 우수한 설계를 통해 가상 서버 인프라 구축을 간소화하고 복잡성을 줄이도록 지원합니다. ONTAP는 온프레미스와 클라우드 모두에서 강력한 가상화 환경을 위한 권장 모범 사례와 솔루션을 제공합니다.
 
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴"] 제품 설명서.
+이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["VMware vSphere용 ONTAP 툴"^]설명합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["TR-4597: ONTAP용 VMware vSphere"]
- ONTAP는 거의 20년 동안 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하면서 관리를 단순화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 구축을 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보 및 권장 사례를 비롯하여 vSphere용 ONTAP 솔루션에 대해 소개합니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html["TR-4597: ONTAP용 VMware vSphere"^] ONTAP은 거의 20년 동안 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로 자리매김해 왔으며, 관리를 단순화하는 동시에 비용을 절감할 수 있는 혁신적인 기능을 계속해서 추가하고 있습니다. 이 문서에서는 구축을 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보 및 권장 사례를 비롯하여 vSphere용 ONTAP 솔루션에 대해 소개합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html["TR-4400: NetApp ONTAP를 통해 VVOL(VMware vSphere 가상 볼륨)을 이동합니다"]
-ONTAP는 20년 이상 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 본 문서에서는 최신 제품 정보 및 사용 사례와 권장 사례 및 기타 정보를 비롯하여 VMware VVOL(vSphere 가상 볼륨)을 위한 ONTAP 기능을 다루며 구축 간소화 및 오류 감소를 위한 방법에 대해 설명합니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vvols-overview.html["TR-4400: NetApp ONTAP를 통해 VVOL(VMware vSphere 가상 볼륨)을 이동합니다"^] ONTAP은 20년 이상 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로 자리매김했으며, 비용을 절감하면서 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 본 문서에서는 최신 제품 정보 및 사용 사례와 권장 사례 및 기타 정보를 비롯하여 VMware VVOL(vSphere 가상 볼륨)을 위한 ONTAP 기능을 다루며 구축 간소화 및 오류 감소를 위한 방법에 대해 설명합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["TR-4900: NetApp ONTAP를 사용하는 VMware 사이트 복구 관리자"]
-ONTAP는 2002년 최신 데이터 센터에 도입된 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션이며, 비용을 절감하는 동시에 관리를 간소화하는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 VMware의 업계 최고 수준의 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)을 위한 ONTAP 솔루션을 소개합니다. 최신 제품 정보와 권장 사례를 통해 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화합니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["TR-4900: NetApp ONTAP를 사용하는 VMware 사이트 복구 관리자"^] ONTAP은 2002년에 현대적인 데이터 센터에 선보인 이후 VMware vSphere 환경을 위한 업계 최고의 스토리지 솔루션으로, 관리 작업을 간소화하는 동시에 비용을 절감할 수 있는 혁신적인 기능을 지속적으로 추가하고 있습니다. 이 문서에서는 VMware의 업계 최고 수준의 DR(재해 복구) 소프트웨어인 VMware SRM(Site Recovery Manager)을 위한 ONTAP 솔루션을 소개합니다. 최신 제품 정보와 권장 사례를 통해 배포를 간소화하고 위험을 줄이며 지속적인 관리를 단순화합니다.
 
-link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_auto_introduction.html["ONTAP 및 vSphere 자동화 소개"]
-자동화는 VMware ESX의 첫 날부터 VMware 환경을 관리하는 데 있어 필수적인 요소입니다. 코드로 인프라를 구축하고 프라이빗 클라우드 운영으로 사례를 확장하는 기능은 확장, 유연성, 셀프 프로비저닝 및 효율성에 관한 문제를 해결하는 데 도움이 됩니다. 이 문서에서는 ONTAP 및 VMware vSphere 환경의 자동화를 위한 ONTAP 솔루션을 소개합니다.
+link:https://docs.netapp.com/us-en/netapp-solutions/virtualization/vsphere_auto_introduction.html["ONTAP 및 vSphere 자동화 소개"^] VMware ESX를 처음 접하는 날부터 자동화는 VMware 환경을 관리하는 데 있어 핵심적인 역할을 했습니다. 코드로 인프라를 구축하고 프라이빗 클라우드 운영으로 사례를 확장하는 기능은 확장, 유연성, 셀프 프로비저닝 및 효율성에 관한 문제를 해결하는 데 도움이 됩니다. 이 문서에서는 ONTAP 및 VMware vSphere 환경의 자동화를 위한 ONTAP 솔루션을 소개합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-tools.html["WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안"]
-이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 9.X용 ONTAP 툴을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-tools.html["WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안"^] 이 문서에서는 VMware vSphere 9.X용 ONTAP 툴을 제품 환경의 기존 위협과 새로운 위협으로부터 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-snapcenter.html["WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안"]
-이 문서에서는 제품 환경의 기존 위협과 새로운 위협으로부터 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-security-snapcenter.html["WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안"^] 이 문서에서는 VMware vSphere 4.X용 NetApp SnapCenter 플러그인을 제품 환경의 기존 위협과 새로운 위협으로부터 보호하는 데 사용되는 기술과 기술에 대해 설명합니다.
 
-link:https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html["TR-4568: Windows Server에 대한 NetApp 배포 지침 및 스토리지 모범 사례"]
-Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가상 데스크톱 인프라, 액세스 보호, 정보 보호, 웹 서비스, 응용 프로그램 플랫폼 인프라 등. 이 문서에서는 Microsoft Windows를 중심으로 배포를 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보와 권장 사례를 비롯하여 Hyper-V 가상화 기술에 특히 중점을 두고 있습니다.
+link:https://docs.netapp.com/us-en/ontap-apps-dbs/microsoft/win_overview.html["TR-4568: Windows Server에 대한 NetApp 배포 지침 및 스토리지 모범 사례"^] Microsoft Windows Server는 네트워킹, 보안, 가상화, 클라우드, 가상 데스크톱 인프라, 액세스 보호, 정보 보호, 웹 서비스, 응용 프로그램 플랫폼 인프라 등을 포함하는 엔터프라이즈급 운영 체제입니다. 이 문서에서는 Microsoft Windows를 중심으로 배포를 간소화하고 위험을 줄이며 관리를 단순화하는 최신 제품 정보와 권장 사례를 비롯하여 Hyper-V 가상화 기술에 특히 중점을 두고 있습니다.

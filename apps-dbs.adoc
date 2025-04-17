@@ -1,10 +1,10 @@
 ---
+permalink: apps-dbs.html 
 sidebar: sidebar 
 keywords: Databases, Applications, Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
-permalink: apps-dbs.html 
 summary: 이 기술 보고서에서는 ONTAP의 애플리케이션 및 데이터베이스를 개괄적으로 비롯하여 권장 사례를 제공합니다 
 ---
-= 애플리케이션 및 데이터베이스 기술 보고서
+= ONTAP, 애플리케이션 및 데이터베이스 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

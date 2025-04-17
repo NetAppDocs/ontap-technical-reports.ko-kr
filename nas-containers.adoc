@@ -1,10 +1,10 @@
 ---
+permalink: nas-containers.html 
 sidebar: sidebar 
 keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, best practices, best-practices 
-permalink: nas-containers.html 
 summary: 이 기술 보고서에서는 NetApp ONTAP의 FlexCache 및 FlexGroup 볼륨을 개괄적으로 비롯하여 모범 사례 권장사항을 제공합니다 
 ---
-= FlexCache 및 FlexGroup 볼륨 기술 보고서
+= ONTAP FlexCache 및 FlexGroup 볼륨 기술 보고서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ NetApp NAS 솔루션은 데이터 관리를 단순화하며 비용을 최적화�
 
 [NOTE]
 ====
-이러한 기술 보고서는 에서 확장됩니다 link:https://docs.netapp.com/us-en/ontap/task_nas_flexcache.html["ONTAP FlexCache 볼륨"] 및 link:https://docs.netapp.com/us-en/ontap/task_nas_provision_flexgroup.html["ONTAP FlexGroup 볼륨"] 제품 설명서.
+이러한 기술 보고서는 및 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/task_nas_flexcache.html["ONTAP FlexCache 볼륨"^] link:https://docs.netapp.com/us-en/ontap/task_nas_provision_flexgroup.html["ONTAP FlexGroup 볼륨"^] 설명합니다.
 
 ====
 
