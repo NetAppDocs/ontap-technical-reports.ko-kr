@@ -1,6 +1,6 @@
 ---
 section: zero-trust
-title: 제로 트러스트 모델을 사용합니다
+title: NetApp와 제로 트러스트
 entries:
 - title: 제로 트러스트 개요
   url: "/zero-trust/zero-trust-overview.html"

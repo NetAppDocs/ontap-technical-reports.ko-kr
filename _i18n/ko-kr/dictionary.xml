@@ -1794,7 +1794,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="50f0055dd25143ce1041a1e865a7cff2" category="paragraph">취약성 및 사고 보고, NetApp 보안 응답 및 고객 기밀성에 대한 자세한 내용은 를 참조하십시오<block ref="85e584d5dd95cb24acf0575604062318" category="inline-link-rx"></block>.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">개요</block>
   <block id="addb25ae677e0b8a55734ab57c09d585" category="sidebar">보안 강화</block>
-  <block id="1aa0723459b84338c8aad8382638c878" category="sidebar">ONTAP 강화 지침</block>
   <block id="ca8c02fc98ee18dce1a2f0c4acf7cd56" category="sidebar">로컬 스토리지 관리자 계정</block>
   <block id="d3d5dd45b51e06a8bf7d70c42f06240c" category="sidebar">다중 관리자 확인</block>
   <block id="4cd4399cfc2bfd6d194da77235de119a" category="sidebar">스냅샷 복사본 잠금</block>
@@ -1803,15 +1802,15 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="b835d7094831b4ed2a38af1dbd1fe404" category="sidebar">FIPS 모드 및 TLS 및 SSL 관리</block>
   <block id="8e48f26dee6c1917b45f1d05c19074d7" category="sidebar">CIFS SMB 서명 및 봉인을 구성합니다</block>
   <block id="94e6cee7fe1a1375bf9dc65d4f0dd995" category="sidebar">LIF 보안</block>
-  <block id="4b3b5551c4f327daecfcde4636aca278" category="sidebar">NetApp 랜섬웨어 방어 에 관해 알아보십시오</block>
   <block id="dcd771e3d20c3c7415e08f5bf28a6e38" category="sidebar">Ransomware 및 NetApp의 보호 포트폴리오</block>
   <block id="06205ba9447bbde00fbe939539a25870" category="sidebar">SnapLock 및 변조 방지 스냅샷 복사본</block>
   <block id="e6a3ee6f35767ceec82038d17d54fb88" category="sidebar">CI 스토리지 워크로드 보안(CISWS)</block>
   <block id="e59f82f50a98ebe0abf3807c82f2a63b" category="sidebar">사이버 보관</block>
   <block id="9c93de8987f6abeac5c25e0855470103" category="sidebar">Active IQ 랜섬웨어 방어</block>
-  <block id="3cecaa4840f4146d89b6a6560054fc43" category="sidebar">제로 트러스트 모델을 사용합니다</block>
   <block id="c8b78402f94fce212009aa61ceb6fa0d" category="sidebar">제로 트러스트 개요</block>
   <block id="ebf6adb994a800f01712f5271da576c8" category="sidebar">제로 트러스트 접근 방식 설계</block>
   <block id="30b66b872763a94b8ae22c6953d55a41" category="sidebar">제로 트러스트를 규모에 맞게 자동화</block>
   <block id="a919cbb519743fc10912cc33b7fce224" category="sidebar">제로 트러스트 하이브리드 클라우드 배포</block>
+  <block id="31f4bfc29163ac1c62592e45806e4c89" category="sidebar">ONTAP 보안 강화 지침</block>
+  <block id="998827b90d84e6f2876b33dda3bee943" category="sidebar">랜섬웨어에 대한 NetApp 솔루션</block>
 </blocks>

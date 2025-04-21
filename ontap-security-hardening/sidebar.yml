@@ -1,6 +1,6 @@
 ---
 section: ontap-security-hardening
-title: ONTAP 강화 지침
+title: ONTAP 보안 강화 지침
 entries:
 - title: ONTAP 보안 강화 개요
   url: "/ontap-security-hardening/security-hardening-overview.html"
