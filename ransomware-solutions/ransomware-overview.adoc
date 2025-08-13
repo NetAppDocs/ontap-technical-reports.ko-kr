@@ -75,7 +75,7 @@ NetApp의 랜섬웨어 방지 기능은 끊임없이 변화하는 위협 환경�
 
 .다른 보호 옵션에 대해 알아봅니다
 * link:ransomware-active-iq.html["Digital Advisor 랜섬웨어 방어"]
-* link:ransomware-CI-workload-security.html["Cloud Insights 스토리지 워크로드 보안(CISWS)"]
+* link:ransomware-DII-workload-security.html["Data Infrastructure Insights 스토리지 워크로드 보안"]
 * link:ransomware-fpolicy.html["FPolicy를 참조하십시오"]
 * link:ransomware-snaplock-tamperproof-snapshots.html["SnapLock 및 변조 방지 스냅샷"]
 

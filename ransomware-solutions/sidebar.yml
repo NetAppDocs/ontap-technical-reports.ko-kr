@@ -8,8 +8,8 @@ entries:
   url: "/ransomware-solutions/ransomware-snaplock-tamperproof-snapshots.html"
 - title: FPolicy 파일 차단
   url: "/ransomware-solutions/ransomware-fpolicy.html"
-- title: CI 스토리지 워크로드 보안(CISWS)
-  url: "/ransomware-solutions/ransomware-CI-workload-security.html"
+- title: Data Infrastructure Insights 스토리지 워크로드 보안
+  url: "/ransomware-solutions/ransomware-DII-workload-security.html"
 - title: 자율 랜섬웨어 보호(ARP)
   url: "/ransomware-solutions/ransomware-protection.html"
 - title: 사이버 보관
