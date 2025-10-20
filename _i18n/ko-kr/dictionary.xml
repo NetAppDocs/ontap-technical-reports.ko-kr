@@ -139,9 +139,6 @@ Active Directory 및 RHEL(Red Hat Enterprise Linux) 클라이언트의 구성 �
   <block id="4b7d52b632284033085bcb2442dcb916" category="inline-link-macro">TR-4957: NetApp SnapCenter 보안 강화 가이드</block>
   <block id="11de28f8883d2023258fafb8ee5fb4df" category="paragraph"><block ref="32cda38a3dba662f660e5eca3be0043a" category="inline-link-macro-rx"></block>
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp SnapCenter 소프트웨어를 구성하는 방법을 알아보십시오.</block>
-  <block id="9346238909f4f9394991d628232a7547" category="inline-link-macro">TR-4963: 보안 강화 가이드: BlueXP Cloud Backup for Applications</block>
-  <block id="dc26de9620ef6e9b8ebe1fb3a333146e" category="paragraph"><block ref="f32c1dcda6d159b978bd858df5e23d46" category="inline-link-macro-rx"></block>
-조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp 클라우드 백업 for Applications를 구성하는 방법을 알아보십시오.</block>
   <block id="338edca147b749d2e7e81c74aa391922" category="inline-link-macro">TR-4943: NetApp Active IQ Unified Manager 보안 강화 가이드</block>
   <block id="8e56a85eceedd9e65ceac8c4efabdc75" category="paragraph"><block ref="60ad041e7e2571bfebeac3e3fdd7c828" category="inline-link-macro-rx"></block>
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Active IQ Unified Manager를 구성하는 방법을 알아보십시오.</block>
@@ -1501,18 +1498,10 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="f383e567325fbd8d9cd37c13e2d27348" category="list-text">NAS 프로토콜용으로 구성된 모든 SVM(스토리지 가상 머신)에 FPolicy가 사용되지 않는다.</block>
   <block id="f079f17b0940258743d34e7b771c715f" category="inline-link-macro">디지털 자문업체</block>
   <block id="e8d0971db7d38725bf7e6c7caa9e5bea" category="paragraph">랜섬웨어 방어의 실제 적용 사례를 보려면 을 참조하십시오.<block ref="a1990f008b33adc9ed0411bbc02affbe" category="inline-link-macro-rx"></block></block>
-  <block id="2982b73f1b2ae805177b88640ad8e7ad" category="summary">NetApp의 랜섬웨어 보호에는 포괄적인 워크로드 중심의 랜섬웨어 방어를 위한 단일 제어 플레인인 BlueXP 가 포함되어 있습니다.</block>
-  <block id="7cbea822b8b0b2365073f8e46cba59ee" category="doc">BlueXP  랜섬웨어 보호를 통한 포괄적인 복원력</block>
-  <block id="9532db48b2e4b444341074d59dc5c1e7" category="paragraph">확산을 방지하고 비용이 많이 드는 다운타임을 방지하려면 랜섬웨어 탐지를 가능한 한 빨리 수행하는 것이 중요합니다. 하지만 효과적인 랜섬웨어 감지 전략에는 단일 계층 이상의 보호를 포함해야 합니다. NetApp의 랜섬웨어 방어는 BlueXP 과 사이버 보관을 위한 격리된 계층적 솔루션을 사용하여 데이터 서비스로 확장되는 실시간 온박스 기능을 포함하는 종합적인 접근 방식을 취합니다.</block>
-  <block id="67ecb6c0a19888100e5352d06f886856" category="section-title">BlueXP 랜섬웨어 보호</block>
-  <block id="fb62c8090c8fdec572ca94ba26dd1366" category="paragraph">BlueXP 는 워크로드 중심의 포괄적인 랜섬웨어 방어를 지능적으로 오케스트레이션하는 단일 제어 플레인입니다. BlueXP  랜섬웨어 방어 기능은 ARP, FPolicy, 무단 변경 방지 스냅샷 등 ONTAP의 강력한 사이버 레질리언스 기능과 BlueXP  백업 및 복구와 같은 BlueXP  데이터 서비스를 통합합니다. 또한 자동화된 워크플로에 권장 사항과 지침을 추가하여 단일 UI를 통해 완벽한 방어 기능을 제공합니다. 워크로드 수준에서 작동하므로 비즈니스를 실행하는 애플리케이션을 보호하고 공격 발생 시 가능한 한 신속하게 복구할 수 있습니다.</block>
-  <block id="9e335597dee6d78d6ef3c91d2e605827" category="inline-image-macro">BlueXP  랜섬웨어 방어는 워크로드 데이터 손실을 최소화하고 신속하게 정상화하는 데 필요한 AI 기반의 인텔리전스 및 서비스입니다. 이 이미지는 BlueXP  UI를 보여 줍니다.</block>
-  <block id="49d585f7409e268b1b815e358acdc26f" category="paragraph"><block ref="49d585f7409e268b1b815e358acdc26f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="57d9f8b4350bdb0360446502776071b9" category="list-title">고객 이점:</block>
   <block id="791642d5220d1b473799da627ac1405a" category="list-text">랜섬웨어 대비 지원을 통해 운영 오버헤드를 줄이고 효율성을 높일 수 있습니다</block>
   <block id="4753ddbc2bf6c3d067422857af0cc6f4" category="list-text">AI/ML을 통한 이상 징후 탐지는 정확성을 높이고 위험을 억제하기 위한 더 빠른 응답을 제공합니다</block>
   <block id="b5da283f7ba421d355ccfa7d424b307f" category="list-text">안내된 애플리케이션 정합성이 보장된 복원을 통해 몇 분 내에 워크로드를 더 쉽게 복구할 수 있습니다</block>
-  <block id="9d32811bcb50ed292552c525a493a000" category="paragraph"><block ref="29934740530d776c168bf410d509cefa" category="inline-link-rx"></block> 다음과 같은 NIST 함수를 보다 쉽게 구현할 수 있습니다.</block>
   <block id="b74c00fcd912be09da942f0cf77a06e4" category="list-text">NetApp 스토리지의 데이터를 자동으로 검색 * 하고 우선 순위를 정할 수 있습니다 *.</block>
   <block id="955940b6598aedf7bedf4a3a12303187" category="list-text">* 상위 워크로드 데이터 백업, 변경 불가, 보안 구성, 악성 파일 차단 및 다양한 보안 도메인에 대한 원 클릭 보호 *.</block>
   <block id="ea71a1cda7dae28be1caa0735bc69aa6" category="list-text">* 차세대 AI 기반 이상 징후 감지 * 를 사용하여 * 랜섬웨어를 최대한 빠르게 * 감지합니다 *</block>
@@ -1541,7 +1530,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="b8141ca182a4c9141741234027f65727" category="paragraph">FPolicy는 원치 않는 파일이 엔터프라이즈급 스토리지 어플라이언스에 저장되지 않도록 차단합니다. 또한 FPolicy는 알려진 랜섬웨어 파일 확장자를 차단하는 방법을 제공합니다. 사용자는 여전히 홈 폴더에 대한 모든 액세스 권한을 가지고 있지만 FPolicy는 관리자가 차단으로 표시한 파일을 사용자가 저장할 수 없도록 합니다. 해당 파일이 MP3 파일 또는 알려진 랜섬웨어 파일 확장자인지 여부는 중요하지 않습니다.</block>
   <block id="863dd1345a2131906a76c984445e7095" category="section-title">FPolicy 기본 모드로 악성 파일 차단</block>
   <block id="8dac2743775831419b5e877cb8748334" category="paragraph">NetApp FPolicy 기본 모드(파일 정책 이라는 이름의 진화)는 파일 확장 차단 프레임워크로, 원치 않는 파일 확장명이 사용자 환경에 유입되는 것을 차단할 수 있습니다. 10년 이상 ONTAP의 일부였으며 랜섬웨어로부터 보호하는 데 매우 유용합니다. 이 제로 트러스트 엔진은 액세스 제어 목록(ACL) 권한을 넘어서는 추가 보안 조치를 취하기 때문에 유용합니다.</block>
-  <block id="b0e108a0f184f4f39152e4e1837f47b8" category="paragraph">ONTAP 시스템 관리자 및 BlueXP 에서는 3000개 이상의 파일 확장자 목록을 참조할 수 있습니다.</block>
   <block id="87e0d4143f67a676e9f425b2da18e8b8" category="admonition">일부 확장은 사용자의 환경에서 합법적일 수 있으며 이러한 확장을 차단하면 예기치 않은 문제가 발생할 수 있습니다. 기본 FPolicy를 구성하기 전에 환경에 적합한 목록을 생성하십시오.</block>
   <block id="a20f8a27f79a03c63685b2f0a17eb57f" category="paragraph">FPolicy 기본 모드는 모든 ONTAP 라이센스에 포함되어 있습니다.</block>
   <block id="4e10dd5be7db083d376988fc33c53897" category="inline-link">블로그: 랜섬웨어에 대항하기: 3부 - 강력한 기본(무료) 툴인 ONTAP FPolicy</block>
@@ -1587,7 +1575,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="4dde43047f2d5d045a6fdc629ddf65e6" category="paragraph">NetApp는 <block ref="8a25609da83a13eb15bee04bab67dff0" category="inline-link-macro-rx"></block>중요한 데이터를 실시간으로 강력한 다면적인 방어 기능을 제공합니다. 고급 AI 기반 감지 알고리즘은 데이터 패턴을 지속적으로 모니터링하여 99% 정확성으로 잠재적 랜섬웨어 위협을 신속하게 식별합니다. 공격에 신속하게 대응함으로써 신속하게 데이터를 스냅샷하고 복사본을 보호하여 신속한 복구를 보장합니다.</block>
   <block id="f0623df679b8fb5200d15870c807c754" category="inline-link-macro">사이버 보관</block>
   <block id="601b8d9c43e24508e42cd6f13e9d0c51" category="paragraph">데이터를 더욱 강화하기 위해 NetApp의 <block ref="45869236cb205c8ce191e0b4485e991e" category="inline-link-macro-rx"></block> 기능은 논리적 공극으로 데이터를 격리합니다. 중요한 데이터를 보호함으로써 신속한 비즈니스 연속성을 보장합니다.</block>
-  <block id="9138335f1406ff736ee7e91719fa3563" category="paragraph">NetApp는 <block ref="09fc8fdfd6f21b6224343b3125f7b11c" category="inline-link-macro-rx"></block>단일 제어 플레인을 통해 운영 부담을 경감하여 엔드 투 엔드 워크로드 중심의 랜섬웨어 방어를 지능적으로 조정 및 실행하므로 클릭 한 번으로 중요 워크로드 데이터를 식별하고 보호하면서 잠재적 공격의 영향을 줄이고 며칠이 아닌 몇 분 내에 워크로드를 복구할 수 있으므로 중요한 워크로드 데이터를 보호하고 비용이 많이 드는 운영 중단을 최소화할 수 있습니다.</block>
   <block id="e2988f9b7e2e29ce8f4fdf68b2030e41" category="inline-link-macro">다중 관리자 인증(MAV)</block>
   <block id="1a725233243e47819bef632c1f6a383e" category="paragraph">데이터에 대한 무단 액세스를 보호하기 위한 기본 내장 ONTAP 솔루션에는 <block ref="4ada1972a70f397973a9f79458e00568" category="inline-link-macro-rx"></block>볼륨 삭제, 추가 관리 사용자 생성 또는 스냅샷 삭제와 같은 작업을 적어도 두 번째 지정된 관리자로부터 승인을 받은 후에만 수행할 수 있는 강력한 기능이 있습니다. 따라서 손상되거나 악의적이거나 경험이 부족한 관리자가 원치 않는 변경 또는 데이터 삭제를 방지할 수 있습니다. 스냅샷을 삭제하기 전에 지정된 관리자 승인자를 원하는 수만큼 구성할 수 있습니다.</block>
   <block id="d18cf9d14d7c8cc60dcc34e313cd6003" category="inline-link">다중 요소 인증(MFA)</block>
@@ -1693,8 +1680,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="0b94cb2ba7751c1c25401f5e08dbc648" category="inline-link">PCI-DSS(Payment Card Industry Data Security Standard)</block>
   <block id="5ed51831e452e5af0bc19c2322929ae1" category="inline-link">일반 데이터 보호 규정(GDPR)</block>
   <block id="404cf3344f005c4231d79e3e3acfb838" category="inline-link">HIPAA(Health Insurance Portability and Accountability Act)</block>
-  <block id="4090e8b079a78b94863e71d76d964719" category="inline-link">BlueXP 분류</block>
-  <block id="0706fc6af16ad99a4708932bdef15f97" category="paragraph">Zero Trust 모델 용어에서 데이터 분류에는 독성 데이터의 식별이 포함됩니다. 독성 데이터는 조직 외부에 노출되지 않도록 설계된 중요 데이터입니다. 독성 데이터를 공개하면 규정 준수 위반을 초래하고 조직의 평판을 훼손할 수 있습니다. 규정 준수 측면에서 독성 데이터에는 에 대한 카드 소유자 데이터<block ref="f0242cdbe3012c10b984dca567890bf1" category="inline-link-rx"></block>, EU의 개인 데이터<block ref="1c1d72e8d281301bae54f599c2499978" category="inline-link-rx"></block>또는 에 대한 의료 데이터가<block ref="3171a82ae3ab3874b2b355f2275ca212" category="inline-link-rx"></block>포함됩니다. AI 기반 툴킷인 NetApp(이전의 Cloud Data Sense)를 사용하여 데이터를 자동으로 스캔, 분석, 범주화할 수 있습니다<block ref="30700e458c339d5d7983a72e64f76aea" category="inline-link-rx"></block> .</block>
   <block id="e31ad1540a081a53f99b55ca2ab41255" category="section-title">더 이상 필요하지 않은 데이터는 안전하게 폐기합니다</block>
   <block id="73870c78b497fc3a04d672a7888e60f0" category="paragraph">조직의 데이터를 분류한 후 일부 데이터가 더 이상 필요하지 않거나 조직의 기능과 관련이 없다는 것을 알게 될 수 있습니다. 불필요한 데이터의 보유는 책임이며, 그러한 데이터는 삭제되어야 한다. 데이터를 암호화하여 삭제하는 고급 메커니즘은 저장된 데이터 암호화의 보안 삭제 설명을 참조하십시오.</block>
   <block id="55f751c849e4551c1d441b02ea4f1d54" category="section-title">데이터 분류에 액세스해야 하는 역할을 이해하고 액세스 제어를 적용하기 위해 최소 권한 원칙을 적용합니다</block>
@@ -1806,11 +1791,25 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="94ad1ae30cf339fc2ec42b97a97e1097" category="inline-link">NetApp Data Infrastructure Insights</block>
   <block id="aac9ee9588b6904654417ff1aa088cce" category="list-text"><block ref="aac9ee9588b6904654417ff1aa088cce" category="inline-link-rx"></block></block>
   <block id="beeace221a558dd2c906f0bdbe9fc38c" category="list-text"><block ref="beeace221a558dd2c906f0bdbe9fc38c" category="inline-link-macro-rx"></block></block>
-  <block id="8d480c386a79b0bc67bd88ac44cd794f" category="inline-link">스토리지 워크로드 보안</block>
-  <block id="703db3f06f315a9ea4f2d8fe24b92fe2" category="paragraph">NetApp의<block ref="d1088f5cdf9840e804f5e13b077264c0" category="inline-link-rx"></block> 클라우드와 온프레미스 ONTAP 스토리지 시스템 모두에서 FPolicy 인터페이스와 사용자 행동 분석을 활용하여 악의적인 사용자 행동에 대한 실시간 알림을 제공합니다.  스토리지 워크로드 보안은 고급 머신 러닝과 이상 감지를 통해 악의적이거나 손상된 사용자가 조직 데이터를 오용하는 것을 방지합니다.  스토리지 워크로드 보안은 랜섬웨어 공격이나 기타 악의적인 행위를 식별하고 스냅샷을 호출하고 악의적인 사용자를 격리할 수 있습니다.  스토리지 워크로드 보안에는 사용자 및 엔터티 활동을 매우 자세히 볼 수 있는 포렌식 기능도 있습니다.  스토리지 워크로드 보안은 NetApp Data Infrastructure Insights 의 일부입니다.</block>
   <block id="ea8fdfe4995ff3c2e31a648205c74010" category="paragraph">Data Infrastructure Insights 는 전체 인프라에 대한 가시성을 제공하는 인프라 모니터링 도구입니다.  Data Infrastructure Insights 사용하면 퍼블릭 클라우드 인스턴스와 프라이빗 데이터 센터를 포함한 모든 리소스를 모니터링하고, 문제를 해결하고, 최적화할 수 있습니다.  Data Infrastructure Insights 해결에 걸리는 평균 시간을 90%까지 단축하고 클라우드 문제의 80%가 최종 사용자에게 영향을 미치지 않도록 예방할 수 있습니다.  또한 실행 가능한 인텔리전스로 데이터를 보호함으로써 클라우드 인프라 비용을 평균 33% 절감하고 내부 위협에 대한 노출도 줄일 수 있습니다.  Data Infrastructure Insights 의 스토리지 워크로드 보안 기능을 사용하면 AI와 ML을 활용한 사용자 행동 분석을 통해 내부 위협으로 인해 비정상적인 사용자 행동이 발생할 때 경고를 받을 수 있습니다.  ONTAP 의 경우, 스토리지 워크로드 보안은 Zero Trust FPolicy 엔진을 활용합니다.</block>
   <block id="199deca5ed39c68fa7f09001f48197ab" category="paragraph">SWS가 잠재적인 랜섬웨어나 데이터 삭제를 감지하면 다음과 같은 자동 조치를 취할 수 있습니다.</block>
   <block id="aec0c9d7322cff54d737e9386f3e149a" category="paragraph">NetApp 은 하이브리드 클라우드의 데이터 권위자입니다. NetApp Amazon Web Services(AWS), Microsoft Azure, Google Cloud 및 기타 주요 클라우드 공급업체와 협력하여 온프레미스 데이터 관리 시스템을 하이브리드 클라우드로 확장하기 위한 다양한 옵션을 제공합니다. NetApp 하이브리드 클라우드 솔루션은 온프레미스 ONTAP 시스템 및 ONTAP Select 소프트웨어 정의 스토리지에서 사용할 수 있는 것과 동일한 Zero Trust 보안 제어를 지원합니다.</block>
   <block id="d1eb18225daf43543a5e81a2e47b280c" category="paragraph">AWS(FSxN), Google Cloud(GCNV), Microsoft Azure용 Azure NetApp Files 등 엔터프라이즈급 클라우드 기반 파일 서비스를 사용하면 일반적인 CAPEX 제약 없이 퍼블릭 클라우드에서 용량을 쉽게 확장할 수 있습니다. 분석 및 DevOps와 같은 데이터 집약적 워크로드에 적합한 이러한 클라우드 데이터 서비스는 NetApp 의 탄력적인 온디맨드 스토리지 서비스와 ONTAP 데이터 관리를 완벽하게 관리되는 제품으로 결합합니다.</block>
   <block id="71591e978528d3f55b9cef450140836b" category="paragraph">ONTAP NetApp SnapMirror 데이터 복제 소프트웨어를 통해 온프레미스 ONTAP 시스템과 AWS, Google Cloud 또는 Azure 스토리지 환경 간에 데이터를 이동할 수 있도록 합니다.</block>
+  <block id="01adb99847e4a9d606034f2f0c967e3d" category="summary">NetApp의 랜섬웨어 보호는 포괄적이고 워크로드 중심의 랜섬웨어 방어를 위한 단일 제어 평면입니다.</block>
+  <block id="aca1911f6be3613660eef6402d750d52" category="doc">NetApp 랜섬웨어 보호로 포괄적인 복원력 제공</block>
+  <block id="36d4e89d2200ee7e1bdebcd704c96ded" category="paragraph">랜섬웨어는 확산을 막고 비용이 많이 드는 가동 중지 시간을 피하기 위해 가능한 한 일찍 감지하는 것이 중요합니다.  그러나 효과적인 랜섬웨어 탐지 전략에는 단일 계층 이상의 보호가 포함되어야 합니다.  NetApp의 랜섬웨어 보호는 NetApp Console 사용하여 데이터 서비스로 확장되는 실시간 온박스 기능과 사이버 보관을 위한 격리된 계층형 솔루션을 포함하는 포괄적인 접근 방식을 취합니다.</block>
+  <block id="8f29fabed21c86cf8e043c5813982abd" category="section-title">NetApp 랜섬웨어 보호</block>
+  <block id="767fb14eabe7e44da41005a68d5a1404" category="paragraph">NetApp Console 포괄적이고 워크로드 중심의 랜섬웨어 방어를 지능적으로 조율하는 단일 제어 평면입니다.  NetApp 랜섬웨어 보호는 ARP, FPolicy, 변조 방지 스냅샷과 같은 ONTAP 의 강력한 사이버 복원력 기능과 NetApp Backup and Recovery 와 같은 NetApp 데이터 서비스를 통합합니다.  또한 단일 UI를 통해 종단 간 방어를 제공하기 위해 자동화된 워크플로를 통해 권장 사항과 지침을 추가합니다.  공격이 발생한 경우 비즈니스를 운영하는 애플리케이션이 보호되고 최대한 빨리 복구될 수 있도록 워크로드 수준에서 작동합니다.</block>
+  <block id="1426c429a2bce3a8285f7cd29c70a658" category="inline-image-macro">NetApp 랜섬웨어 보호는 워크로드 데이터 손실을 최소화하고 신속하게 복구하는 데 필요한 AI 기반 인텔리전스 및 지원입니다.  이 이미지는 NetApp Console UI를 보여줍니다.</block>
+  <block id="4ad6744ed4fa63be994b8a4bf3b524f8" category="paragraph"><block ref="4ad6744ed4fa63be994b8a4bf3b524f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9dce0afe228ddd06fd986c359f7de587" category="paragraph"><block ref="1b2e92702549b05e44da2a8e753271c8" category="inline-link-rx"></block>NIST 기능을 더 쉽게 구현할 수 있습니다.</block>
+  <block id="90ec78e3b0f8e00a2f39b663afb040f7" category="paragraph">ONTAP System Manager와 NetApp Console 에서는 3000개가 넘는 파일 확장자 목록을 참조할 수 있습니다.</block>
+  <block id="4d93f25765d0df6f1ff1270d9e36a9bc" category="paragraph">NetApp<block ref="f40d8e1951fd9e6b77db9780352e5ff6" category="inline-link-macro-rx"></block> 단일 제어 평면을 통해 엔드 투 엔드 워크로드 중심 랜섬웨어 방어를 지능적으로 조정하고 실행하여 운영 부담을 줄여 단 한 번의 클릭으로 위험에 처한 중요한 워크로드 데이터를 식별하고 보호하고, 잠재적 공격의 영향을 제한하기 위해 정확하고 자동으로 감지하고 대응하고, 며칠이 아닌 몇 분 내에 워크로드를 복구하여 귀중한 워크로드 데이터를 보호하고 비용이 많이 드는 중단을 최소화할 수 있습니다.</block>
+  <block id="1744662d2a3b0d7d855a0bf90e2b1174" category="inline-link-macro">TR-4963: 보안 강화 가이드: 애플리케이션을 위한 NetApp Backup and Recovery</block>
+  <block id="c1733b71a6618736776e1d44a2946556" category="paragraph"><block ref="2122c383f2b1ddffdc4b9abafadacc80" category="inline-link-macro-rx"></block>조직이 정보 시스템의 기밀성, 무결성 및 가용성에 대한 규정된 보안 목표를 충족할 수 있도록 NetApp Cloud Backup for Applications를 구성하는 방법을 알아보세요.</block>
+  <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="inline-link">NetApp Data Classification</block>
+  <block id="364f2dc2688b81006a28502eb315eb81" category="paragraph">Zero Trust 모델의 용어로, 데이터 분류에는 유해 데이터를 식별하는 것이 포함됩니다.  유해 데이터는 조직 외부에 노출될 의도가 없는 민감한 데이터입니다.  유해 데이터가 공개되면 규정 준수에 문제가 생기고 조직의 평판이 손상될 수 있습니다.  규정 준수 측면에서 독성 데이터에는 카드 소지자 데이터가 포함됩니다.<block ref="f0242cdbe3012c10b984dca567890bf1" category="inline-link-rx"></block> , EU의 개인 데이터<block ref="1c1d72e8d281301bae54f599c2499978" category="inline-link-rx"></block> 또는 의료 데이터<block ref="3171a82ae3ab3874b2b355f2275ca212" category="inline-link-rx"></block> .  NetApp 사용할 수 있습니다<block ref="9cabaced3548b9ac7424f5195d176109" category="inline-link-rx"></block> (이전 명칭: Cloud Data Sense)는 데이터를 자동으로 스캔, 분석, 분류하는 AI 기반 툴킷입니다.</block>
+  <block id="013ffbcdcdb1baf0401d4fb97f3a053d" category="inline-link">DII 스토리지 워크로드 보안</block>
+  <block id="ec30e7fc4410e62b2187bbd40b7a20cf" category="paragraph">NetApp의<block ref="1574ae3bb673b89adc6481583a34727e" category="inline-link-rx"></block> 클라우드와 온프레미스 ONTAP 스토리지 시스템 모두에서 FPolicy 인터페이스와 사용자 행동 분석을 활용하여 악의적인 사용자 행동에 대한 실시간 알림을 제공합니다. 스토리지 워크로드 보안은 고급 머신 러닝과 이상 감지를 통해 악의적이거나 손상된 사용자가 조직 데이터를 오용하는 것을 방지합니다. 스토리지 워크로드 보안은 랜섬웨어 공격이나 기타 악의적인 행위를 식별하고 스냅샷을 호출하고 악의적인 사용자를 격리할 수 있습니다. 스토리지 워크로드 보안에는 사용자 및 엔터티 활동을 매우 자세히 볼 수 있는 포렌식 기능도 있습니다. 스토리지 워크로드 보안은 NetApp Data Infrastructure Insights 의 일부입니다.</block>
 </blocks>

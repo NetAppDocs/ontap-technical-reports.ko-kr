@@ -32,8 +32,7 @@ link:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-otv-hardening-ov
 link:https://www.netapp.com/pdf.html?item=/media/82393-tr-4957.pdf["TR-4957: NetApp SnapCenter 보안 강화 가이드"^]
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp SnapCenter 소프트웨어를 구성하는 방법을 알아보십시오.
 
-link:https://www.netapp.com/pdf.html?item=/media/83591-tr-4963.pdf["TR-4963: 보안 강화 가이드: BlueXP Cloud Backup for Applications"^]
-조직에서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp 클라우드 백업 for Applications를 구성하는 방법을 알아보십시오.
+link:https://www.netapp.com/pdf.html?item=/media/83591-tr-4963.pdf["TR-4963: 보안 강화 가이드: 애플리케이션을 위한 NetApp Backup and Recovery"^]조직이 정보 시스템의 기밀성, 무결성 및 가용성에 대한 규정된 보안 목표를 충족할 수 있도록 NetApp Cloud Backup for Applications를 구성하는 방법을 알아보세요.
 
 link:https://netapp.com/pdf.html?item=/media/78654-tr-4943.pdf["TR-4943: NetApp Active IQ Unified Manager 보안 강화 가이드"^]
 조직에서 정보 시스템 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 NetApp Active IQ Unified Manager를 구성하는 방법을 알아보십시오.
