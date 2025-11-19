@@ -753,7 +753,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="1dde952248d0bd2612f27750d9ea6ecd" category="list-text">클러스터 LIF는 구성 가능한 방화벽 정책을 가지고 있지 않으며 완전히 열리기 때문에 격리된 보안 네트워크의 프라이빗 IP 서브넷에 있어야 합니다.</block>
   <block id="70e881dcf58395b686bc9ce323d6c37a" category="list-text">LIF 역할은 인터넷에 공개되어서는 안 됩니다.</block>
   <block id="ea0bd843613a20eb803001b279246689" category="inline-link-macro">LIF의 방화벽 정책을 구성합니다</block>
-  <block id="188ec1c2236d76b450ecc7703e44a0bd" category="paragraph">LIF 보안에 대한 자세한 내용은 를 <block ref="96282db2df36a6442998c6258ad3e2e9" category="inline-link-macro-rx"></block>참조하십시오.</block>
   <block id="161d8000cc54f43db7cefdff14a52ca3" category="summary">암호 매개 변수를 수정하는 명령 및 암호 저장을 위한 해시 기능.</block>
   <block id="daaa34a7959b8b3a167ca267e8f8f5f1" category="doc">로그인 및 암호 매개 변수</block>
   <block id="e5764a1c88fe5a8f80fc6eb88beda3bb" category="paragraph">효과적인 보안 체계는 확립된 조직 정책, 지침 및 조직에 적용되는 모든 거버넌스 또는 표준을 준수합니다. 이러한 요구 사항의 예로는 사용자 이름 수명, 암호 길이 요구 사항, 문자 요구 사항 및 이러한 계정의 저장 등이 있습니다. ONTAP 솔루션은 이러한 보안 구조를 처리하는 기능을 제공합니다.</block>
@@ -1812,4 +1811,7 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="364f2dc2688b81006a28502eb315eb81" category="paragraph">Zero Trust 모델의 용어로, 데이터 분류에는 유해 데이터를 식별하는 것이 포함됩니다.  유해 데이터는 조직 외부에 노출될 의도가 없는 민감한 데이터입니다.  유해 데이터가 공개되면 규정 준수에 문제가 생기고 조직의 평판이 손상될 수 있습니다.  규정 준수 측면에서 독성 데이터에는 카드 소지자 데이터가 포함됩니다.<block ref="f0242cdbe3012c10b984dca567890bf1" category="inline-link-rx"></block> , EU의 개인 데이터<block ref="1c1d72e8d281301bae54f599c2499978" category="inline-link-rx"></block> 또는 의료 데이터<block ref="3171a82ae3ab3874b2b355f2275ca212" category="inline-link-rx"></block> .  NetApp 사용할 수 있습니다<block ref="9cabaced3548b9ac7424f5195d176109" category="inline-link-rx"></block> (이전 명칭: Cloud Data Sense)는 데이터를 자동으로 스캔, 분석, 분류하는 AI 기반 툴킷입니다.</block>
   <block id="013ffbcdcdb1baf0401d4fb97f3a053d" category="inline-link">DII 스토리지 워크로드 보안</block>
   <block id="ec30e7fc4410e62b2187bbd40b7a20cf" category="paragraph">NetApp의<block ref="1574ae3bb673b89adc6481583a34727e" category="inline-link-rx"></block> 클라우드와 온프레미스 ONTAP 스토리지 시스템 모두에서 FPolicy 인터페이스와 사용자 행동 분석을 활용하여 악의적인 사용자 행동에 대한 실시간 알림을 제공합니다. 스토리지 워크로드 보안은 고급 머신 러닝과 이상 감지를 통해 악의적이거나 손상된 사용자가 조직 데이터를 오용하는 것을 방지합니다. 스토리지 워크로드 보안은 랜섬웨어 공격이나 기타 악의적인 행위를 식별하고 스냅샷을 호출하고 악의적인 사용자를 격리할 수 있습니다. 스토리지 워크로드 보안에는 사용자 및 엔터티 활동을 매우 자세히 볼 수 있는 포렌식 기능도 있습니다. 스토리지 워크로드 보안은 NetApp Data Infrastructure Insights 의 일부입니다.</block>
+  <block id="0b5afbf05d11e6ac9adfe1f86374ab53" category="paragraph">LIF 보안에 대해 자세히 알아보려면 다음을 참조하세요. <block ref="96282db2df36a6442998c6258ad3e2e9" category="inline-link-macro-rx"></block>. 이 페이지에서는 ONTAP 9.10.1부터 시작되는 LIF 서비스 정책에 대한 세부 정보도 제공합니다.</block>
+  <block id="fb3030d6c04abdfd96f25e5abb17c519" category="inline-link-macro">명령어 참조.</block>
+  <block id="8ececa6c1580a337b174a3f201d4a2e7" category="paragraph">새 서비스 정책을 만드는 방법에 대해 자세히 알아보려면 다음을 참조하세요.<block ref="bde3003423c900964c4ee350a2c93937" prefix=" " category="inline-code"></block> 명령 <block ref="4c757f8118f458307cd8cbbe7cb0437b" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -53,4 +53,6 @@ LIF 역할은 다음과 같습니다.
 
 
 ====
-LIF 보안에 대한 자세한 내용은 를 link:https://docs.netapp.com/us-en/ontap/networking/configure_firewall_policies_for_lifs.html["LIF의 방화벽 정책을 구성합니다"^]참조하십시오.
+LIF 보안에 대해 자세히 알아보려면 다음을 참조하세요. link:https://docs.netapp.com/us-en/ontap/networking/configure_firewall_policies_for_lifs.html["LIF의 방화벽 정책을 구성합니다"^]. 이 페이지에서는 ONTAP 9.10.1부터 시작되는 LIF 서비스 정책에 대한 세부 정보도 제공합니다.
+
+새 서비스 정책을 만드는 방법에 대해 자세히 알아보려면 다음을 참조하세요. `network interface service-policy create` 명령 link:https://docs.netapp.com/us-en/ontap-cli/network-interface-service-policy-create.html["명령어 참조."^]
