@@ -656,8 +656,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="97078bcee255554708a2dc43daad1d89" category="paragraph">관리자 역할은 모든 응용 프로그램을 사용하여 액세스할 수 있으므로 관리자 계정을 제한해야 합니다. diag 계정은 시스템 쉘에 액세스할 수 있으며 기술 지원 부서의 문제 해결 작업을 수행하기 위한 목적으로만 예약되어야 합니다.</block>
   <block id="c9accd8b029c8942d752f43699b37096" category="paragraph">기본 관리 계정에는 및 의 두<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block><block ref="776e6c3d14fd9df9fc13e130d598c448" prefix=" " category="inline-code"></block>가지가 있습니다.</block>
   <block id="67d110324f28f5ad695d2812caac20f0" category="paragraph">고립된 계정은 권한 에스컬레이션을 비롯한 취약점을 유발하는 주요 보안 수단입니다. 이러한 계정은 사용자 계정 저장소에 남아 있는 불필요하고 사용되지 않는 계정입니다. 이러한 계정은 기본적으로 사용되지 않았거나 암호가 업데이트 또는 변경되지 않은 기본 계정입니다. 이 문제를 해결하기 위해 ONTAP에서는 계정 제거 및 이름 변경을 지원합니다.</block>
-  <block id="b6de1bc3879c1fa71330c661bc8a43d6" category="admonition">ONTAP에서 기본 제공 계정을 제거하거나 이름을 바꿀 수 없습니다. 그러나 NetApp에서는 lock 명령을 사용하여 필요하지 않은 기본 제공 계정을 잠그는 것이 좋습니다.</block>
-  <block id="e4f0e98df937959605d87463cbbc31b1" category="paragraph">분리된 계정은 중요한 보안 문제이지만 NetApp에서는 로컬 계정 리포지토리에서 계정을 제거할 경우의 영향을 테스트하는 것이 좋습니다.</block>
   <block id="6cb6c61de00d2ea2ddc89f9bc1af9d56" category="section-title">로컬 계정을 나열합니다</block>
   <block id="8af692810cb4817c76de0eac3fc74663" category="paragraph">로컬 계정을 나열하려면<block ref="025c83c1a746b39471a98aa72befe950" prefix=" " category="inline-code"></block> 명령을 실행합니다.</block>
   <block id="9fe6ad1a708406939d553d1950a0091c" category="section-title">진단(diag) 계정 암호를 설정합니다</block>
@@ -680,7 +678,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="2c7bd7f651e1707f9b742cbee6c80dc0" category="summary">감사 이벤트를 생성하려면 CIFS 감사를 설정해야 합니다. 'vserver audit create' 명령을 사용하여 감사 구성을 생성하십시오.</block>
   <block id="8bd72155b8c97b023d15022524cfb0c0" category="doc">NAS 파일 시스템 감사</block>
   <block id="c6aee334f16650400781c76024693fed" category="paragraph">NAS 파일 시스템이 차지하는 공간 증가 오늘날의 위협 환경에서 감사 기능은 가시성을 지원하는 데 매우 중요합니다.</block>
-  <block id="2aeeab8bfaf9973e4cb353723dd50223" category="paragraph">보안에는 검증이 필요합니다. ONTAP 9은 솔루션 전반에 걸쳐 향상된 감사 이벤트와 세부 정보를 제공합니다. NAS 파일 시스템은 오늘날의 위협 환경에서 차지하는 공간이 늘어나기 때문에 감사 기능은 가시성을 지원하는 데 매우 중요합니다. ONTAP 9의 감사 기능이 개선되었기 때문에 CIFS 감사 세부 정보가 그 어느 때보다 많이 제공됩니다. 생성된 이벤트로 다음을 비롯한 키 세부 정보가 기록됩니다.</block>
   <block id="162e07d341435ffc1b2b21176789aacb" category="list-text">파일, 폴더 및 공유 액세스</block>
   <block id="a7bf213cd0eaac79d826418a77d1fb6c" category="list-text">생성, 수정 또는 삭제된 파일</block>
   <block id="2231d958d39aa0f0ccdc938fcd72bfd9" category="list-text">파일 읽기 액세스가 성공했습니다</block>
@@ -1487,7 +1484,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="d59048f21fd887ad520398ce677be586" category="list-title">자세한 정보</block>
   <block id="d755a63c36cf4c0f9c6907ccfa9cd73c" category="summary">NetApp의 랜섬웨어 보호에는 NetApp 스토리지의 선제적 관리 및 최적화를 간소하게 진행하는 디지털 자문업체인 Digital Advisor가 포함되어 있습니다.</block>
   <block id="b9146cd276bd05c42b4605042c3bb243" category="doc">Digital Advisor 랜섬웨어 방어</block>
-  <block id="4897c02070da8b53d75b19c7322951d0" category="paragraph">Active IQ Digital Advisor(Digital Advisor)는 최적의 데이터 관리를 위해 실행 가능한 인텔리전스를 통해 NetApp 스토리지의 능동적 관리 및 최적화를 간소화합니다. NetApp의 매우 다양한 설치 기반에서 얻은 원격 분석 데이터와 고급 AI 및 ML 기술을 사용하여 스토리지 환경의 위험을 줄이고 성능 및 효율성을 개선할 기회를 찾아줍니다.</block>
   <block id="519c2a8fa4c04e06ca3cdf8bf1e36af8" category="inline-link">보안 취약점을 제거합니다</block>
   <block id="76577e72432337ec3d67b6d505672afa" category="paragraph">이<block ref="c99e626cc10ed243c60409c4c9277251" category="inline-link-rx"></block> 방법은 도움이 될 뿐만<block ref="b106a6727b998eeea424b8da33e2facf" category="inline-link-rx"></block> 아니라 랜섬웨어로부터 보호하는 것과 관련된 통찰력과 지침도 제공합니다. 전용 웰니스 카드는 필요한 조치와 해결된 위험을 보여줍니다. 따라서 시스템이 이러한 모범 사례 권장 사항을 충족하는지 확인할 수 있습니다.</block>
   <block id="06cd9bbf1bdce12e9f926308f5ac9049" category="inline-image-macro">NetApp 디지털 어드바이저 대시보드의 웰니스 모니터</block>
@@ -1814,4 +1810,9 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="0b5afbf05d11e6ac9adfe1f86374ab53" category="paragraph">LIF 보안에 대해 자세히 알아보려면 다음을 참조하세요. <block ref="96282db2df36a6442998c6258ad3e2e9" category="inline-link-macro-rx"></block>. 이 페이지에서는 ONTAP 9.10.1부터 시작되는 LIF 서비스 정책에 대한 세부 정보도 제공합니다.</block>
   <block id="fb3030d6c04abdfd96f25e5abb17c519" category="inline-link-macro">명령어 참조.</block>
   <block id="8ececa6c1580a337b174a3f201d4a2e7" category="paragraph">새 서비스 정책을 만드는 방법에 대해 자세히 알아보려면 다음을 참조하세요.<block ref="bde3003423c900964c4ee350a2c93937" prefix=" " category="inline-code"></block> 명령 <block ref="4c757f8118f458307cd8cbbe7cb0437b" category="inline-link-macro-rx"></block></block>
+  <block id="7a065dad17780417ecadd37ba8bae045" category="admonition">내장 계정은 삭제하거나 이름을 변경할 수 없습니다. 관리자가 계정을 삭제하더라도 재부팅 시 내장 계정이 다시 생성됩니다. *NetApp에서는* 불필요한 내장 계정은 lock 명령을 사용하여 잠그는 것을 권장합니다.</block>
+  <block id="871d0d1970227521c025d4afdbdf144d" category="paragraph">고아 계정은 심각한 보안 문제이지만, *NetApp에서는* 로컬 계정 저장소에서 계정을 제거했을 때의 영향을 테스트해 볼 것을 강력히 권장합니다.</block>
+  <block id="66ce8dda241a30d6506fbb0ce52ca6c6" category="paragraph">보안에는 검증이 필수적입니다. ONTAP는 솔루션 전반에 걸쳐 향상된 감사 이벤트와 세부 정보를 제공합니다. 오늘날의 위협 환경에서 NAS 파일 시스템의 비중이 점점 커지고 있기 때문에 가시성을 확보하기 위해서는 감사 기능이 매우 중요합니다. ONTAP의 향상된 감사 기능 덕분에 CIFS 감사 세부 정보가 그 어느 때보다 풍부해졌습니다. 다음과 같은 주요 세부 정보가 생성된 이벤트와 함께 기록됩니다:</block>
+  <block id="de52fabb7b2b8cf3a6c7a650dbb7a61c" category="admonition">/api/storage/volumes REST API는 파일 액세스 이상의 용도로 사용됩니다. System Manager 및 기타 GUI 인터페이스에서 볼륨을 생성, 조회 및 수정하는 데 사용됩니다.</block>
+  <block id="d07e47e6acab2a8f8badef6ddfd866f1" category="paragraph">Active IQ 기반 Digital Advisor는 실행 가능한 인텔리전스를 통해 최적의 데이터 관리를 지원하여 NetApp 스토리지의 사전 예방적 관리 및 최적화를 간소화합니다. 다양한 설치 기반에서 수집된 원격 측정 데이터를 활용하여 고급 AI 및 ML 기술을 통해 스토리지 환경의 위험을 줄이고 성능 및 효율성을 개선할 수 있는 기회를 발견합니다.</block>
 </blocks>
