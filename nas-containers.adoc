@@ -38,12 +38,6 @@ link:https://docs.netapp.com/us-en/ontap/flexcache-writeback/flexcache-write-bac
 
 == FlexGroup 볼륨
 
-link:https://www.netapp.com/pdf.html?item=/media/17251-tr4571a.pdf["TR-4571a: FlexGroup의 10대 모범 사례"^]
-이 기술 보고서는 빠른 사용을 위한 TR-4571:NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드의 요약 버전입니다.
-
-link:https://www.netapp.com/pdf.html?item=/media/7337-tr4557.pdf["TR-4557: NetApp ONTAP FlexGroup 볼륨 - 기술 개요"^]
-메타데이터 집약적인 워크로드에서 예측 가능하고 지연 시간이 짧은 성능과 무한 확장성을 결합한 ONTAP 스케일아웃 NAS 컨테이너인 FlexGroup 볼륨에 대해 알아보십시오.
-
 link:https://www.netapp.com/pdf.html?item=/media/12385-tr4571.pdf["TR-4571: NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드"^]
 FlexGroup 볼륨, 권장 사례 및 구현 팁에 대해 알아보십시오. FlexGroup 볼륨은 메타데이터가 많은 워크로드에서 거의 무제한의 용량과 예측 가능하고 짧은 지연 시간의 성능을 결합한 ONTAP 스케일아웃 NAS 컨테이너의 발전된 형태입니다.
 
