@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: afx-overview/afx-overview-whats-new.html 
+keywords: netapp afx, new features, release notes, version history, ontap 
+summary: 이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 나올 때마다 업데이트될 예정입니다. 
+---
+= NetApp AFX의 새로운 기능
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx-overview/
+
+
+[role="lead"]
+이 섹션에서는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 출시될 때마다 업데이트될 예정입니다. 새로운 정보를 확인하려면 정기적으로 이 페이지를 방문해 주시고, 버전 릴리스 노트도 참조하시기 바랍니다.
+
+
+
+== NetApp ONTAP for AFX 최신 릴리스의 새로운 기능은 무엇입니까?
+
+최신 릴리스:
+
+ONTAP 9.19.1RC1(2026년 5월 기준)
+
+NetApp AFX의 새로운 기능:
+
+* 전역 중복 제거
+* 동적 스토리지 효율성
+* 고급 미리 읽기
+* 32개 노드 지원
+* 32PB 지원
+* FlexGroup 볼륨당 512개의 구성 볼륨
+
+
+
+
+== 버전 기록
+
+|===
+| 버전 | 날짜 | 문서 버전 기록 
+
+
+| 버전 1.0 | 2026년 6월 | 초기 릴리스 
+|===

@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: afx-overview/afx-overview-capabilities.html 
+keywords: netapp afx, networking, security, data protection, nondisruptive, volumes 
+summary: NetApp AFX는 일부 조정 사항을 제외하고 통합 ONTAP과 동일한 네트워킹 스택, 보안 기능, 데이터 보호 기술, 무중단 운영 및 볼륨 유형을 지원합니다. 
+---
+= 네트워킹, 보안 및 운영
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx-overview/
+
+
+[role="lead"]
+NetApp AFX는 일부 분리형 아키텍처에만 적용되는 조정 사항을 제외하고, 통합 ONTAP와 동일한 네트워킹 스택, 보안 기능, 데이터 보호 기술, 무중단 운영, 볼륨 유형을 지원합니다.
+
+
+
+== 네트워킹
+
+NetApp AFX의 네트워킹 스택은 통합 ONTAP와 동일합니다.
+
+* 데이터 LIF는 여전히 내부 및 외부 서비스에 네트워크 주소를 제공하는 데 사용됩니다.
+* 각 노드에는 고유한 물리적 포트 및 가상 포트 세트가 있습니다.
+* VLAN, ifgroup 및 BGP는 모두 여전히 지원됩니다.
+* LIF는 클러스터의 물리적 노드와 포트 간에 페일오버를 수행할 수 있습니다.
+* IPspace/브로드캐스트 도메인은 이전과 동일하게 구성되어 있습니다.
+* 각 SVM은 자체적인 전용 데이터 네트워크를 가질 수 있습니다.
+* 관리 네트워크는 데이터 네트워크와 분리될 수 있습니다.
+* 클라이언트 데이터 네트워크는 400GB 네트워킹 지원이 새로 추가된 것 외에는 변경 사항이 없습니다.
+* 백엔드 클러스터 스위치는 여전히 NetApp에서 제공하는 "골든 구성" 파일을 통해 구성됩니다.
+
+
+주요 네트워크 차이점은 다음과 같습니다.
+
+* 백엔드 클러스터 네트워크 포트는 이제 클러스터 스위치에 대한 100GB 연결만 지원합니다.
+* 클러스터 스위치는 400GB를 지원하므로 백엔드 노드 연결에는 스위치에서 사용하는 포트 수를 줄이기 위해 4 x 100GB 브레이크아웃 케이블이 사용됩니다.
+* 이제 스위치의 새로운 HA VLAN 구성을 통해 백엔드 클러스터 네트워크 전체의 HA 쌍 간에 NVRAM이 미러링됩니다.
+* AI Data Engine에 대해 새 DCN 네트워크가 기본적으로 추가됩니다. 이러한 IP 주소는 자동으로 생성되며 필요에 따라 변경할 수 있습니다.
+
+
+
+
+== 보안
+
+NetApp AFX는 ONTAP를 실행하므로 ONTAP와 동일한 보안을 사용합니다. 모든 암호화 모듈이 동일하므로 인증 프로세스가 완료되면 보안 인증도 동일합니다. NetApp AFX는 통합 ONTAP와 동일한 보안 암호를 지원합니다.
+
+또한 NetApp AFX는 다음을 포함하되 이에 국한되지 않는 통합 ONTAP에서 제공하는 많은 보안 기능을 지원합니다.
+
+* 자율 랜섬웨어 보호
+* 안전한 다중 테넌시
+* 저장 데이터 암호화(볼륨 암호화) 및 전송 데이터 암호화(TLS 1.3)
+* 자체 암호화 드라이브(SED)
+* NFS 및 SMB Kerberos 인증 및 암호화
+* 다중 관리 검증
+* SnapLock
+
+
+통합 ONTAP이 획득한 인증(및 기타 보안 강화 정보)에 대한 자세한 내용은 다음을 참조하십시오.
+
+* link:https://security.netapp.com/certifications["NetApp 제품 보안"^]
+* link:https://docs.netapp.com/us-en/ontap-technical-reports/ontap-security-hardening/security-hardening-overview.html["ONTAP 보안 강화 개요"^]
+
+
+
+
+== 스냅샷 및 데이터 보호
+
+NetApp AFX는 통합 ONTAP와 동일한 스냅샷 및 복제 기술을 활용하며, 이러한 기능의 작동 방식에 큰 변화는 없습니다. 실제로 AFX는 기존에 익숙한 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html["규칙 및 구성"^]를 사용하여 통합 ONTAP 시스템과의 복제를 수행할 수 있습니다.
+
+AFX에서 복제와 관련하여 유일한 예외는 FlexGroup 볼륨을 통합 ONTAP 시스템으로 복제하는 경우입니다. 이 경우 대상 통합 ONTAP 시스템은 고급 용량 균형 조정(Advanced Capacity Balancing)을 지원하기 위해 ONTAP 9.16.1 이상 버전을 실행해야 합니다.
+
+
+
+== 무중단 운영
+
+ONTAP는 볼륨 이동, 업그레이드, 클러스터 유지 관리, 스토리지 페일오버 등과 같은 무중단 운영을 제공합니다. NetApp AFX는 일부 조정을 통해 동일한 무중단 운영을 제공합니다.
+
+* 볼륨 이동은 여전히 중단 없이 진행되지만 더 이상 복사가 필요하지 않습니다.
+* 스토리지 페일오버는 여전히 무중단 방식이지만, 초기 페일오버 후에는 클러스터의 모든 남아 있는 노드에 걸쳐 볼륨이 재조정됩니다.
+* LIF 마이그레이션은 동일합니다.
+* 하드웨어 유지 보수 및 업그레이드는 동일합니다.
+
+
+
+
+== 볼륨 유형
+
+Unified ONTAP는 다음과 같은 다양한 볼륨 유형을 지원합니다.
+
+* FlexVols
+* FlexGroup 볼륨
+* FlexCache
+* FlexClone
+* 객체 버킷
+
+
+NetApp AFX는 이러한 각 볼륨 유형을 완벽하게 지원할 뿐만 아니라 통합 ONTAP 시스템과 FlexCache 볼륨 간의 완벽한 상호 운용성도 제공합니다.
+
+FlexGroup 볼륨이 AFX 아키텍처를 통해 얻는 이점에 대한 자세한 내용은 link:afx-overview-architecture.html#flexgroup-volume-management-improvements["FlexGroup 볼륨 관리 개선 사항"]을 참조하십시오.

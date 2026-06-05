@@ -1,11 +1,11 @@
 ---
 indexpage:
-  title: ONTAP 기술 보고서
-  summary: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
-    제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
+  title: NetApp 기술 보고서
+  summary: NetApp 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
+    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제공합니다.
   keywords: ONTAP 9, ONTAP, Technical Reports, TR
-  lead: ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를
-    제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.
+  lead: NetApp 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
+    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제공합니다.
   tiles:
   - title: 제공합니다
     links:

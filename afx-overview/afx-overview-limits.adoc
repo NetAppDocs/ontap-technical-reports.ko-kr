@@ -1,0 +1,211 @@
+---
+sidebar: sidebar 
+permalink: afx-overview/afx-overview-limits.html 
+keywords: netapp afx, maximums, minimums, limits, capacity, nodes, volumes 
+summary: 이 페이지에서는 NetApp AFX 클러스터의 최대값과 최소값을 통합 ONTAP와 비교하여 설명합니다. 
+---
+= 최대값 및 제한값
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx-overview/
+
+
+[role="lead"]
+다음 섹션에서는 NetApp AFX 클러스터의 최대값과 최소값을 통합 ONTAP와 비교하여 설명합니다.
+
+최신 제한 사항은 link:http://hwu.netapp.com/["Hardware Universe"^]을 참조하십시오.
+
+*NetApp AFX 최대값 및 최소값*
+
+|===
+| 제한 | 통합 ONTAP | NetApp AFX 
+
+
+| 볼륨 수(클러스터)  a| 
+* 30,000(플랫폼에 따라 다름)
+
+ a| 
+* 30,000
+
+
+
+
+| 애그리게이트 크기  a| 
+* 800 TB
+
+ a| 
+* 해당 없음
+
+
+
+
+| 노드 수  a| 
+* 24
+
+ a| 
+* 8 (9.17.1)
+* 32 (9.19.1RC1)
+
+
+
+
+| 총 용량  a| 
+* 노드 및 드라이브에 따라 다릅니다. 자세한 내용은 link:http://hwu.netapp.com["hwu.netapp.com"^]을 참조하십시오.
+
+ a| 
+* 2PB (9.17.1)
+* 3PB (9.18.1RC1)
+* 16PB(9.18.1GA 릴리스)
+* 20PB (9.19.1RC0)
+* 32PB (9.19.1RC1)
+
+
+
+
+| 지원되는 쉘프 수  a| 
+* HA 쌍당 8개
+* 클러스터당 192개
+
+ a| 
+* 클러스터당 12개(9.18.1GA)
+* 클러스터당 17개(9.19.1RC0)
+* 클러스터당 25개(9.19.1RC1)(HA 쌍 제한 없음)
+
+
+
+
+| 지원되는 총 드라이브 수  a| 
+* HA 쌍당 240
+* 2880(노드 24개)
+
+ a| 
+* 클러스터당 288개(쉘프 수 제한 기준, HA 쌍 제한 없음)
+* 클러스터당 408개(9.19.1RC0)
+* 클러스터당 600개(9.19.1RC1)
+
+
+
+
+| 볼륨 크기  a| 
+* 300TB(FlexVol)
+* 60PB(FlexGroup)
+
+ a| 
+* 300TB(FlexVol)
+* 60PB (FlexGroup)*
+
+
+
+
+| 볼륨당 최대 파일 수  a| 
+* 20억(FlexVol)
+* 4천억(FlexGroup)
+
+ a| 
+* 20억(FlexVol)
+* 4천억(FlexGroup)
+
+
+
+
+| 디렉터리당 최대 파일 수(기본 320MB maxdirsize 값)  a| 
+* 약 4백만(FlexVol)
+* 약 2백만(FlexGroup)
+
+ a| 
+* 약 4백만(FlexVol)
+* 약 2백만(FlexGroup)
+
+
+
+
+| SnapMirror 동시 전송  a| 
+* 250
+
+ a| 
+* 250
+
+
+
+
+| qtree 수  a| 
+* 4096
+
+ a| 
+* 4096
+
+
+
+
+| 노드당 최대 TCP 연결 수  a| 
+* 100,000
+
+ a| 
+* 100,000
+
+
+
+
+| 노드당 최대 잠금 수  a| 
+* 300만
+
+ a| 
+* 300만
+
+
+
+
+| 최대 데이터 인터페이스 수(클러스터)  a| 
+* 4096
+
+ a| 
+* 4096
+
+
+
+
+| 최대 구성요소 수 – FlexGroup  a| 
+* 200
+
+ a| 
+* 200
+* 9.19.1 RC1의 512
+
+
+
+
+| 클러스터 간 LIF의 최대 개수  a| 
+* 8
+
+ a| 
+* 8
+
+
+
+
+| 최대 IP 공간 수  a| 
+* 512
+
+ a| 
+* 512
+
+
+
+
+| 오리진당 최대 FlexCache 수  a| 
+* 100
+
+ a| 
+* 100
+
+
+
+
+| 최대 FlexCache 수(노드)  a| 
+* 400
+
+ a| 
+* 400
+
+
+|===

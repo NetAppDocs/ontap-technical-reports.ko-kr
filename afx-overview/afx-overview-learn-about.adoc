@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: afx-overview/afx-overview-learn-about.html 
+keywords: netapp afx, ontap, disaggregated architecture, overview, key terms 
+summary: NetApp AFX는 NAS 및 객체 워크로드를 위한 분산형 아키텍처를 제공하는 동시에, 여러분이 잘 알고 사랑하는 기능이 풍부한 ONTAP 소프트웨어를 그대로 제공합니다. 
+---
+= NetApp AFX 개요: NetApp AFX에 대해 알아보세요
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx-overview/
+
+
+[role="lead"]
+NetApp AFX는 여전히 ONTAP입니다. 단지 ONTAP의 이점을 활용하는 다른 방법일 뿐입니다. NetApp AFX는 NAS 및 객체 워크로드를 위한 분산 아키텍처를 제공하는 동시에, 여러분이 알고 사랑하는 풍부한 기능을 갖춘 ONTAP 소프트웨어를 그대로 제공합니다.
+
+
+
+== 혁신의 진화: NetApp ONTAP
+
+NetApp ONTAP는 1992년 여러 클라이언트에 NFS 워크로드를 제공하는 새로운 방식으로 개발되었으며, 성능, 데이터 복원력, 시점 복사 등 여러 측면에서 혁신을 가져왔습니다. 초기에는 NFSv2만 지원했지만, 최신 NFS 버전, 다른 데이터 프로토콜, 강화된 데이터 보호 기능에 대한 수요가 증가함에 따라 NetApp ONTAP는 발전해 왔습니다.
+
+다음은 지난 30여 년 동안 ONTAP에서 발생한 주요 변화들을 간략하게 정리한 타임라인입니다.
+
+*NetApp ONTAP의 진화*
+
+|===
+| 10년 | 기능 
+
+
+| 1990s | NFSv2, NFSv3, CIFS, 스냅샷, WAFL 파일 시스템, AutoSupport, SnapMirror 
+
+
+| 2000s | SnapVault, SnapLock, NFSv4, 블록 프로토콜, FlexVols, FlexClone, GX/스케일 아웃, 중복 제거, 파일 클론 
+
+
+| 2010s | 클러스터형 ONTAP, 인라인 스토리지 효율성, NFSv4.1/pNFS, NVMe, RAID-TEC, FlexGroup 볼륨, 볼륨 암호화, AFF, Cloud Volumes ONTAP, QoS, FabricPool, Azure NetApp Files (ANF), Google Cloud NetApp Volumes (GCNV), All SAN Array (ASA) 
+
+
+| 2020s | SnapMirror Business Continuity, FlexCache, ONTAP S3, IPsec, Autonomous Ransomware Protection, ANF 및 GCNV 내외부의 SnapMirror, Amazon FSxN, ASAr2, NetApp AFX가 여기에 있습니다 
+|===
+
+
+=== NetApp ONTAP 특성
+
+수년간 ONTAP는 파일, 블록 및 객체를 단일 시스템으로 결합한 통합 플랫폼으로 운영되었습니다. 이로 인해 ONTAP는 데이터센터의 만능 도구, 즉 사용자가 요청하는 모든 작업을 수행할 수 있는 플랫폼으로 자리매김했습니다.
+
+하지만 애플리케이션이 발전하고 IT 산업의 여러 변화에 따라 데이터센터 요구 사항이 바뀌면서 특정 기능을 수행할 수 있는 플랫폼에 대한 수요가 증가했습니다. 그 결과, 현재 ONTAP을 사용하는 몇 가지 다른 방법이 있습니다.
+
+*NetApp ONTAP 특성*
+
+|===
+| ONTAP 퍼스낼리티 | 설명 
+
+
+| 통합 ONTAP | 여러분이 항상 알고 있던 동일한 ONTAP이며, 여전히 활발하게 개발 및 개선되고 있습니다. 
+
+
+| 모든 SAN 어레이 | ONTAP은 iSCSI, FCP 및 FC/TCP를 통한 NVMe만 지원하며 액티브/액티브 컨트롤러 기능과 ASAr2의 분산형 개념을 제공합니다. 
+
+
+| 클라우드 상주 ONTAP | 클라우드에서 실행되는 ONTAP은 클라우드 데이터 센터에 있는 베어 메탈 시스템 또는 가상화된 ONTAP 인스턴스에서 실행됩니다. 
+
+
+| 분리형 ONTAP/AFX | ONTAP는 고성능 NAS 및 객체 워크로드를 위해 분산형 아키텍처를 사용합니다. 
+|===
+
+
+== 통합 ONTAP 아키텍처 개요
+
+다음 다이어그램은 통합 ONTAP의 일반 아키텍처를 보여주며, 그 아래에는 모든 구성 요소가 어떻게 결합되는지에 대한 설명이 있습니다.
+
+*일반 ONTAP 아키텍처*
+
+image:image3.png["이미지"]
+
+ONTAP 아키텍처의 주요 측면:
+
+* 파일, 객체 및 블록 지원
+* 프로토콜은 프런트엔드 클라이언트 데이터 네트워크를 통해 제공됩니다.
+* 여러 개의 독립적인 노드를 함께 클러스터링할 수 있습니다.
+* 각 노드는 데이터 및 관리 사용 사례에 대해 독립적인 플로팅 IP 주소를 제공할 수 있습니다
+* 클러스터링된 노드는 클러스터 VLAN을 통해 NetApp에서 제공하는 백엔드 스위치에 연결됩니다.
+* 노드들은 하드웨어 또는 전력 장애 발생 시 복원력을 제공하기 위해 고가용성(HA) 쌍으로 구성됩니다.
+* HA 쌍은 쓰기를 보호하기 위해 복제하는 NVRAM 카드가 직접 연결되어 있습니다
+* 각 노드에는 최소 하나 이상의 애그리게이트가 할당되며 전체 디스크 수의 일부를 소유합니다.
+* 페일오버 시 노드의 디스크는 HA 파트너(HA 파트너에게만)에게 재할당됩니다.
+* 디스크 셸프는 일반적으로 다중 경로 케이블을 통해 노드에 직접 연결되지만, 고급 시스템에서는 동일한 백엔드 클러스터 스위치에 스토리지 네트워크 개념이 도입되었습니다.
+* 볼륨(FlexVols 및 FlexGroup 볼륨)은 데이터 액세스를 위한 스토리지의 진입점을 제공합니다
+
+
+
+
+== NetApp AFX란 무엇인가요?
+
+여기서 한 가지 명심해야 할 점은 NetApp AFX가 여전히 ONTAP라는 것입니다.
+
+이는 ONTAP의 이점을 활용하는 또 다른 방법일 뿐입니다. Unified ONTAP 또는 All SAN Array 시스템에 설치하는 이미지와 동일한 이미지가 NetApp AFX에서도 사용됩니다. 코드베이스는 동일하지만, 시스템 부팅 방식에 따라 실행되는 코드 경로, 백엔드 스토리지의 표현 방식, 지원되는 기능 및 프로토콜이 결정됩니다.
+
+NetApp AFX는 NAS 및 객체 워크로드를 위한 분산형 아키텍처를 제공하는 동시에, 익숙하고 사랑받는 풍부한 기능을 갖춘 ONTAP 소프트웨어를 그대로 제공합니다. 분산형 ONTAP는 모든 NetApp 컨트롤러 노드가 이중화된 네트워크 스위치와 고속 저지연 네트워크를 통해 동일한 용량을 사용하는 스토리지 아키텍처를 의미합니다. 이러한 접근 방식을 통해 컨트롤러 노드와 스토리지 용량이 서로 독립적으로 확장하여 다양한 고성능 워크로드의 요구 사항을 더욱 효과적으로 충족할 수 있습니다. 즉, 추가 성능이 필요하면 컨트롤러 노드를 추가하면 됩니다. 추가 용량이 필요하면 쉘프 인클로저를 추가하면 됩니다. 이를 통해 스토리지 관리자는 최종 사용자에게 더욱 비용 효율적인 스토리지 솔루션을 제공할 수 있는 유연성을 확보할 수 있습니다.
+
+컨트롤러 노드가 디스크를 독립적으로 소유하지 않기 때문에 자체 용량 및 성능 제약 조건을 가진 물리적 애그리게이트도 존재하지 않습니다. 대신 용량은 모든 노드가 상호 작용할 수 있는 공유 모델로 제공되며 ONTAP가 자동으로 관리할 수 있습니다.
+
+*분리형 ONTAP*
+
+image:image4.png["이미지"]
+
+
+
+== 주요 용어 및 개념
+
+아래는 AFX와 직접적으로 관련된 용어입니다. ONTAP 관련 용어는 제품 설명서를 참조하십시오.
+
+link:https://docs.netapp.com/us-en/ontap-family/index.html["ONTAP 제품 설명서"^].
+
+
+
+=== 분산형 ONTAP
+
+ONTAP를 기반으로 하는 새로운 아키텍처를 의미하며, 컴퓨팅과 용량을 서로 독립적으로 확장할 수 있는 기능을 제공합니다. "분리형 ONTAP"이라는 용어는 제품명이 아니라 통합 ONTAP와 NetApp AFX 아키텍처를 구분하기 위한 용어입니다.
+
+
+
+=== NetApp AFX
+
+NetApp AFX는 분산형 ONTAP 아키텍처의 공식 제품명이며 NetApp Insight 2025에서 발표되었습니다.
+
+
+
+=== 컴퓨팅 노드
+
+NetApp AFX에서 컴퓨팅 노드는 스토리지 컨트롤러 노드를 의미하며, 문서에서는 종종 같은 의미로 사용됩니다. 이러한 노드에는 온보드 디스크가 없으며, 분산형 ONTAP 아키텍처가 제공하는 독립적인 확장성을 지원하기 위해 완전한 모듈형으로 설계되었습니다.
+
+
+
+=== 스토리지 가용 영역
+
+스토리지 가용 영역(SAZ)은 NetApp AFX 클러스터에서 모든 디스크가 모든 노드에서 공유되는 단일 용량 풀입니다. SAZ를 통해 공유 용량, 향상된 성능, 전역 데이터 중복 제거 등의 기능을 활용할 수 있습니다.

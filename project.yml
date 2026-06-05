@@ -1,16 +1,16 @@
 ---
 settings:
-  name: ONTAP Technical Reports
+  name: NetApp Technical Reports
   search: ontap-technical-reports, ontap-apps-dbs, netapp-solutions-sap
   internal:
-    pdf_enabled: true
+    pdf_enabled: false
   prod:
     pdf_enabled: true
     harmony_enabled: false
   langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: ONTAP 기술 보고서
+  - title: NetApp 기술 보고서
     url: "/index.html"
   - title: 제공합니다
     url: "/apps-dbs.html"
@@ -38,6 +38,10 @@ sidebar:
     - title: 개요
       url: "/security-hardening-guides.html"
     - section: ontap-security-hardening
+  - title: 스토리지 시스템
+    entries:
+    - title: AFX
+      section: afx-overview
   - title: SnapCenter
     url: "/snapcenter.html"
   - title: 계층화

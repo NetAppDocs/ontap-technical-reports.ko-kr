@@ -1,0 +1,22 @@
+---
+section: afx-overview
+title: AFX
+entries:
+- title: 개요
+  url: "/afx-overview/afx-overview-learn-about.html"
+- title: 새로운 소식
+  url: "/afx-overview/afx-overview-whats-new.html"
+- title: 아키텍처
+  url: "/afx-overview/afx-overview-architecture.html"
+- title: 성능
+  url: "/afx-overview/afx-overview-performance.html"
+- title: 관리
+  url: "/afx-overview/afx-overview-management.html"
+- title: 제공합니다
+  url: "/afx-overview/afx-overview-capabilities.html"
+- title: 하드웨어
+  url: "/afx-overview/afx-overview-hardware.html"
+- title: 최대값 및 제한값
+  url: "/afx-overview/afx-overview-limits.html"
+- title: 관련 정보
+  url: "/afx-overview/afx-overview-related-info.html"

@@ -23,12 +23,6 @@ Epic은 의료 업계를 위한 소프트웨어를 만듭니다. NetApp 스토�
   <block id="c961d9be8d19d4a797bcb8379b8d53da" category="paragraph"><block ref="dcccffffe1593858762c9997c1787d46" category="inline-link-macro-rx"></block>
 FlexCache는 동일하거나 다른 ONTAP 클러스터에서 볼륨의 쓰기 가능한 스파스 복제본을 생성하는 캐싱 기술입니다. 데이터 및 파일을 사용자와 더 가까운 곳에 제공하여 더 적은 설치 공간으로 더 빠른 처리량을 얻을 수 있습니다. FlexCache 사용 방법, 권장 사례, 제한 및 설계 및 구현 고려 사항에 대해 알아보십시오.</block>
   <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="section-title">FlexGroup 볼륨</block>
-  <block id="005e8b273d9247c834522a5865fba55a" category="inline-link-macro">TR-4571a: FlexGroup의 10대 모범 사례</block>
-  <block id="88c689e951f21e04438921c1a8f89c53" category="paragraph"><block ref="e57f10ccb2fbbeb4438b60c102c4cbf0" category="inline-link-macro-rx"></block>
-이 기술 보고서는 빠른 사용을 위한 TR-4571:NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드의 요약 버전입니다.</block>
-  <block id="af1445adb596e3036441303b3f225364" category="inline-link-macro">TR-4557: NetApp ONTAP FlexGroup 볼륨 - 기술 개요</block>
-  <block id="3649786d1f84e11756db92f2cd48a240" category="paragraph"><block ref="cc2f82cb4a64554dd07d5530f932405a" category="inline-link-macro-rx"></block>
-메타데이터 집약적인 워크로드에서 예측 가능하고 지연 시간이 짧은 성능과 무한 확장성을 결합한 ONTAP 스케일아웃 NAS 컨테이너인 FlexGroup 볼륨에 대해 알아보십시오.</block>
   <block id="222369aa30ed4d2b01e2ad3c4826e38f" category="inline-link-macro">TR-4571: NetApp ONTAP FlexGroup 볼륨 모범 사례 및 구현 가이드</block>
   <block id="b42d52921e30b7b641b9b5fd0146b053" category="paragraph"><block ref="aa86589b7ac63727c91bf2f5e5311f75" category="inline-link-macro-rx"></block>
 FlexGroup 볼륨, 권장 사례 및 구현 팁에 대해 알아보십시오. FlexGroup 볼륨은 메타데이터가 많은 워크로드에서 거의 무제한의 용량과 예측 가능하고 짧은 지연 시간의 성능을 결합한 ONTAP 스케일아웃 NAS 컨테이너의 발전된 형태입니다.</block>
@@ -225,7 +219,6 @@ PCI DSS 4.0 표준에 따라 시스템을 검증하고 NetApp ONTAP 시스템에
   <block id="1406aa071af210d31c6a2951fe66ddcc" category="inline-link-macro">ONTAP 및 vSphere 자동화 소개</block>
   <block id="777794440aa1ad0d5dfc51e1f00e6b65" category="inline-link-macro">WP-7353: VMware vSphere용 ONTAP 툴 - 제품 보안</block>
   <block id="a3d8d5aab8801e818f1ef65d0656ac6f" category="inline-link-macro">WP-7355: SnapCenter 플러그인 VMware vSphere - 제품 보안</block>
-  <block id="6d4e2f1f073dd653734779d5d0cf0f77" category="sidebar">ONTAP 기술 보고서는 다양한 에코시스템 또는 다양한 프로토콜 내에서 ONTAP 구축을 계획 및 최적화할 수 있는 추가적인 컨텍스트를 제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능에 대한 아키텍처 맥락과 권장 사례를 제공합니다.</block>
   <block id="9eaca569c6f5ca3388f5613da3aa008c" category="sidebar">ONTAP 기반의 Oracle 데이터베이스</block>
   <block id="db43ac1a3df915eac1e2b05048e0ff14" category="sidebar">SnapLock를 사용한 규정 준수 WORM 스토리지</block>
   <block id="098a9352bab68d0361bda3b31e3eaf76" category="sidebar">FlexCache 볼륨</block>
@@ -299,7 +292,6 @@ NetApp AFF A-Series 및 C-Series 시스템을 사용하는 Microsoft SQL Server�
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
-  <block id="9678a7dcb872318bf33163b8a1ba5331" category="sidebar">ONTAP 기술 보고서</block>
   <block id="9aa5016539f88d8f1972a16ce9babd34" category="paragraph">SQL Server는 Microsoft의 데이터 플랫폼의 토대로서, 인메모리 기술을 통해 업무상 중요한 성능을 제공하고 온프레미스 또는 클라우드의 모든 데이터에 대한 보다 빠른 인사이트를 제공합니다.</block>
   <block id="9b69ac51cee72ab028bfee99876e67a5" category="inline-link-macro">ONTAP 지원 Microsoft SQL Server에 대한 모범 사례</block>
   <block id="01752505b04bc5ba6ef1dfc307d41db3" category="admonition">이 문서는 이전에 게시된 기술 보고서_TR-4590: ONTAP를 사용하여 Microsoft SQL Server에 대한 모범 사례 가이드를 대체합니다</block>
@@ -703,7 +695,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="8dc069dbc94e0f92294ae55e163a927e" category="paragraph">ONTAP 9.4부터는 UEFI(통합 확장 펌웨어 인터페이스) 보안 부팅이 NetApp AFF A800, AFF A220, FAS2750, FAS2720 시스템과 UEFI BIOS를 사용하는 후속 차세대 시스템에서 지원됩니다.</block>
   <block id="655bf761a665b5c3191f2f417b3c3452" category="paragraph">전원을 켜는 동안 부트로더는 로드된 각 모듈과 연결된 서명을 사용하여 보안 부팅 키의 화이트리스트 데이터베이스를 검증합니다. 각 모듈이 검증되고 로드된 후 부팅 프로세스는 ONTAP 초기화를 계속합니다. 모듈에 대한 서명 검증이 실패하면 시스템이 재부팅됩니다.</block>
   <block id="ac0085d2b84b8c40a9b127b5d73f46a5" category="admonition">이러한 항목은 ONTAP 이미지 및 플랫폼 BIOS에 적용됩니다.</block>
-  <block id="b756419b786d6448060053d918d50049" category="summary">IPsec은 NFS 또는 SMB/CIFS 암호화에 대한 대안을 제공하며 iSCSI 트래픽에 대한 전송 중인 유일한 암호화 옵션입니다.</block>
   <block id="ee0d0f0cab8bcd3f366b9b6968497712" category="doc">전송 중인 IPsec 데이터 암호화</block>
   <block id="a991f8cfc0c75d85730a9cc0a87aab1d" category="paragraph">데이터 복제 트래픽을 위해 NSE(NetApp Storage Encryption), NVE(NetApp Volume Encryption), CPE(클러스터 피어링 암호화)와 같은 유휴 데이터 암호화 기술을 사용하는 고객은 이제 ONTAP 9.8 이상으로 업그레이드하고 를 사용하여 하이브리드 멀티 클라우드 Data Fabric 전반에서 클라이언트와 스토리지 간에 엔드 투 엔드 암호화를 사용할 수 있습니다 IPsec을 선택합니다. IPsec은 NFS 또는 SMB/CIFS 암호화에 대한 대안을 제공하며 iSCSI 트래픽에 대한 전송 중인 유일한 암호화 옵션입니다.</block>
   <block id="826b2ee1302663e734aedf76739d09b4" category="paragraph">경우에 따라 유선을 통해(또는 전송 중인) ONTAP SVM으로 전송되는 모든 클라이언트 데이터를 보호해야 할 필요가 있을 수 있습니다. 이렇게 하면 전송 중에 중요 데이터에 대한 재생 및 악의적인 메시지 가로채기 공격이 방지됩니다.</block>
@@ -1816,4 +1807,666 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="5df74c89ba8e94dd2a8e011f208aef1f" category="paragraph">클러스터 피어링은 클러스터 피어 간의 모든 데이터를 암호화합니다. 예를 들어 SnapMirror를 사용하는 경우 소스 및 타겟 클러스터 피어 간의 모든 피어링 정보와 모든 SnapMirror 관계가 암호화됩니다. 클러스터 피어링 암호화가 활성화된 경우 클러스터 피어 간에 평문 데이터를 전송할 수 없습니다.</block>
   <block id="9a2a67e1042dbd593b75f93bc2171e98" category="paragraph">ONTAP 9.6부터는 새로운 클러스터 피어 관계에 기본적으로 암호화가 활성화됩니다. ONTAP 9.6 이전에 생성된 클러스터 피어 관계에 암호화를 활성화하려면 소스 및 타겟 클러스터를 9.6으로 업그레이드해야 합니다. 또한, <block ref="18ac852fb0d15d21df0560ca7f7d0e22" prefix=" " category="inline-code"></block> 명령을 사용하여 소스 및 타겟 클러스터 피어 모두 클러스터 피어링 암호화를 사용하도록 변경해야 합니다.</block>
   <block id="43ea6f5beb13835aa597f3515ad5607b" category="paragraph">ONTAP 9.6에서는 다음 예시와 같이 기존 피어 관계를 클러스터 피어링 암호화를 사용하도록 변환할 수 있습니다.</block>
+  <block id="cb090eca9812e4936ab57cef23bcf50f" category="doc">AFX 개요 9191 초안</block>
+  <block id="143a58224755c78c479d5fe193823469" category="section-title">혁신의 진화: NetApp ONTAP</block>
+  <block id="f1a5c5e76146241064a34187bee212d9" category="paragraph">NetApp ONTAP는 1992년 여러 클라이언트에 NFS 워크로드를 제공하는 새로운 방식으로 개발되었으며, 성능, 데이터 복원력, 시점 복사 등 여러 측면에서 혁신을 가져왔습니다. 초기에는 NFSv2만 지원했지만, 최신 NFS 버전, 다른 데이터 프로토콜, 강화된 데이터 보호 기능에 대한 수요가 증가함에 따라 NetApp ONTAP는 발전해 왔습니다.</block>
+  <block id="dc9f537cfd024826c1cbddf0894fdb42" category="paragraph">다음은 지난 30여 년 동안 ONTAP에서 발생한 주요 변화들을 간략하게 정리한 타임라인입니다.</block>
+  <block id="ad3bf81f37b9dddba943b53f7670c57b" category="cell">10년</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="cell">기능</block>
+  <block id="a7e87ea76aba0111df9a8c610c56c077" category="cell">1990s</block>
+  <block id="d524df807dfc6048f8ba166a41eee4b6" category="cell">NFSv2, NFSv3, CIFS, 스냅샷, WAFL 파일 시스템, AutoSupport, SnapMirror</block>
+  <block id="fcccb46de7a9b26c0781c4843943336a" category="cell">2000s</block>
+  <block id="753dcaaa76a30c6dbc25e44affa7ce40" category="cell">SnapVault, SnapLock, NFSv4, 블록 프로토콜, FlexVols, FlexClone, GX/스케일 아웃, 중복 제거, 파일 클론</block>
+  <block id="a96568dc603cfa05e2b9d778af5ad46f" category="cell">2010s</block>
+  <block id="77405b6bff4698c3deb99c76c8b4bd25" category="cell">클러스터형 ONTAP, 인라인 스토리지 효율성, NFSv4.1/pNFS, NVMe, RAID-TEC, FlexGroup 볼륨, 볼륨 암호화, AFF, Cloud Volumes ONTAP, QoS, FabricPool, Azure NetApp Files (ANF), Google Cloud NetApp Volumes (GCNV), All SAN Array (ASA)</block>
+  <block id="6c895fd976d83d4a56c7c64e6dfbaf11" category="cell">2020s</block>
+  <block id="0a61fe321562e6e74ee0c3c539a1e176" category="cell">SnapMirror Business Continuity, FlexCache, ONTAP S3, IPsec, Autonomous Ransomware Protection, ANF 및 GCNV 내외부의 SnapMirror, Amazon FSxN, ASAr2, NetApp AFX가 여기에 있습니다</block>
+  <block id="7ab31c83f151d50a11ad5f652ee8d754" category="section-title">NetApp ONTAP 특성</block>
+  <block id="a8171735a657a5d66f49c872df04cbb2" category="paragraph">수년간 ONTAP는 파일, 블록 및 객체를 단일 시스템으로 결합한 통합 플랫폼으로 운영되었습니다. 이로 인해 ONTAP는 데이터센터의 만능 도구, 즉 사용자가 요청하는 모든 작업을 수행할 수 있는 플랫폼으로 자리매김했습니다.</block>
+  <block id="0db0c2c0e0ae1f9cf1a2c7c345ea0f14" category="paragraph">하지만 애플리케이션이 발전하고 IT 산업의 여러 변화에 따라 데이터센터 요구 사항이 바뀌면서 특정 기능을 수행할 수 있는 플랫폼에 대한 수요가 증가했습니다. 그 결과, 현재 ONTAP을 사용하는 몇 가지 다른 방법이 있습니다.</block>
+  <block id="e248b9c5e25e6a19d27f91110da7c22f" category="cell">ONTAP 퍼스낼리티</block>
+  <block id="b33eab3f59e19afa3da64a7838372c21" category="cell">통합 ONTAP</block>
+  <block id="38fe3a914dfe66d74ecdd3fc1820867e" category="cell">여러분이 항상 알고 있던 동일한 ONTAP이며, 여전히 활발하게 개발 및 개선되고 있습니다.</block>
+  <block id="531b50f22671e8795591ed8a4dc6f932" category="cell">모든 SAN 어레이</block>
+  <block id="21a722d3688a2ba63bbb0f800d209c5b" category="cell">ONTAP은 iSCSI, FCP 및 FC/TCP를 통한 NVMe만 지원하며 액티브/액티브 컨트롤러 기능과 ASAr2의 분산형 개념을 제공합니다.</block>
+  <block id="7c4376c68911329ec757b4f05c3e5205" category="cell">클라우드 상주 ONTAP</block>
+  <block id="7114a5bb0545e0e843f93f7a397b612d" category="cell">클라우드에서 실행되는 ONTAP은 클라우드 데이터 센터에 있는 베어 메탈 시스템 또는 가상화된 ONTAP 인스턴스에서 실행됩니다.</block>
+  <block id="f0aaa5f77c05a55bb4affe6520c8334d" category="cell">분리형 ONTAP/AFX</block>
+  <block id="5ec161764358c95f29ea9bc1a0db0b85" category="cell">ONTAP는 고성능 NAS 및 객체 워크로드를 위해 분산형 아키텍처를 사용합니다.</block>
+  <block id="a9047099cfb9e5f1e84f8107929d3213" category="section-title">통합 ONTAP 아키텍처 개요</block>
+  <block id="0e11c7bbcd2d7bcbd95d6748951c9359" category="paragraph">다음 다이어그램은 통합 ONTAP의 일반 아키텍처를 보여주며, 그 아래에는 모든 구성 요소가 어떻게 결합되는지에 대한 설명이 있습니다.</block>
+  <block id="c296633dada9d9bd144d1b33507efccd" category="paragraph-title">그림 1) 일반 ONTAP 아키텍처</block>
+  <block id="be53a0541a6d36f6ecb879fa2c584b08" category="inline-image-macro">이미지</block>
+  <block id="ce2b768b0008427d3863459a2b431f08" category="paragraph"><block ref="ce2b768b0008427d3863459a2b431f08" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e256f29219a58813c42635a41192cf74" category="paragraph">ONTAP 아키텍처의 주요 측면:</block>
+  <block id="1c0da5907b8e232d3d0e03a1c51beebc" category="list-text">파일, 객체 및 블록 지원</block>
+  <block id="9e335c30ae544ee158af7dbd059e955e" category="list-text">프로토콜은 프런트엔드 클라이언트 데이터 네트워크를 통해 제공됩니다.</block>
+  <block id="12c68f5d061fcf6508750a3e74c0cccc" category="list-text">여러 개의 독립적인 노드를 함께 클러스터링할 수 있습니다.</block>
+  <block id="76417ca03596b26fbce88de7d45092d6" category="list-text">각 노드는 데이터 및 관리 사용 사례에 대해 독립적인 플로팅 IP 주소를 제공할 수 있습니다</block>
+  <block id="5dc1e1f866b68778134f990037be8fe1" category="list-text">클러스터링된 노드는 클러스터 VLAN을 통해 NetApp에서 제공하는 백엔드 스위치에 연결됩니다.</block>
+  <block id="b7213a58e231c50af152dd0d98d9c982" category="list-text">노드들은 하드웨어 또는 전력 장애 발생 시 복원력을 제공하기 위해 고가용성(HA) 쌍으로 구성됩니다.</block>
+  <block id="c4d0a39f96e4c6d8b99eeda628899e71" category="list-text">HA 쌍은 쓰기를 보호하기 위해 복제하는 NVRAM 카드가 직접 연결되어 있습니다</block>
+  <block id="bee8012c179799daa9062a455a61ad49" category="list-text">각 노드에는 최소 하나 이상의 애그리게이트가 할당되며 전체 디스크 수의 일부를 소유합니다.</block>
+  <block id="9dafc63ac759adc3f8676720aece5dee" category="list-text">페일오버 시 노드의 디스크는 HA 파트너(HA 파트너에게만)에게 재할당됩니다.</block>
+  <block id="b5b84408a9ab58c7066c32a1060adc2d" category="list-text">디스크 셸프는 일반적으로 다중 경로 케이블을 통해 노드에 직접 연결되지만, 고급 시스템에서는 동일한 백엔드 클러스터 스위치에 스토리지 네트워크 개념이 도입되었습니다.</block>
+  <block id="cd6ceff9b008e61ef7b5c8c9d44aebfe" category="list-text">볼륨(FlexVols 및 FlexGroup 볼륨)은 데이터 액세스를 위한 스토리지의 진입점을 제공합니다</block>
+  <block id="3d762cdf84cac14f507e728d9d02f8e5" category="section-title">NetApp AFX란 무엇인가요?</block>
+  <block id="70b0a2d0f2b9eb0057ba7c622a39f879" category="paragraph">여기서 한 가지 명심해야 할 점은 NetApp AFX가 여전히 ONTAP라는 것입니다.</block>
+  <block id="3ee070a2e0f8e15a0cf3dc9605ebb90f" category="paragraph">이는 ONTAP의 이점을 활용하는 또 다른 방법일 뿐입니다. Unified ONTAP 또는 All SAN Array 시스템에 설치하는 이미지와 동일한 이미지가 NetApp AFX에서도 사용됩니다. 코드베이스는 동일하지만, 시스템 부팅 방식에 따라 실행되는 코드 경로, 백엔드 스토리지의 표현 방식, 지원되는 기능 및 프로토콜이 결정됩니다.</block>
+  <block id="9ddac153f4f78c233ad497dd170f6553" category="paragraph">NetApp AFX는 NAS 및 객체 워크로드를 위한 분산형 아키텍처를 제공하는 동시에, 익숙하고 사랑받는 풍부한 기능을 갖춘 ONTAP 소프트웨어를 그대로 제공합니다. 분산형 ONTAP는 모든 NetApp 컨트롤러 노드가 이중화된 네트워크 스위치와 고속 저지연 네트워크를 통해 동일한 용량을 사용하는 스토리지 아키텍처를 의미합니다. 이러한 접근 방식을 통해 컨트롤러 노드와 스토리지 용량이 서로 독립적으로 확장하여 다양한 고성능 워크로드의 요구 사항을 더욱 효과적으로 충족할 수 있습니다. 즉, 추가 성능이 필요하면 컨트롤러 노드를 추가하면 됩니다. 추가 용량이 필요하면 쉘프 인클로저를 추가하면 됩니다. 이를 통해 스토리지 관리자는 최종 사용자에게 더욱 비용 효율적인 스토리지 솔루션을 제공할 수 있는 유연성을 확보할 수 있습니다.</block>
+  <block id="e3417b4dae687eff07b3f13817c999c4" category="paragraph">컨트롤러 노드가 디스크를 독립적으로 소유하지 않기 때문에 자체 용량 및 성능 제약 조건을 가진 물리적 애그리게이트도 존재하지 않습니다. 대신 용량은 모든 노드가 상호 작용할 수 있는 공유 모델로 제공되며 ONTAP가 자동으로 관리할 수 있습니다.</block>
+  <block id="aad51dc9c583714edd788852333c9ced" category="paragraph-title">그림 2) 분산형 ONTAP</block>
+  <block id="6fb475b8827a544ad077bfe94e2d966d" category="paragraph"><block ref="6fb475b8827a544ad077bfe94e2d966d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="64c5b16e5b097a855d8ac61b043ef018" category="section-title">주요 용어 및 개념</block>
+  <block id="01d07af64fe4939b546514c3f2fe46fe" category="paragraph">아래는 AFX와 직접적으로 관련된 용어입니다. ONTAP 관련 용어는 제품 설명서를 참조하십시오.</block>
+  <block id="274bc582ca884fc158ea9ac9f79f9067" category="inline-link-macro">ONTAP 제품 설명서</block>
+  <block id="7d4ea421df668a6c9a3981e3f0a3540c" category="paragraph"><block ref="e49ae1b420759497af2e9a947f3d5ed2" category="inline-link-macro-rx"></block>.</block>
+  <block id="974c5a5413fe25ff5c2cff857a0a2bee" category="section-title">분산형 ONTAP</block>
+  <block id="e89761550c930a9c8d4af3e02b548337" category="paragraph">ONTAP를 기반으로 하는 새로운 아키텍처를 의미하며, 컴퓨팅과 용량을 서로 독립적으로 확장할 수 있는 기능을 제공합니다. "분리형 ONTAP"이라는 용어는 제품명이 아니라 통합 ONTAP 아키텍처와 NetApp AFX 아키텍처를 구분하기 위한 용어입니다.</block>
+  <block id="4d4bcd00dec0ee009c6a6c831d33fda4" category="section-title">NetApp AFX</block>
+  <block id="db2759f17d5ec736f4f6ca60806a8914" category="paragraph">NetApp AFX는 분산형 ONTAP 아키텍처의 공식 제품명이며 NetApp Insight 2025에서 발표되었습니다.</block>
+  <block id="0a90ae9733f3b799ab6f5203099a1799" category="section-title">컴퓨팅 노드</block>
+  <block id="d18f6ad8018ccaafc66c39e79abde1f2" category="paragraph">NetApp AFX에서 컴퓨팅 노드는 스토리지 컨트롤러 노드를 의미하며, 문서에서는 종종 같은 의미로 사용됩니다. 이러한 노드에는 온보드 디스크가 없으며, 분산형 ONTAP 아키텍처가 제공하는 독립적인 확장성을 지원하기 위해 완전한 모듈형으로 설계되었습니다.</block>
+  <block id="d62dc2b68a33f70ee55fd5e5d26af79d" category="section-title">스토리지 가용 영역</block>
+  <block id="6d9a909ea40da7a903880d820b836a5d" category="paragraph">스토리지 가용 영역(SAZ)은 NetApp AFX 클러스터에서 모든 디스크가 모든 노드에서 공유되는 단일 용량 풀입니다. SAZ를 통해 공유 용량, 향상된 성능, 전역 데이터 중복 제거 등의 기능을 활용할 수 있습니다.</block>
+  <block id="5fcc6927df9405ef24f5ed09aa24d9a2" category="section-title">NetApp AFX 아키텍처와 통합 ONTAP의 차이점</block>
+  <block id="3a61f7c411547058cd1e47c2396360b6" category="paragraph">위에서 우리는 통합 ONTAP 아키텍처가 자체 디스크 세트를 소유하고 디스크 집합을 통해 물리적 용량을 제공하는 직접 연결된 HA 쌍을 통해 파일, 객체 및 블록 데이터 스토리지를 제공하는 방식에 대한 일반적인 그림을 보여주었습니다. 이 섹션에서는 통합 ONTAP과 NetApp AFX 아키텍처 간의 주요 차이점을 더 자세히 살펴보겠습니다.</block>
+  <block id="433d492efcc88dc8913edb98bcfb55be" category="section-title">시스템이 NetApp AFX를 실행 중인지 확인하는 방법</block>
+  <block id="8e1a5130efded476c10c89c59f9a89b5" category="paragraph">시스템에 NetApp AFX가 실행 중인지 확인하는 가장 일반적인 방법은 다음 명령을 실행하는 것입니다.</block>
+  <block id="b495725aeacd3907d69898a4bd723481" category="paragraph">또 다른 단서는 새로운 Storage Availability Zone이지만, 이는 NetApp All-SAN Arrays(ASA)에서도 사용할 수 있는 개념입니다. 해당 명령을 통해 용량을 확인할 수 있습니다.</block>
+  <block id="669ca2c1d937de2756d3251f10518621" category="section-title">노드-디스크 관계</block>
+  <block id="fd23dbaa972ab2535635652051b26e22" category="paragraph">통합 ONTAP 아키텍처에서는 읽기 및 쓰기 작업이 특정 디스크 하위 집합으로 전달됩니다. 따라서 24개 노드로 구성된 클러스터에 24개의 디스크 셸프(노드당 하나의 셸프)가 있더라도, 각 노드는 특정 시점에 하나의 디스크 셸프에만 직접 액세스할 수 있으므로 클러스터에서 사용 가능한 용량과 성능이 제한됩니다.</block>
+  <block id="2e123df415a2f180d5c4773c308fb32b" category="paragraph-title">그림 3) 통합 ONTAP 클러스터 디스크 액세스</block>
+  <block id="1ad1f1747be9464037453b37536cc7d2" category="paragraph"><block ref="1ad1f1747be9464037453b37536cc7d2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e86959c7638799540ed87cd5cf44beeb" category="paragraph">또한 NVRAM이 HA 쌍 간에 직접 연결되어 있으므로 노드는 물리적으로 서로 인접해야 하며 장애 조치 대상으로서 더욱 긴밀하게 연결되어야 합니다. 예를 들어 한 노드가 파트너 노드로 장애 조치를 수행할 때 해당 노드가 물리적으로 접근할 수 있는 디스크는 HA 쌍 도메인에 있는 디스크뿐입니다.</block>
+  <block id="98e1e77d4d66b8f45006e99b1fd516c4" category="paragraph-title">그림 4) HA 페일오버 중 통합 ONTAP 클러스터</block>
+  <block id="9b6164afaa0cc5f8adadaf62c9310fe4" category="paragraph"><block ref="9b6164afaa0cc5f8adadaf62c9310fe4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dabd989394b6bf1e229d48324c44d50e" category="paragraph">NetApp AFX에서는 컴퓨팅 노드에 디스크를 제공하는 방식에 몇 가지 주요 변경 사항이 있습니다.</block>
+  <block id="b650659880eaa887a133d59c8ecfa3cd" category="section-title">모든 디스크는 모든 스토리지 노드에서 볼 수 있으며 디스크 소유권은 없습니다</block>
+  <block id="e054c56126a0ae3de72afee710f43f7e" category="paragraph">NetApp AFX에서는 노드와 쉘프가 모두 동일한 백엔드 스위치에 연결되어 있어 ONTAP이 디스크에 대한 전체 가시성 도메인을 전체 스택으로 확장할 수 있습니다. 결과적으로 어떤 노드도 특정 디스크를 소유하지 않습니다. 대신 모든 디스크는 Storage Availability Zone이라는 단일 용량 풀에 참여하므로 용량 관리가 간소화되고 성능 잠재력이 향상됩니다(사용 가능한 디스크가 많을수록 사용 가능한 성능이 향상됨).</block>
+  <block id="e69d86a2a254ca692b9b28339399ec38" category="paragraph-title">그림 5) NetApp AFF 스토리지 가용 영역</block>
+  <block id="3816eff5dc71edf432493884285f8927" category="paragraph"><block ref="3816eff5dc71edf432493884285f8927" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="781dece243566cc40191dc6fc3373451" category="section-title">더 이상 물리적 애그리게이트가 없습니다</block>
+  <block id="d401e9212d33b4064029b1e5dd87a71e" category="paragraph">Unified ONTAP은 디스크를 RAID 그룹으로 모은 다음, 이를 애그리게이트라고 하는 용량 구조로 결합합니다. 이 애그리게이트는 스토리지에 물리적 용량을 제공하는 방식이며, 최종 사용자에게 데이터를 제공하기 위한 볼륨 생성에 사용 가능한 공간의 경계를 나타냅니다. 모든 노드에는 최소 하나 이상의 애그리게이트가 할당되어야 하며, 각 애그리게이트의 현재 용량 제한은 800TB입니다. 이 제한에 도달하면 더 이상 추가 쓰기 작업을 위한 공간이 없습니다.</block>
+  <block id="ae6c8440e7d944595dcec2843005711e" category="paragraph">물리적 애그리게이트는 용량 관리 어려움을 야기할 수 있습니다. 스토리지 관리자는 클러스터 노드 간 용량 균형을 유지하기 위해 볼륨을 수동으로 재배치해야 하는 경우가 있기 때문입니다. 이러한 어려움은 스케일아웃 볼륨 아키텍처(예: FlexGroup 볼륨)를 활용할 때 더욱 커질 수 있습니다. 또한 애그리게이트는 크기, 디스크 개수, 디스크 유형 등이 다양할 수 있으며, 이로 인해 노드 간 이동 시 성능 차이가 발생할 수 있습니다.</block>
+  <block id="17c1a7b90454c8f0525330692f81accc" category="paragraph-title">그림 6) 통합 ONTAP의 애그리게이트</block>
+  <block id="4503d79038e30b8974f72d5fa63c4bb9" category="paragraph"><block ref="4503d79038e30b8974f72d5fa63c4bb9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e5d080f989394af975b69807482e534e" category="paragraph">NetApp AFX는 물리적 애그리게이트 개념을 가상화하고 ONTAP에서 관리하도록 하며, 새로운 스토리지 가용 영역을 통해 물리적 용량 관리를 노드 단위 방식에서 클러스터 단위로 전환합니다. 이 단일 용량 풀은 "보는 대로 얻는" 공간 관리 방식을 제공합니다.</block>
+  <block id="4c6a8cdd679a43e41674a246e09aa00c" category="paragraph-title">그림 7) NetApp AFX 스토리지 가용 영역</block>
+  <block id="9a3db5c6c4c195d33ae99730b50f8ad6" category="paragraph"><block ref="9a3db5c6c4c195d33ae99730b50f8ad6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="92d913448f8a1543799469519bc2f13a" category="section-title">NVRAM이 직접 연결에서 스위치드 복제로 이동했습니다</block>
+  <block id="d7197a4624315c9a1c687f9271d5823b" category="paragraph">ONTAP는 클러스터로 들어오는 쓰기 작업을 보호하기 위해 NVRAM을 임시 저장소로 사용합니다. ONTAP 클러스터의 각 노드에는 배터리로 백업되는 NVRAM 카드가 있습니다. 클라이언트에서 볼륨으로 쓰기 작업이 전송되면 먼저 NVRAM에 저장됩니다. NVRAM이 가득 차거나 10초 타이머가 만료되면(둘 중 먼저 발생하는 경우) NVRAM 내용이 디스크에 기록됩니다. 이를 정합성 보장 지점이라고 합니다.</block>
+  <block id="b17914f5928b49cb4b484744f39d8853" category="paragraph">NVRAM 콘텐츠는 HA 쌍 간에 지속적으로 복제되므로 데이터 정합성을 더욱 효과적으로 보호할 수 있습니다. 노드 장애가 발생하더라도 NVRAM 콘텐츠는 정상 노드에 보존되어 디스크에 커밋되기 때문입니다.</block>
+  <block id="771b260e89b0efcf86e4bc48907430a8" category="paragraph">통합 ONTAP 클러스터에서 HA 쌍 간의 NVRAM 카드는 서로 직접 연결됩니다. NetApp AFX는 NVRAM 복제를 백엔드 클러스터 네트워크로 이동합니다. 결과적으로 HA 파트너 노드는 노드 간 엄격한 거리 제한을 받지 않습니다. 대신 HA 쌍은 이더넷 최대 거리까지 떨어져 있을 수 있습니다.</block>
+  <block id="00e89bf63b568dfa76452688afcd319c" category="paragraph-title">그림 8) NetApp AFX NVRAM 복제</block>
+  <block id="78e7cf70eb47a4179564a39f1253a682" category="paragraph"><block ref="78e7cf70eb47a4179564a39f1253a682" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6231bda7ea6446ef60276df0aaa888d8" category="section-title">가용 영역 내의 모든 디스크에 기록된 데이터</block>
+  <block id="516c2369acc04f856949012d18e720f1" category="paragraph">NetApp AFX는 디스크 소유권 개념을 없애고 물리적 애그리게이트 구조를 ONTAP에서 관리하는 가상화된 접근 방식으로 전환하여, 클러스터에 구매한 용량을 클러스터에 연결된 모든 노드에서 사용할 수 있도록 합니다. AFX를 사용하면 노드:볼륨 소유권과 관계없이 모든 노드가 Storage Availability Zone의 모든 디스크에 쓰기 작업을 수행할 수 있습니다. 쓰기 작업은 여전히 NVRAM을 통한 경로를 거치므로 노드에는 여전히 볼륨 소유권 개념이 있지만, 해당 데이터는 사용 가능한 용량 내 어디에든 저장될 수 있습니다. 즉, 더 많은 디스크가 단일 워크로드에 참여할 수 있어 성능 향상 효과를 얻을 수 있습니다.</block>
+  <block id="eb54f0bdc13f1ec6880af2a448408d1e" category="paragraph-title">그림 9) 데이터가 스토리지 가용 영역에 저장되는 방식</block>
+  <block id="944f1fdb83ec981a362e84d199c1501b" category="paragraph"><block ref="944f1fdb83ec981a362e84d199c1501b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7e7b3a88979db35aa3a6e7dc98c1d658" category="section-title">용량 및 컴퓨팅 노드의 독립적인 확장</block>
+  <block id="4bc560d93f8087e161a177e8ad3a003c" category="paragraph">NetApp AFX 아키텍처에서는 하드웨어 리소스가 분리되어 있어 노드를 추가할 때 더 이상 연결된 디스크를 함께 추가할 필요가 없습니다. 클러스터에서 RAM, CPU 또는 네트워크 처리량과 같은 성능 관련 리소스가 부족할 경우 스토리지 노드만 클러스터에 추가하면 기존 스토리지 가용 영역을 활용할 수 있습니다. 반대로 용량이 필요한 경우에는 쉘프만 추가하면 됩니다. 이러한 유연성을 통해 필요한 리소스만 구매하여 과잉 프로비저닝을 방지할 수 있습니다.</block>
+  <block id="66f8cce31949fb84ce1e11022b5a527e" category="paragraph-title">그림 10) NetApp AFX – 독립적인 확장성</block>
+  <block id="b6044572d2e6996ce14dbc56fbae2a67" category="paragraph"><block ref="b6044572d2e6996ce14dbc56fbae2a67" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="39444758c16cbd4cd22a7a8cde0af634" category="section-title">노드 성능의 선형 확장</block>
+  <block id="c6a3082e513cda699b81237e7ab60f4f" category="paragraph">AFX 클러스터에 노드가 추가됨에 따라 워크로드에 더 많은 CPU, RAM 및 네트워크 리소스가 제공됩니다. 이러한 리소스가 환경에 통합됨에 따라 성능 향상은 선형적으로 나타납니다. 아래 그림은 노드가 추가됨에 따라 성능이 어떻게 향상되는지 보여줍니다.</block>
+  <block id="617388bd388909bc60ef69f36e7625a0" category="paragraph-title">그림 11) NetApp AFX 노드 추가에 따른 선형적인 성능 향상</block>
+  <block id="cae540f9bda5aade1e3852c5a9da33b3" category="paragraph"><block ref="cae540f9bda5aade1e3852c5a9da33b3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b67e58d94881a7f1a524daa280ef1472" category="section-title">더 큰 RAID 그룹, 더 적은 패리티 드라이브</block>
+  <block id="cc8f9a98f730c7c7965b6f14302533cf" category="paragraph">ONTAP는 RAID 그룹, 특히 디스크 장애 발생 시 3중 패리티 보호 기능을 제공하는 RAID-TEC을 통해 디스크의 데이터 보호와 성능을 결합한 솔루션을 제공합니다. RAID-TEC은 RAID 그룹에서 최대 3개의 동시 드라이브 장애를 견딜 수 있습니다. 통합 ONTAP에서 RAID 그룹은 최대 28개의 디스크를 지원하며, 이 중 3개는 패리티에 사용되고 1개는 예비 드라이브로 예약됩니다. 결과적으로 28개 드라이브 중 24개가 데이터 처리/RAID 스트라이프에 사용됩니다.</block>
+  <block id="6ff4c0c42fbb2dd22abd269717f386e8" category="paragraph-title">그림 12) 통합 ONTAP RAID 그룹</block>
+  <block id="e07986240c9c625d10beb4079d016655" category="paragraph"><block ref="e07986240c9c625d10beb4079d016655" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="366ad670cfd7fc0e6385c0a9ca112bdd" category="paragraph">NetApp AFX는 여전히 RAID-TEC를 활용하지만, RAID 그룹 크기를 96개 드라이브로 늘리는 동시에 패리티 드라이브 3개와 예비 드라이브 1개만 필요로 합니다. 더 큰 RAID 그룹은 전반적인 성능을 향상시키며, SSD의 낮은 고장률, 더 많은 드라이브에 걸쳐 작업이 더욱 균등하게 분산되는 점, 그리고 NetApp AFX의 패리티에서 데이터 드라이브 재구축 기능 개선을 통해 드라이브 장애 노출을 최소화합니다.</block>
+  <block id="99c15b9df96ed5999bbdcb975c359e2b" category="paragraph-title">그림 13) NetApp AFX 스토리지 가용성 영역 RAID 그룹</block>
+  <block id="97cf9f92a42ca2ebab03bbae532f68f9" category="paragraph"><block ref="97cf9f92a42ca2ebab03bbae532f68f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a062997d68fc995a355c98224d61646d" category="paragraph">다음 표는 드라이브 크기가 다양한 통합 ONTAP 및 NetApp AFX 시스템의 84개 디스크에 대해 사용 가능한 원시 용량을 대략적으로 나타낸 것입니다.</block>
+  <block id="ec8691da9bf60fda22f12e08033d054b" category="cell">드라이브 크기</block>
+  <block id="ac42a71dfe464f09e55a57f84ceb163f" category="cell">대략적인 원시 용량(통합)</block>
+  <block id="46cc5fb7e0299e674d5da41e0dad3a1f" category="cell">대략적인 원시 용량(AFX)</block>
+  <block id="c7d332a0c322abaf8181c5babf32fd81" category="cell">7.6 TB</block>
+  <block id="e50bccab556ac30cde3b134fb81a2530" category="cell">~547.2TB</block>
+  <block id="08dedfbf48e1600e5cfd9c8c2745fec6" category="cell">~608TB (+60.8TB)</block>
+  <block id="1f04a7c587f50d269f44d43229c966ac" category="cell">15.3 TB</block>
+  <block id="9a2d1eca7e54938f79761d06b7caaf18" category="cell">~1101.6TB</block>
+  <block id="5e741ceec539284f7a96b67008f0e517" category="cell">~1224TB (+122.4TB)</block>
+  <block id="655a8069a585e15310fa0928303b0b11" category="cell">30.6 TB</block>
+  <block id="73eb8a9754f5ecc61ce25d2e8e371989" category="cell">~2203.2TB</block>
+  <block id="94349b8d5b0340bcb0458995ee9ab770" category="cell">~2448TB (+244.7TB)</block>
+  <block id="9257d41133566970b9f900427eddfca7" category="cell">60.1 TB</block>
+  <block id="fdb85d8d2f1b660e9094464753645daf" category="cell">~4327.2TB</block>
+  <block id="90dcf605a76adf0ffd1f6ffdcf98ea1c" category="cell">~4808TB (+480.8TB)</block>
+  <block id="5e06c034fcb9929c3a3d307a69120d13" category="section-title">디스크 장애 재구축 시간 단축</block>
+  <block id="52a19c534c80db30c7d17f69cea22f5a" category="paragraph">통합 ONTAP에서 각 노드는 스토리지 스택의 디스크 하위 집합을 소유합니다. 즉, 해당 노드는 소유한 디스크에만 쓰기 작업을 수행할 뿐만 아니라 디스크 장애 발생 시 디스크 재구축은 단일 노드에서만 처리됩니다.</block>
+  <block id="4fe53f7fa4a2c86a19a25367bbcd3261" category="paragraph">NetApp AFX는 디스크 소유권이 필요하지 않습니다. 따라서 필요한 경우 단일 노드에서 모든 드라이브에 쓰기 작업을 수행할 수 있습니다. 또한 드라이브를 패리티 기반으로 재구축해야 할 경우 클러스터의 모든 노드가 참여하므로 단일 노드에서만 재구축해야 하는 경우보다 훨씬 빠르게 드라이브를 재구축할 수 있습니다.</block>
+  <block id="aa16007758210bfd880bec499f5e68c1" category="paragraph-title">그림 14) NetApp AFX의 디스크 재구축</block>
+  <block id="552310dcd7c51429d207ea55e04d33d4" category="paragraph"><block ref="552310dcd7c51429d207ea55e04d33d4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bbcbe753a7eb13938c9024321ceaae05" category="section-title">중복 제거 도메인</block>
+  <block id="157ce389445b4f3f44130a14007ebf04" category="paragraph">중복 제거는 스토리지 시스템이 파일 시스템에서 중복 블록을 찾아 단일 블록에 대한 포인터를 생성하여 사용된 총 용량을 줄일 수 있도록 합니다. 통합 ONTAP에서 중복 제거는 축소할 수 있는 블록에 대한 특정 경계를 따릅니다. 이러한 경계는 사용 중인 중복 제거 유형에 따라 달라집니다. 일반적으로:</block>
+  <block id="6f9f45d520cffb99bb950d8fda5dbdba" category="list-text">볼륨 기반 중복 제거 -&gt; 볼륨 경계</block>
+  <block id="438a3758b0006aebd9a250021848cc7c" category="list-text">볼륨 간 중복 제거 -&gt; 애그리게이트 경계</block>
+  <block id="abc17501e54077de9a4b274d54df863c" category="paragraph-title">그림 15) 통합 ONTAP 중복 제거 도메인</block>
+  <block id="21b0b029300c61135ad9721104b8348a" category="paragraph"><block ref="21b0b029300c61135ad9721104b8348a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f89efbc018eb553bd85f13f9d3ff23d7" category="paragraph">아래 표는 통합 ONTAP의 다양한 시나리오에서 중복 데이터에 대한 용량 동작을 보여줍니다. 파일 복사본이 노드와 애그리게이트(따라서 중복 제거 도메인)에 걸쳐 있을 경우 공간 절약 효과가 감소합니다.</block>
+  <block id="54861efdd06fc309e1c9a420feff98eb" category="cell">시나리오</block>
+  <block id="77d8eb15db31182d5d16adaae1167a58" category="cell">사용된 공간</block>
+  <block id="f891059e8c06b24c2303442e1ea0b502" category="cell">동일한 10GB 파일의 복사본 4개, 동일한 볼륨(볼륨 중복 제거)</block>
+  <block id="4ac1352d5b927390a1b2f14dac0647d9" category="cell">10 GB</block>
+  <block id="c11f0e78ef3de243c83f7ec7deb5ec59" category="cell">동일한 10GB 파일의 복사본 4개, 서로 다른 볼륨, 동일한 애그리게이트(볼륨 간 중복 제거 활성화됨)</block>
+  <block id="e5368f4f57a5e8656e84b995331e8fc1" category="cell">동일한 10GB 파일의 복사본 4개, 서로 다른 볼륨 4개, 서로 다른 애그리게이트 4개(볼륨 간 중복 제거 활성화됨)</block>
+  <block id="006d8b5945ff5ea00e335cd43159f15a" category="cell">40 GB</block>
+  <block id="554c7e5aa7d4f0b74f57389da62e73c1" category="paragraph">NetApp AFX는 물리적 애그리게이트를 제거하고 용량 관리를 새로운 스토리지 가용 영역으로 이동함에 따라 중복 제거 도메인 경계도 변경됩니다. AFX에서 중복 제거 도메인은 9.19.1 이전 버전에서는 볼륨 수준(unified ONTAP과 유사)이고 노드 수준(애그리게이트가 아닌)입니다.</block>
+  <block id="079395b0c979d0b54fc2b1c99f54e40e" category="paragraph">ONTAP 9.19.1부터 AFX는 스토리지 가용 영역 수준에서 전역 중복 제거 도메인을 지원하므로 클러스터 스토리지 풀의 모든 중복 블록이 동일하게 처리됩니다.</block>
+  <block id="0f7b3a0f91931d5d309d464a216c7369" category="paragraph-title">그림 16) NetApp AFX – 글로벌 중복 제거 도메인(ONTAP 9.19.1)</block>
+  <block id="f83df156391f38ff73d1a49f6a8425e6" category="paragraph"><block ref="f83df156391f38ff73d1a49f6a8425e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e156c20f9a8ac4def7069dda32e8320e" category="paragraph">아래 표는 NetApp AFX에서 다양한 시나리오에 따른 중복 데이터의 용량 동작을 보여줍니다.</block>
+  <block id="a9cd3bbc2e51a6e1347445b84d798f2a" category="cell">10GB (9.18.1) 10GB (9.19.1)</block>
+  <block id="df90a1a2cc2054e32c9c28d5c25e62cf" category="cell">동일한 10GB 파일의 복사본 4개, 서로 다른 볼륨, 동일한 노드(볼륨 간 중복 제거 활성화됨)</block>
+  <block id="0b3bf068e64e34843d3d704e013cb2b2" category="cell">동일한 10GB 파일의 복사본 4개, 서로 다른 볼륨 4개, 서로 다른 노드 4개(볼륨 간 중복제거 활성화됨)</block>
+  <block id="8869b48ff17dcbd09bde895bd5027ed2" category="cell">40GB (9.18.1) 10GB (9.19.1)</block>
+  <block id="6e5fc7251e1276f061a3ac94294d4ce6" category="section-title">제거되었거나 더 이상 지원되지 않는 기능</block>
+  <block id="c1da2d4d510103b46e423190aacd1d6b" category="paragraph">NetApp AFX는 고성능 NAS 및 객체 워크로드, 특히 AI 학습 및 추론 분야에 최적화되어 있습니다(단, 이에 국한되지는 않습니다). NetApp AFX를 설계하면서 ONTAP의 일부 기능을 비활성화하기로 결정했습니다.</block>
+  <block id="763ebb6b2480e502c5034139361bcc1d" category="list-text">고성능 NAS 및 객체에 중점을 두기 때문에 블록 워크로드가 NetApp AFX 솔루션에서 제거되었습니다. FCP, iSCSI 또는 NVMe 데이터 프로토콜은 지원되지 않으며 블록 프로토콜을 추가할 계획도 없습니다.</block>
+  <block id="ee62ec9079a51f3f2d61fb5c219e4c5b" category="list-text">분산(Disaggregated)은 분리(de-aggregated)와 동의어로, (적어도 물리적 스토리지 관리 개념으로서의) 애그리게이트가 제거되었음을 의미합니다. 물리적 애그리게이트를 제거하면 ONTAP에서 용량 관리가 간소화될 뿐만 아니라 단일 용량 풀을 구성할 수 있는 메커니즘이 제공됩니다.</block>
+  <block id="66eaa41609136e6dddf23584334de66b" category="list-text">애그리게이트가 제거됨에 따라 애그리게이트 관련 기능도 함께 제거됩니다. 예를 들어 Metrocluster는 사이트 장애 조치 기능을 위해 애그리게이트 수준 미러링을 활용합니다. 따라서 Metrocluster도 NetApp AFX에서 제거됩니다. 사이트 장애 조치 기능은 ONTAP 9.19.1GA에 포함된 새로운 SnapMirror Active-Sync for NAS 기능을 통해 제공됩니다.</block>
+  <block id="9dcccb917097dd0eb877aa03be34ec0d" category="list-text">FabricPool이라는 콜드 데이터 계층화 기능은 애그리게이트별로 제공되므로 현재 NetApp AFX에서는 사용할 수 없습니다.</block>
+  <block id="182861940630ac67a33141acc73ea45c" category="list-text">NetApp AFX에서는 새로운 용량 아키텍처 덕분에 복사 기반 볼륨 이동이 더 이상 필요하지 않습니다. 자세한 내용은 "제로 카피 볼륨 이동"을 참조하십시오.</block>
+  <block id="144508c60f3cca56510b134fc12e757f" category="list-text">기능 제거는 CLI/GUI/REST API 변경을 의미하기도 하므로, 더 이상 지원되지 않는 기능에 대한 모든 명령이나 API 호출도 제거됩니다.</block>
+  <block id="900a913e531c8157d7a2f4a97608dc94" category="list-text">ZAPI는 현재 NetApp AFX에서 사용할 수 없습니다.</block>
+  <block id="e89ad37d68f36cce38303bc48e8c2fe6" category="list-text">가상화를 위한 NFS 복사 오프로드(FlexGroup 볼륨의 세분화된 데이터 분산 기능만 해당)</block>
+  <block id="f8c9693eb34a8916c9e613f8afca2ef1" category="section-title">ONTAP 관리 변경 사항</block>
+  <block id="cea3622035a3726dec586cdf9fabcb7a" category="paragraph">일반적으로 NetApp AFX 관리는 클러스터 관리에 사용되는 메커니즘을 변경하지 않습니다. 관리자는 여전히 CLI, GUI 및 REST API를 활용하여 클러스터에 로그인하고 구성할 수 있습니다. 하지만 NetApp AFX는 스토리지 관리 작업 방식을 개선할 수 있는 기회를 제공했습니다.</block>
+  <block id="e025f27af7a0ab530c0c79e51c8ddc21" category="section-title">더욱 간편해진 용량 관리</block>
+  <block id="85e6f6e2e02603e4a6c37196e99d68e7" category="paragraph">NetApp AFX 스토리지 가용 영역은 노드 및 애그리게이트 기반 접근 방식에서 클러스터 전체에서 사용할 수 있는 단일 용량 풀로 관리 엔드포인트를 줄여줍니다. 볼륨 크기가 증가하거나 감소함에 따라 ONTAP는 스토리지 가용 영역에서 용량을 자동으로 빌리고 반환합니다.</block>
+  <block id="ddeb7090eb04d100bcabff49f47b2bef" category="paragraph">이러한 이유로 스토리지 관리자는 더 이상 최대 24개 노드와 수백 개의 애그리게이트에 걸쳐 사용 가능한 여유 공간을 찾고 관리하는 데 신경 쓸 필요가 없습니다. 이제 용량을 관리하고 확인하는 곳은 단 한 곳뿐입니다.</block>
+  <block id="50c80f36fb9d5a95cbb1e696488a601d" category="paragraph">예를 들어, 통합 ONTAP의 CLI에서 클러스터의 전체 물리적 용량 정보를 보려면 <block ref="2fcdb1b8d913320ba0e2667a5f3dcf22" prefix="“" category="inline-code"></block>를 사용하면 모든 애그리게이트 항목이 출력됩니다. NetApp AFX에서는 <block ref="b0f15a747a6b3df0f90c34429f58be83" prefix="“" category="inline-code"></block>를 사용하면 단일 스토리지 가용 영역만 표시됩니다.</block>
+  <block id="991471d835c3633e69aecf5bf8f69ae9" category="paragraph-title">그림 17) 통합 ONTAP과 NetApp AFX에서 용량 CLI 명령어를 나란히 비교한 그림</block>
+  <block id="68ab8227a681f41895474e422eb3d350" category="paragraph"><block ref="68ab8227a681f41895474e422eb3d350" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="19e422548a564001669531fadf5bee79" category="paragraph">Unified ONTAP System Manager GUI에서는 티어를 사용하여 용량을 표시합니다. 실제로 GUI는 총계를 합산하여 클러스터의 전체 용량을 보여주려고 하지만, 전체 사용량은 여전히 애그리게이트 단위로 표시됩니다.</block>
+  <block id="4ddd53953c5af4492f3d8ee37fb3da75" category="paragraph-title">그림 18) System Manager 용량 보기 – Unified ONTAP</block>
+  <block id="0f14d9142f93f560dfe6b178433186f0" category="paragraph"><block ref="0f14d9142f93f560dfe6b178433186f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9c35c98208f1d1a759c7a440055092e" category="paragraph">NetApp AFX System Manager에서 클러스터 공간에 대한 보기 방식은 거의 동일하지만, 애그리게이트가 없으므로 추가 계산이 필요하지 않습니다. 표시되는 용량이 실제로 사용할 수 있는 용량입니다.</block>
+  <block id="8955bc580cea8be8ceb0bc7758248e9d" category="paragraph-title">그림 19) System Manager 용량 보기 – NetApp AFX</block>
+  <block id="9a2eeae4bccbe2fe42a322b7f92c8b00" category="paragraph"><block ref="9a2eeae4bccbe2fe42a322b7f92c8b00" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e7012fa0213ef501af73fa346af5a04" category="section-title">FlexGroup 볼륨 관리 개선 사항</block>
+  <block id="cd636b51fdd89c632270226ee4a56fbe" category="paragraph">FlexGroup 볼륨은 클러스터의 여러 노드와 애그리게이트에 걸쳐 생성된 여러 개의 기본 FlexVol 구성 볼륨으로 구성되며 NAS 클라이언트에 단일 대형 네임스페이스로 제공됩니다. FlexGroup 볼륨은 고성능 워크로드에 성능, 확장성, 로드 밸런싱 및 파일 수 이점을 제공합니다. 그러나 노드와 애그리게이트 간에 조정되기 때문에 용량이 차기 시작하면 물리적 한계에 직면할 수 있습니다. 애그리게이트에서 제공하는 독립적인 파일 시스템에도 독립적인 용량 사용량 및 제한이 있기 때문입니다. 예를 들어, FlexGroup 볼륨 구성 요소를 포함하는 애그리게이트가 클러스터의 다른 애그리게이트보다 먼저 용량이 차기 시작하면 전체 FlexGroup 자체에 용량 또는 성능 문제가 발생할 수 있습니다.</block>
+  <block id="a18f2faca7fa3c1d0e080be5927573ab" category="paragraph">결과적으로 스토리지 관리자는 기본 FlexGroup 인프라에 대해 지나치게 걱정하게 되어 환경의 다른 측면을 유지 관리하는 데 소홀해질 수 있습니다.</block>
+  <block id="d2ecf99fa3160be027aa796cbee3404d" category="paragraph-title">그림 20) FlexGroup 볼륨 레이아웃 - Unified ONTAP 애그리게이트</block>
+  <block id="086bd2e3b28ed51d92210430317d1696" category="paragraph"><block ref="086bd2e3b28ed51d92210430317d1696" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1f22cd8cc995516df6a340339e98aa43" category="paragraph">NetApp AFX는 단일 스토리지 가용 영역에 용량을 제공하며, 이는 FlexGroup 볼륨의 작동 방식과 더욱 유사합니다. 크기가 서로 다른 여러 애그리게이트에 걸쳐 여러 개의 구성 볼륨이 존재하는 대신, 모든 볼륨이 동일한 용량 풀에 상주하므로 FlexGroup 볼륨 사용 시 전반적인 관리 오버헤드가 크게 단순화됩니다.</block>
+  <block id="49328713bd4daf43cf93136d33988aec" category="paragraph">또한 AFX는 FlexGroup 볼륨에 대해 Advanced Capacity Balancing을 기본적으로 활성화하여 볼륨 내 대용량 파일의 분산을 최적화합니다. 이제 FlexGroup 볼륨 구성 요소는 관리 개념이 아닌 백그라운드에서 조용히 작업을 수행하는 방식으로 전환됩니다.</block>
+  <block id="db625be42cfcb379495b4a535fff2818" category="paragraph-title">그림 21) FlexGroup 볼륨 레이아웃 - NetApp AFX</block>
+  <block id="b04c6be3a0c2715cf298c6858aafdec2" category="paragraph"><block ref="b04c6be3a0c2715cf298c6858aafdec2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="591b7e4a83822f3477d36ac1390ed210" category="section-title">자동화된 스토리지 관리 작업</block>
+  <block id="e5acbb4916e4ad745f7ab261de87bba8" category="paragraph">NetApp AFX의 스토리지 가용 영역을 사용하면 모든 용량이 모든 노드에서 공유됩니다. 노드는 여전히 볼륨을 소유하지만, ONTAP는 각 노드의 필요에 따라 용량을 빌리고 해제하여 각 노드의 용량 사용량을 자동으로 관리합니다. 즉, 스토리지 관리자는 더 이상 사용 가능한 공간의 균형을 최적으로 맞추는 방법에 대해 고민할 필요가 없습니다.</block>
+  <block id="b9bfd8cd96f3dc16633eb7ac3cf9d518" category="paragraph">또한 RAID 그룹 관리는 ONTAP에 의해 자동화되어 있으며, 새로 추가된 디스크는 관리자 개입 없이 기존 또는 새로운 RAID 그룹에 추가됩니다. ONTAP는 데이터 복사 없이 노드 간 볼륨 이동도 관리합니다.</block>
+  <block id="913ef981ae568ab215ce9a179461e1e1" category="section-title">제로 카피 볼륨 이동</block>
+  <block id="bc9a4f65b3b66945205ca7605583f7c8" category="paragraph">Unified ONTAP는 클러스터 전체의 성능 및 용량 사용량을 관리하는 방법으로 노드 또는 애그리게이트 간에 볼륨을 중단 없이 이동할 수 있는 방법을 제공합니다.</block>
+  <block id="4c174f1c272bff7cf23f534455586b4a" category="paragraph">볼륨 이동이 시작되면 다음과 같은 일이 발생합니다.</block>
+  <block id="7ca533d81bbeb39f2bf3a6f1c1dbb9e8" category="list-text">지정된 대상 애그리게이트에 새로운 빈 볼륨이 생성됩니다</block>
+  <block id="9723b45ad72be54688369608e198b339" category="list-text">볼륨 메타데이터(스토리지 효율성 정보, 파일 핸들 등)는 새 대상 볼륨으로 복제됩니다</block>
+  <block id="9b7338a728659b439237881c705e1402" category="list-text">볼륨 데이터는 SnapMirror 기술을 통해 백엔드 클러스터 네트워크를 거쳐 대상 볼륨으로 복제됩니다. 대상 애그리게이트에 이동을 위한 여유 공간이 있어야 하며, 그렇지 않으면 이동 작업이 실패합니다.</block>
+  <block id="f32456675d2495f4eaca0ee4cb604fe7" category="list-text">두 볼륨이 데이터 변경 사항과 일관성을 유지하도록 볼륨 복제가 다시 수행됩니다</block>
+  <block id="f84085af5ff267098f415f5d181406c1" category="list-text">컷오버 프로세스가 시작되어 원본 볼륨을 오프라인으로 전환하고 대상 볼륨을 클라이언트의 새로운 원본 볼륨으로 승격합니다</block>
+  <block id="37dbd3405d03d74c85beef7336cfe7f7" category="list-text">클라이언트 IO는 전환 중에 잠시 일시 중지되지만 재마운트는 필요하지 않습니다</block>
+  <block id="62f763fcfb0142fb29dcf96f017201b6" category="paragraph">NetApp AFX에서 스토리지 가용 영역은 모든 노드에 모든 용량을 제공하며, 모든 노드는 해당 풀의 모든 디스크에 쓰기 작업을 수행할 수 있습니다. 데이터가 한 번 배치되면 볼륨이 이동되더라도 원래 위치에 그대로 유지됩니다. 즉, 데이터 복사가 필요하지 않습니다. 볼륨 이동 프로세스는 통합 ONTAP와 동일하지만, SnapMirror를 통한 데이터 복제가 필요하지 않습니다. 추가 용량도 필요하지 않습니다.</block>
+  <block id="21d185629c4b7cca3b7cfa185c3c4b55" category="paragraph-title">그림 22) NetApp AFX에서 제로 카피 볼륨 이동</block>
+  <block id="7ea5dee6ac36060e2e5ec55196ce74a9" category="paragraph"><block ref="7ea5dee6ac36060e2e5ec55196ce74a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f18525f1737d62ea81d9d5e2c584828" category="paragraph">경량 볼륨 이동 기능을 통해 AFX는 성능이나 용량 제약 없이 많은 관리 작업을 자동화할 수 있으며, 이러한 볼륨 이동은 아래 항목에서 설명하는 NetApp AFX의 몇 가지 새로운 기능에 사용됩니다.</block>
+  <block id="9ff73995df3060010d9f83634e15a350" category="section-title">HA 페일오버 동작</block>
+  <block id="5ab2c2d9913212100d3ebe08d49515c0" category="paragraph">통합 ONTAP에서 노드는 디스크와 애그리게이트를 소유하며, 데이터는 볼륨을 통해 제공됩니다. 쓰기 작업은 로컬 노드의 NVRAM을 사용하여 해당 노드가 소유한 디스크에 플러시됩니다. 노드가 재부팅되거나 장애가 발생하면 ONTAP는 장애가 발생한 노드의 리소스에 대한 테이크오버를 트리거하여 디스크 및 애그리게이트 소유권을 파트너 노드로 이전합니다. 네트워크 인터페이스 또한 IP 공간의 포트로 페일오버되며, NVRAM 내용은 HA 쌍 전체에 지속적으로 복제되므로, 해당 노드는 NVRAM 내용을 플러시하여 장애가 발생한 노드의 쓰기 작업을 디스크에 커밋합니다. 이후, 생존한 노드는 노드 반환이 발생할 때까지 장애가 발생한 노드의 애그리게이트와 볼륨을 소유하게 됩니다. 즉, 페일오버 문제가 해결될 때까지 해당 볼륨과 이미 생존한 노드가 소유한 볼륨에 대한 모든 트래픽은 단일 노드에서 처리됩니다.</block>
+  <block id="b2314ec5f32fe0661b06cf654a9d774f" category="paragraph">초기 통합 ONTAP 클러스터 구축 시에는 단일 노드가 파트너 노드에 과부하를 일으키는 것을 방지하기 위해 장애 조치 계획을 미리 세우는 것이 좋습니다. 어떤 볼륨이 성능 저하의 주요 원인이 될지 예측하기 어렵기 때문에 이는 그 자체로 어려운 과제이지만, 무중단 볼륨 이동 및 볼륨 QoS(서비스 품질) 정책과 같은 기능을 통해 문제를 완화할 수 있습니다.</block>
+  <block id="0aed936db642f45f6eb903bbaee16ec7" category="paragraph">아래 이미지는 통합 ONTAP 클러스터에서 노드 간 성능 불균형이 발생할 수 있는 방식과 장애 조치로 인해 경우에 따라 성능 저하가 발생할 수 있는 방식을 보여줍니다.</block>
+  <block id="8263805ff73c96a6a33b4ff29a5181bf" category="paragraph-title">그림 23) 통합 ONTAP – 노드 활용도의 잠재적 불균형</block>
+  <block id="65a30aa7d7587de8b7d7f75054a95ca4" category="paragraph"><block ref="65a30aa7d7587de8b7d7f75054a95ca4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="19a1ed95279058c4a040fbbbd4a2bd36" category="paragraph">HA 쌍의 노드에 볼륨 수 및 성능 사용률 불균형이 발생하면 노드 페일오버가 전체 성능에 영향을 미칩니다. 정상 노드가 장애가 발생한 노드의 모든 볼륨을 소유하게 되기 때문입니다. 한편, 클러스터의 다른 노드에는 추가 작업을 처리할 여유가 있을 수 있습니다.</block>
+  <block id="8948979406e90702fd9fef13df2cf520" category="paragraph-title">그림 24) Unified ONTAP – 장애 조치가 노드 활용률에 미치는 영향</block>
+  <block id="6cb73a79a72bbbfbcaa549361d5ac63b" category="paragraph"><block ref="6cb73a79a72bbbfbcaa549361d5ac63b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fbd152c55bc990850ce5304c0ee55c8b" category="paragraph">위 예시에서 HA 파트너 노드가 추가 작업을 처리해야 할 경우 과부하가 발생하여 해당 노드의 모든 볼륨 성능에 영향을 미칠 수 있습니다. 볼륨 이동은 이러한 상황을 완화하는 데 도움이 될 수 있지만, 노드 간 복사(사용 가능한 여유 공간 필요)가 필요하며, 이 작업에 소요되는 시간이 노드 장애 복구 시간보다 길어질 수 있습니다. 또한, 볼륨을 이동하면 원래 노드로 장애 복구되지 않습니다. 대신 이동한 노드에 그대로 유지됩니다.</block>
+  <block id="f4fc3de86ca2cfb935e3654982a071f7" category="paragraph">NetApp AFX를 사용하면 노드 장애 조치가 몇 가지 다른 동작을 보입니다.</block>
+  <block id="24022ceee408d3203176347908930139" category="list-text">노드는 디스크를 소유하지 않고 물리적 애그리게이트도 없으므로 노드 페일오버 시 이러한 리소스를 전송할 필요가 없습니다. 대신 네트워크 인터페이스와 볼륨 소유권만 다른 노드로 이전됩니다.</block>
+  <block id="df3c61e5011c2a4bf3653943bf19facd" category="list-text">NVRAM 커밋은 여전히 발생하지만, 직접 연결 대신 HA 네트워크를 통해 이루어집니다.</block>
+  <block id="3f00142197623951c75f031677fae1ca" category="list-text">볼륨이 파트너 노드로 초기 페일오버를 수행하면 AFX는 클러스터 내의 다른 생존 노드에 볼륨을 재분배합니다. 이는 제로 카피 볼륨 이동을 통해 가능합니다.</block>
+  <block id="8cd05b85f2b4bd52b4b6edf36b87ce19" category="list-text">노드가 복구되면 볼륨은 원래 노드로 다시 이동합니다.</block>
+  <block id="41bd83ace55be554661db9fc03871f1c" category="paragraph">NetApp AFX는 클러스터의 노드 간 성능 균형을 유지하여 비교적 균등한 사용률을 유지하므로, 장애 조치가 발생하고 볼륨이 재분배될 때 클러스터 전체의 노드 사용률은 거의 동일해야 합니다.</block>
+  <block id="acf52383c18ed21db151f96dab702a45" category="paragraph-title">그림 25) NetApp AFX - 장애 조치 후 볼륨 재조정</block>
+  <block id="39b85b5ad4be02ac1409885db340a7b7" category="paragraph"><block ref="39b85b5ad4be02ac1409885db340a7b7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="02d13001e51339db716d34a7460be4c7" category="section-title">노드 추가 및 제거</block>
+  <block id="32e900f5a3bf5501cd46e24f2cc12235" category="paragraph">통합 ONTAP과 NetApp AFX 모두 클러스터에 노드를 추가하고 제거할 수 있습니다. 하지만 아키텍처 차이로 인해 노드 추가 및 제거 프로세스가 약간 다릅니다.</block>
+  <block id="97e63e6ed6f5df8ec9baa24eff9b0de0" category="section-title">통합 ONTAP에서 노드 추가/제거</block>
+  <block id="90e5f2d8f4a4c0d32b329ee38f229c28" category="paragraph">우리는 통합 ONTAP가 노드와 디스크 간의 직접적인 소유권 관계를 가지며, 모든 노드에는 디스크와 하나 이상의 애그리게이트가 연결되어 있어야 한다는 것을 이미 배웠습니다. 이러한 점을 염두에 두고, 추가 및 제거 시 다음 사항이 적용됩니다.</block>
+  <block id="b19ee3572c125a2a9f550a7e51339ddc" category="list-text">통합 ONTAP에서 노드를 추가할 때는 별도의 단계가 필요하지 않지만, 모든 노드(새 노드 포함)에서 균형 잡힌 성능을 제공하려면 볼륨을 새 노드로 이동해야 합니다. 이를 위해서는 기존 볼륨과 워크로드를 사전에 분석하고, 이동할 볼륨을 결정한 다음, 실제 볼륨 이동을 수행해야 합니다. 이 과정에서도 백엔드 클러스터 네트워크를 통해 데이터를 복사해야 합니다.</block>
+  <block id="e452d4d6a09a15767cc07ad7d5ca4e31" category="list-text">통합 ONTAP에서 노드를 제거하려면 해당 노드에 있는 기존 볼륨을 수동으로 옮겨야 합니다. 즉, 성능 균형을 유지하기 위해 어떤 노드에 어떤 볼륨을 저장할 수 있는지 파악해야 하며, 해당 볼륨을 이동할 수 있는 충분한 여유 공간이 있어야 합니다. 여유 공간이 부족한 경우, 클러스터 내에서 워크로드를 재배치하기 위해 추가적인 볼륨 이동이 필요할 수 있습니다. 노드 제거는 HA 페어 제거도 포함하므로 작업량이 두 배로 늘어납니다. 또한 각 노드는 디스크를 소유하고 있으므로 해당 노드의 전체 디스크를 다시 초기화해야 합니다. 이러한 모든 요소는 비교적 간단해야 할 작업에 시간과 노력을 추가합니다.</block>
+  <block id="8ca6377d87bf66b133edfe4a5391d3ca" category="section-title">NetApp AFX에서 노드 추가/제거</block>
+  <block id="ae971c213e343eb4726efaa67b950945" category="paragraph">또한 NetApp AFX는 표준 노드-디스크 소유권 방식을 활용하지 않고 물리적 애그리게이트를 사용하여 클러스터에 용량을 제공하지 않는다는 사실을 알게 되었습니다. 이 때문에 노드 추가 및 제거 동작 방식이 다소 다릅니다.</block>
+  <block id="4e9078749b85d85d7a9a16b0b0666512" category="list-text">NetApp AFX에 노드를 추가할 때 더 이상 사전 볼륨 분석이나 관리자 개입을 통해 각 노드의 볼륨 균형을 맞출 필요가 없습니다. 대신 ONTAP는 새로 추가된 노드 간에 볼륨 수를 자동으로 균형 있게 분산하여 비교적 균일한 성능 프로필을 유지합니다. ONTAP는 데이터 복사 없이 자동으로 볼륨을 노드 간에 이동하므로 클러스터에 노드를 추가하는 데 필요한 시간, 용량 및 노력을 줄여줍니다.</block>
+  <block id="03cc5f9146d6178c6cecb767adc3d18b" category="list-text">NetApp AFX에서 노드를 제거하는 데에는 수동 작업이 거의 또는 전혀 필요하지 않습니다. 노드 제거 태그가 지정되면 ONTAP는 자동으로 볼륨을 다른 노드로 이동하여(복사 없이) 제거되는 노드의 데이터를 비웁니다. 또한 노드에 디스크가 할당되지 않으므로 노드 제거 후 디스크를 다시 초기화할 필요가 없습니다. 이러한 특징 덕분에 AFX의 노드는 모듈식 구조를 가지며 확장 및 축소가 용이합니다.</block>
+  <block id="a7a9b5ecf910203a99dd58086a4f9062" category="section-title">성능 중심 볼륨 이동</block>
+  <block id="59bb1b744f5d89038eb466b34011d3a7" category="paragraph">NetApp AFX의 제로 카피 볼륨 이동 기능은 데이터를 복사하지 않고 필요에 따라 볼륨의 균형을 재조정할 수 있으므로 추가 용량 없이도 빠르게 수행할 수 있습니다. 즉, 볼륨 이동이 ONTAP 클러스터에서 사용할 수 있는 자동 로드 밸런싱의 주요 부분이 될 수 있습니다. 이제 볼륨 이동 비용이 거의 들지 않으므로 ONTAP는 이 유용한 도구를 활용하여 성능 중심의 볼륨 로드 밸런싱과 같은 기능을 통합할 수 있습니다.</block>
+  <block id="1451b95144527264de957fb033424c86" category="paragraph">NetApp AFX의 ONTAP 9.18.1 이상 버전에서는 노드, HA 쌍 및 볼륨 사용률이 지속적으로 모니터링되는 동시에 성능 데이터가 수집 및 분석됩니다. 노드 사용률이 정의된 임계값을 벗어나면 ONTAP는 클러스터 전체의 균형 잡힌 성능을 유지하기 위해 사용률이 낮은 노드로 이동할 볼륨을 자동으로 선택합니다.</block>
+  <block id="8cc39a2a78ef7ff9394e54e13756681a" category="paragraph-title">그림 26) NetApp AFX에서 성능 기반 볼륨 이동 - 높은 사용률이 볼륨 이동을 트리거함</block>
+  <block id="d052d3815c544d12d435fad0cba82804" category="paragraph"><block ref="d052d3815c544d12d435fad0cba82804" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="606f37a06dee7537f753cd3f3bcfea42" category="paragraph-title">그림 27) NetApp AFX에서 성능 기반 볼륨 이동 - 볼륨 이동 후 균형 잡힌 노드 사용률</block>
+  <block id="a96dc9b4bfb601ecdc3d6f77eefad7d9" category="paragraph"><block ref="a96dc9b4bfb601ecdc3d6f77eefad7d9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8de9c92500473b4cc61cc63f0674d137" category="section-title">클러스터 규모 및 확장</block>
+  <block id="2d3b718fe0fcdd1df07d2b10f7c3d671" category="paragraph">Unified ONTAP 클러스터는 최대 24개의 노드를 지원하며, 추가되는 각 노드에는 시스템 기능 및 데이터 서비스를 위한 디스크가 반드시 포함되어야 합니다. 디스크 쉘프는 클러스터에 추가할 수 있지만, 클러스터 크기가 24개 노드이든 관계없이 항상 단일 HA 쌍에 연결되고 단일 노드에서만 소유됩니다. 즉, 성능만 필요한 경우에도 클러스터에 용량이 추가되며, 이러한 성능 증가는 대부분 새 노드가 소유하는 특정 디스크 세트로 제한됩니다. 결과적으로 반드시 필요하지 않은 추가 용량이 발생할 수 있습니다.</block>
+  <block id="4c65a52d11b823802a846ea477e56057" category="paragraph-title">그림 28) 통합 ONTAP – 추가된 확장 고려 사항</block>
+  <block id="c4a4c82146f47c5e36d4e06952cdceb8" category="paragraph"><block ref="c4a4c82146f47c5e36d4e06952cdceb8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bf82343460988dd7ef911e977c0764d1" category="paragraph">NetApp AFX는 클러스터에 대해 더 큰 규모를 지원합니다. 9.19.1부터 AFX 클러스터는 단일 클러스터에서 최대 32개의 노드에 도달할 수 있습니다. 그리고 모든 노드가 모든 디스크를 보고 액세스할 수 있으므로, 모든 노드는 해당 드라이브의 성능과 용량(ONTAP 9.19.1 기준 최대 32PB)을 공유할 수 있어 리소스가 고립되는 일이 없습니다. 볼륨 이동에는 복사가 필요하지 않으므로, ONTAP은 새로 추가된 노드로 볼륨을 자동으로 이동시켜 노드 활용도를 고르게 분산시키고, 용량은 Storage Availability Zone을 통해 고르게 분배됩니다.</block>
+  <block id="a6f848626bb6ee80e93caf3d94919ded" category="paragraph-title">그림 29) NetApp AFX – 추가된 확장성 고려 사항</block>
+  <block id="d5c61e3d2402ccf375fc5286240234f7" category="paragraph"><block ref="d5c61e3d2402ccf375fc5286240234f7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7e82addb42172e38d87e681b0c654291" category="section-title">루트 볼륨 변경</block>
+  <block id="8a6003cd7ce55dca1f4bb3bf66285755" category="paragraph">NetApp ONTAP에서 각 노드에는 루트 볼륨이 할당되며, 이 볼륨은 로그 파일, 부팅 이미지, 코어 파일, 클러스터 데이터베이스 등과 같은 시스템별 파일 및 기능에 사용됩니다.</block>
+  <block id="afafec8f8cb58f6be5dfb246da9af25d" category="paragraph">통합 ONTAP에서 이러한 루트 볼륨은 물리적 루트 애그리게이트에 저장되었습니다. 루트 애그리게이트가 사용하는 용량을 줄이기 위해 ADP(Advanced Disk Partitioning)를 통해 데이터 드라이브 파티션에 걸쳐 생성되었습니다.</block>
+  <block id="b567370fae9b57dc36db6aee3f9ed75b" category="paragraph">NetApp AFX는 물리적 애그리게이트를 방정식에서 제거하므로 루트 애그리게이트와 ADP를 사용할 필요가 없습니다. 루트 볼륨은 여전히 개념으로 존재하지만 이제 용량 풀의 가상화된 영역에 존재하며 추가 구성이 필요하지 않습니다. 또한 루트 볼륨 기능이 변경됩니다. 부팅 이미지와 복제된 클러스터 데이터베이스는 스토리지 스택에서 각 AFX 노드에 있는 온보드 부팅 미디어로 이동됩니다. 이제 스토리지 스택에 대한 액세스가 손실되더라도 노드는 계속 부팅하고 클러스터 자격을 유지할 수 있으므로 문제 해결의 복잡성이 완화됩니다.</block>
+  <block id="b979ab805a7e598c5dfaabcd6b9559f4" category="section-title">온보드 부팅 미디어</block>
+  <block id="1937d0811cd3262ee4642c8649e4bc0b" category="paragraph">NetApp AFX 노드는 약 3.8TB 크기의 NVMe 연결 M.2 장치인 온보드 부트 미디어를 활용합니다. 이러한 부트 장치에는 스토리지 인클로저와 별도로 부트 이미지 파일과 복제된 데이터베이스가 포함되어 있어 디스크 액세스 문제 발생 시 추가적인 이중화를 제공합니다. 부트 미디어에 장애가 발생하면 해당 노드는 HA 파트너에 의해 인계되고 부트 미디어를 교체할 수 있습니다. 교체가 완료되면 스토리지 관리자가 새로운 ONTAP 이미지를 장치에 로드하고 ONTAP는 자동으로 클러스터 데이터베이스를 재구축하여 전체 기능을 복원합니다.</block>
+  <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">성능</block>
+  <block id="3652b93356fea2dfa9bebcddf84efc1c" category="paragraph">NetApp AFX는 성능과 확장성을 염두에 두고 설계되었으며, 특히 높은 읽기 및 쓰기 처리량이 필요하고 간단하고 선형적인 확장이 가능한 워크로드에 적합합니다.</block>
+  <block id="6b6795e030846da5007fbae567ffe6c8" category="section-title">노드별 성능</block>
+  <block id="387d2f69d45198a2c66e3422e78901b5" category="paragraph">각 NetApp AFX 스토리지 노드는 읽기 및 쓰기에 대해 특정 처리량을 제공합니다. 클러스터에 노드가 추가됨에 따라 성능이 선형적으로 증가하며, 이는 이 문서의 "노드 성능의 선형 확장" 섹션에서 설명합니다.</block>
+  <block id="03a70507b7d040ed5990e474d0b55688" category="inline-link-macro">AFX 1K</block>
+  <block id="f9b9821a66de79cc30f8d44dc67f7777" category="paragraph">현재 노드 유형은 <block ref="9cf787ca68118452f94875110bf7c0d8" category="inline-link-macro-rx"></block>이며 아래와 같이 읽기 및 쓰기 처리량을 제공합니다. NetApp AFX에 새로운 하드웨어가 추가되면 이러한 제한 사항이 변경될 수 있습니다. 참고: 최대 성능은 아래 "벤치마크 결과" 섹션에 표시된 것처럼 여러 클라이언트가 여러 파일을 읽고 쓰는 환경에서 달성되었습니다.</block>
+  <block id="95363aa90e372ebfaf3970380516572f" category="cell">노드 유형</block>
+  <block id="8a838d83ab54b8bfa72f5858f236e9f9" category="cell">최대 읽기 성능</block>
+  <block id="b1677e63421d75d4ab2f96235f93b70b" category="cell">최대 쓰기 성능</block>
+  <block id="1c6ad39ca9961af393de4d2a32ec598e" category="cell">~35GB/s</block>
+  <block id="53a91c3f00365965762e95a7e6adfa82" category="cell">~10GB/s</block>
+  <block id="0ccbb04df9863d6c79423d300f5a016a" category="admonition">최신 성능 예상치는 NetApp 영업팀에 문의하십시오.</block>
+  <block id="0bda7e818310ac16e72aac7bfe4d0eb2" category="section-title">쉘프별 성능</block>
+  <block id="594f376ed15d0ec6881425d65ce2b043" category="paragraph">각 셸프에는 16개의 100GB 이더넷 포트를 갖춘 고성능 셸프 모듈이 포함되어 있으며, 클러스터의 컴퓨팅 노드와 고대역폭 스토리지 상호 작용을 위해 RoCEv2 통신을 활용합니다. 모든 물리적 리소스와 마찬가지로 이러한 셸프에도 달성할 수 있는 최대 성능이 있으며, 특히 NetApp AFX는 동일한 디스크 세트를 가리키는 여러 노드를 구성할 수 있기 때문에 더욱 그렇습니다. 다음 표는 TLC 및 QLC 드라이브에 대한 단일 셸프의 예상 최대 읽기 및 쓰기 성능을 보여줍니다. TLC와 QLC의 차이점에 대한 자세한 내용은 "TLC vs. QLC"를 참조하십시오.</block>
+  <block id="0bc5859b805eb2649c8c0ff6dde33044" category="cell">쉘프 모듈 유형</block>
+  <block id="cc9084c2fed1d57fb50ee76b150c96de" category="cell">NSM 140</block>
+  <block id="ede449d5c77dbf1a876ba74f7a82cd43" category="cell">140GB/s (TLC 및 QLC)</block>
+  <block id="f3e451363190c1f43ef5d709f51ce4e7" category="cell">70GB/s TLC 35GB/s QLC</block>
+  <block id="56b8b83f998dd9761119047c9d76dbfe" category="section-title">성능 밀도</block>
+  <block id="c1a2f8f6f3bfbadf11742b61cc98b0c4" category="paragraph">분산형 ONTAP 아키텍처에서 스토리지 노드와 셸프를 분리하면 더 많은 노드가 더 적은 셸프로 트래픽을 전송할 수 있으므로 필요한 용량만으로 최대 성능을 얻는 데 필요한 전체 데이터 센터 공간을 줄일 수 있습니다.</block>
+  <block id="30669d2af901746b4cde59e144f81cb3" category="paragraph">이러한 "성능 밀도" 개념을 통해 스토리지 관리자는 스토리지 환경을 과도하게 프로비저닝할 필요 없이 보유한 하드웨어를 최대한 활용할 수 있습니다.</block>
+  <block id="4ae4c8e1d2b552815258c78743bb204e" category="paragraph">예를 들어, 통합 ONTAP 클러스터에서는 각 노드가 자체 디스크 세트를 가지므로 성능은 해당 노드가 소유한 디스크에만 집중됩니다. 또한 하나의 노드만 하나의 디스크 세트에 접근할 수 있기 때문에 사용 가능한 디스크를 완전히 활용하여 최대 성능을 달성하지 못할 수도 있습니다.</block>
+  <block id="b4f2dfc62f0c75a3536651d04528bf75" category="paragraph-title">그림 30) 통합 ONTAP – 성능 분배 방식</block>
+  <block id="33f4eb7eed8d8b2113c48953bac67bf8" category="paragraph"><block ref="33f4eb7eed8d8b2113c48953bac67bf8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5cb33c5c027f61f5d28891275974f9d" category="paragraph">NetApp AFX는 모든 디스크를 단일 스토리지 가용 영역으로 통합하여 모든 노드가 모든 디스크를 활용할 수 있도록 합니다. 또한 디스크와 노드가 분리되어 있으므로 동일한 성능을 얻기 위해 필요한 쉘프 수가 줄어듭니다. 이를 통해 성능이 집중되고 쉘프의 최대 성능 잠재력을 극대화할 수 있습니다.</block>
+  <block id="5e340d5c54545abb1cdb6cd00f9e5167" category="paragraph-title">그림 31) NetApp AFX – 성능 밀도</block>
+  <block id="99eb2edd23e124ad314a265478aad0a7" category="paragraph"><block ref="99eb2edd23e124ad314a265478aad0a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c5403d6a6718b58910134e247573ddcd" category="section-title">노드 대 쉘프 비율</block>
+  <block id="5a9b6da3c89cc10b2605462a01ff5d1e" category="paragraph">Unified ONTAP 노드는 노드당 최소 한 세트의 디스크가 필요하며, 단일 노드에 여러 개의 셸프를 연결할 수 있습니다. 따라서 자체 디스크 용량을 충분히 활용하지 못하는 단일 노드에서 성능 병목 현상이 발생할 수 있습니다.</block>
+  <block id="962bc0f988d9a6b087f2e852d024b921" category="paragraph">NetApp AFX는 모든 디스크 셸프를 모든 노드에 제공합니다. 각 셸프에는 16개의 100GB RoCE 지원 인터페이스가 있는 모듈이 포함되어 있어 셸프당 허용되는 총 성능을 향상시킵니다. 따라서 여러 노드가 동일한 디스크 세트에 읽기/쓰기 작업을 수행하여 단일 셸프의 성능을 최대한 활용할 수 있습니다.</block>
+  <block id="76ec7f81b3187ef46319086883f7fbd6" category="paragraph">ONTAP 9.19.1 버전 기준으로 노드 대 쉘프 포화 비율은 약 4:1입니다.</block>
+  <block id="81517b0fa3a8d75c3583bca55033c957" category="section-title">벤치마크 결과</block>
+  <block id="5fb3d68ef18b7e2fc36d57ce8a8e106a" category="paragraph">다음 섹션에서는 아래 구성 매개변수를 사용하는 NetApp AFX 클러스터의 벤치마크 결과를 다룹니다.</block>
+  <block id="3e6a751b39e6b30cc5ad600e2e6371be" category="list-text">4개 노드, 4개 데이터 인터페이스</block>
+  <block id="b827d6860b20dc1f1de306f24773c085" category="list-text">2개의 쉘프(7.6TB 드라이브)</block>
+  <block id="ea7f38fbe84ac28be0f7c90cca730a69" category="list-text">ONTAP 9.19.1</block>
+  <block id="85d0f94acd6137c52384e071c0beb76b" category="list-text">NFSv4.2(pNFS, 세션 트렁킹)</block>
+  <block id="e9db3004828d9514fafc57881dfbdbd2" category="list-text">FlexGroup 볼륨</block>
+  <block id="4c4ae09914e5fd587c43d091395a2882" category="inline-link-macro">ElBencho</block>
+  <block id="5bfe1c4aefee7ff6c90907e8decebcde" category="list-text"><block ref="451033c113f4cb2c96f7cf68d47e4bb7" category="inline-link-macro-rx"></block> 벤치마크</block>
+  <block id="c6d9bc9f8228f6999828018425cac23e" category="list-text">쓰기: elbencho --hosts=x.x.x.[y-z] -d -w -b 1M -t 80 --iodepth 1 --direct -s 600g /fio_vol1/</block>
+  <block id="cc2b3a45b47a8b9d004c234fb92d3fcb" category="list-text">읽기: elbencho --hosts=x.x.x.[y-z] -r -b 256k -t 80 --lat --iodepth 2 --direct -s 600g --infloop /fio_vol1/</block>
+  <block id="dca1eed7465e9cf14f5a6055d8f663f8" category="list-text">Cisco C240 M8 서버 4대, 2포트 * 200GbE CX-7 카드, 80개 스레드</block>
+  <block id="683511573a30f6287e69ad2c0d011547" category="list-text">NFS 마운트 옵션: rw,vers=4.2,rsize=1048576,wsize=1048576,trunkdiscovery,proto=tcp</block>
+  <block id="02dd924970d34986c36fe30c00c8f15b" category="paragraph">위 구성은 4노드 클러스터에서 사용 가능한 최대 읽기 속도(~134GB/s)에 매우 근접했으며, 노드당 허용된 최대 쓰기 속도(40GB/s)에 정확히 도달했습니다.</block>
+  <block id="108192483d4cb5dcec160185dc887ec4" category="paragraph-title">그림 32) NetApp AFX – ElBencho 읽기 성능, 4개 노드</block>
+  <block id="0629dec3ceb906c03be375c8f9507b0a" category="inline-image-macro">x_그림 3</block>
+  <block id="b3e70719e8aabc3e0c318726c98b0cbb" category="paragraph"><block ref="b3e70719e8aabc3e0c318726c98b0cbb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="127aab4a0f0747c1392c276baaebfe64" category="paragraph-title">그림 33) NetApp AFX – ElBencho 쓰기 성능, 4개 노드</block>
+  <block id="18201bf8e59cb8efcc8482827096b438" category="inline-image-macro">x_그림 5</block>
+  <block id="74225adb007750cc27390cdf50e2ed0b" category="paragraph"><block ref="74225adb007750cc27390cdf50e2ed0b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8904e382a774a4f2ca933b9deac56dc3" category="section-title">적극적인 사전 읽기</block>
+  <block id="37e7d13499f5b180195012d0c215d6c3" category="paragraph">미디어 스트리밍 워크로드에서 4K 영화는 종종 수만 개의 파일로 분할되며, 각 파일의 크기는 일반적으로 50MB에서 250MB 사이입니다. 각 파일은 프레임을 나타내며, 애플리케이션은 단일 요청으로 전체 프레임을 읽습니다. 버퍼링 없이 매끄럽고 끊김 없는 스트림을 유지하려면 이러한 프레임 읽기가 끊김 없이 완료되어야 합니다.</block>
+  <block id="4f8fb65dbbaa534f2acb0656e54a84a7" category="paragraph">ONTAP는 <block ref="623a9f3da6a1fc87ef08e178fc0716aa" prefix="(" category="inline-code"></block>이러한 워크로드를 최적화하기 위한 볼륨 수준 옵션을 제공합니다. ONTAP 9.19.1부터 유사한 파일 유형(예: 미디어 렌더링 및 스트리밍)에서 예측 가능한 I/O 패턴을 가진 워크로드를 가속화하기 위해 적극적인 미리 읽기를 위한 새로운 <block ref="025821a17a0db93af43037c636ca5e00" prefix=" " category="inline-code"></block>모드가 AFX에 도입되었습니다.</block>
+  <block id="a39ef97e3205a5209f3914b3847c00a9" category="paragraph">cross_file_sequential_read는 파일 이름을 기반으로 다음에 읽을 파일을 예측하고 클라이언트가 읽기 호출을 하기 전에 해당 파일들을 미리 읽어옵니다. 이 예측 로직은 디렉터리 내의 모든 파일이 단조롭게 증가하는 숫자 접미사(예: file1, file2, file3)를 사용하는 명명 패턴을 따른다고 가정합니다. 디렉터리 내의 모든 파일은 십진수 또는 16진수 번호를 사용하여 이 패턴을 따라야 합니다. 파일 이름은 최대 255자까지 가능합니다. 이 로직은 파일 확장자에 관계없이 현재 파일 이름만을 기반으로 현재 디렉터리에서 다음 파일 이름 세트를 생성합니다. 이전에 10진수 번호로 생성된 파일 이름이 디렉터리에 존재하지 않으면 16진수 번호로 다시 생성됩니다. 생성된 파일 이름 중 어느 것도 존재하지 않으면 해당 세트에 대한 프리페칭은 수행되지 않습니다. 프리페칭은 다음 클라이언트 읽기 호출이 발생하면 재개됩니다.</block>
+  <block id="5df886a6418fecfefb4ebea0783f8f6f" category="inline-link-macro">frametest</block>
+  <block id="115d07f5a35463eafb62431b64c8586d" category="paragraph">이러한 옵션을 활성화하면 <block ref="c5319e7fde85cb16e594df8068a7e621" category="inline-link-macro-rx"></block> 성능 벤치마크에서 30개 클라이언트(NFSv3 및 SMB3)와 34개 클라이언트(NFSv4.1)를 사용하여 초당 30프레임으로 30,000개의 4K 프레임을 읽을 수 있었으며, 프레임 손실은 단 한 건도 발생하지 않았습니다.</block>
+  <block id="502169986dbeafff7f0857fe6c160067" category="paragraph">파일 간 순차 읽기는 주로 미디어 워크로드를 위해 설계되었지만, AI 학습 및 추론과 같이 액세스 패턴과 파일 이름이 예측 가능한 다른 읽기 중심 워크로드에서도 이점을 얻을 수 있습니다.</block>
+  <block id="8ff47880b7f2d2fd3106d402fd88af31" category="section-title">고려 사항 및 주의 사항</block>
+  <block id="58121263bb6cef1c81b159c833d9a34c" category="list-text">공유 버퍼 캐시 - 적극적인 읽기 미리 읽기 기능은 노드의 다른 볼륨과 동일한 버퍼 캐시를 사용합니다. 이 기능을 활성화하면 해당 노드의 다른 볼륨에 대한 읽기 성능에 영향을 줄 수 있습니다.</block>
+  <block id="b3fdb461c87590dab365ef87ec347d39" category="list-text">기본 스토리지 성능 – 파일 읽기 속도가 충분히 빠르지 않으면(예: HDD 기반 FAS 시스템) 클라이언트 읽기가 발생하기 전에 캐시된 데이터가 제거되어 미리 읽기의 이점이 상쇄될 수 있습니다.</block>
+  <block id="40098639f1fdd84b60522411af530dcf" category="list-text">액세스 패턴 요구 사항 – 워크로드의 읽기 패턴이 순차적이지 않거나 디렉터리의 파일 이름이 순차적으로 증가하는 순서로 지정되지 않은 경우 cross_file_sequential_read의 적극적인 미리 읽기 모드는 의미 있는 이점을 제공하지 않습니다.</block>
+  <block id="803a6b220723e16093a2272d2adc3c49" category="section-title">NFSv4.x 성능 향상</block>
+  <block id="add8060d9a5ec980642d1dbd3444b13e" category="paragraph">NFS 버전 3은 1995년 공식 출시 이후 수십 년 동안 NFS 애플리케이션의 표준으로 자리 잡았습니다. 뛰어난 성능과 안정성 덕분에 최신 NFS 버전으로의 전환이 어려운 이유도 충분합니다. </block>
+  <block id="bcbfbfefbf1dbfe35550114ce769a78d" category="paragraph">하지만 NFSv3에도 한계가 있습니다. 프로토콜의 무상태성은 성능 향상과 스토리지 장애 조치 시 중단 최소화에는 좋지만, 데이터 일관성 및 잠금 관리에는 적합하지 않습니다. NFS 서버는 잠금 상태를 추적하지 않기 때문에 장애 발생 시 NFS 서버가 잠금을 해제할 수도 있고 해제하지 않을 수도 있으며, NFS 클라이언트는 파일이 잠겨 있는지 여부를 알 수 없을 수 있습니다.</block>
+  <block id="4c67ea22e665230775a0cac794609c81" category="inline-link-macro">RFC-3530</block>
+  <block id="5ca4a464648228916bed3e4290c12670" category="inline-link-macro">RFC-7530</block>
+  <block id="a2d520d9766a62ffc799cc1fd16c7ec4" category="paragraph"> NFSv3의 보안 또한 다소 부족합니다. 이 프로토콜은 제대로 작동하기 위해 여러 개의 방화벽 포트를 열어야 하며, 숫자 ID는 평문으로 전송됩니다. 또한 NFS는 강력한 ACL 지원이 없으며, 기본 파일 및 폴더 감사 기능도 포함하지 않습니다. 이러한 한계로 인해 2003년에 NFSv4가 <block ref="137ffaad1617b26215dd671ba64c17d0" category="inline-link-macro-rx"></block> 를 통해 개발되었습니다(2015년에 <block ref="d04016ec9c74ac358e156447074d1dc9" category="inline-link-macro-rx"></block>로 대체됨).</block>
+  <block id="56ee6add8613574f546ec5cf54f1945a" category="paragraph">NFSv4.x는 20년 이상 존재해 왔지만, 몇 가지 이유로 아직 널리 채택되지 못했습니다.</block>
+  <block id="32fa1447b1477712a8d5c882a6543db8" category="list-text">ID 관리의 복잡성: 많은 환경에서 NFSv4.x의 이름 문자열 및 Kerberos 보안 요구 사항을 제대로 활용하기 위한 네임 서비스 인프라가 구축되어 있지 않습니다.</block>
+  <block id="c416b7cab269d6d3acd2de6bc874da03" category="list-text">최신 NFS 클라이언트의 필요성: NFSv4가 처음 출시된 시점으로부터 시간이 흐른 지금과 같이 현대적인 NFS 환경에서는 이 문제가 덜 중요해졌습니다. 현재 사용되는 거의 모든 운영 체제에는 NFSv4를 완벽하게 지원하는 NFS 클라이언트가 포함되어 있지만, 필요한 NFSv4.x 패키지가 없는 레거시 시스템도 여전히 존재합니다. 실제로 일부 애플리케이션은 여전히 이전 버전의 NFS를 사용해야 합니다.</block>
+  <block id="9c2cc7d4b317cd844644741f0211d4db" category="list-text">"고장 나지 않았으면 고치지 마라"는 사고방식: 기업 IT 조직은 새로운 기술, 심지어 20년 이상 된 기술조차 도입하는 데 있어 매우 보수적인 것으로 악명이 높습니다. 현재 NFS 버전이 잘 작동하고 있다면 왜 바꿔야 할까요?</block>
+  <block id="79b7d9f5b63afe6abe8baa687aa66b23" category="list-text">성능 문제: NFSv4.x와 같은 상태 저장 프로토콜의 성능은 지난 20년 동안 대부분 상태 비저장 NFSv3에 비해 뒤처져 왔습니다. 과거에는 성능 영향이 NFSv4.x의 장점을 상쇄하는 경우가 많았습니다.</block>
+  <block id="f8704a30932d4a9d65ba5ad415fdfedd" category="section-title">AFX를 사용한 ONTAP 9.18.1의 NFSv4.x 개선 사항</block>
+  <block id="33454fb8ab1802fbaad4416110a2b4ab" category="paragraph">ONTAP의 일부 아키텍처 변경으로 NFS의 전반적인 성능이 크게 향상되었으며, NFSv4.x의 성능 개선에도 상당한 진전이 있었습니다.</block>
+  <block id="aa9bcd08b0d6a1705755a3e6b370af53" category="paragraph">다음은 이러한 변경 사항 중 일부를 간략하게 요약한 것입니다.</block>
+  <block id="b92857e59d0c3773c2d0c0ee71ca76f6" category="section-title">순차 읽기 향상: NFSv4.1이 NFSv3보다 30% 우수</block>
+  <block id="947fe9b6a28b1c320669d4e65607cc5a" category="paragraph">ONTAP 9.18.1은 NFSv4.1을 사용한 다중 경로 IO 지원을 도입했습니다. MPIO는 WAFL 파일 시스템에서 읽기 작업을 처리하는 대신, 읽기 작업을 네트워크 도메인으로 이동시켜 다중 경로 안전 방식으로 처리합니다. 이 접근 방식은 컨텍스트 스위치를 줄여 순차 읽기 트래픽에서 전반적인 병렬성을 향상시키고, WAFL을 우회하여 버퍼 관리의 오버헤드를 줄입니다.</block>
+  <block id="666741158d41d72d211858d032f9fb00" category="section-title">FlexGroup 볼륨의 임의 읽기 향상: NFSv4.1이 NFSv3의 7% 이내</block>
+  <block id="b90f2db135fa838737803a40e0485e29" category="paragraph">FlexGroup 볼륨은 여러 개의 하위 구성 볼륨을 하나의 통합 네임스페이스로 제공하는 볼륨입니다. AFX에서 FlexGroup 볼륨은 기본적으로 고급 용량 균형 조정(Advanced Capacity Balancing)이 활성화되어 있어 10GB보다 큰 파일은 여러 구성 볼륨에 멀티파트 파일로 분산하여 기록됩니다. 이러한 파일 파트가 원격 위치에 저장되기 때문에, 기존 NFSv4.x 환경에서는 임의 읽기 성능이 다소 떨어지는 문제가 있었습니다(NFSv3보다 약 18% 낮음). ONTAP 9.18.1 버전에서는 이러한 문제를 해결하기 위해 NFSv4.x 환경에서 멀티파트 읽기에 대한 캐시된 IO 지원을 도입했습니다. 참고: 이 변경 사항은 FlexVol 볼륨에는 적용되지 않습니다.</block>
+  <block id="8a9e9b5baa845bf9313eec9638bd0aac" category="section-title">순차 쓰기: 이전 릴리스 대비 +10% 향상</block>
+  <block id="61f5c50a9e53b7849ae303a8a1613ee0" category="paragraph">HA 페일오버 기능에 사용되는 NVLOG 데이터 복제 방식이 개선되어 NetApp AFX 시스템의 전반적인 순차 쓰기 성능이 향상되었습니다.</block>
+  <block id="4211fa3408a7f41fc598bbfe4b7b2e52" category="section-title">메타데이터 작업: EDA 벤치마크에서 NFSv3 대비 15% 이내의 성능</block>
+  <block id="1ed7a33c3c50b376b850d768c9eac2aa" category="paragraph">NFSv4.1은 전통적으로 모든 OPEN 및 CLOSE 작업을 직렬화하여 클러스터 노드가 네트워크에서 WAFL로 전송되기 전에 한 번에 하나씩 처리합니다. ONTAP 9.18.1에서는 동시 열림/닫힘(COC) 기능을 도입하여 경쟁 조건 해결 방식을 변경함으로써 네트워크 직렬화를 없애고 이전 릴리스에서 발생했던 OPEN/CLOSE 병목 현상을 해결합니다.</block>
+  <block id="bf9296b46aa00690835a1ed3785b14ef" category="paragraph">이러한 모든 변경 사항은 AFX에서 이루어진 아키텍처 변경 사항과 함께 ONTAP 9.18.1에서 전반적인 NFSv4.1 성능을 향상시킬 수 있게 했습니다.</block>
+  <block id="104a21d408fa95df212acf133e687d1c" category="section-title">순차 IO 결과</block>
+  <block id="39c180581c090fc39815b0bbb818325f" category="paragraph">성능이 다소 향상된 부분 중 하나는 순차 IO(즉, 예측 가능하고 연속적으로 발행되는 IO)였습니다. fio를 사용한 표준 성능 테스트에서 ONTAP 9.18.1을 실행하는 AFX는 순차 읽기 성능을 거의 30%, 순차 쓰기 성능을 10% 향상시켰습니다.</block>
+  <block id="35233f34a34c2f849706386c87699a14" category="paragraph-title">그림 34) NetApp AFX – NFSv4.1 순차 IO 성능(ONTAP 9.18.1)</block>
+  <block id="69bdc8c83ef26acac8abddded97f8b64" category="paragraph"><block ref="69bdc8c83ef26acac8abddded97f8b64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8ccb316b5c1b78555f8a38a9affe4408" category="section-title">메타데이터 비중이 높은 워크로드 결과</block>
+  <block id="c81b7a45a8b8e64fa801da91d93c88cc" category="paragraph">NFSv4.x의 주요 성능 저하 요인 중 하나인 메타데이터 처리 성능이 더욱 인상적으로 개선되었습니다. 메타데이터는 파일 소유자 및 속성 관리, 파일 생성 및 목록 조회 등에 사용되는 일반적으로 4K 범위의 랜덤 IO입니다. NFSv4.x의 상태 유지 특성으로 인해 이러한 유형의 작업은 CPU 및 지연 시간 측면에서 더 많은 비용이 소요되며, 이는 결과적으로 전반적인 성능을 저하시킵니다. </block>
+  <block id="3bd1fd712f75938356695de5aab35052" category="paragraph">AFX ONTAP 9.18.1의 변경 사항으로 이러한 유형의 워크로드에 대한 NFSv4.x 성능이 크게 향상되어 NFSv3 성능과의 격차를 15% 이내로 좁혔습니다.</block>
+  <block id="c583e153d978cb5844d41c32c86a31ff" category="paragraph">저희 성능 엔지니어링 팀은 표준 AI 이미지, EDA 및 소프트웨어 빌드 벤치마크의 성능을 비교한 결과 이전 ONTAP 릴리스 대비 상당한 성능 향상을 발견했습니다.</block>
+  <block id="273317e13cb2741d955ced49f1a88c58" category="paragraph-title">그림 35) NetApp AFX – NFSv4.1 메타데이터 IO 성능 in ONTAP 9.18.1</block>
+  <block id="aa6ef0e541d33677fb78f28cb622a5b5" category="paragraph"><block ref="aa6ef0e541d33677fb78f28cb622a5b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0c50be72847bf731e0fb164ee3693c43" category="section-title">그 외 유사점 및 차이점</block>
+  <block id="a6a8f697c065d890bf89843c649c7358" category="paragraph">NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로 상당한 차이가 있지만, 기능 세트와 ONTAP 관리 방식은 사실상 변경되지 않았습니다. 이는 전적으로 의도적인 설계입니다. ONTAP은 ONTAP이므로 가능한 한 학습 곡선이 거의 없거나 전혀 없어야 합니다. 그리고 이 경우 NetApp AFX는 여전히 ONTAP을 실행하고 있습니다.</block>
+  <block id="da7e3e739f578be1f4c13495e5461eff" category="section-title">관리 – CLI</block>
+  <block id="05437f19c5de6633ca8141580d39017e" category="paragraph">NetApp AFX의 CLI는 통합 ONTAP의 CLI가 제공하는 것과 거의 동일합니다. 대부분의 명령은 클러스터 수준에서 실행되지만 노드 수준 명령도 실행할 수 있습니다. 최상위 명령 디렉터리와 하위 명령, 그리고 명령의 탭 자동 완성 기능도 그대로 제공됩니다. 또한 모든 CLI 바로 가기도 동일하게 작동합니다(예: <block ref="ec92dbc26cd120dad4e0cd275bb88a04" prefix=" " category="inline-code"></block>를 사용한 콘텐츠 필터링).</block>
+  <block id="df261ff56c5330171ae5368b990efce8" category="paragraph">NetApp AFX CLI의 유일한 실질적인 차이점은 추가된 기능과 제거된 기능(이 문서의 " 섹션 참조)에 있습니다. 애그리게이트 또는 MetroCluster와 같은 기능이 제거된 경우 해당 CLI 명령은 더 이상 사용할 수 없습니다.</block>
+  <block id="193e26b12796469aed7d47e0aa0d503e" category="inline-link-macro">NetApp AI Data Engine(AIDE)</block>
+  <block id="360aca875ca1d58ffafda7b5769a8691" category="paragraph">또한 NetApp AFX에 새로운 기능과 성능이 추가됨에 따라 새로운 명령어도 사용할 수 있게 됩니다. 예를 들어, 새로운 <block ref="05a2f95fa807d23213f8d8ee23985815" category="inline-link-macro-rx"></block> 추가 기능은 백엔드 클러스터 네트워크를 통해 NetApp AFX 클러스터와 직접 상호 작용합니다. 따라서 <block ref="5bc109280e5e43f1dff47cc509d93c25" prefix=" " category="inline-code"></block> 및 <block ref="d38635dc6a45447e1425453f8461347e" prefix=" " category="inline-code"></block> 명령어 디렉터리가 NetApp AFX CLI에 추가됩니다.</block>
+  <block id="640ce02de4e6cf89be34aab0e74054ef" category="paragraph">다음은 NetApp AFX 클러스터에서 관리자 권한으로 사용할 수 있는 최상위 명령 디렉터리를 보여줍니다. 새로 추가된 명령은 굵게 표시되어 있습니다.</block>
+  <block id="83a0f8ffe53bc9724b85d6e4af630922" category="section-title">관리 – GUI</block>
+  <block id="1a0e25453455babbd4d41a3b30ac2ddb" category="paragraph">System Manager는 여전히 리소스 관리를 위해 NetApp AFX 클러스터와 상호 작용하는 GUI 인터페이스이며, 처음 로그인할 때 통합 ONTAP 시스템에 로그인하지 않았다는 것을 한눈에 알아차리기 어려울 것입니다.</block>
+  <block id="69477dadfb2964ee658af67d4cdd0cac" category="cell">통합 ONTAP System Manager 대시보드 <block ref="bf6faeac7c9ab439b469b8e1c35378c6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0118b691b3a335847f2ba556180a1eb7" category="cell">NetApp AFX System Manager 대시보드 <block ref="3968e6a5500863c7e7d6d3b77da1ab24" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c5e50d69030755936a2deb5c0d3af70f" category="paragraph">위에서 보시는 바와 같이, 통합 ONTAP과 NetApp AFX의 System Manager에는 뚜렷한 차이점이 많지 않습니다. 하지만 몇 가지 알아챌 만한 단서가 있습니다.</block>
+  <block id="5ddd27a38579b7e49708fddae57b766d" category="paragraph-title">그림 37) System Manager에서 NetApp AFX의 차이점</block>
+  <block id="c0e3f26ad0e73463526def15e5ea5f8c" category="paragraph"><block ref="c0e3f26ad0e73463526def15e5ea5f8c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1d79462b427260ace228671c1a811d79" category="paragraph">메뉴와 대시보드를 자세히 살펴보면 대부분의 내용은 이전과 동일합니다. 볼륨에는 사용량과 총 용량이 표시됩니다. 네트워크 인터페이스에는 포트와 IP 주소가 표시됩니다. SnapMirror에 대한 보호 정책을 구성할 수 있습니다. 하드웨어 보기도 계속 사용할 수 있습니다. 하지만 NetApp AFX는 새로운 케이블링 보기를 제공하여 스토리지 스택 전체에 걸쳐 모든 케이블이 어디에 연결되어 있는지 자세히 확인할 수 있도록 보기 기능을 향상시켰습니다.</block>
+  <block id="c99eef9971a397402cb4b1349a400db2" category="paragraph-title">그림 38) NetApp AFX 케이블 연결 모습</block>
+  <block id="b3de1b7e09ff9deeb433499ce732641c" category="paragraph"><block ref="b3de1b7e09ff9deeb433499ce732641c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c257f5c852c12409e63afb17104f69c5" category="section-title">REST API</block>
+  <block id="c8ee7f355c82a72cadbe3a64ddfa6055" category="paragraph">NetApp AFX는 ONTAP REST API 호출의 대부분을 유지하기 위해 상당한 노력을 기울이고 있습니다. 즉, REST API를 기반으로 자동화 도구 모음을 생성한 경우 대부분의 경우 해당 도구를 계속 사용할 수 있습니다. 주요 예외 사항으로는 애그리게이트, Metrocluster, SAN 및 일부 성능 카운터가 있습니다. 전체 REST API 문서는 NetApp AFX 클러스터의 System Manager에서<block ref="34b9810fdc4870fa56a270808bbf467c" category="inline-link-rx"></block>로 이동하여 확인할 수 있습니다.</block>
+  <block id="eec095a139240fdc4a611b02d6b51355" category="section-title">오프박스 ONTAP 관리 툴</block>
+  <block id="0609e938cd55d444777f12f11ea2a621" category="paragraph">NetApp AFX는 다음과 같은 외부 ONTAP 관리 도구를 일부 지원합니다.</block>
+  <block id="03b0980fed141ff65a4ee480b9f3b94c" category="list-text">NetApp System Manager</block>
+  <block id="3c031b939f6ec312ee601d021e7a6644" category="list-text">NetApp Console</block>
+  <block id="fc15be35c28b3ca0d92a6137fb0f819c" category="list-text">Grafana Harvest(25.11.0 이상)</block>
+  <block id="b270ffced045220cb079b15f8db1c035" category="list-text">NetApp Trident(25.10 이상)</block>
+  <block id="da30fe2c6d6cee8e3680587439f53827" category="paragraph">NetApp AFX는 현재 다음을 지원하지 않습니다.</block>
+  <block id="260f55f0e71cde4b422f5557677755e3" category="list-text">NetApp ActiveIQ Unified Manager</block>
+  <block id="9679857c7a55fc497408ea23fb12ff5b" category="paragraph">NetApp AFX의 네트워킹 스택은 통합 ONTAP와 동일합니다.</block>
+  <block id="fbfa71f06a73de2d0a630552287b4c12" category="list-text">데이터 LIF는 여전히 내부 및 외부 서비스에 네트워크 주소를 제공하는 데 사용됩니다.</block>
+  <block id="2b0f3303c174dd40574aba8fb32ef224" category="list-text">각 노드에는 고유한 물리적 포트 및 가상 포트 세트가 있습니다.</block>
+  <block id="cfcbeb183fcccae91fa65c3e674a9523" category="list-text">VLAN, ifgroup 및 BGP는 모두 여전히 지원됩니다.</block>
+  <block id="356ece7bffd42538e3a989e422ed03fa" category="list-text">LIF는 클러스터의 물리적 노드와 포트 간에 페일오버를 수행할 수 있습니다.</block>
+  <block id="d1d8ced5529f4545b271ed7c0f8eee21" category="list-text">IPspace/브로드캐스트 도메인은 이전과 동일하게 구성되어 있습니다.</block>
+  <block id="bb4a363335b76669a7ee32c39b97b7a7" category="list-text">각 SVM은 자체적인 전용 데이터 네트워크를 가질 수 있습니다.</block>
+  <block id="fa7e3ce056e445f916459f4372867737" category="list-text">관리 네트워크는 데이터 네트워크와 분리될 수 있습니다.</block>
+  <block id="0444184d88145af9b161901b5b6ba1e9" category="list-text">클라이언트 데이터 네트워크는 400GB 네트워킹 지원이 새로 추가된 것 외에는 변경 사항이 없습니다.</block>
+  <block id="7878fbcd8bea7289bd473dc7916037e1" category="list-text">백엔드 클러스터 스위치는 여전히 NetApp에서 제공하는 "골든 구성" 파일을 통해 구성됩니다.</block>
+  <block id="9b9a79176e66304af399df0747b11958" category="paragraph">주요 네트워크 차이점은 다음과 같습니다.</block>
+  <block id="d6e99a721e3959d61475fb8a779af6da" category="list-text">백엔드 클러스터 네트워크 포트는 이제 클러스터 스위치에 대한 100GB 연결만 지원합니다.</block>
+  <block id="7e4a61956036e6a0f962729225a087fd" category="list-text">클러스터 스위치는 400GB를 지원하므로 백엔드 노드 연결에는 스위치에서 사용하는 포트 수를 줄이기 위해 4 x 100GB 브레이크아웃 케이블이 사용됩니다.</block>
+  <block id="3642ca6533d5185a15902437ef4ed2cb" category="list-text">이제 스위치의 새로운 HA VLAN 구성을 통해 백엔드 클러스터 네트워크 전체의 HA 쌍 간에 NVRAM이 미러링됩니다.</block>
+  <block id="5af24813aa4e491fa55cdff2a9e543b1" category="list-text">AI Data Engine에 대해 새 DCN 네트워크가 기본적으로 추가됩니다. 이러한 IP 주소는 자동으로 생성되며 필요에 따라 변경할 수 있습니다.</block>
+  <block id="2d6547f7462502cd7177c73060bb9b5b" category="paragraph">NetApp AFX는 ONTAP를 실행하므로 ONTAP와 동일한 보안을 사용합니다. 모든 암호화 모듈이 동일하므로 인증 프로세스가 완료되면 보안 인증도 동일합니다. NetApp AFX는 통합 ONTAP와 동일한 보안 암호를 지원합니다.</block>
+  <block id="608beef06dee65257d7f56d427db34e9" category="paragraph">또한 NetApp AFX는 다음을 포함하되 이에 국한되지 않는 통합 ONTAP에서 제공하는 많은 보안 기능을 지원합니다.</block>
+  <block id="8c2e08b809343efaa9a2f9657abba668" category="list-text">안전한 다중 테넌시</block>
+  <block id="1c6532607e840786cc7ea4c802692dea" category="list-text">저장 데이터 암호화(볼륨 암호화) 및 전송 데이터 암호화(TLS 1.3)</block>
+  <block id="f6208293d9473f546cde029bda053872" category="list-text">자체 암호화 드라이브(SED)</block>
+  <block id="bf99735243839dbc15c047aac43154b9" category="list-text">NFS 및 SMB Kerberos 인증 및 암호화</block>
+  <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
+  <block id="99ea7fe6dea3854ba90d4c925836e232" category="paragraph">통합 ONTAP이 획득한 인증(및 기타 보안 강화 정보)에 대한 자세한 내용은 다음을 참조하십시오.</block>
+  <block id="c97236d0432cf7fbbc8c3b120b3e6701" category="inline-link-macro">NetApp 제품 보안</block>
+  <block id="9f1a69c754d3a3e49b333d12ee8f0f24" category="list-text"><block ref="9f1a69c754d3a3e49b333d12ee8f0f24" category="inline-link-macro-rx"></block></block>
+  <block id="3ddcacddc2a36f511a8e26ece20945dd" category="list-text"><block ref="3ddcacddc2a36f511a8e26ece20945dd" category="inline-link-macro-rx"></block></block>
+  <block id="81b6f23eeb09459b1b476aee5f8f72ee" category="section-title">스냅샷 및 데이터 보호</block>
+  <block id="b15cf320632a63bcd52340d2e192c30a" category="inline-link-macro">규칙 및 구성</block>
+  <block id="54ad3870c5ce5b39f891a2a9614a3a88" category="paragraph">NetApp AFX는 통합 ONTAP와 동일한 스냅샷 및 복제 기술을 활용하며, 이러한 기능의 작동 방식에 큰 변화는 없습니다. 실제로 AFX는 기존에 익숙한 <block ref="da7716a18045fb53ba7fce5776a770cf" category="inline-link-macro-rx"></block>를 사용하여 통합 ONTAP 시스템과의 복제를 수행할 수 있습니다.</block>
+  <block id="b134f0424fcce3d2eabfe8dd3e63b5fc" category="paragraph">AFX에서 복제와 관련하여 유일한 예외는 FlexGroup 볼륨을 통합 ONTAP 시스템으로 복제하는 경우입니다. 이 경우 대상 통합 ONTAP 시스템은 고급 용량 균형 조정(Advanced Capacity Balancing)을 지원하기 위해 ONTAP 9.16.1 이상 버전을 실행해야 합니다.</block>
+  <block id="6cf72c001b2e1894f097105e8bb48949" category="section-title">무중단 운영</block>
+  <block id="acb4f3e2d117a10e97ef79d49dd2f569" category="paragraph">ONTAP는 볼륨 이동, 업그레이드, 클러스터 유지 관리, 스토리지 페일오버 등과 같은 무중단 운영을 제공합니다. NetApp AFX는 일부 조정을 통해 동일한 무중단 운영을 제공합니다.</block>
+  <block id="204c2218d61638a3fc6e49de67e5bec3" category="list-text">볼륨 이동은 여전히 중단 없이 진행되지만 더 이상 복사가 필요하지 않습니다.</block>
+  <block id="b61deb419f192c0f1a67bb5e4b1f2adc" category="list-text">스토리지 페일오버는 여전히 무중단 방식이지만, 초기 페일오버 후에는 클러스터의 모든 남아 있는 노드에 걸쳐 볼륨이 재조정됩니다.</block>
+  <block id="e7bef7f0000c3b62f723cb98853bb51f" category="list-text">LIF 마이그레이션은 동일합니다.</block>
+  <block id="463e9691bab5f3a22337659d70cb8402" category="list-text">하드웨어 유지 보수 및 업그레이드는 동일합니다.</block>
+  <block id="77f414f45ea3d8865875af8f20630412" category="section-title">볼륨 유형</block>
+  <block id="bf8dd762b35ca354b0fe84b313251378" category="paragraph">Unified ONTAP는 다음과 같은 다양한 볼륨 유형을 지원합니다.</block>
+  <block id="9fb12fc620d677152b16fef69ab318b8" category="list-text">FlexVols</block>
+  <block id="a701f5d044348085ee4f97fef6636845" category="list-text">FlexClone</block>
+  <block id="4c92c8f155b3a5fd143619a182e7ee31" category="list-text">객체 버킷</block>
+  <block id="da6c9881b443b0012a9bb5b8f093fa28" category="paragraph">NetApp AFX는 이러한 각 볼륨 유형을 완벽하게 지원할 뿐만 아니라 통합 ONTAP 시스템과 FlexCache 볼륨 간의 완벽한 상호 운용성도 제공합니다.</block>
+  <block id="31719ca1bb11a891c147cfd16518ce7b" category="paragraph">FlexGroup 볼륨이 AFX 아키텍처를 통해 얻는 이점에 대한 자세한 내용은 "FlexGroup 볼륨 관리 개선 사항"을 참조하십시오.</block>
+  <block id="49a4424a39f72ccd065d06c6b79c3d21" category="section-title">하드웨어 세부 정보</block>
+  <block id="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link-macro"><block ref="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link-rx"></block></block>
+  <block id="f1d4991c23f3e0a4c2cfe2c92d1513e1" category="paragraph">다음 섹션에서는 NetApp AFX 클러스터 하드웨어에 대한 세부 정보를 다룹니다. NetApp AFX 하드웨어에 대한 최신 정보는 <block ref="fbd1b799f21dab00963646892e0a8bc0" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="b2a10addfa20e797512c93a082680656" category="section-title">지원되는 hardware</block>
+  <block id="30cf7a36a073e8f6f943d72fb5d6ba32" category="paragraph">NetApp AFX에서 지원하는 하드웨어에 대한 최신 정보는 <block ref="fbd1b799f21dab00963646892e0a8bc0" category="inline-link-macro-rx"></block>을(를) 참조하십시오.</block>
+  <block id="187c6ad3a74cc93ac6c2229d398e383e" category="section-title">노드</block>
+  <block id="3cf2439f2c058990ff372e335184dd99" category="paragraph">NetApp AFX 노드는 통합 ONTAP 클러스터용으로 제공되는 AFF A1K 모델 노드를 기반으로 합니다. 이 노드에는 스토리지용 온보드 디스크가 없으며, 성능 요구 사항에 따라 노드를 쉽게 추가 및 제거할 수 있도록 모듈식으로 설계되었습니다. 각 노드는 2U의 랙 공간을 차지하며, AFX 클러스터에 추가될수록 성능이 선형적으로 향상됩니다.</block>
+  <block id="aff8fffb0a871ced1bd078341b8307ba" category="paragraph-title">그림 39) NetApp AFX 1K 노드 세부 정보</block>
+  <block id="d5e794e7dbae5aaa599a71bcdb41beef" category="paragraph"><block ref="d5e794e7dbae5aaa599a71bcdb41beef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40a737e5041c4ace9449f041a4a18b80" category="section-title">하드웨어 슬롯</block>
+  <block id="92d6e217184c21d30e8aeb113e46244e" category="paragraph">NetApp AFX 1K 노드는 다음과 같은 슬롯 할당을 사용합니다.</block>
+  <block id="dee946edba950a53e547192bb4b71b02" category="list-text">슬롯 1은 HA 복제 전용입니다.</block>
+  <block id="0ffa1cebf11bd7df873f9642723e5ffb" category="list-text">슬롯 7은 클러스터 복제 전용입니다.</block>
+  <block id="93d005b726c60db23c2a5efc3fa57c72" category="list-text">슬롯 10과 11은 스토리지 쉘프 통신 전용입니다.</block>
+  <block id="bb53c62475a4f28295dfd71302a53a3d" category="section-title">쉘프</block>
+  <block id="809b1b174fd9b06c2a94221c0c6d4e22" category="paragraph">NetApp AFX 셸프는 AFF 시스템에서 사용하는 것과 동일한 엔클로저를 사용합니다. AFX 셸프의 주요 차이점은 사용되는 모듈에 있습니다. NSM140 모듈은 향상된 성능 기능을 제공하며 분산형 ONTAP을 가능하게 합니다. 몇 가지 주요 고려 사항은 다음과 같습니다.</block>
+  <block id="271efc38de12bb3b04f01a2fadcb1464" category="list-text">완전히 채워진 쉘프만 지원됩니다.</block>
+  <block id="9b1f6cd15e4dc73c7dbb9b4bbe78a355" category="list-text">NetApp AFX는 연결 시 쉘프를 자동으로 감지합니다.</block>
+  <block id="418a22edcf863b6215ff85a0897c6806" category="list-text">현재 셸프 제거는 지원되지 않습니다.</block>
+  <block id="bc4207e6de5d732f9b73c86bfd1bc5d1" category="paragraph-title">그림 40) NetApp AFX 셸프 엔클로저 세부 정보</block>
+  <block id="e1dbc260ea02b60d80a16f35093997ff" category="paragraph"><block ref="e1dbc260ea02b60d80a16f35093997ff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0052efad5d260a806d52bfcfe640936f" category="section-title">스위치</block>
+  <block id="e1b3ec490386a2a23989a65207e5048f" category="paragraph">NetApp AFX는 클러스터 데이터베이스 복제, 원격 데이터 작업, 스토리지 작업 및 NVRAM 미러링과 같은 클러스터 내 통신을 위해 여전히 백엔드 클러스터 스위치를 사용합니다. 기능적으로 통합 ONTAP과 NetApp AFX 클러스터 스위치 간의 유일한 차이점은 다음과 같습니다.</block>
+  <block id="528db8ffc1fb0bd9ecd0079bb25364a1" category="list-text">400GbE 지원</block>
+  <block id="09206f9f9ba2a029fde379433effada2" category="list-text">새 HA VLAN</block>
+  <block id="7a73866a5780660712c2f567d50a3d4e" category="inline-link-macro">Cisco 스위치 데이터 시트</block>
+  <block id="dccb27e8b03cb56df2a6877ed19a9fd8" category="list-text">자세한 내용은 <block ref="90cb3a4603072e0b41362ef1057cf320" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="c3150df181d7f079672ad3db9904ac60" category="paragraph-title">그림 41) NetApp AFX 클러스터 스위치</block>
+  <block id="73ed82219e935d8e1007e1c3f266cba7" category="paragraph"><block ref="73ed82219e935d8e1007e1c3f266cba7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ebc44233941122337b29386177d91130" category="section-title">클러스터 스위치 연결</block>
+  <block id="47db3bf9cf495bcc67c8e360c1e98aa9" category="paragraph">NetApp AFX는 주요 아키텍처 개념의 상당 부분을 백엔드 클러스터 스위치에 의존하여 구현합니다. 예를 들어, 클러스터 인터페이스, 스토리지 어댑터, 스토리지 셸프, NVRAM 카드 등은 모두 클러스터 스위치에 연결됩니다. 현재 이러한 인터페이스는 모두 100GB 통신만 지원하는 반면, 스위치는 400GB를 지원합니다. 따라서 100GB 인터페이스는 4 x 100GB 브레이크아웃 케이블을 통해 스위치의 400GB 인터페이스에 연결됩니다. 이러한 방식을 통해 스위치에서 사용하는 포트 수를 줄일 수 있습니다. 예를 들어, 16 x 100GB 스토리지 셸프 모듈 포트는 스위치에서 4개의 포트만 사용하고, 노드의 총 8개 포트는 스위치 포트 2개를 사용합니다.</block>
+  <block id="353837d1001e9f24e0f66794ee89d9e6" category="paragraph-title">그림 42) NetApp AFX 스위치 케이블링</block>
+  <block id="57b5f0954762dfdb314fe646634d976a" category="paragraph"><block ref="57b5f0954762dfdb314fe646634d976a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c5ddc935447794865d4cbffec8a3d20" category="section-title">디스크 유형 및 크기</block>
+  <block id="97f14179dd02ff11f07602385544cf86" category="paragraph">NetApp AFX는 현재 다음과 같은 크기의 NVMe 연결 SSD만 지원합니다.</block>
+  <block id="ce5fba88cb69cd2186756f8faf58b8d9" category="list-text">30.1 TB</block>
+  <block id="e86d671ba5d15a1c611be884ea7cf55a" category="list-text">60.6 TB</block>
+  <block id="1d19d1aa0e80c186229626ee1f0041e4" category="section-title">TLC와 QLC</block>
+  <block id="7a2e1ddf0e6216bfff611dd9ae70ce57" category="paragraph">NetApp AFX는 TLC와 QLC 플래시 유형을 모두 활용할 수 있습니다. 7.6TB 및 15.3TB 드라이브는 TLC 모델이며, 30.1TB 이상의 드라이브는 QLC입니다. 미디어 유형에 관계없이 NVIDIA SuperPod 인증 성능 표준을 충족할 수 있습니다.</block>
+  <block id="3490c43d24f428db31d4011fa273ef4a" category="paragraph">NetApp AFX에 사용되는 모든 드라이브는 성능 등급이 지정된 드라이브이며, QLC와 TLC는 읽기 트래픽에서 거의 동일한 성능을 제공합니다. QLC는 쓰기 성능이 TLC에 비해 약간 떨어지며, 쓰기 작업이 많은 워크로드에서는 마모 평준화 현상이 약간 더 많이 발생할 수 있습니다.</block>
+  <block id="13e95b00a619dea997f306c152e84241" category="paragraph">성능 수치는 표 7) 쉘프별 성능 추정치를 참조하십시오.</block>
+  <block id="e9c6d4b89f2fd8f80f0238667ae15952" category="paragraph">사용할 드라이브 유형을 선택할 때는 스토리지가 호스팅할 워크로드와 관련된 성능/용량 밀도 트레이드오프를 고려해야 합니다.</block>
+  <block id="bcfafbfbcdfcfdbda4a3457116afb256" category="section-title">최대값과 최소값</block>
+  <block id="760b833cb870c3441ec6b8c08f6ec02b" category="paragraph">다음 섹션에서는 NetApp AFX 클러스터의 최대값과 최소값을 통합 ONTAP와 비교하여 설명합니다.</block>
+  <block id="da160308e3b4b4a80bf1b72b5bdbedb8" category="inline-link-macro">Hardware Universe</block>
+  <block id="5b0cdba2f3e51e1c93145ece246a8361" category="paragraph">최신 제한 사항은 <block ref="b67de25a3dcb5f9736e89df389466488" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="80d2677cf518f4d04320042f4ea6c146" category="cell">제한</block>
+  <block id="28ecef53ed5ea9ffc7dfc643a245aab6" category="cell">볼륨 수(클러스터)</block>
+  <block id="baf40b70423d8b3abccc8f1ef6ce2ed7" category="list-text">30,000(플랫폼에 따라 다름)</block>
+  <block id="8487699fb65ed58bf886a609cc850b23" category="list-text">30,000</block>
+  <block id="f64bc191156dac76ffce8622c16cb21d" category="cell">애그리게이트 크기</block>
+  <block id="b1e8908d89a1ad733767a64e964d99a1" category="list-text">800 TB</block>
+  <block id="382b0f5185773fa0f67a8ed8056c7759" category="list-text">해당 없음</block>
+  <block id="f143d990b31f7ac5e79358104cb48aff" category="cell">노드 수</block>
+  <block id="1ff1de774005f8da13f42943881c655f" category="list-text">24</block>
+  <block id="aa1d200574a94cfcb3d0759a739c4dd9" category="list-text">8 (9.17.1)</block>
+  <block id="2d971449b9b517e5d9b06c0774a86eb5" category="list-text">32 (9.19.1RC1)</block>
+  <block id="a720679b3b1209f744e43750ba9fde85" category="cell">총 용량</block>
+  <block id="5404442a7ea7dc52ed099fdd23e4199c" category="inline-link-macro">hwu.netapp.com</block>
+  <block id="682e0c17b99d72fabde958b4e8c0d999" category="list-text">노드 및 드라이브에 따라 다릅니다. 자세한 내용은 <block ref="523b424ce9b7195ce25d27d4cc912219" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="b1e3bf6af04167acb01354e14eeebecc" category="list-text">2PB (9.17.1)</block>
+  <block id="704a0d93f7b6ca8da6cbce9ed5971f0e" category="list-text">3PB (9.18.1RC1)</block>
+  <block id="bd73788e2d7ae873811b5f0a7396e233" category="list-text">16PB(9.18.1GA 릴리스)</block>
+  <block id="f97ef3dbbb7841f0aa42a42747c2a0ee" category="list-text">20PB (9.19.1RC0)</block>
+  <block id="653c5fed5c5f4dcbffe13c96221408cd" category="list-text">32PB (9.19.1RC1)</block>
+  <block id="b7766a901d78384091033386c4093325" category="cell">지원되는 쉘프 수</block>
+  <block id="91706301a0c706cc2b6ed119849431ab" category="list-text">HA 쌍당 8개</block>
+  <block id="2b74c007e56a8be14949b63b9c86ef6d" category="list-text">클러스터당 192개</block>
+  <block id="140cff9a338f00caa42bc917c0418ca5" category="list-text">클러스터당 12개(9.18.1GA)</block>
+  <block id="8f913e0a31e7129dc8f1303d1c3bbb6e" category="list-text">클러스터당 17개(9.19.1RC0)</block>
+  <block id="ce3356bb97f3c0c67abc10dbbe67295d" category="list-text">클러스터당 25개(9.19.1RC1)(HA 쌍 제한 없음)</block>
+  <block id="cba50d32905010ba6b646887e5e895fb" category="cell">지원되는 총 드라이브 수</block>
+  <block id="0776e87be9974c41478d5bd51d257edd" category="list-text">HA 쌍당 240</block>
+  <block id="1e55cbc137a2331e70c391fc4fd9c60e" category="list-text">2880(노드 24개)</block>
+  <block id="10f58cba14d2923711530ca627a44630" category="list-text">클러스터당 288개(쉘프 수 제한 기준, HA 쌍 제한 없음)</block>
+  <block id="4ae417e18c2dbaa126c383d02921071f" category="list-text">클러스터당 408개(9.19.1RC0)</block>
+  <block id="68c6eeaf09540ebb55999b818976f02b" category="list-text">클러스터당 600개(9.19.1RC1)</block>
+  <block id="6bb41960470a19d97556b9240ac0b3ff" category="cell">볼륨 크기</block>
+  <block id="8998a6f31a494ea1f237e3fa701e0ed9" category="list-text">300TB(FlexVol)</block>
+  <block id="b10a65115e7a646fec0fd28107237725" category="list-text">60PB(FlexGroup)</block>
+  <block id="0bab89c96b68baae41f5285b98af3ac5" category="list-text">60PB (FlexGroup)*</block>
+  <block id="c211a42bcb266c4a94bd61b00651fb1c" category="cell">볼륨당 최대 파일 수</block>
+  <block id="b693a2bd240e09ce2afb4bc4488dc1a4" category="list-text">20억(FlexVol)</block>
+  <block id="9337be44c241fe6070fdf7a59195811d" category="list-text">4천억(FlexGroup)</block>
+  <block id="621d2e727830d63c7fc4c5ff656ab003" category="cell">디렉터리당 최대 파일 수(기본 320MB maxdirsize 값)</block>
+  <block id="1c0fce2b58f88fd5dea81a60a93b24ee" category="list-text">약 4백만(FlexVol)</block>
+  <block id="9fd955005b1c97ed56602caafd717be0" category="list-text">약 2백만(FlexGroup)</block>
+  <block id="965ce25eb8115c5aa2aadd286056d0c1" category="cell">SnapMirror 동시 전송</block>
+  <block id="6c9882bbac1c7093bd25041881277658" category="list-text">250</block>
+  <block id="861615662b353363ad0f778ddb19a730" category="cell">qtree 수</block>
+  <block id="f7efa4f864ae9b88d43527f4b14f750f" category="list-text">4096</block>
+  <block id="7357aa5ae639481f9f6e1e8c230021c6" category="cell">노드당 최대 TCP 연결 수</block>
+  <block id="ee70718f6a92d6c1b099a6942f594963" category="list-text">100,000</block>
+  <block id="b7639b383cb3a4cab77aa12f58aa915b" category="cell">노드당 최대 잠금 수</block>
+  <block id="1ec14607f84befa006cafa9013c8912f" category="list-text">300만</block>
+  <block id="6849c78228c7cd366db4c21c9938140f" category="cell">최대 데이터 인터페이스 수(클러스터)</block>
+  <block id="c903af30d83599be98f0662224f2c47d" category="cell">최대 구성요소 수 – FlexGroup</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="list-text">200</block>
+  <block id="b6eddf963db615d515417f95e5dc2fa9" category="list-text">9.19.1 RC1의 512</block>
+  <block id="a3dffa639f016fdda26bbc66ef4e8297" category="cell">클러스터 간 LIF의 최대 개수</block>
+  <block id="bc7755ec4d34c6846a5772829cb17914" category="cell">최대 IP 공간 수</block>
+  <block id="10a7cdd970fe135cf4f7bb55c0e3b59f" category="list-text">512</block>
+  <block id="6e6cd8aca53bc8ac47f9369bc24191a1" category="cell">오리진당 최대 FlexCache 수</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="list-text">100</block>
+  <block id="f687535718e53d023297c10d45c01270" category="cell">최대 FlexCache 수(노드)</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="list-text">400</block>
+  <block id="53de1c7cdb80f3c7e5a41e6540841720" category="section-title">NetApp ONTAP for AFX 최신 릴리스의 새로운 기능은 무엇입니까?</block>
+  <block id="0acc25e6e7239d394aedd7b0e37728b5" category="paragraph">이 섹션에서는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 출시될 때마다 업데이트될 예정입니다. 새로운 정보를 확인하려면 정기적으로 이 페이지를 방문해 주시고, 버전 릴리스 노트도 참조하시기 바랍니다.</block>
+  <block id="bff2eea4246a1f0ecb68fc0c8a335f25" category="paragraph">최신 릴리스:</block>
+  <block id="7dd300df1c1cbba0e8f3f2216e700979" category="paragraph">ONTAP 9.19.1RC1(2026년 5월 기준)</block>
+  <block id="27c085bde15f2bb253b0aee8a5f084c2" category="paragraph">NetApp AFX의 새로운 기능:</block>
+  <block id="d2faa14ab70288d07188a62b2f1242e8" category="list-text">전역 중복 제거</block>
+  <block id="1f72924400244c635421d0b144e597e4" category="list-text">동적 스토리지 효율성</block>
+  <block id="dd42f69179596562bdf74ed6eb436868" category="list-text">고급 미리 읽기</block>
+  <block id="84c7ad08ad1ce4c57bc36b003f2114aa" category="list-text">32개 노드 지원</block>
+  <block id="cf96fa27b40fac14ff477fc51d645667" category="list-text">32PB 지원</block>
+  <block id="db205ae8bdf2835682d741206291c18c" category="list-text">FlexGroup 볼륨당 512개의 구성 볼륨</block>
+  <block id="4bb047f8c530785002e490ef17fa725e" category="section-title">추가 정보를 찾을 수 있는 위치</block>
+  <block id="7d5b957cd473f6eaf5ad335a9c63c4ff" category="paragraph">이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.</block>
+  <block id="edd1ab4aa75a5fec969c05a8b30f7159" category="inline-link-macro"><block ref="edd1ab4aa75a5fec969c05a8b30f7159" category="inline-link-rx"></block></block>
+  <block id="f9cfe6815bd47be353c3bb39a0139fa8" category="list-text">Hardware Universe<block ref="9b728666388740f3273b7fd3c79f41a3" category="inline-link-macro-rx"></block></block>
+  <block id="82d68405cccf1e20bdf17e9113f92699" category="list-text">NetApp AFX 제품 페이지 <block ref="41c1c71697c17785bd4ba5e736738c42" category="inline-link-rx"></block></block>
+  <block id="ffa8e3dd54a1aebd2bec70c8e324c546" category="inline-link-macro"><block ref="ffa8e3dd54a1aebd2bec70c8e324c546" category="inline-link-rx"></block></block>
+  <block id="858cf9c99b0b862efd234a7e9baf6925" category="list-text">NetApp AFX: 확장 가능하고 안전한 AI 데이터 인프라 <block ref="3aa6bc3cce342e09582bd41034e5d890" category="inline-link-macro-rx"></block></block>
+  <block id="c2d05aa5a52a26363457404a67c100ec" category="inline-link-macro"><block ref="c2d05aa5a52a26363457404a67c100ec" category="inline-link-rx"></block></block>
+  <block id="113b6ad1210d507cfbdeea8852c55c42" category="list-text">NFSv3와 NFSv4.x 중 어떤 것을 선택해야 할까요? 이제 선택이 점점 명확해지고 있습니다… <block ref="557477dbf74915d5a818c1f69c0f8792" category="inline-link-macro-rx"></block></block>
+  <block id="6220eabe39a1109ebb5f7cbb5b71d2b4" category="inline-link-macro"><block ref="6220eabe39a1109ebb5f7cbb5b71d2b4" category="inline-link-rx"></block></block>
+  <block id="56f8963bb7cc32c1d25e21641bd952b7" category="list-text">NetApp AFX 데이터 시트 <block ref="41fee6b02e5a22a1b6d68a533a507406" category="inline-link-macro-rx"></block></block>
+  <block id="f6a738f75f76f62a241636eca02cd87d" category="section-title">버전 기록</block>
+  <block id="34b6cd75171affba6957e308dcbd92be" category="cell">버전</block>
+  <block id="44749712dbec183e983dcd78a7736c41" category="cell">날짜</block>
+  <block id="8002bc13927c65b5f265b031079ce1d4" category="cell">문서 버전 기록</block>
+  <block id="3798985ee5e15c84c4263815d5a4d0b7" category="cell">버전 1.0</block>
+  <block id="c21446b3ecfb30ed6c2760d686bd4578" category="cell">2026년 6월</block>
+  <block id="dfd02aef9802f4824ead7c08b8f81f1f" category="cell">초기 릴리스</block>
+  <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link-macro">상호 운용성 매트릭스 툴(IMT)</block>
+  <block id="fdb1f395c4c1607e78f4c8889a701441" category="paragraph">NetApp 지원 사이트의 <block ref="fa803882898e1e77b4e4322ec82309da" category="inline-link-macro-rx"></block>를 참조하여 이 문서에 설명된 정확한 제품 및 기능 버전이 특정 환경에서 지원되는지 확인하십시오. NetApp IMT는 NetApp에서 지원하는 구성을 구축하는 데 사용할 수 있는 제품 구성 요소 및 버전을 정의합니다. 구체적인 결과는 게시된 사양에 따라 각 고객의 설치 환경에 따라 달라집니다.</block>
+  <block id="d1bd696076baa83e70fde943ded54811" category="paragraph">*저작권 정보*</block>
+  <block id="ef3c78d4167fc075f88d5d07d49646ee" category="paragraph">Copyright © 2026 NetApp, Inc. All rights reserved. 미국에서 인쇄됨. 저작권이 적용되는 이 문서의 일부 또는 전부는 저작권 소유자의 사전 서면 허가 없이 어떠한 형태나 방법(그래픽, 전자, 기계적 방법 포함, 복사, 녹음, 녹화 또는 전자 검색 시스템에 저장 등)으로도 복제할 수 없습니다.</block>
+  <block id="ce4ad2236c56cc11a838f29c8c261bf7" category="paragraph">NetApp이 저작권을 가진 자료에 있는 소프트웨어에는 아래의 라이센스와 고지 사항이 적용됩니다.</block>
+  <block id="1b99f5d5318214394cf661a6df9d6650" category="paragraph">이 소프트웨어는 NetApp에서 "있는 그대로" 제공되며, 명시적 또는 묵시적 보증을 포함하여, 상품성 및 특정 목적에의 적합성에 대한 묵시적 보증을 포함하되 이에 국한되지 않는 모든 보증을 부인합니다. 어떠한 경우에도 NetApp은 본 소프트웨어의 사용으로 인해 발생하는 직접적, 간접적, 부수적, 특수적, 징벌적 또는 결과적 손해(대체 상품 또는 서비스 조달, 사용 손실, 데이터 손실, 이익 손실 또는 사업 중단 등을 포함하되 이에 국한되지 않음)에 대해 계약, 엄격 책임 또는 불법 행위(과실 또는 기타 행위 포함) 등 어떠한 책임 이론에 근거하더라도 책임을 지지 않습니다. 이는 손해 발생 가능성에 대해 사전에 고지받은 경우에도 마찬가지입니다.</block>
+  <block id="4fc9b260d15698bbd988f76ca839c5b6" category="paragraph">NetApp은 본 문서에 설명된 제품을 언제든지 예고 없이 변경할 권리를 보유합니다. NetApp은 NetApp의 명시적인 서면 동의를 받은 경우를 제외하고 본 문서에 설명된 제품을 사용하여 발생하는 어떠한 문제에도 책임을 지지 않습니다. 본 제품의 사용 또는 구입의 경우 NetApp에서는 어떠한 특허권, 상표권 또는 기타 지적 재산권이 적용되는 라이센스도 제공하지 않습니다.</block>
+  <block id="87bfcb691f34a9e3fdda83480f0acf78" category="paragraph">본 매뉴얼에 설명된 제품은 하나 이상의 미국 특허, 기타 국가의 특허 또는 출원 중인 특허에 의해 보호될 수 있습니다.</block>
+  <block id="f0d620a77a05ab2e3f599cad9a6a5589" category="paragraph">제한적 권리 설명: 정부에 의한 사용, 복제 또는 공개는 DFARS 252.227-7013(FEB 2014) 및 FAR 52.227-19(DEC 2007)의 기술 데이터 권리 - 비상업적 항목의 하위 단락(b)(3)에 명시된 제한을 받습니다.</block>
+  <block id="3dbcbf0e2faa9df47914229ee56b52ad" category="paragraph">본 계약서에 포함된 데이터는 상업용 제품 및/또는 상업용 서비스(FAR 2.101에 정의됨)와 관련되며 NetApp, Inc.의 소유입니다. 본 계약에 따라 제공되는 모든 NetApp 기술 데이터 및 컴퓨터 소프트웨어는 상업적 성격을 가지며 전적으로 민간 자금으로 개발되었습니다. 미국 정부는 해당 데이터가 제공된 미국 정부 계약과 관련하여 그리고 그 계약을 지원하는 목적으로만 데이터를 사용할 수 있는 비독점적, 양도 불가능, 재허가 불가능, 전 세계적인, 제한적이고 취소 불가능한 라이선스를 보유합니다. 본 계약에 명시된 경우를 제외하고, NetApp, Inc.의 사전 서면 승인 없이는 데이터를 사용, 공개, 복제, 수정, 실행 또는 표시할 수 없습니다. 미 국방부의 라이선스 권한은 DFARS 조항 252.227-7015(b)(2014년 2월)에 명시된 권한으로 제한됩니다.</block>
+  <block id="1fd396c8eed4c6a36210e18299db87cb" category="paragraph">*상표 정보*</block>
+  <block id="4ea073dc7b2153ccbc630a45cdee93c8" category="inline-link-macro"><block ref="4ea073dc7b2153ccbc630a45cdee93c8" category="inline-link-rx"></block></block>
+  <block id="10821d871193de77bcdade08c1f62502" category="paragraph">NETAPP, NETAPP 로고 및 <block ref="68f8c2ade2cbcb4d7a556afe2e90099f" category="inline-link-macro-rx"></block>에 나열된 마크는 NetApp, Inc.의 상표입니다. 다른 회사 및 제품 이름은 해당 소유자의 상표일 수 있습니다.</block>
+  <block id="594cf2fe6e4a6d11de793e30d812248a" category="paragraph"><block ref="594cf2fe6e4a6d11de793e30d812248a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e46b5438c72ebc6fcdb27a4b54b8149b" category="summary">NetApp AFX는 스토리지 표현 방식, 노드가 디스크와 상호 작용하는 방식, 용량 관리 방식 등에서 통합 ONTAP과 상당한 아키텍처적 차이점을 보여줍니다.</block>
+  <block id="01d6c0208d15fa623f6a23e4b8e9a4d5" category="paragraph">앞서 우리는 통합 ONTAP 아키텍처가 자체 디스크 세트를 소유하고 디스크 집합을 통해 물리적 용량을 제공하는 직접 연결된 HA 쌍을 통해 파일, 객체 및 블록 데이터 스토리지를 제공하는 방식에 대한 일반적인 개요를 살펴보았습니다. 이 섹션에서는 통합 ONTAP과 NetApp AFX 아키텍처 간의 주요 차이점을 더 자세히 살펴보겠습니다.</block>
+  <block id="a5b0f63347e611b7596ec7e5b4610f77" category="paragraph">*HA 페일오버 중 통합 ONTAP 클러스터*</block>
+  <block id="c8f20dbf8b50e32f29ae1385be92fe52" category="paragraph">*NetApp AFX 스토리지 가용 영역*</block>
+  <block id="62c5d74b538148a5592691e7d6e6f3b7" category="paragraph">*통합 ONTAP의 애그리게이트*</block>
+  <block id="9c1f4e133199bb3b30ad965795339742" category="paragraph">NetApp AFX는 물리적 애그리게이트 개념을 가상화하고 ONTAP에서 관리하도록 하며, 새로운 스토리지 가용 영역을 통해 물리적 용량 관리를 노드 단위 방식에서 클러스터 단위로 전환합니다. 이 단일 용량 풀은 공간 관리에 대한 "보는 대로 얻는" 접근 방식을 제공합니다.</block>
+  <block id="9c6ccd61e6cadd3c56f2f803372c6340" category="paragraph">*NetApp AFX NVRAM 복제*</block>
+  <block id="e4a3074bc92e1001c8fa0a79d71b356c" category="paragraph">*데이터가 Storage Availability Zone에 저장되는 방식*</block>
+  <block id="058e67e9edd3194b557e321f62455e6c" category="paragraph">*NetApp AFX – 독립적인 확장*</block>
+  <block id="bea94c3d6f81b478a1163e1edf396847" category="paragraph">*NetApp AFX 노드를 추가할수록 성능이 선형적으로 향상됩니다.*</block>
+  <block id="bfa3bd307e9b2e759884cd03fb2e76a0" category="paragraph">*통합 ONTAP RAID 그룹*</block>
+  <block id="ef8d58e97d6fa8ff9c37bb8e667c3480" category="paragraph">*NetApp AFX Storage Availability Zone RAID 그룹*</block>
+  <block id="5f009470c525619904fd84251f905a7e" category="paragraph">*대략적인 원시 용량 비교, 드라이브 84개 기준 – Unified ONTAP 및 NetApp AFX*</block>
+  <block id="d8ed1a209c750a3dc71890cc94412b31" category="paragraph">*NetApp AFX에서의 디스크 재구축*</block>
+  <block id="dc1b0acbe90560cc5a5e94e6e90708ba" category="paragraph">*통합 ONTAP 중복 제거 도메인*</block>
+  <block id="b12d1303cded0366ad3fa9aa6d34be4a" category="paragraph">*동일한 10GB 파일에 대한 다양한 시나리오에서의 중복제거 동작 – 통합 ONTAP*</block>
+  <block id="7b5e9f2c0d06f5a691b8531801c6399b" category="paragraph">*NetApp AFX – 글로벌 중복제거 도메인(ONTAP 9.19.1)*</block>
+  <block id="a040d8510d49a488312dd741d89e9ca6" category="paragraph">*동일한 10GB 파일에 대한 다양한 시나리오에서의 중복 제거 동작 – NetApp AFX*</block>
+  <block id="186cb1a33e8e53960ebea64a2e6d0b69" category="list-text">NetApp AFX에서는 새로운 용량 아키텍처 덕분에 복사 기반 볼륨 이동이 더 이상 필요하지 않습니다. 자세한 내용은 <block ref="b59888323cfca50660660414893d5a3c" category="inline-xref-macro-rx"></block>를 참조하십시오.</block>
+  <block id="f80e34d35179b16c68ce3cb79ad36d9e" category="paragraph">예를 들어, 통합 ONTAP의 CLI에서 클러스터의 전체 물리적 용량 정보를 보려면 "`aggregate show-space`"를 사용하면 모든 애그리게이트 항목이 출력됩니다. NetApp AFX에서는 "`cluster space show`"를 사용하면 단일 스토리지 가용 영역만 표시됩니다.</block>
+  <block id="42afd96b757f8f9bd0f24bdf70f4bf70" category="paragraph">*통합 ONTAP과 NetApp AFX에서 용량 관련 CLI 명령어를 나란히 비교*</block>
+  <block id="bdc937cba7fe46550f14e60dabe07eec" category="paragraph">*System Manager 용량 보기 – Unified ONTAP*</block>
+  <block id="f7178b0a88859db98ac17cdf0d8bccd9" category="paragraph">*System Manager 용량 보기 – NetApp AFX*</block>
+  <block id="128ccd91059cc6e3771d3650d67b327f" category="paragraph">*FlexGroup 볼륨 레이아웃 - 통합 ONTAP 애그리게이트*</block>
+  <block id="4589c9cb34a86de66efa7bf442df342a" category="paragraph">*FlexGroup 볼륨 레이아웃 - NetApp AFX*</block>
+  <block id="6416108cd8d79488802bed52429c1baf" category="paragraph">*NetApp AFX에서 제로 복사 볼륨 이동*</block>
+  <block id="a9e0c1c665e73778f9daba5d285764f9" category="paragraph">*Unified ONTAP – 노드 활용률의 잠재적 불균형*</block>
+  <block id="d6ac91a08b1677976cde831b36420d1b" category="paragraph">*통합 ONTAP – 장애 조치가 노드 활용률에 미치는 영향*</block>
+  <block id="d4298e46c67163aeff153e95584202b3" category="paragraph">*NetApp AFX - 장애 조치 후 볼륨 재조정*</block>
+  <block id="e7a1b151f53816db451e2a75fc12da95" category="paragraph">*NetApp AFX에서 성능 기반 볼륨 이동 - 높은 사용률 시 볼륨 이동이 트리거됩니다*</block>
+  <block id="c9e0532d83a0344e22052301e6d5717b" category="paragraph">*NetApp AFX에서 성능 기반 볼륨 이동 - 볼륨 이동 후 노드 활용률 균형 유지*</block>
+  <block id="df9ce760a1c4f4c45c88be50306ffb2d" category="paragraph">*Unified ONTAP – 추가된 확장 고려 사항*</block>
+  <block id="6db2dcc5e269dd46fafde3b75a4eb390" category="paragraph">*NetApp AFX – 확장 고려 사항 추가*</block>
+  <block id="96ecf2e06276cc31b88da3e63921d8f0" category="summary">NetApp AFX는 일부 조정 사항을 제외하고 통합 ONTAP과 동일한 네트워킹 스택, 보안 기능, 데이터 보호 기술, 무중단 운영 및 볼륨 유형을 지원합니다.</block>
+  <block id="aca5c6c5028a0c8a796384c5ea7999c2" category="doc">네트워킹, 보안 및 운영</block>
+  <block id="484d763eeee5c04a097672d534792f3b" category="paragraph">NetApp AFX는 일부 분리형 아키텍처에만 적용되는 조정 사항을 제외하고, 통합 ONTAP와 동일한 네트워킹 스택, 보안 기능, 데이터 보호 기술, 무중단 운영, 볼륨 유형을 지원합니다.</block>
+  <block id="5dac646a3f0ff641aace12f8d6296714" category="list-text">백엔드 클러스터 스위치는 여전히 NetApp에서 제공하는 "골든 구성" 파일을 통해 구성됩니다.</block>
+  <block id="120dd7399f0edf1b12aef029d83e52c0" category="paragraph">FlexGroup 볼륨이 AFX 아키텍처를 통해 얻는 이점에 대한 자세한 내용은 <block ref="de3e3c4a779e726b263d94a1a7eb669a" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="8923acc01723d2dea48a3c29b7884e28" category="summary">이 페이지에서는 노드, 셸프, 스위치 및 지원되는 디스크 유형을 포함하여 NetApp AFX 클러스터 하드웨어에 대한 자세한 내용을 다룹니다.</block>
+  <block id="e7fafb2ccb1b958f507973f0ebf1e287" category="paragraph">*NetApp AFX 1K 노드 세부 정보*</block>
+  <block id="4dd442874128d8fb9292260b4725122a" category="paragraph">*NetApp AFX 쉘프 엔클로저 세부 정보*</block>
+  <block id="b68f1fbdb4992c36ecb4a27f3df9c140" category="paragraph">*NetApp AFX 클러스터 스위치*</block>
+  <block id="c9b06a9ae46b51ca4661bef8455b7c25" category="paragraph">*NetApp AFX 스위치 케이블링*</block>
+  <block id="d3cd7fe1603c9593fd2f0e94c1f4035d" category="paragraph">성능 수치는 <block ref="36d7af5e98ee6b2fc07fe78c1dd32dc6" category="inline-link-macro-rx"></block>을 참조하십시오.</block>
+  <block id="cd43675b27f89e5420f5768f2a6246b2" category="summary">NetApp AFX는 NAS 및 객체 워크로드를 위한 분산형 아키텍처를 제공하는 동시에, 여러분이 잘 알고 사랑하는 기능이 풍부한 ONTAP 소프트웨어를 그대로 제공합니다.</block>
+  <block id="9616f5c36fa17026eb57cf8a989cc78b" category="doc">NetApp AFX 개요: NetApp AFX에 대해 알아보세요</block>
+  <block id="fb2ce406a04d381699287a6262926e70" category="paragraph">NetApp AFX는 여전히 ONTAP입니다. 단지 ONTAP의 이점을 활용하는 다른 방법일 뿐입니다. NetApp AFX는 NAS 및 객체 워크로드를 위한 분산 아키텍처를 제공하는 동시에, 여러분이 알고 사랑하는 풍부한 기능을 갖춘 ONTAP 소프트웨어를 그대로 제공합니다.</block>
+  <block id="7099e36fda7aa12242e18f16709eb2d3" category="paragraph">*NetApp ONTAP의 진화*</block>
+  <block id="2e969553a292147f2f3bd71ddb2490ad" category="paragraph">*NetApp ONTAP 특성*</block>
+  <block id="85cd7f4278fcba7ea9c2018e981be22b" category="paragraph">*일반 ONTAP 아키텍처*</block>
+  <block id="d4c7a4da3569dd3833d364df39bffde0" category="paragraph">*분리형 ONTAP*</block>
+  <block id="5cf3f2b1ecbf2a2f426fbc0363cbcee8" category="paragraph">ONTAP를 기반으로 하는 새로운 아키텍처를 의미하며, 컴퓨팅과 용량을 서로 독립적으로 확장할 수 있는 기능을 제공합니다. "분리형 ONTAP"이라는 용어는 제품명이 아니라 통합 ONTAP와 NetApp AFX 아키텍처를 구분하기 위한 용어입니다.</block>
+  <block id="ad5caac66af524a44d92b4cc1c8ad87f" category="summary">이 페이지에서는 NetApp AFX 클러스터의 최대값과 최소값을 통합 ONTAP와 비교하여 설명합니다.</block>
+  <block id="ea629c640de47abfbd9731f1383d108a" category="doc">최대값 및 제한값</block>
+  <block id="0fc87a3629114127c8f973f35e3c57ba" category="paragraph">*NetApp AFX 최대값 및 최소값*</block>
+  <block id="5b8dee0cb73a41462c6285f68c17d093" category="summary">NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로 상당한 차이가 있지만, 기능 세트와 ONTAP 관리 방식은 사실상 변경되지 않았습니다.</block>
+  <block id="cb981099a03b9edaa33f39b7fc686d56" category="doc">관리 툴</block>
+  <block id="02a6e2c6554c926b5858f18226afa7f4" category="paragraph">NetApp AFX CLI의 유일한 실질적인 차이점은 추가된 기능과 제거된 기능(이 문서의 "" 섹션 참조)에 있습니다. 애그리게이트 또는 MetroCluster와 같은 기능이 제거된 경우 해당 CLI 명령은 더 이상 사용할 수 없습니다.</block>
+  <block id="971d55389f6a3f4ab4d365e1d96ca63d" category="paragraph">*통합 ONTAP 및 NetApp AFX System Manager 랜딩 페이지 비교*</block>
+  <block id="95ed053dd135138a161dff0eedd7f2e9" category="inline-image-macro">통합 ONTAP 및 NetApp AFX System Manager 대시보드를 나란히 비교한 화면</block>
+  <block id="d17de84b38ca0b20e5c39d1a9bd09f5e" category="paragraph"><block ref="d17de84b38ca0b20e5c39d1a9bd09f5e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2923836ccc48a68f98aac876914059e2" category="paragraph">*System Manager에서 NetApp AFX가 다른 점*</block>
+  <block id="f5e64500886f685b50bab074f7baaf8b" category="paragraph">*NetApp AFX 케이블 연결 보기*</block>
+  <block id="0ba14e1ce49ecde8fd2a51e3f76b6ee2" category="paragraph">NetApp AFX는 ONTAP REST API 호출의 대부분을 유지하기 위해 상당한 노력을 기울이고 있습니다. 따라서 REST API를 기반으로 자동화 도구를 개발한 경우 대부분의 경우 해당 도구를 계속 사용할 수 있습니다. 주요 예외 사항으로는 애그리게이트, Metrocluster, SAN 및 일부 성능 카운터가 있습니다. 전체 REST API 문서는 NetApp AFX 클러스터의 System Manager에서 \https://clus_mgmt_ip/docs/api 경로로 이동하여 확인할 수 있습니다.</block>
+  <block id="10f8b4caccad4d5001f788be83e36b4a" category="summary">NetApp AFX는 성능과 확장성을 염두에 두고 설계되었으며, 특히 높은 읽기 및 쓰기 처리량이 필요한 워크로드에 적합합니다.</block>
+  <block id="26fb7c096cf7c88b9c31d41be766163e" category="paragraph">각 NetApp AFX 스토리지 노드는 읽기 및 쓰기에 대해 특정 처리량을 제공합니다. 클러스터에 노드가 추가됨에 따라 성능이 선형적으로 증가하며, 이는 이 문서의 "노드 성능의 선형 확장" 섹션에서 설명합니다.</block>
+  <block id="f72f669b81d6cf52d23dfe312609010f" category="paragraph">현재 노드 유형은 <block ref="9cf787ca68118452f94875110bf7c0d8" category="inline-link-macro-rx"></block>이며 아래와 같이 읽기 및 쓰기 처리량을 제공합니다. NetApp AFX에 새로운 하드웨어가 추가되면 이러한 제한 사항이 변경될 수 있습니다. 참고: 최대 성능은 아래 "벤치마크 결과" 섹션에 표시된 것처럼 여러 클라이언트가 여러 파일을 읽고 쓰는 환경에서 달성되었습니다.</block>
+  <block id="1966077bb0e25c1b863a791297107edf" category="paragraph">*노드당 성능 예상치*</block>
+  <block id="fe09038d2862b2c84a6fc7f6783e9a9a" category="paragraph">각 셸프에는 16개의 100GB 이더넷 포트를 갖춘 고성능 셸프 모듈이 포함되어 있으며, 클러스터의 컴퓨팅 노드와 고대역폭 스토리지 상호 작용을 위해 RoCEv2 통신을 활용합니다. 모든 물리적 리소스와 마찬가지로 이러한 셸프에도 달성할 수 있는 최대 성능이 있으며, 특히 NetApp AFX는 동일한 디스크 세트를 가리키는 여러 노드를 구성할 수 있기 때문에 더욱 그렇습니다. 다음 표는 TLC 및 QLC 드라이브에 대한 단일 셸프의 예상 최대 읽기 및 쓰기 성능을 보여줍니다. TLC와 QLC의 차이점에 대한 자세한 내용은 <block ref="46fd1f92660d2a08565b6707d02ca819" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
+  <block id="b1091795c1256c094d3449a2a2bc6deb" category="paragraph">*셸프당 성능 예상치*</block>
+  <block id="450baef0095326f9d30e6c8ca1f65004" category="paragraph">이러한 "성능 밀도" 개념을 통해 스토리지 관리자는 스토리지 환경을 과도하게 프로비저닝할 필요 없이 보유한 하드웨어를 최대한 활용할 수 있습니다.</block>
+  <block id="f1ca3af29720d1cc2e5e3aeb52426068" category="paragraph">*Unified ONTAP – 성능 분배 방식*</block>
+  <block id="6cec5952bf91a714077b6f34dacd5625" category="paragraph">*NetApp AFX – 성능 밀도*</block>
+  <block id="06a44d635901bf6e69a30a79c4e7bb44" category="paragraph">*NetApp AFX – ElBencho 읽기 성능, 4개 노드*</block>
+  <block id="f18215a47c5b8072c7a2d4131df7f36f" category="paragraph">*NetApp AFX – ElBencho 쓰기 성능, 4개 노드*</block>
+  <block id="3da8d892cb740d942db01a6a4a029ff6" category="paragraph">cross_file_sequential_read는 파일 이름을 기반으로 다음에 읽을 파일을 예측하고 클라이언트가 읽기 호출을 하기 전에 해당 파일들을 미리 읽어옵니다. 이 예측 로직은 디렉터리 내의 모든 파일이 단조롭게 증가하는 숫자 접미사(예: file1, file2, file3)를 사용하는 명명 패턴을 따른다고 가정합니다. 디렉터리 내의 모든 파일은 십진수 또는 16진수 번호를 사용하여 이 패턴을 따라야 합니다. 파일 이름은 최대 255자까지 가능합니다. 이 로직은 파일 확장자에 관계없이 현재 파일 이름만을 기반으로 현재 디렉터리에서 다음에 읽을 파일 이름 세트를 생성합니다. 이전에 10진수 번호로 생성된 파일 이름이 디렉터리에 존재하지 않으면 16진수 번호로 다시 생성됩니다. 생성된 파일 이름 중 어느 것도 존재하지 않으면 해당 세트에 대한 프리페칭은 수행되지 않습니다. 프리페칭은 다음 클라이언트 읽기 호출이 발생하면 재개됩니다.</block>
+  <block id="7e002cd3fdcd74acba71f4c4d4181c74" category="paragraph">NFS 버전 3은 1995년 공식 출시 이후 수십 년 동안 NFS 애플리케이션의 표준으로 자리 잡았습니다. 뛰어난 성능과 안정성 덕분에 최신 NFS 버전으로의 전환이 어려운 이유도 충분합니다.</block>
+  <block id="b48c2f2835fd8152519d5dc2ad046353" category="list-text">"고장 나지 않았으면 고치지 마라"는 사고방식: 기업 IT 조직은 새로운 기술, 심지어 20년 이상 된 기술조차 도입하는 데 있어 매우 보수적인 것으로 악명이 높습니다. 현재 NFS 버전이 잘 작동하고 있다면 왜 바꿔야 할까요?</block>
+  <block id="1eef8946d0cbeaecb21b2a938827040e" category="paragraph">성능이 다소 향상된 부분 중 하나는 순차 I/O(즉, 예측 가능하고 순차적으로 발행되는 I/O)였습니다. fio를 사용한 표준 성능 테스트에서 ONTAP 9.18.1을 실행하는 AFX는 순차 읽기 성능을 거의 30%, 순차 쓰기 성능을 10% 향상시켰습니다.</block>
+  <block id="458a3f89edcc08eb6255ebe8b1d42393" category="paragraph">*NetApp AFX – ONTAP 9.18.1에서의 NFSv4.1 순차 IO 성능*</block>
+  <block id="bddd597f0eec2113f06b93b0277da19f" category="paragraph">NFSv4.x의 주요 성능 저하 요인 중 하나인 메타데이터 처리 성능이 더욱 인상적으로 개선되었습니다. 메타데이터는 파일 소유자 및 속성 관리, 파일 생성 및 목록 조회 등에 사용되는 일반적으로 4K 범위의 랜덤 IO입니다. NFSv4.x의 상태 유지 특성으로 인해 이러한 유형의 작업은 CPU 및 지연 시간 측면에서 더 많은 비용이 소요되며, 이는 결과적으로 전반적인 성능을 저하시킵니다.</block>
+  <block id="8d3bd41fd952027a466e35605cbd651b" category="paragraph">*NetApp AFX – ONTAP 9.18.1에서의 NFSv4.1 메타데이터 IO 성능*</block>
+  <block id="cbbe23e446b1acb5414c4f9076c4423a" category="summary">NetApp AFX에 대해 자세히 알아보려면 다음 자료를 참조하십시오.</block>
+  <block id="739f428040feee735e00029f2f74aaad" category="summary">이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 나올 때마다 업데이트될 예정입니다.</block>
+  <block id="89bef61b77bccd688eb4c742aab2b38b" category="doc">NetApp AFX의 새로운 기능</block>
+  <block id="f5cb5bdaaa412361fa89cf3912168e46" category="summary">IPsec은 NFS 또는 SMB 암호화의 대안을 제공하며 iSCSI 트래픽에 대한 유일한 전송 중 암호화 옵션입니다.</block>
+  <block id="0edc4f2a9dbc6aeccfda9e35d7fc1e2c" category="sidebar">NetApp 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다. 일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제공합니다.</block>
+  <block id="769f9a17e2917e1c464ebd1dfbcbc78f" category="sidebar">NetApp 기술 보고서</block>
+  <block id="5c6ab1284b6b7a5a7102854a969c99be" category="sidebar">스토리지 시스템</block>
+  <block id="e9d7397e9772df2e11071d57657f4b22" category="sidebar">AFX</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
+  <block id="2d242bb36ec91b32005f9296ff03a912" category="sidebar">아키텍처</block>
+  <block id="fe4dbcab9b910577e5035e97ac068dae" category="sidebar">관리</block>
+  <block id="3c02a379965ab0dfcd77b1c484450433" category="sidebar">하드웨어</block>
 </blocks>
