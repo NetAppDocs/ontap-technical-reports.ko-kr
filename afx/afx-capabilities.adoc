@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-capabilities.html 
+permalink: afx/afx-capabilities.html 
 keywords: netapp afx, networking, security, data protection, nondisruptive, volumes 
 summary: NetApp AFX는 일부 조정 사항을 제외하고 통합 ONTAP과 동일한 네트워킹 스택, 보안 기능, 데이터 보호 기술, 무중단 운영 및 볼륨 유형을 지원합니다. 
 ---
 = 네트워킹, 보안 및 운영
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]
@@ -96,4 +96,4 @@ Unified ONTAP는 다음과 같은 다양한 볼륨 유형을 지원합니다.
 
 NetApp AFX는 이러한 각 볼륨 유형을 완벽하게 지원할 뿐만 아니라 통합 ONTAP 시스템과 FlexCache 볼륨 간의 완벽한 상호 운용성도 제공합니다.
 
-FlexGroup 볼륨이 AFX 아키텍처를 통해 얻는 이점에 대한 자세한 내용은 link:afx-overview-architecture.html#flexgroup-volume-management-improvements["FlexGroup 볼륨 관리 개선 사항"]을 참조하십시오.
+FlexGroup 볼륨이 AFX 아키텍처를 통해 얻는 이점에 대한 자세한 내용은 link:afx-architecture.html#flexgroup-volume-management-improvements["FlexGroup 볼륨 관리 개선 사항"]을 참조하십시오.

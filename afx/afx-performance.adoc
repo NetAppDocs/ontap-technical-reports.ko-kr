@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-performance.html 
+permalink: afx/afx-performance.html 
 keywords: netapp afx, performance, nfsv4, benchmarks, read-ahead, throughput 
 summary: NetApp AFX는 성능과 확장성을 염두에 두고 설계되었으며, 특히 높은 읽기 및 쓰기 처리량이 필요한 워크로드에 적합합니다. 
 ---
 = 성능
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]
@@ -36,7 +36,7 @@ NOTE: 최신 성능 예상치는 NetApp 영업팀에 문의하십시오.
 
 == 쉘프별 성능
 
-각 셸프에는 16개의 100GB 이더넷 포트를 갖춘 고성능 셸프 모듈이 포함되어 있으며, 클러스터의 컴퓨팅 노드와 고대역폭 스토리지 상호 작용을 위해 RoCEv2 통신을 활용합니다. 모든 물리적 리소스와 마찬가지로 이러한 셸프에도 달성할 수 있는 최대 성능이 있으며, 특히 NetApp AFX는 동일한 디스크 세트를 가리키는 여러 노드를 구성할 수 있기 때문에 더욱 그렇습니다. 다음 표는 TLC 및 QLC 드라이브에 대한 단일 셸프의 예상 최대 읽기 및 쓰기 성능을 보여줍니다. TLC와 QLC의 차이점에 대한 자세한 내용은 link:afx-overview-hardware.html#tlc-vs-qlc["TLC와 QLC"]를 참조하십시오.
+각 셸프에는 16개의 100GB 이더넷 포트를 갖춘 고성능 셸프 모듈이 포함되어 있으며, 클러스터의 컴퓨팅 노드와 고대역폭 스토리지 상호 작용을 위해 RoCEv2 통신을 활용합니다. 모든 물리적 리소스와 마찬가지로 이러한 셸프에도 달성할 수 있는 최대 성능이 있으며, 특히 NetApp AFX는 동일한 디스크 세트를 가리키는 여러 노드를 구성할 수 있기 때문에 더욱 그렇습니다. 다음 표는 TLC 및 QLC 드라이브에 대한 단일 셸프의 예상 최대 읽기 및 쓰기 성능을 보여줍니다. TLC와 QLC의 차이점에 대한 자세한 내용은 link:afx-hardware.html#tlc-vs-qlc["TLC와 QLC"]를 참조하십시오.
 
 *셸프당 성능 예상치*
 

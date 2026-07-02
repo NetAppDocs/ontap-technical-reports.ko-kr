@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-limits.html 
+permalink: afx/afx-limits.html 
 keywords: netapp afx, maximums, minimums, limits, capacity, nodes, volumes 
 summary: 이 페이지에서는 NetApp AFX 클러스터의 최대값과 최소값을 통합 ONTAP와 비교하여 설명합니다. 
 ---
 = 최대값 및 제한값
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]

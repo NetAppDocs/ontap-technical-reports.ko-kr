@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-management.html 
+permalink: afx/afx-management.html 
 keywords: netapp afx, cli, system manager, rest api, management tools, gui 
 summary: NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로 상당한 차이가 있지만, 기능 세트와 ONTAP 관리 방식은 사실상 변경되지 않았습니다. 
 ---
 = 관리 툴
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]

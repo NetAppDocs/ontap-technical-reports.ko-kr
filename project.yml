@@ -41,7 +41,7 @@ sidebar:
   - title: 스토리지 시스템
     entries:
     - title: AFX
-      section: afx-overview
+      section: afx
   - title: SnapCenter
     url: "/snapcenter.html"
   - title: 계층화

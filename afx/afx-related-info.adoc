@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-related-info.html 
+permalink: afx/afx-related-info.html 
 keywords: netapp afx, resources, documentation, links, data sheet 
 summary: NetApp AFX에 대해 자세히 알아보려면 다음 자료를 참조하십시오. 
 ---
 = 추가 정보를 찾을 수 있는 위치
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]

@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-hardware.html 
+permalink: afx/afx-hardware.html 
 keywords: netapp afx, hardware, nodes, shelves, switches, disks, nvme 
 summary: 이 페이지에서는 노드, 셸프, 스위치 및 지원되는 디스크 유형을 포함하여 NetApp AFX 클러스터 하드웨어에 대한 자세한 내용을 다룹니다. 
 ---
 = 하드웨어 세부 정보
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]
@@ -100,6 +100,6 @@ NetApp AFX는 TLC와 QLC 플래시 유형을 모두 활용할 수 있습니다. 
 
 NetApp AFX에 사용되는 모든 드라이브는 성능 등급이 지정된 드라이브이며, QLC와 TLC는 읽기 트래픽에서 거의 동일한 성능을 제공합니다. QLC는 쓰기 성능이 TLC에 비해 약간 떨어지며, 쓰기 작업이 많은 워크로드에서는 마모 평준화 현상이 약간 더 많이 발생할 수 있습니다.
 
-성능 수치는 link:afx-overview-performance.html#per-shelf-performance["쉘프별 성능"]을 참조하십시오.
+성능 수치는 link:afx-performance.html#per-shelf-performance["쉘프별 성능"]을 참조하십시오.
 
 사용할 드라이브 유형을 선택할 때는 스토리지가 호스팅할 워크로드와 관련된 성능/용량 밀도 트레이드오프를 고려해야 합니다.

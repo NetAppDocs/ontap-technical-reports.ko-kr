@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-whats-new.html 
+permalink: afx/afx-whats-new.html 
 keywords: netapp afx, new features, release notes, version history, ontap 
 summary: 이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 나올 때마다 업데이트될 예정입니다. 
 ---
 = NetApp AFX의 새로운 기능
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]

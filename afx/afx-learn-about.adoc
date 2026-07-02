@@ -1,13 +1,13 @@
 ---
 sidebar: sidebar 
-permalink: afx-overview/afx-overview-learn-about.html 
+permalink: afx/afx-learn-about.html 
 keywords: netapp afx, ontap, disaggregated architecture, overview, key terms 
 summary: NetApp AFX는 NAS 및 객체 워크로드를 위한 분산형 아키텍처를 제공하는 동시에, 여러분이 잘 알고 사랑하는 기능이 풍부한 ONTAP 소프트웨어를 그대로 제공합니다. 
 ---
 = NetApp AFX 개요: NetApp AFX에 대해 알아보세요
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/afx-overview/
+:imagesdir: ../media/afx/
 
 
 [role="lead"]
