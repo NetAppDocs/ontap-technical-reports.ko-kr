@@ -15,6 +15,7 @@ LIF는 역할, 홈 포트, 홈 노드, 페일오버할 포트 목록 및 방화�
 
 
 
+[[lif-roles]]
 == LIF 역할
 
 LIF 역할은 다음과 같습니다.
@@ -28,6 +29,7 @@ LIF 역할은 다음과 같습니다.
 
 
 
+[[security-characteristics-of-each-lif-role]]
 == 각 LIF 역할의 보안 특성입니다
 
 [cols="21%,13%,14%,18%,18%,16%"]

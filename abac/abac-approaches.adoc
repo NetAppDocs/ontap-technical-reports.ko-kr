@@ -15,6 +15,7 @@ ONTAP는 NFS v4.2 보안 레이블 및 NFS를 사용한 확장 특성(xattrs)을
 
 
 
+[[nfs-v4-2-security-labels]]
 == NFS v4.2 보안 레이블
 
 ONTAP 9.9.1부터 NFS라는 이름의 NFS v4.2 기능이 지원됩니다.
@@ -33,6 +34,7 @@ NFS v4.2 보안 레이블의 사용 사례는 다음과 같습니다.
 
 
 
+[[enable-nfs-v4-2-security-labels]]
 === NFS v4.2 보안 레이블을 사용하도록 설정합니다
 
 다음 명령을 사용하여 NFS v4.2 보안 레이블을 설정하거나 해제할 수 있습니다(고급 권한 필요).
@@ -45,6 +47,7 @@ vserver nfs modify -vserver <svm_name> -v4.2-seclabel <disabled|enabled>
 
 
 
+[[enforcement-modes-for-nfs-v4-2-security-labels]]
 === NFS v4.2 보안 레이블에 대한 적용 모드입니다
 
 ONTAP 9.9.1부터 ONTAP는 다음 적용 모드를 지원합니다.
@@ -63,6 +66,7 @@ NOTE: ONTAP는 현재 전체 모드를 지원하지 않습니다(MAC 레이블 �
 
 
 
+[[nfs-v4-2-security-labels-examples]]
 === NFS v4.2 보안 레이블 예
 
 다음 예제 구성은 Red Hat Enterprise Linux 릴리스 9.3(Plow)을 사용하는 개념을 보여 줍니다.
@@ -126,6 +130,7 @@ MLS(다중 수준 보안) 외에도 MCS(다중 범주 보안)라는 또 다른 �
 |===
 
 
+[[extended-attributes-xattrs]]
 == 확장 속성(xattrs)
 
 ONTAP 9.12.1부터 ONTAP는 xattrs.xattrs를 지원하므로 ACL(액세스 제어 목록) 또는 사용자 정의 속성과 같이 시스템에서 제공하는 것 이상의 파일 및 디렉토리와 메타데이터를 연결할 수 있습니다.
@@ -157,6 +162,7 @@ Xattr 사용 사례 예:
 
 
 
+[[commands-for-managing-xattrs]]
 === xattrs 관리 명령입니다
 
 * `setfattr` 파일 또는 디렉토리의 확장 속성을 설정합니다.
@@ -192,6 +198,7 @@ getfattr -n user.comment example.txt
 
 
 
+[[xattr-key-value-pair-examples]]
 === Xattr 키 값 쌍의 예
 
 다음 표에서는 두 개의 xattr 키 값 쌍의 예를 보여 줍니다.
@@ -216,6 +223,7 @@ getfattr -n user.comment example.txt
 |===
 
 
+[[user-permissions-with-ace-for-xattrs]]
 === xattrs에 대한 ACE의 사용자 권한
 
 ACE(액세스 제어 항목)는 파일 또는 디렉터리와 같은 특정 리소스에 대해 개별 사용자 또는 사용자 그룹에 부여된 액세스 권한이나 권한을 정의하는 ACL 내의 구성 요소입니다. 각 ACE는 허용 또는 거부된 액세스 유형을 지정하며 특정 보안 주체(사용자 또는 그룹 ID)와 연결됩니다.
@@ -238,6 +246,7 @@ ACE(액세스 제어 항목)는 파일 또는 디렉터리와 같은 특정 리�
 |===
 
 
+[[integration-with-abac-identity-and-access-control-software]]
 == ABAC ID 및 액세스 제어 소프트웨어와의 통합
 
 ABAC의 기능을 최대한 활용하기 위해 ONTAP는 ABAC 중심의 ID 및 액세스 관리 소프트웨어와 통합할 수 있습니다.
@@ -274,6 +283,7 @@ image:abac-access-architecture.png["ABAC 액세스 아키텍처"]
 
 
 
+[[ontap-cloning-and-snapmirror]]
 == ONTAP 클론 복제 및 SnapMirror
 
 ONTAP의 클론 생성 및 SnapMirror 기술은 파일 데이터의 모든 측면을 보존하고 파일과 함께 전송할 수 있도록 효율적이고 안정적인 데이터 복제 및 복제 기능을 제공하도록 설계되었습니다. xattrs는 보안 레이블, 액세스 제어 정보, 사용자 정의 데이터 등 파일과 관련된 추가 메타데이터를 저장하는 데 있어 중요한 역할을 합니다.
@@ -287,6 +297,7 @@ NOTE: NFS v4.2 보안 레이블에는 에 정의된 문제점이 <<NFS v4.2 보�
 
 
 
+[[auditing-changes-to-labels]]
 == 라벨에 대한 변경 감사
 
 xattrs 또는 NFS 보안 레이블의 변경 사항을 감사하는 것은 파일 시스템 관리 및 보안의 중요한 부분입니다. 표준 파일 시스템 감사 툴을 사용하면 xattrs 및 보안 레이블 수정을 비롯하여 파일 시스템에 대한 모든 변경 사항을 모니터링하고 기록할 수 있습니다.
@@ -325,6 +336,7 @@ link:https://docs.netapp.com/us-en/ontap/nas-audit/two-parts-fpolicy-solution-co
 
 
 
+[[examples-of-controlling-access-to-data]]
 == 데이터에 대한 액세스를 제어하는 예
 
 John R. Smith의 PKI 인증서에 저장된 데이터에 대한 다음 예제 항목은 NetApp의 접근 방식을 파일에 적용하고 세분화된 액세스 제어를 제공하는 방법을 보여 줍니다.

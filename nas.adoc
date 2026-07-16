@@ -23,6 +23,7 @@ NetApp NAS 솔루션은 데이터 관리를 단순화하며 비용을 최적화�
 ====
 
 
+[[nfs]]
 == NFS 를 참조하십시오
 
 link:https://www.netapp.com/pdf.html?item=/media/10720-tr-4067.pdf["TR-4067: ONTAP의 NFS 모범 사례 및 구축 가이드"^]
@@ -33,6 +34,7 @@ ONTAP 9.12.1 이상에서 NFSv4.2 확장 속성을 설정하고 사용하는 방
 
 
 
+[[smb]]
 == 중소기업
 
 link:https://www.netapp.com/pdf.html?item=/media/17136-tr4740.pdf["TR-4740: SMB 3.0 멀티채널"^]
@@ -40,6 +42,7 @@ Microsoft는 SMB1과 SMB2의 성능 및 안정성 한계를 해결함으로써 S
 
 
 
+[[multiprotocol]]
 == 멀티 프로토콜
 
 link:https://www.netapp.com/pdf.html?item=/media/27436-tr-4887.pdf["TR-4887: ONTAP의 다중 프로토콜 NAS 개요 및 모범 사례"^]
@@ -47,12 +50,14 @@ ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프
 
 
 
+[[ontap-s3]]
 == ONTAP S3
 
 link:https://docs.netapp.com/us-en/ontap/s3-config/index.html["TR-4814:S3(ONTAP 모범 사례"^] ONTAP 소프트웨어와 함께 Amazon S3(Simple Storage Service)를 사용하기 위한 권장 사례와 ONTAP를 네이티브 S3 애플리케이션이 있는 오브젝트 저장소 또는 FabricPool의 계층화 대상으로 사용하기 위한 기능 및 구성에 대해 알아보십시오.
 
 
 
+[[name-services]]
 == 네임 서비스
 
 link:https://www.netapp.com/pdf.html?item=/media/19370-tr-4523.pdf["TR-4523: ONTAP에서 DNS 로드 밸런싱"^]
@@ -66,6 +71,7 @@ link:https://www.netapp.com/pdf.html?item=/media/19423-tr-4835.pdf["TR-4835: ONT
 
 
 
+[[nas-security]]
 == NAS 보안
 
 link:https://www.netapp.com/pdf.html?item=/media/19384-tr-4616.pdf["TR-4616: ONTAP에서 NFS Kerberos"^]

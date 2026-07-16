@@ -23,12 +23,14 @@ ONTAP는 보안을 솔루션의 일부로 통합하여 지속적으로 발전하
 ====
 
 
+[[ontap-cyber-vault]]
 == ONTAP 사이버 소산
 
 link:https://docs.netapp.com/us-en/netapp-solutions/cyber-vault/ontap-cyber-vault-overview.html["ONTAP 사이버 소산"^] NetApp의 ONTAP 기반 사이버 저장소는 가장 중요한 데이터 자산을 보호하는 포괄적이고 유연한 솔루션을 제공합니다. ONTAP은 강력한 강화 방법론을 통해 논리적 공기 흐름을 활용하여 진화하는 사이버 위협에 맞서 복원력을 갖춘 격리된 보안 스토리지 환경을 만들 수 있도록 지원합니다. ONTAP을 사용하면 스토리지 인프라의 민첩성과 효율성을 유지하면서 데이터의 기밀성, 무결성, 가용성을 보장할 수 있습니다.
 
 
 
+[[ransomware]]
 == 랜섬웨어
 
 link:./ransomware-solutions/ransomware-overview.html["TR-4572: 랜섬웨어용 NetApp 솔루션"] 랜섬웨어의 진화 과정을 알아보고, 랜섬웨어용 NetApp 솔루션을 사용하여 공격을 식별하고, 확산을 방지하고, 최대한 빠르게 복구하는 방법을 살펴보십시오. 이 문서에 제공된 지침과 솔루션은 조직이 사이버 복원력 있는 솔루션을 보유하면서 정보 시스템의 기밀성, 무결성 및 가용성에 대해 규정된 보안 목표를 충족할 수 있도록 설계되었습니다.
@@ -38,12 +40,14 @@ link:https://www.netapp.com/pdf.html?item=/media/6158-tr4526.pdf["TR-4526: NetAp
 
 
 
+[[zero-trust]]
 == 제로 트러스트
 
 link:./zero-trust/zero-trust-overview.html["NetApp와 제로 트러스트"] 제로 트러스트는 네트워크 중심의 접근 방식으로 MCAP(마이크로 코어 및 경계)를 설계하여 데이터, 서비스, 애플리케이션 또는 자산을 세분화 게이트웨이라고 하는 제어 기능을 사용해 왔습니다. ONTAP는 제로 트러스트에 대한 데이터 중심 접근 방식을 취하며 스토리지 관리 시스템이 세분화 게이트웨이가 되어 고객 데이터의 액세스를 보호하고 모니터링합니다. 특히 FPolicy Zero Trust 엔진과 FPolicy 파트너 에코시스템은 정상 및 비정상적인 데이터 액세스 패턴을 세부적으로 이해하고 내부자 위협을 식별하기 위한 제어 센터가 됩니다.
 
 
 
+[[multifactor-authentication]]
 == 다단계 인증
 
 link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647.pdf["TR-4647: ONTAP 모범 사례 및 구현 가이드의 다중 요소 인증"^]
@@ -54,6 +58,7 @@ ONTAP에서 CAC(Common Access Card)에 저장된 공개 키를 통해 ONTAP 스�
 
 
 
+[[multitenancy]]
 == 멀티 테넌시
 
 link:https://www.netapp.com/pdf.html?item=/media/16886-tr-4160.pdf["TR-4160: ONTAP의 보안 멀티 테넌시"^]
@@ -61,6 +66,7 @@ link:https://www.netapp.com/pdf.html?item=/media/16886-tr-4160.pdf["TR-4160: ONT
 
 
 
+[[standards]]
 == 표준
 
 link:https://www.netapp.com/pdf.html?item=/media/17180-tr4401.pdf["TR-4401: PCI-DSS 4.0 및 ONTAP"^]
@@ -68,6 +74,7 @@ PCI DSS 4.0 표준에 따라 시스템을 검증하고 NetApp ONTAP 시스템에
 
 
 
+[[attribute-based-access-control]]
 == 속성 기반 액세스 제어
 
 link:./abac/abac-overview.html["ONTAP로 속성 기반 액세스 제어"] RBAC(역할 기반 액세스 제어) 및 ABAC(속성 기반 액세스 제어)를 지원하도록 NFSv4.2 보안 레이블 및 확장 속성(xattrs)을 구성하는 방법에 대해 알아봅니다. 이 방법은 사용자, 리소스 및 환경 특성을 기준으로 사용 권한을 정의하는 권한 부여 전략입니다.

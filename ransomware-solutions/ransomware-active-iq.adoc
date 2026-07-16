@@ -11,7 +11,7 @@ summary: NetApp의 랜섬웨어 보호에는 NetApp 스토리지의 선제적 �
 [role="lead"]
 Active IQ 기반 Digital Advisor는 실행 가능한 인텔리전스를 통해 최적의 데이터 관리를 지원하여 NetApp 스토리지의 사전 예방적 관리 및 최적화를 간소화합니다. 다양한 설치 기반에서 수집된 원격 측정 데이터를 활용하여 고급 AI 및 ML 기술을 통해 스토리지 환경의 위험을 줄이고 성능 및 효율성을 개선할 수 있는 기회를 발견합니다.
 
-이 https://www.netapp.com/services/support/active-iq/["NetApp 디지털 자문"^] 방법은 도움이 될 뿐만 https://www.netapp.com/blog/fix-security-vulnerabilities-with-active-iq/["보안 취약점을 제거합니다"^] 아니라 랜섬웨어로부터 보호하는 것과 관련된 통찰력과 지침도 제공합니다. 전용 웰니스 카드는 필요한 조치와 해결된 위험을 보여줍니다. 따라서 시스템이 이러한 모범 사례 권장 사항을 충족하는지 확인할 수 있습니다.
+ https://www.netapp.com/data-services/digital-advisor/["NetApp 디지털 자문"^]은 도움을 줄 수 있을 뿐만 아니라 https://www.netapp.com/blog/fix-security-vulnerabilities-with-active-iq/["보안 취약점을 제거합니다"^], 랜섬웨어 공격으로부터 시스템을 보호하는 데 필요한 구체적인 정보와 지침을 제공합니다. 전용 상태 카드를 통해 필요한 조치와 해결해야 할 위험 요소를 확인할 수 있으므로 시스템이 모범 사례 권장 사항을 충족하고 있는지 확인할 수 있습니다.
 
 image:ransomware-solution-dashboard.jpg["NetApp 디지털 어드바이저 대시보드의 웰니스 모니터"]
 
@@ -21,4 +21,4 @@ image:ransomware-solution-dashboard.jpg["NetApp 디지털 어드바이저 대시
 * NAS 프로토콜용으로 구성된 모든 SVM(스토리지 가상 머신)에 FPolicy가 사용되지 않는다.
 
 
-랜섬웨어 방어의 실제 적용 사례를 보려면 을 참조하십시오.link:https://www.netapp.com/services/support/active-iq/["디지털 자문업체"^]
+랜섬웨어 보호 기능이 실제로 어떻게 작동하는지 보려면 link:https://www.netapp.com/data-services/digital-advisor/["디지털 자문업체"^]을 참조하십시오.

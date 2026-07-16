@@ -24,6 +24,7 @@ NetApp에서 권장하는 사항은 다음과 같습니다.
 ====
 
 
+[[supported-ciphers-and-key-exchanges]]
 == 지원되는 암호 및 키 교환
 
 [cols="42%,58%"]
@@ -59,6 +60,7 @@ NetApp에서 권장하는 사항은 다음과 같습니다.
 |===
 
 
+[[supported-aes-and-3des-symmetric-encryptions]]
 == AES 및 3DES 대칭 암호화가 지원됩니다
 
 ONTAP는 다음 유형의 AES 및 3DES 대칭 암호화(암호라고도 함)도 지원합니다.

@@ -15,6 +15,7 @@ summary: 이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하�
 
 
 
+[[whats-new-in-the-latest-release-of-netapp-ontap-for-afx]]
 == NetApp ONTAP for AFX 최신 릴리스의 새로운 기능은 무엇입니까?
 
 최신 릴리스:
@@ -33,6 +34,7 @@ NetApp AFX의 새로운 기능:
 
 
 
+[[version-history]]
 == 버전 기록
 
 |===

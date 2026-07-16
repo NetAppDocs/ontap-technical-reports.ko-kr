@@ -18,6 +18,7 @@ NetApp은 전략적 파트너십을 기반으로 더욱 강화된 산업별 데�
 
 
 
+[[eda]]
 == EDA
 
 link:https://www.netapp.com/pdf.html?item=/media/19368-tr-4617.pdf["ONTAP의 전자 설계 자동화 모범 사례"^]
@@ -25,6 +26,7 @@ EDA FlexGroup(전자 설계 자동화) 워크로드를 위한 NetApp ONTAP의 �
 
 
 
+[[healthcare]]
 == 의료
 
 link:https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf["Epic의 NetApp 모범 사례"^]

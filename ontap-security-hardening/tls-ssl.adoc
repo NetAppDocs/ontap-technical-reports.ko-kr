@@ -22,6 +22,7 @@ NOTE: FIPS 구성은 ONTAP 및 플랫폼 BMC에 적용됩니다.
 
 
 
+[[netapp-ontaps-fips-mode-configuration]]
 == NetApp ONTAP의 FIPS 모드 구성
 
 NetApp ONTAP에는 컨트롤 플레인에 추가 보안 수준을 인스턴스화하는 FIPS 모드 구성이 있습니다.
@@ -36,6 +37,7 @@ NOTE: NIST는 FIPS-140-3 표준을 제출했으며, NCSM은 FIPS-140-2 및 FIPS-
 
 
 
+[[enable-fips-140-2-and-fips-140-3-compliance-mode]]
 == FIPS-140-2 및 FIPS-140-3 규정 준수 모드를 사용합니다
 
 ONTAP 9부터 클러스터 전체 컨트롤 플레인 인터페이스에 대해 FIPS-140-2 및 FIPS-140-3 규정 준수 모드를 활성화할 수 있습니다.
@@ -46,6 +48,7 @@ ONTAP 9부터 클러스터 전체 컨트롤 플레인 인터페이스에 대해 
 
 
 
+[[fips-enablement-and-protocols]]
 == FIPS 지원 및 프로토콜
 
  `security config modify`명령을 사용하여 기존 클러스터 차원의 보안 구성을 수정할 수 있습니다. FIPS 호환 모드를 활성화하면 클러스터에서 TLS 프로토콜만 자동으로 선택됩니다.
@@ -62,6 +65,7 @@ ONTAP 9부터 클러스터 전체 컨트롤 플레인 인터페이스에 대해 
 
 
 
+[[fips-enablement-and-ciphers]]
 == FIPS 지원 및 암호화
 
 * 매개 변수를 사용하여 `-supported-cipher-suites` AES(Advanced Encryption Standard) 또는 AES 및 3DES 만 구성합니다.
@@ -72,6 +76,7 @@ ONTAP 9부터 클러스터 전체 컨트롤 플레인 인터페이스에 대해 
 
 
 
+[[ssh-and-tls-security-hardening]]
 == SSH 및 TLS 보안 강화
 
 ONTAP 9의 SSH 관리를 위해서는 OpenSSH 클라이언트 5.7 이상이 필요합니다. SSH 클라이언트가 연결에 성공하려면 ECDSA(Elliptic Curve Digital Signature Algorithm) 공개 키 알고리즘과 협상해야 합니다.
@@ -80,6 +85,7 @@ TLS 보안을 강화하려면 TLS 1.2만 활성화하고 PFS(Perfect Forward Sec
 
 
 
+[[enable-tlsv1-2-and-pfs-capable-cipher-suites]]
 == TLSv1.2 및 PFS 지원 암호화 제품군을 활성화합니다
 
 TLS 1.2 및 PFS 지원 암호 그룹만 활성화하려면 `security config modify` 고급 권한 수준의 명령을 사용합니다.

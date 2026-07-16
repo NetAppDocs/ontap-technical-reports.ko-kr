@@ -24,6 +24,7 @@ NAS 파일 시스템이 차지하는 공간 증가 오늘날의 위협 환경에
 
 
 
+[[create-an-audit-configuration]]
 == 감사 구성을 생성합니다
 
 감사 이벤트를 생성하려면 CIFS 감사를 설정해야 합니다. 명령을 사용하여 `vserver audit create` 감사 구성을 생성합니다. 기본적으로 감사 로그는 크기에 따라 순환 방법을 사용합니다. Rotation Parameters(회전 매개변수) 필드에 지정된 경우 시간 기반 회전 옵션을 사용할 수 있습니다. 추가 로그 감사 회전 구성 세부 정보에는 회전 일정, 회전 제한, 주중 회전 날짜 및 회전 크기가 포함됩니다. 다음 텍스트는 12:30에 모든 요일에 대해 예약된 월별 시간 기반 순환을 사용하는 감사 구성을 보여 주는 예제 구성을 제공합니다.
@@ -34,6 +35,7 @@ cluster1::> vserver audit create -vserver vs1 -destination /audit_log -rotate-sc
 ----
 
 
+[[cifs-audit-events]]
 == CIFS 감사 이벤트입니다
 
 CIFS 감사 이벤트는 다음과 같습니다.
@@ -50,12 +52,14 @@ NOTE: 이 기능은 시스템 감사 기능을 기반으로 합니다. 이 기�
 
 
 
+[[effect-of-rest-apis-on-nas-auditing]]
 == REST API가 NAS 감사에 미치는 영향
 
 ONTAP에는 관리자 계정이 REST API를 사용하여 SMB/CIFS 또는 NFS 파일에 액세스하고 조작할 수 있는 기능이 포함되어 있습니다. REST API는 ONTAP 관리자만 실행할 수 있지만 REST API 명령은 시스템 NAS 감사 로그를 무시합니다. 또한 REST API를 사용할 때 ONTAP 관리자가 파일 권한을 무시할 수도 있습니다. 그러나 파일에 대한 REST API를 사용한 관리자의 작업은 시스템 명령 기록 로그에 기록됩니다.
 
 
 
+[[create-no-access-rest-api-role]]
 === 액세스할 수 없는 REST API 역할을 생성합니다
 
 REST를 통해 ONTAP 볼륨에 액세스할 수 없는 REST API 역할을 생성하여 ONTAP 관리자가 파일 액세스에 REST API를 사용하지 못하도록 할 수 있습니다. 이 역할을 프로비저닝하려면 다음 단계를 완료하십시오.

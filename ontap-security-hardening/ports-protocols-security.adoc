@@ -15,6 +15,7 @@ summary: ONTAP는 일반적으로 이러한 포트와 프로토콜을 사용하�
 
 
 
+[[commonly-used-protocols-and-ports]]
 == 일반적으로 사용되는 프로토콜 및 포트
 
 [cols="27%,26%,47%"]
@@ -148,6 +149,7 @@ summary: ONTAP는 일반적으로 이러한 포트와 프로토콜을 사용하�
 |===
 
 
+[[netapp-internal-ports]]
 == NetApp 내부 포트
 
 [cols="47%,53%"]

@@ -17,12 +17,14 @@ ONTAP는 보안을 중시하는 기업에 다양한 로그인 응용 프로그�
 
 
 
+[[roles]]
 == 역할
 
 사용자는 역할 기반 액세스 제어(RBAC)를 사용하여 직무 역할 및 기능에 필요한 시스템 및 옵션에만 액세스할 수 있습니다. ONTAP의 RBAC 솔루션은 사용자의 관리 액세스를 정의된 역할에 허용된 수준으로 제한하므로 관리자가 할당된 역할별로 사용자를 관리할 수 있습니다. ONTAP는 몇 가지 미리 정의된 역할을 제공합니다. 운영자와 관리자는 사용자 지정 액세스 제어 역할을 생성, 수정 또는 삭제할 수 있으며 특정 역할에 대한 계정 제한을 지정할 수 있습니다.
 
 
 
+[[predefined-roles-for-cluster-administrators]]
 === 클러스터 관리자를 위한 사전 정의된 역할
 
 |===
@@ -159,6 +161,7 @@ NOTE:  `autosupport`역할은 AutoSupport OnDemand에서 사용하는 미리 정
 
 
 
+[[predefined-roles-for-storage-virtual-machine-svm-administrators]]
 === 스토리지 가상 머신(SVM) 관리자를 위한 사전 정의된 역할
 
 |===
@@ -252,6 +255,7 @@ NOTE:  `autosupport`역할은 AutoSupport OnDemand에서 사용하는 미리 정
 |===
 
 
+[[application-methods]]
 == 응용 프로그램 방법
 
 응용 프로그램 메서드는 로그인 메서드의 액세스 유형을 지정합니다. 가능한 값에는 `console, http, ontapi, rsh, snmp, service-processor, ssh,` 및 `telnet`가 포함됩니다.
@@ -266,6 +270,7 @@ NetApp에서는 보안 원격 액세스를 위해 SSH(보안 셸)를 권장하�
 
 
 
+[[authentication-methods]]
 == 인증 방법
 
 authentication method 매개 변수는 로그인에 사용되는 인증 방법을 지정합니다.
@@ -318,4 +323,4 @@ ONTAP 9.13.1부터:
 * 공개 키 취소는 SSH 공개 키와 SSH 중에 만료/해지 여부를 확인하는 인증서를 통해 지원됩니다.
 
 
-ONTAP System Manager, Active IQ Unified Manager, SSH를 위한 다단계 인증(MFA)에 대한 자세한 내용은 를 참조하십시오. link:http://www.netapp.com/us/media/tr-4647.pdf["TR-4647: ONTAP 9의 다단계 인증"^]
+ONTAP System Manager, Active IQ Unified Manager 및 SSH에 대한 다중 요소 인증(MFA)에 대한 자세한 내용은 link:https://www.netapp.com/pdf.html?item=/media/17055-tr4647.pdf["TR-4647: ONTAP 9의 다단계 인증"^]을 참조하십시오.

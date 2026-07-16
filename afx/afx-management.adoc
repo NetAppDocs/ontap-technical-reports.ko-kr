@@ -15,6 +15,7 @@ NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로
 
 
 
+[[management-cli]]
 == 관리 – CLI
 
 NetApp AFX의 CLI는 통합 ONTAP의 CLI가 제공하는 것과 거의 동일합니다. 대부분의 명령은 클러스터 수준에서 실행되지만 노드 수준 명령도 실행할 수 있습니다. 최상위 명령 디렉터리와 하위 명령, 그리고 명령의 탭 자동 완성 기능도 그대로 제공됩니다. 또한 모든 CLI 바로 가기도 동일하게 작동합니다(예:  `-fields`를 사용한 콘텐츠 필터링).
@@ -37,6 +38,7 @@ AFX::>
 ----
 
 
+[[management-gui]]
 == 관리 – GUI
 
 System Manager는 여전히 리소스 관리를 위해 NetApp AFX 클러스터와 상호 작용하는 GUI 인터페이스이며, 처음 로그인할 때 통합 ONTAP 시스템에 로그인하지 않았다는 것을 한눈에 알아차리기 어려울 것입니다.
@@ -59,12 +61,14 @@ image:image41.png["이미지"]
 
 
 
+[[rest-apis]]
 == REST API
 
 NetApp AFX는 ONTAP REST API 호출의 대부분을 유지하기 위해 상당한 노력을 기울이고 있습니다. 따라서 REST API를 기반으로 자동화 도구를 개발한 경우 대부분의 경우 해당 도구를 계속 사용할 수 있습니다. 주요 예외 사항으로는 애그리게이트, Metrocluster, SAN 및 일부 성능 카운터가 있습니다. 전체 REST API 문서는 NetApp AFX 클러스터의 System Manager에서 \https://clus_mgmt_ip/docs/api 경로로 이동하여 확인할 수 있습니다.
 
 
 
+[[off-box-ontap-management-tools]]
 == 오프박스 ONTAP 관리 툴
 
 NetApp AFX는 다음과 같은 외부 ONTAP 관리 도구를 일부 지원합니다.

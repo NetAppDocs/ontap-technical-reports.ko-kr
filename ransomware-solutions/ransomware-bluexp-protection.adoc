@@ -13,6 +13,7 @@ summary: NetApp의 랜섬웨어 보호는 포괄적이고 워크로드 중심의
 
 
 
+[[netapp-ransomware-protection]]
 == NetApp 랜섬웨어 보호
 
 NetApp Console 포괄적이고 워크로드 중심의 랜섬웨어 방어를 지능적으로 조율하는 단일 제어 평면입니다.  NetApp 랜섬웨어 보호는 ARP, FPolicy, 변조 방지 스냅샷과 같은 ONTAP 의 강력한 사이버 복원력 기능과 NetApp Backup and Recovery 와 같은 NetApp 데이터 서비스를 통합합니다.  또한 단일 UI를 통해 종단 간 방어를 제공하기 위해 자동화된 워크플로를 통해 권장 사항과 지침을 추가합니다.  공격이 발생한 경우 비즈니스를 운영하는 애플리케이션이 보호되고 최대한 빨리 복구될 수 있도록 워크로드 수준에서 작동합니다.

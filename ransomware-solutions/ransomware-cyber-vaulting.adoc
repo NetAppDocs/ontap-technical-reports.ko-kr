@@ -13,6 +13,7 @@ NetApp의 사이버 소산 접근 방식은 논리적으로 에어갭 사이버 
 
 
 
+[[cyber-vaulting-with-snaplock-compliance-and-a-logical-air-gap]]
 == SnapLock Compliance과 논리적 격차가 있는 사이버 소산
 
 공격자가 백업 사본을 폐기하고 경우에 따라 암호화하는 경향이 증가하고 있습니다. 따라서 사이버 보안 업계의 많은 기업들이 전반적인 사이버 복원력 전략의 일환으로 에어 갭 백업을 사용하도록 권장합니다.
@@ -29,6 +30,7 @@ NetApp은 10년 이상 SnapLock 기능을 발표하여 HIPAA(Health Insurance Po
 
 
 
+[[tamperproof-snapshots]]
 == 변조 방지 스냅샷
 
 SnapLock Compliance를 논리적 AIR Gap으로 활용하면 공격자가 백업 복사본을 삭제하지 못하도록 완벽하게 보호할 수 있지만, SnapVault를 사용하여 스냅샷을 2차 SnapLock 지원 볼륨으로 이동해야 합니다. 결과적으로 많은 고객이 네트워크를 통한 보조 스토리지에 이 구성을 구현합니다. 따라서 기본 스토리지에서 기본 볼륨 스냅샷을 복원하는 것보다 복원 시간이 더 길 수 있습니다.

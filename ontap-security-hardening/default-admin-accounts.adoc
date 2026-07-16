@@ -24,6 +24,7 @@ NOTE: 내장 계정은 삭제하거나 이름을 변경할 수 없습니다. 관
 
 
 
+[[list-local-accounts]]
 == 로컬 계정을 나열합니다
 
 로컬 계정을 나열하려면 `security login show` 명령을 실행합니다.
@@ -47,6 +48,7 @@ autosupport      console     password  autosupport      no     no
 ----
 
 
+[[set-the-diagnostic-diag-account-password]]
 == 진단(diag) 계정 암호를 설정합니다
 
 라는 진단 계정이 `diag` 스토리지 시스템과 함께 제공됩니다. 계정을 사용하여 에서 문제 해결 작업을 수행할 수 `diag` `systemshell`있습니다. 이 `diag` 계정은 권한이 있는 명령을 통해 시스템 쉘에 액세스하는 데 사용할 수 있는 유일한 계정입니다. `diag` `systemshell`
