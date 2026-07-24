@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: nfs-tls/nfs-tls-reference.html 
+keywords: nfs, tls, interoperability, svm-dr, metrocluster, snapmirror, limits, connection limit, enforcement, recommendations 
+summary: TLS를 통한 NFS는 표준 ONTAP 내보내기 정책 제어와 함께 구성되며 SVM-DR 및 MetroCluster를 통해 복제됩니다. 이 페이지에서는 연결 제한, 적용 동작 및 운영 권장 사항에 대해서도 다룹니다. 
+---
+= 상호 운용성 및 한계
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:toc-position: content
+
+
+[role="lead"]
+TLS를 통한 NFS는 표준 ONTAP 내보내기 정책 제어와 함께 작동하고, SVM-DR 및 MetroCluster를 통해 복제되며, 배포 전에 알아야 할 몇 가지 하드 플랫폼 제한 사항과 운영 권장 사항이 있습니다.
+
+
+
+[[interoperability]]
+== 상호 운용성
+
+
+
+[[supported-co-existing-features]]
+=== 공존 가능한 기능 지원
+
+*내보내기 정책, qtree 내보내기 및 접합 경로.* 내보내기 정책 규칙은 규칙별로 TLS를 요구할 수 있는 `-allow-nfs-tls-only` 필드를 갖습니다. 이 필드는 기존의 클라이언트 일치, 프로토콜, 읽기 전용/읽기-쓰기, 슈퍼유저, 익명, 소유권 변경 모드, suid 허용 및 NTFS-UNIX 보안 제어와 함께 사용됩니다. qtree 내보내기 및 접합 경로 마운트는 동일한 내보내기 정책 메커니즘을 통해 TLS 요구 사항을 상속합니다. System Manager는 NFS 액세스 선택기에서 `-allow-nfs-tls-only` 설정을 표시합니다.
+
+NFS over TLS 복제 및 재해 복구(DR) 지원에 대한 요약은 아래 표에 나와 있습니다. 복제 메커니즘에 대한 배경 정보는 link:nfs-tls-architecture.html["아키텍처"]을 참조하십시오.
+
+[cols="2,3"]
+|===
+| 복제/재해 복구 | 9.19.1 버전의 TLS 기반 NFS 
+
+
+| SVM-DR | *지원됩니다.* TLS 인터페이스 행은 SVM 범위(상태, 인증서 이름 및 UUID, 호스트 인증 적용)에서 복제됩니다. The `-allow-nfs-tls-only` 내보내기 규칙 필드는 내보내기 정책과 함께 복제됩니다. 
+
+
+| MetroCluster (SVM 수준 복제) | *지원됩니다.* SVM-DR과 동일한 복제 경로를 사용합니다. 대상 SVM의 인증서 자료 수명 주기는 인증서 관리자가 관리합니다. 
+
+
+| SnapMirror(볼륨 복제) | *지원됩니다.* 클라이언트 측 TLS 전송과 직교합니다. 
+
+
+| 클라우드 호스팅 ONTAP 변형 | 9.19.1에서는 *지원되지 않습니다*. 
+|===
+
+
+[[features-with-constraints]]
+=== 제약 조건이 있는 기능
+
+*클라이언트 요구사항.* NFS 클라이언트는 link:https://www.rfc-editor.org/rfc/rfc9289.html["RFC 9289"]에 따라 ONC RPC용 TLS를 구현해야 합니다. Linux에서 이는  `ktls-utils` 패키지의 사용자 공간 TLS 핸드셰이크 헬퍼  `tlshd`와 함께 사용되는  `xprtsec=tls`(또는  `xprtsec=mtls`) 마운트 옵션을 지원하는 커널 내 NFS 클라이언트에 의해 제공됩니다. 최소 커널 버전, 사용자 공간 패키지 버전 및 지원되는 Linux 배포판을 포함한 최종 클라이언트 매트릭스는 IMT를 참조하십시오.
+
+
+
+[[limitations-and-caveats]]
+== 제한 사항 및 주의 사항
+
+* *클라우드 호스팅 ONTAP 변형.* Cloud Volumes ONTAP 및 기타 클라우드 호스팅 ONTAP 변형은 ONTAP 9.19.1에서 지원되지 않습니다.
+* *RDMA(Remote Direct Memory Access) 기반 NFS.* 동일한 LIF에서 NFS-over-RDMA와 NFS over TLS는 상호 배타적입니다.
+
+
+
+
+[[per-node-limits]]
+=== 노드별 제한
+
+
+IMPORTANT: 현재 ONTAP에서 NFS-over-TLS에 대한 하드 코딩된 연결 제한은 없습니다. 지원되는 제한에 대한 최신 정보는 link:https://hwu.netapp.com["Hardware Universe"]을 참조하십시오.
+
+*모범 사례:* 마운트 폭주 및 고가용성(HA) 전환을 위한 여유 공간을 확보하기 위해 노드별 NFS-over-TLS 연결 수를 10,000개 미만으로 유지하십시오.
+
+
+
+[[per-cluster-limits]]
+=== 클러스터별 제한
+
+코드상 클러스터 전체에 적용되는 별도의 집계 제한은 없습니다.
+
+
+
+[[per-lif-and-per-object-limits]]
+=== LIF별 및 객체별 제한
+
+* 구성 테이블은  `(SVM, LIF)`튜플을 키로 사용합니다. 각 LIF에는 NFS-over-TLS 구성 행이 0개 또는 1개 포함됩니다.
+* NFS-over-TLS가 활성화된 LIF당 정확히 하나의 서버 인증서가 바인딩됩니다. 인증서는  `vserver nfs tls interface enable` 시점에 지정되며  `... modify -certificate-name`을(를) 사용하여 변경할 수 있습니다.
+* `-allow-nfs-tls-only` 각 내보내기 정책 규칙당 하나의 부울 값입니다. 이 기능은 별도의 규칙 개수 제한을 추가하지 않으며, 표준 정책별 및 SVM별 내보내기 규칙 최대값이 적용됩니다.
+
+
+
+
+[[enforcement-behavior]]
+=== 집행 행위
+
+**`-allow-nfs-tls-only true` 강제 적용.** 이 필드가 `true` 일치하는 내보내기 정책 규칙에 있는 경우, RFC 9289에 따라 ONC RPC에 TLS를 사용하지 않는 일치하는 클라이언트의 NFS 연결 시도는 내보내기 규칙 평가 시 거부됩니다. 해당 클라이언트의 기존 TLS 연결은 영향을 받지 않습니다.
+
+**`-enforce-host-auth true` 강제 적용.**  `true`이(가)  `(SVM, LIF)`에 있을 때, 클라이언트 인증서 ID가 LIF에 대해 구성된 호스트 ID와 일치하지 않는 TLS 핸드셰이크는 TLS 핸드셰이크 중에 거부됩니다. EMS 이벤트 `Nblade.TLSHandshakeFailed`(심각도 `ERR`, 이벤트 소스당 10분마다 한 번으로 발생 제한)는 실패한 각 핸드셰이크에 대해 발생합니다.
+
+**EMS 속도 제한.**
+`Nblade.TLSConfigError` 및 `Nblade.TLSHandshakeFailed`은 이벤트 소스당 10분당 1회로 속도가 제한됩니다. `Nblade.NfsTlsDisabled`은 이벤트 소스당 24시간당 1회로 속도가 제한됩니다. 이는 지속적인 장애 조건 동안 이벤트 로그 볼륨에 대해 의도적으로 설정된 상한선입니다. 버스트가 발생하는 동안에는 각 속도 제한 기간 내에서 첫 번째 발생만 기록됩니다.
+
+
+
+[[soft-limits-and-recommendations]]
+=== 소프트 리미트 및 권장 사항
+
+다음은 권장 사항이며, 절대적인 최대치는 아닙니다.
+
+* *노드당 NFS-over-TLS 연결 수를 10,000개 이하로 유지하십시오.* 고정된 제한은 없지만, 노드당 NFS-over-TLS 연결 수를 10,000개 이하로 유지하십시오.
+* *HA 테이크오버 후 TLS 재핸드셰이크를 완전히 수행할 수 있도록 계획하십시오.* TLS 세션은 TCP 범위이며 테이크오버 후에는 유지되지 않습니다. 모든 클라이언트는 유지 노드 또는 대상 노드에서 새로운 TLS 1.3 핸드셰이크를 통해 다시 연결되므로, 마운트 폭증에 대비해야 합니다. 연결 수를 10,000개 미만으로 유지하면 이러한 폭증을 처리할 수 있는 여유 공간을 확보할 수 있습니다.
+

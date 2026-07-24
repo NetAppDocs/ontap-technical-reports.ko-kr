@@ -1,0 +1,36 @@
+---
+permalink: nfs.html 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, NAS, best practices, best-practices 
+summary: 이 기술 보고서는 NFS ONTAP에 대한 개요와 권장 사례를 제공합니다. 
+---
+= ONTAP NFS 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp NFS 솔루션은 데이터 관리를 간소화하고 비용을 최적화하면서 성장에 발맞춰 나갈 수 있도록 지원합니다.
+
+
+
+[[nfs]]
+== NFS 를 참조하십시오
+
+link:https://www.netapp.com/pdf.html?item=/media/10720-tr-4067.pdf["TR-4067: ONTAP의 NFS 모범 사례 및 구축 가이드"^]
+ONTAP의 NFS에 대한 기본 개념, 지원 정보, 구성 팁 및 권장 사항에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/84595-tr-4962.pdf["TR-4962: NFSv4.2 확장 속성"^]
+ONTAP 9.12.1 이상에서 NFSv4.2 확장 속성을 설정하고 사용하는 방법에 대해 알아봅니다.
+
+
+
+[[multiprotocol]]
+== 멀티 프로토콜
+
+link:https://www.netapp.com/pdf.html?item=/media/27436-tr-4887.pdf["TR-4887: ONTAP의 다중 프로토콜 NAS 개요 및 모범 사례"^]
+ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프로토콜 환경에 대한 권장 사례에 대해 알아보십시오.

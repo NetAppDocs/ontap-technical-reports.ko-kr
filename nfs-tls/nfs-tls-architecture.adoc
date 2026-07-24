@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: nfs-tls/nfs-tls-architecture.html 
+keywords: nfs, tls, architecture, data flow, ha takeover, svm-dr, metrocluster 
+summary: NFS over TLS는 ONTAP NFS 서버의 LIF별 전송 보안 기능으로, SVM별로 구성되고 클러스터 전체에 복제됩니다. 
+---
+= 아키텍처
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:toc-position: content
+
+
+[role="lead"]
+NFS over TLS는 ONTAP NFS 서버의 LIF별 전송 보안 기능입니다. 클라이언트와 ONTAP NFS 서버 간의 NFS 트래픽에 TLS 보호를 적용합니다. 구성은  `vserver nfs tls interface` 명령어 제품군과 해당  `/api/protocols/nfs/tls/interfaces` REST 리소스를 통해 관리됩니다.
+
+구성은 SVM 범위로 지정되며, LIF별로 적용되고 클러스터 전체에 복제됩니다. 현재 LIF를 호스팅하는 모든 노드는 동일한 TLS 설정을 적용합니다. 클러스터 전체에 대한 활성화/비활성화 옵션은 없습니다. 활성화 및 비활성화는 LIF별로 수행됩니다.
+
+
+
+[[external-dependencies]]
+== 외부 종속성
+
+9.19.1 버전에서는 NFS TLS 핸드셰이크 경로에서 외부 인증 기관(CA) 또는 OCSP 응답기로의 아웃바운드 호출이 수행되지 않습니다. 체인 및 주체 대체 이름(SAN) 유효성 검사는 SVM에 설치된 인증서 자료를 대상으로 로컬에서 수행됩니다.
+
+
+
+[[data-flow]]
+== 데이터 흐름
+
+NFSv3와 NFSv4는 모두 TCP 포트 2049로 전송되는 첫 번째 NULL 호출/응답 쌍 이후의 전체 NFS 페이로드를 암호화합니다. NULL 호출 `AUTH_TLS`에는 클라이언트가 TLS를 사용하겠다는 의사를 나타내는 RFC 9289에 정의된 새로운 자격 증명 형식이 포함됩니다. 서버는 TLS 업그레이드를 수락하거나 거부하는 NULL 응답을 보냅니다. 클라이언트가 수락을 받으면 동일한 TCP 연결을 통해 TLS 1.3 핸드셰이크를 진행합니다. 핸드셰이크가 성공적으로 완료되면 이후의 모든 NFS RPC는 TLS 레코드로 캡슐화되어 전송 중에 암호화됩니다.
+
+NFSv3와 NFSv4.x의 차이점은 하나 있습니다. NFSv3는 보조 프로토콜인 -`rpcbind`(portmapper),  `mountd`, NLM(Network Lock Manager), NSM(Network Status Monitor)을 사용하는데, 이러한 프로토콜은 TLS로 보호되는 연결을 통해 전송되지 않고 암호화되지 않은 상태로 전송됩니다. 스토리지 트래픽의 완전한 암호화를 의무화하는 규정 준수 요건을 충족해야 하는 조직은 NFSv3와 NFSv4.x 중 하나를 선택할 때 이 점을 고려해야 합니다. NFSv4.x는 이러한 사이드 채널 프로토콜을 제거합니다. 모든 NFSv4.x 트래픽은 포트 2049로 통합되어 TLS 핸드셰이크 후 암호화됩니다.
+
+image:nfs-tls-v3-handshake.png["caption=\"NFS over TLS 핸드셰이크 시퀀스 다이어그램\", alt=\"클라이언트와 ONTAP NFS 서버 간의 NFS over TLS 핸드셰이크 흐름을 보여주는 시퀀스 다이어그램.\""]
+
+NFSv4.x는 보조 프로토콜을 사용하지 않으므로 모든 NFSv4.x RPC는 TLS 핸드셰이크 후에 암호화됩니다.
+
+image:nfs-tls-v4-handshake.png["caption=\"NFSv4.1 over TLS 핸드셰이크 시퀀스 다이어그램\", alt=\"클라이언트와 ONTAP NFS 서버 간의 NFSv4.1 over TLS 핸드셰이크 흐름을 보여주는 시퀀스 다이어그램.\""]
+
+ONTAP는 현재 LIF를 호스팅하는 노드의 NFS 서버에서 TLS를 종료합니다. 전송 계층 위에서 NFS 서버는 TLS를 사용하지 않는 NFS 연결과 동일하게 RPC를 처리합니다.
+
+
+
+[[ha-takeover-behavior]]
+== HA 테이크오버 동작
+
+기존 NFS-over-TLS 세션은 HA 테이크오버 또는 예기치 않은 노드 패닉 발생 시 유지되지 않습니다. TLS는 TCP 기반의 세션 수준 전송 프로토콜입니다. 노드와의 TCP 연결이 끊어지면 TLS 세션도 함께 끊어집니다.
+
+인수 후 클라이언트는 다시 연결하여 새로운 TLS 1.3 핸드셰이크를 완료합니다. 파트너 노드는 구성 레코드가 클러스터 전체에 복제되므로 동일한 복제된 TLS 구성(인증서 바인딩, 호스트 인증 설정 및 SAN 유효성 검사 설정)을 사용합니다.
+
+TLS 세션 티켓과 사전 공유 키(PSK)는 노드 로컬에 저장되며 파트너에게 전송되지 않습니다. 서버 인계 시 전체 TLS 핸드셰이크가 수행되면서 재연결 요청이 폭증할 수 있습니다.
+
+
+
+[[metrocluster-and-svm-dr-behavior]]
+== MetroCluster 및 SVM-DR 동작
+
+TLS 인터페이스 인증서와 구성은 표준 SVM-DR 및 MetroCluster SVM 수준 복제 경로를 통해 SVM과 복제됩니다. ID 유지 스위치오버 후 대상 SVM은 동일한 LIF별 TLS 구성을 유지합니다.
+
+ `-allow-nfs-tls-only` 엑스포트 정책 규칙의 필드는 표준 엑스포트 정책 복제 경로를 통해 엑스포트 정책 규칙의 나머지 부분과 함께 복제됩니다. SVM-DR에서는 정책이 SVM과 함께 복제될 때 규칙도 정책과 함께 복제됩니다.

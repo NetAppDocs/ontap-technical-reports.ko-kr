@@ -73,7 +73,7 @@ NetApplink:ransomware-bluexp-protection.html["NetApp 랜섬웨어 보호"] 단�
 데이터에 대한 무단 액세스를 보호하기 위한 기본 내장 ONTAP 솔루션에는 link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html["다중 관리자 인증(MAV)"^]볼륨 삭제, 추가 관리 사용자 생성 또는 스냅샷 삭제와 같은 작업을 적어도 두 번째 지정된 관리자로부터 승인을 받은 후에만 수행할 수 있는 강력한 기능이 있습니다. 따라서 손상되거나 악의적이거나 경험이 부족한 관리자가 원치 않는 변경 또는 데이터 삭제를 방지할 수 있습니다. 스냅샷을 삭제하기 전에 지정된 관리자 승인자를 원하는 수만큼 구성할 수 있습니다.
 
 
-NOTE: NetApp ONTAP는 https://www.netapp.com/pdf.html?item=/media/17055-tr4647pdf.pdf["다중 요소 인증(MFA)"^] System Manager와 SSH CLI 인증의 웹 기반 요구사항을 해결합니다.
+NOTE: NetApp ONTAP는 System Manager의 웹 기반 https://www.netapp.com/pdf.html?item=/media/17055-tr4647.pdf["다중 요소 인증(MFA)"^] 및 SSH CLI 인증 요구 사항을 충족합니다.
 
 NetApp의 랜섬웨어 방지 기능은 끊임없이 변화하는 위협 환경에서 안심할 수 있도록 제공합니다. 이 포괄적인 접근 방식은 현재의 랜섬웨어 변종을 방어할 뿐만 아니라 새로운 위협에 대응하여 데이터 인프라에 장기적인 보안을 제공합니다.
 

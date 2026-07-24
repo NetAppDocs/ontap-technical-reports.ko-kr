@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: nfs-tls/nfs-tls-overview.html 
+keywords: nfs, tls, encryption, ontap, rfc9289, in-transit, prerequisites, requirements 
+summary: ONTAP 9.19.1은 TLS를 통한 네이티브 NFS를 도입하여 Kerberos 또는 IPsec 없이 RFC 9289에 따라 NFS RPC 트래픽의 전송 중 암호화를 지원합니다. 
+---
+= TLS를 통한 NFS 개요
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:toc-position: content
+
+
+[role="lead"]
+ONTAP 9.19.1에서는 NFS 트래픽 암호화를 위한 오랫동안 기다려온 '간편한 버튼'인 NFS over TLS가 도입되었습니다.
+
+이 기능이 도입되기 전에는 NFS 페이로드 전송 중에 암호화하는 데 IPsec 또는 Kerberos만 사용할 수 있었습니다. 두 방법 모두 효과적이었지만 구성이 번거롭고 성능 저하가 심각할 수 있었습니다. 또한 두 방법 모두 NFS 전용 RFC에 정의되지 않은 '부가적인' 솔루션이었습니다. link:https://www.rfc-editor.org/rfc/rfc9289.html["RFC 9289"], "원격 프로시저 호출 암호화를 기본값으로 전환"이라는 제목의 RFC가 이러한 상황을 바꾸었습니다. 이제 NFSv3 및 NFSv4.x는 TLS 1.3을 사용하여 NFS RPC 트래픽을 전송 중에 암호화할 수 있습니다. Kerberos가 필요하지 않습니다. IPsec도 필요하지 않습니다.
+
+
+
+[[prerequisites]]
+== 필수 구성 요소
+
+ONTAP NFS over TLS를 사용하려면 다음 요구 사항을 충족해야 합니다.
+
+* ...ONTAP 9.19.1을 실행 중이어야 합니다
++
+** ONTAP 클라우드 개인 설정은 현재 지원되지 않습니다.
+
+
+* ...NFS 라이선스를 보유하고 있습니다
+* ... link:https://imt.netapp.com["NetApp 상호 운용성 매트릭스"]에서 NFS 클라이언트를 찾았습니다
+
+
+
+
+[[what-it-doesnt-do]]
+== 이 제품이 하지 않는 것
+
+TLS를 통한 NFS는 전송 계층을 보호할 뿐, NFS의 사용자 인증 방식을 변경하지는 않습니다.
+
+*인증서 기반 사용자 인증.* TLS를 통한 NFS는 *새로운 사용자 인증 메커니즘을 제공하지 않습니다*. 사용자 인증을 위해서는 여전히 `auth_sys` 또는 `krb5`이 필요합니다.  `krb5i` 및 `krb5p`를 계속 사용할 수 있지만, TLS를 사용하면 이러한 방식의 무결성 및 개인 정보 보호 기능이 불필요해지며 성능 저하가 발생할 수 있습니다.

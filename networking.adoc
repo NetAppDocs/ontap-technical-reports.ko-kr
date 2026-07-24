@@ -21,5 +21,24 @@ ONTAP는 가장 까다로운 스케일 아웃 애플리케이션을 충족할 �
 이러한 기술 보고서는 제품 설명서에 대해 자세히 link:https://docs.netapp.com/us-en/ontap/network-management/index.html["ONTAP 네트워크 관리"^]설명합니다.
 
 ====
+
+
+[[routing]]
+== 라우팅
+
 link:https://www.netapp.com/pdf.html?item=/media/79703-TR-4949.pdf["TR-4949: 데이터 센터에서 ONTAP를 사용하는 BGP/VIP"^]
 ONTAP에서 기본적인 BGP 구성을 빠르게 구축하는 방법을 알아보십시오.
+
+
+
+[[name-services]]
+== 네임 서비스
+
+link:https://www.netapp.com/pdf.html?item=/media/19370-tr-4523.pdf["TR-4523: ONTAP에서 DNS 로드 밸런싱"^]
+ONTAP의 DNS, 다양한 구성 방법 및 권장 방법을 포함하여 DNS 로드 밸런싱 방법론과 함께 사용하도록 ONTAP를 구성하는 방법에 대해 알아봅니다.
+
+link:https://www.netapp.com/pdf.html?item=/media/16328-tr-4668.pdf["TR-4668: 서비스 모범 사례 가이드를 이름하십시오"^]
+ONTAP에서 CIFS/SMB 및 NFS와 같은 NAS(Network-Attached Storage) 솔루션을 구축할 때 권장되는 방법, 제한 및 고려 사항에 대해 알아보십시오.
+
+link:https://www.netapp.com/pdf.html?item=/media/19423-tr-4835.pdf["TR-4835: ONTAP 멀티 프로토콜 NAS ID 관리에서 LDAP를 구성하는 방법"^]
+멀티 프로토콜 NAS를 위해 ONTAP에서 LDAP(Lightweight Directory Access Protocol) ID 관리를 구성하는 방법에 대해 알아봅니다.

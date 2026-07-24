@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: nfs-tls/nfs-tls-monitor.html 
+keywords: nfs, tls, monitor, counters, ems, events, statistics, observability 
+summary: TLS를 통한 NFS는 nfs_tls 객체에 대한 카운터 관리자 카운터와 연결 상태 및 강제 동작을 추적하기 위한 4개의 EMS 이벤트를 노출합니다. 
+---
+= TLS를 통한 NFS 모니터링
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:toc-position: content
+
+
+[role="lead"]
+TLS를 통한 NFS는  `nfs_tls` 객체에 대한 카운터 관리자 카운터와 연결 상태 및 강제 동작을 추적하는 데 사용할 수 있는 4개의 EMS 이벤트를 노출합니다.
+
+
+
+[[counter-manager-counters]]
+== 카운터 매니저 카운터
+
+모든 NFS-over-TLS 카운터 관리자 카운터는 관리자 범위 객체에 있습니다 `nfs_tls`. 다음을 사용하여 확인하십시오 `statistics show -object nfs_tls`.  `-counter <name>`를 사용하여 단일 카운터로 필터링하거나 `-instance`를 사용하여 특정 SVM 또는 노드 행으로 범위를 지정하십시오.
+
+*식별자/레이블 카운터(문자열):*
+
+* `nfs_tls:instance_name`--행의 인스턴스 이름(구성 요소 SVM 이름)입니다.
+* `nfs_tls:instance_uuid`--행에 대한 인스턴스 UUID(구성 요소 SVM 식별자).
+* `nfs_tls:vserver_id`-- 집계된 행에 대한 SVM 식별자 레이블입니다.
+* `nfs_tls:vserver_name`-- 집계된 행에 대한 SVM 이름 레이블입니다.
+* `nfs_tls:node_name`-- 집계된 행에 대한 노드 이름 레이블입니다.
+
+
+*연결 볼륨 카운터(비율):*
+
+* `nfs_tls:tls_total_connection_requests`--처리된 총 NFS-over-TLS 연결 요청 수(성공 + 실패).
+* `nfs_tls:tls_connection_success`--성공적인 NFS-over-TLS 연결.
+* `nfs_tls:tls_disabled_connection_failures`--SVM에서 TLS를 통한 NFS가 비활성화되어 있어 연결이 거부되었습니다.
+* `nfs_tls:tls_connection_handshake_failures`--TLS 핸드셰이크 중에 실패한 연결입니다.
+* `nfs_tls:tls_configuration_not_found`--SVM/LIF 쌍에 대한 TLS 구성이 없으므로 연결 시도가 거부되었습니다.
+* `nfs_tls:tls_connection_mismatch`--메모리 내 연결 식별자가 핸드셰이크 완료 중에 관찰된 연결과 일치하지 않아 실패한 연결입니다.
+
+
+*지연 시간 카운터(평균):*
+
+* `nfs_tls:tls_handshake_average_latency`--TLS 핸드셰이크 평균 지연 시간(마이크로초). 기본 카운터: `tls_connection_success`.
+
+
+
+
+[[event-management-system-ems-messages]]
+== 이벤트 관리 시스템(EMS) 메시지
+
+NFS 서버는 NFS-over-TLS 데이터 경로에서 고객에게 표시되는 4개의 EMS 이벤트를 발생시킵니다. 다음 명령으로 확인할 수 있습니다. `event log show`
+
+`Nblade.TLSConfigError`:: 심각도 `ERR`, 10분 간격 속도 제한. 클라이언트가 TLS 구성이 없는 SVM/LIF에서 TLS를 통한 NFS를 시도할 때 트리거됩니다. 로그 필드: 클라이언트 IP 주소, SVM 이름, LIF IP 주소. 해결하려면 `vserver nfs tls interface enable`으로 구성을 활성화하십시오.
+`Nblade.TLSHandshakeFailed`:: 심각도 `ERR`, 10분 간격으로 전송 속도 제한. 클라이언트와 서버 간 TLS 핸드셰이크 실패 시 발생합니다. 로그 필드: SVM 이름, LIF IP 주소, 클라이언트(원격) IP 주소, 서버 인증서 UUID. 해결하려면 LIF에서 TLS 구성을 확인하고 네트워크 상태를 점검하십시오. 문제가 지속되면 NetApp 지원팀에 문의하십시오.
+`Nblade.NfsTlsDisabled`:: 심각도 `ALERT`, 24시간 동안 속도 제한됨. 클라이언트가 해당 기능이 비활성화된 SVM에서 TLS를 통한 NFS를 시도할 때 발생합니다. 로그 필드: SVM 이름.
+`Nblade.nfsTLSAccessErr`:: 심각도 `ERR`. 내보내기 정책 규칙에 따라 일치하는 클라이언트가  `-allow-nfs-tls-only true` TLS 없이 NFS 경로를 마운트하거나 액세스하려고 할 때 트리거됩니다. 이 이벤트를 사용하여 TLS를 사용하지 않는 클라이언트가 의도한 대로 차단되는지 확인하십시오.
+

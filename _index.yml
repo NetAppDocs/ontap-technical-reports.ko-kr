@@ -57,6 +57,8 @@ indexpage:
       url: nas.html
     - title: ONTAP에서 NFS Kerberos
       url: nas.html
+    - title: TLS를 통한 NFS
+      url: nfs-tls/
     - title: 추가 NAS 기술 보고서
       url: nas.html
   - title: 산

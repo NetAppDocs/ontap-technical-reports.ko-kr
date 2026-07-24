@@ -1,0 +1,33 @@
+---
+permalink: smb.html 
+sidebar: sidebar 
+keywords: Technical Reports, TR, NetApp TR, ONTAP TR, ONTAP, ONTAP 9, NAS, best practices, best-practices 
+summary: 이 기술 보고서는 ONTAP의 SMB/CIFS에 대한 개요와 권장 사례를 제공합니다. 
+---
+= ONTAP SMB 기술 보고서
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp NAS 솔루션은 데이터 관리를 간소화하고 비용을 최적화하면서 성장에 발맞춰 나갈 수 있도록 지원합니다.
+
+
+
+[[smb]]
+== 중소기업
+
+link:https://www.netapp.com/pdf.html?item=/media/17136-tr4740.pdf["TR-4740: SMB 3.0 멀티채널"^]
+Microsoft는 SMB1과 SMB2의 성능 및 안정성 한계를 해결함으로써 SMB3 프로토콜의 개선을 목표로 SMB 3.0 프로토콜에 멀티채널을 도입했습니다. ONTAP의 기능, 권장 사례 및 성능 테스트 결과를 비롯한 멀티채널 기능에 대해 알아보십시오.
+
+
+
+[[multiprotocol]]
+== 멀티 프로토콜
+
+link:https://www.netapp.com/pdf.html?item=/media/27436-tr-4887.pdf["TR-4887: ONTAP의 다중 프로토콜 NAS 개요 및 모범 사례"^]
+ONTAP에서 멀티프로토콜 NAS 액세스가 작동하는 방식과 멀티프로토콜 환경에 대한 권장 사례에 대해 알아보십시오.
