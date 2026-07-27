@@ -13,9 +13,9 @@ summary: NetApp AFX에 대해 자세히 알아보려면 다음 자료를 참조�
 [role="lead"]
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
-* Hardware Universelink:https://hwu.netapp.com/["https://hwu.netapp.com/"^]
-* NetApp AFX 제품 페이지 https://www.netapp.com/afx/[]
-* NetApp AFX: 확장 가능하고 안전한 AI 데이터 인프라 link:https://www.netapp.com/blog/afx-scalable-secure-ai-data-infrastructure/["https://www.netapp.com/blog/afx-scalable-secure-ai-data-infrastructure/"^]
-* NFSv3와 NFSv4.x 중 어떤 것을 선택해야 할까요? 이제 선택이 점점 명확해지고 있습니다… link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Deciding-between-NFSv3-or-NFSv4-x-The-choice-is-getting-clearer["https://community.netapp.com/t5/Tech-ONTAP-Blogs/Deciding-between-NFSv3-or-NFSv4-x-The-choice-is-getting-clearer"^]
-* NetApp AFX 데이터 시트 link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf"^]
+* link:https://hwu.netapp.com/["Hardware Universe"]
+* link:https://www.netapp.com/afx/["AFX 제품 페이지"]
+* link:https://www.netapp.com/blog/afx-scalable-secure-ai-data-infrastructure/["AI 기반 기업 구축: 인프라가 중요한 이유"]
+* link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Deciding-between-NFSv3-or-NFSv4-x-The-choice-is-getting-clearer/ba-p/465963["블로그: NFSv3와 NFSv4.X 중 어떤 것을 선택해야 할까요?"]
+* link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 데이터시트"]
 
