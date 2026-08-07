@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: nfs-tls/nfs-tls-reference.html 
 keywords: nfs, tls, interoperability, svm-dr, metrocluster, snapmirror, limits, connection limit, enforcement, recommendations 
-summary: TLS를 통한 NFS는 표준 ONTAP 내보내기 정책 제어와 함께 구성되며 SVM-DR 및 MetroCluster를 통해 복제됩니다. 이 페이지에서는 연결 제한, 적용 동작 및 운영 권장 사항에 대해서도 다룹니다. 
+summary: TLS를 통한 NFS는 표준 ONTAP 내보내기 정책 제어와 함께 작동하며 SVM-DR 및 MetroCluster를 통해 복제됩니다. 이 페이지에서는 연결 제한, 적용 동작 및 운영 권장 사항에 대해서도 다룹니다. 
 ---
 = 상호 운용성 및 한계
 :toc: macro

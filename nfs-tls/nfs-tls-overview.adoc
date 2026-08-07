@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: nfs-tls/nfs-tls-overview.html 
 keywords: nfs, tls, encryption, ontap, rfc9289, in-transit, prerequisites, requirements 
-summary: ONTAP 9.19.1은 TLS를 통한 네이티브 NFS를 도입하여 Kerberos 또는 IPsec 없이 RFC 9289에 따라 NFS RPC 트래픽의 전송 중 암호화를 지원합니다. 
+summary: ONTAP 9.19.1은 TLS를 통한 네이티브 NFS를 도입하여 Kerberos 또는 IPsec 없이 RFC 9289에 따라 NFS의 전송 중 암호화를 지원합니다. 
 ---
 = TLS를 통한 NFS 개요
 :toc: macro

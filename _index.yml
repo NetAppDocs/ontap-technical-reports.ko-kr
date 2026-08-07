@@ -1,11 +1,11 @@
 ---
 indexpage:
-  title: NetApp 기술 보고서
-  summary: NetApp 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
-    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제공합니다.
+  title: ONTAP 기술 보고서
+  summary: ONTAP 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
+    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제시합니다.
   keywords: ONTAP 9, ONTAP, Technical Reports, TR
-  lead: NetApp 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
-    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제공합니다.
+  lead: ONTAP 기술 보고서는 다양한 생태계 또는 프로토콜 환경에서 배포를 계획하고 최적화하는 데 필요한 추가적인 맥락 정보를 제공합니다.
+    일부 ONTAP 기술 보고서는 ONTAP 기능 및 역량에 대한 아키텍처적 맥락과 권장 사례를 제시합니다.
   tiles:
   - title: 제공합니다
     links:
@@ -58,7 +58,7 @@ indexpage:
     - title: ONTAP에서 NFS Kerberos
       url: nas.html
     - title: TLS를 통한 NFS
-      url: nfs-tls/
+      url: "/nfs-tls/nfs-tls-overview.html"
     - title: 추가 NAS 기술 보고서
       url: nas.html
   - title: 산
