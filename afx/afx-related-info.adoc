@@ -14,8 +14,17 @@ summary: NetApp AFX에 대해 자세히 알아보려면 다음 자료를 참조�
 이 문서에 설명된 정보에 대해 자세히 알아보려면 다음 문서 및/또는 웹 사이트를 검토하십시오.
 
 * link:https://hwu.netapp.com/["Hardware Universe"]
+* link:https://docs.netapp.com/us-en/ontap-afx/index.html["AFX 문서"]
+* link:https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9191.html["AFX 스토리지 시스템용 ONTAP 9.19.1의 새로운 기능"]
 * link:https://www.netapp.com/afx/["AFX 제품 페이지"]
 * link:https://www.netapp.com/blog/afx-scalable-secure-ai-data-infrastructure/["AI 기반 기업 구축: 인프라가 중요한 이유"]
 * link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Deciding-between-NFSv3-or-NFSv4-x-The-choice-is-getting-clearer/ba-p/465963["블로그: NFSv3와 NFSv4.X 중 어떤 것을 선택해야 할까요?"]
 * link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 데이터시트"]
 
+
+[cols="1,1"]
+|===
+
+
+| link:afx-limits.html["이전"] |  
+|===

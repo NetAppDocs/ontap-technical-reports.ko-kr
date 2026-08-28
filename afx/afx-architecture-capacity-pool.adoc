@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: afx/afx-architecture-capacity-pool.html 
+keywords: netapp afx, single capacity pool, storage availability zone, aggregates, capacity 
+summary: NetApp AFX 스토리지 가용성 영역이 물리적 애그리게이트를 단일 클러스터 전체 용량 풀로 대체하는 방법을 알아보십시오. 
+---
+= 단일 용량 풀
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx/
+
+
+[role="lead"]
+NetApp AFX는 노드별 물리적 애그리게이트를 클러스터 전체에서 사용할 수 있는 단일 스토리지 가용성 영역으로 대체합니다.
+
+
+
+[[no-more-physical-aggregates]]
+== 더 이상 물리적 애그리게이트가 없습니다
+
+Unified ONTAP은 디스크를 RAID 그룹으로 모은 다음, 이를 애그리게이트라고 하는 용량 구조로 결합합니다. 이 애그리게이트는 스토리지에 물리적 용량을 제공하는 방식이며, 최종 사용자에게 데이터를 제공하기 위한 볼륨 생성에 사용 가능한 공간의 경계를 나타냅니다. 모든 노드에는 최소 하나 이상의 애그리게이트가 할당되어야 하며, 각 애그리게이트의 현재 용량 제한은 800TB입니다. 이 제한에 도달하면 더 이상 추가 쓰기 작업을 위한 공간이 없습니다.
+
+물리적 애그리게이트는 용량 관리 어려움을 야기할 수 있습니다. 스토리지 관리자는 클러스터 노드 간 용량 균형을 유지하기 위해 볼륨을 수동으로 재배치해야 하는 경우가 있기 때문입니다. 이러한 어려움은 스케일아웃 볼륨 아키텍처(예: FlexGroup 볼륨)를 활용할 때 더욱 커질 수 있습니다. 또한 애그리게이트는 크기, 디스크 개수, 디스크 유형 등이 다양할 수 있으며, 이로 인해 노드 간 이동 시 성능 차이가 발생할 수 있습니다.
+
+*통합 ONTAP의 애그리게이트*
+
+image:image8.png["이미지"]
+
+NetApp AFX는 물리적 애그리게이트 개념을 가상화하고 ONTAP에서 관리하도록 하며, 새로운 스토리지 가용 영역을 통해 물리적 용량 관리를 노드 단위 방식에서 클러스터 단위로 전환합니다. 이 단일 용량 풀은 공간 관리에 대한 "보는 대로 얻는" 접근 방식을 제공합니다.
+
+*NetApp AFX 스토리지 가용 영역*
+
+image:image9.png["이미지"]
+
+
+
+[[data-written-to-any-and-all-disks-in-the-availability-zone]]
+== 가용 영역 내의 모든 디스크에 기록된 데이터
+
+NetApp AFX는 디스크 소유권 개념을 없애고 물리적 애그리게이트 구조를 ONTAP에서 관리하는 가상화된 접근 방식으로 전환하여, 클러스터에 구매한 용량을 클러스터에 연결된 모든 노드에서 사용할 수 있도록 합니다. AFX를 사용하면 노드:볼륨 소유권과 관계없이 모든 노드가 Storage Availability Zone의 모든 디스크에 쓰기 작업을 수행할 수 있습니다. 쓰기 작업은 여전히 NVRAM을 통한 경로를 거치므로 노드에는 여전히 볼륨 소유권 개념이 있지만, 해당 데이터는 사용 가능한 용량 내 어디에든 저장될 수 있습니다. 즉, 더 많은 디스크가 단일 워크로드에 참여할 수 있어 성능 향상 효과를 얻을 수 있습니다.
+
+*데이터가 Storage Availability Zone에 저장되는 방식*
+
+image:image11.png["이미지"]
+
+[cols="1,1"]
+|===
+
+
+| link:afx-architecture-node-disk.html["이전: 노드-디스크 관계"] | link:afx-architecture-nvram-ha.html["다음: 복제된 NVRAM 및 HA 페일오버 동작"] 
+|===

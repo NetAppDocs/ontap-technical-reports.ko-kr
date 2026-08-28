@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: afx/afx-architecture-root-volume.html 
+keywords: netapp afx, root volume, boot media, nvme, m.2, cluster database 
+summary: NetApp AFX가 루트 볼륨을 가상화하고 부팅 이미지 및 클러스터 데이터베이스를 온보드 부팅 미디어로 이동하는 방법을 알아보십시오. 
+---
+= 루트 볼륨 변경
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx/
+
+
+[role="lead"]
+NetApp AFX는 물리적 루트 애그리게이트를 제거하고 부팅 이미지 및 복제된 클러스터 데이터베이스에 온보드 NVMe 부팅 미디어를 사용합니다.
+
+
+
+[[root-volume-changes]]
+== 루트 볼륨 변경
+
+NetApp ONTAP에서 각 노드에는 루트 볼륨이 할당되며, 이 볼륨은 로그 파일, 부팅 이미지, 코어 파일, 클러스터 데이터베이스 등과 같은 시스템별 파일 및 기능에 사용됩니다.
+
+통합 ONTAP에서 이러한 루트 볼륨은 물리적 루트 애그리게이트에 저장되었습니다. 루트 애그리게이트가 사용하는 용량을 줄이기 위해 ADP(Advanced Disk Partitioning)를 통해 데이터 드라이브 파티션에 걸쳐 생성되었습니다.
+
+NetApp AFX는 물리적 애그리게이트를 방정식에서 제거하므로 루트 애그리게이트와 ADP를 사용할 필요가 없습니다. 루트 볼륨은 여전히 개념으로 존재하지만 이제 용량 풀의 가상화된 영역에 존재하며 추가 구성이 필요하지 않습니다. 또한 루트 볼륨 기능이 변경됩니다. 부팅 이미지와 복제된 클러스터 데이터베이스는 스토리지 스택에서 각 AFX 노드에 있는 온보드 부팅 미디어로 이동됩니다. 이제 스토리지 스택에 대한 액세스가 손실되더라도 노드는 계속 부팅하고 클러스터 자격을 유지할 수 있으므로 문제 해결의 복잡성이 완화됩니다.
+
+
+
+[[onboard-boot-media]]
+== 온보드 부팅 미디어
+
+NetApp AFX 노드는 약 3.8TB 크기의 NVMe 연결 M.2 장치인 온보드 부트 미디어를 활용합니다. 이러한 부트 장치에는 스토리지 인클로저와 별도로 부트 이미지 파일과 복제된 데이터베이스가 포함되어 있어 디스크 액세스 문제 발생 시 추가적인 이중화를 제공합니다. 부트 미디어에 장애가 발생하면 해당 노드는 HA 파트너에 의해 인계되고 부트 미디어를 교체할 수 있습니다. 교체가 완료되면 스토리지 관리자가 새로운 ONTAP 이미지를 장치에 로드하고 ONTAP는 자동으로 클러스터 데이터베이스를 재구축하여 전체 기능을 복원합니다.
+
+[cols="1,1"]
+|===
+
+
+| link:afx-architecture-cluster-scale.html["이전: 클러스터 크기"] | link:afx-performance.html["다음: 성능"] 
+|===

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: afx/afx-management.html 
-keywords: netapp afx, cli, system manager, rest api, management tools, gui 
-summary: NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로 상당한 차이가 있지만, 기능 세트와 ONTAP 관리 방식은 사실상 변경되지 않았습니다. 
+keywords: netapp afx, capacity management, storage availability zone, cli, system manager, rest api, management tools, gui 
+summary: NetApp AFX 스토리지 가용 영역이 용량 관리를 간소화하는 동시에 익숙한 ONTAP 관리 툴을 계속 사용할 수 있는 방법을 알아보십시오. 
 ---
 = 관리 툴
 :allow-uri-read: 
@@ -61,6 +61,33 @@ image:image41.png["이미지"]
 
 
 
+[[capacity-management]]
+== 용량 관리
+
+NetApp AFX 스토리지 가용 영역은 노드 및 애그리게이트 기반 접근 방식에서 클러스터 전체에서 사용할 수 있는 단일 용량 풀로 관리 엔드포인트를 줄여줍니다. 볼륨 크기가 증가하거나 감소함에 따라 ONTAP는 스토리지 가용 영역에서 용량을 자동으로 빌리고 반환합니다.
+
+이러한 이유로 스토리지 관리자는 더 이상 최대 24개 노드와 수백 개의 애그리게이트에 걸쳐 사용 가능한 여유 공간을 찾고 관리하는 데 신경 쓸 필요가 없습니다. 이제 용량을 관리하고 확인하는 곳은 단 한 곳뿐입니다.
+
+예를 들어, 통합 ONTAP의 CLI에서 클러스터의 전체 물리적 용량 정보를 보려면 "`aggregate show-space`"를 사용하면 모든 애그리게이트 항목이 출력됩니다. NetApp AFX에서는 "`cluster space show`"를 사용하면 단일 스토리지 가용 영역만 표시됩니다.
+
+*통합 ONTAP과 NetApp AFX에서 용량 관련 CLI 명령어를 나란히 비교*
+
+image:image19.png["이미지"]
+
+Unified ONTAP System Manager GUI에서는 티어를 사용하여 용량을 표시합니다. 실제로 GUI는 총계를 합산하여 클러스터의 전체 용량을 보여주려고 하지만, 전체 사용량은 여전히 애그리게이트 단위로 표시됩니다.
+
+*System Manager 용량 보기 – Unified ONTAP*
+
+image:image20.png["이미지"]
+
+NetApp AFX System Manager에서 클러스터 공간에 대한 보기 방식은 거의 동일하지만, 애그리게이트가 없으므로 추가 계산이 필요하지 않습니다. 표시되는 용량이 실제로 사용할 수 있는 용량입니다.
+
+*System Manager 용량 보기 – NetApp AFX*
+
+image:image21.png["이미지"]
+
+
+
 [[rest-apis]]
 == REST API
 
@@ -83,3 +110,10 @@ NetApp AFX는 현재 다음을 지원하지 않습니다.
 
 * NetApp ActiveIQ Unified Manager
 
+
+[cols="1,1"]
+|===
+
+
+| link:afx-performance-benchmarks.html["이전"] | link:afx-capabilities.html["다음: 기능"] 
+|===

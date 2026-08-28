@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: afx/afx-architecture-feature-support.html 
+keywords: netapp afx, ontap feature support, unsupported features, metrocluster, fabricpool, block protocols 
+summary: NetApp AFX에서 변경, 제거 또는 지원되지 않는 ONTAP 기능을 검토하십시오. 
+---
+= ONTAP 기능 지원 변경 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/afx/
+
+
+[role="lead"]
+NetApp AFX의 고성능 NAS 및 오브젝트 설계로 인해 일부 ONTAP 기능 및 인터페이스의 사용 가능 여부가 변경됩니다.
+
+
+
+[[ontap-features-that-have-been-removed-or-are-unsupported-with-afx]]
+[[ontap-features-that-have-been-removedare-unsupported-with-afx]]
+== AFX에서 제거되었거나 지원되지 않는 ONTAP 기능
+
+NetApp AFX는 고성능 NAS 및 객체 워크로드, 특히 AI 학습 및 추론 분야에 최적화되어 있습니다(단, 이에 국한되지는 않습니다). NetApp AFX를 설계하면서 ONTAP의 일부 기능을 비활성화하기로 결정했습니다.
+
+* 고성능 NAS 및 객체에 중점을 두기 때문에 블록 워크로드가 NetApp AFX 솔루션에서 제거되었습니다. FCP, iSCSI 또는 NVMe 데이터 프로토콜은 지원되지 않으며 블록 프로토콜을 추가할 계획도 없습니다.
+* 분산(Disaggregated)은 분리(de-aggregated)와 동의어로, (적어도 물리적 스토리지 관리 개념으로서의) 애그리게이트가 제거되었음을 의미합니다. 물리적 애그리게이트를 제거하면 ONTAP에서 용량 관리가 간소화될 뿐만 아니라 단일 용량 풀을 구성할 수 있는 메커니즘이 제공됩니다.
+* 애그리게이트가 제거됨에 따라 애그리게이트 관련 기능도 함께 제거됩니다. 예를 들어 Metrocluster는 사이트 장애 조치 기능을 위해 애그리게이트 수준 미러링을 활용합니다. 따라서 Metrocluster도 NetApp AFX에서 제거됩니다. 사이트 장애 조치 기능은 ONTAP 9.19.1GA에 포함된 새로운 SnapMirror Active-Sync for NAS 기능을 통해 제공됩니다.
+* FabricPool이라는 콜드 데이터 계층화 기능은 애그리게이트별로 제공되므로 현재 NetApp AFX에서는 사용할 수 없습니다.
+* NetApp AFX에서는 새로운 용량 아키텍처 덕분에 복사 기반 볼륨 이동이 더 이상 필요하지 않습니다. 자세한 내용은 link:afx-architecture-volume-moves.html#zero-copy-volume-moves["제로 카피 볼륨 이동"]을 참조하십시오.
+* 기능 제거는 CLI/GUI/REST API 변경을 의미하기도 하므로, 더 이상 지원되지 않는 기능에 대한 모든 명령이나 API 호출도 제거됩니다.
+* ZAPI는 현재 NetApp AFX에서 사용할 수 없습니다.
+* 가상화를 위한 NFS 복사 오프로드(FlexGroup 볼륨의 세분화된 데이터 분산 기능만 해당)
+
+
+[cols="1,1"]
+|===
+
+
+| link:afx-architecture-storage-efficiency.html["이전: 스토리지 효율성"] | link:afx-architecture-flexgroup.html["다음: FlexGroup 관리 개선 사항"] 
+|===

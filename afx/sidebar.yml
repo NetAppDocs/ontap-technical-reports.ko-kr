@@ -7,9 +7,35 @@ entries:
 - title: 새로운 소식
   url: "/afx/afx-whats-new.html"
 - title: 아키텍처
-  url: "/afx/afx-architecture.html"
+  entries:
+  - title: 개요
+    url: "/afx/afx-architecture.html"
+  - title: 노드-디스크 관계
+    url: "/afx/afx-architecture-node-disk.html"
+  - title: 단일 용량 풀
+    url: "/afx/afx-architecture-capacity-pool.html"
+  - title: 복제된 NVRAM 및 HA 페일오버 동작
+    url: "/afx/afx-architecture-nvram-ha.html"
+  - title: 독립적인 선형 척도
+    url: "/afx/afx-architecture-independent-scale.html"
+  - title: RAID 변경 사항
+    url: "/afx/afx-architecture-raid.html"
+  - title: 스토리지 효율성
+    url: "/afx/afx-architecture-storage-efficiency.html"
+  - title: ONTAP 기능 지원 변경 사항
+    url: "/afx/afx-architecture-feature-support.html"
+  - title: FlexGroup 관리 개선 사항
+    url: "/afx/afx-architecture-flexgroup.html"
+  - title: 볼륨 이동
+    url: "/afx/afx-architecture-volume-moves.html"
+  - title: 클러스터 규모
+    url: "/afx/afx-architecture-cluster-scale.html"
+  - title: 루트 볼륨 변경
+    url: "/afx/afx-architecture-root-volume.html"
 - title: 성능
   url: "/afx/afx-performance.html"
+- title: 성능 벤치마크 팁
+  url: "/afx/afx-performance-benchmarks.html"
 - title: 관리
   url: "/afx/afx-management.html"
 - title: 제공합니다

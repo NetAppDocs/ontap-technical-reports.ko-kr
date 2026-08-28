@@ -18,9 +18,15 @@ NetApp AFX는 성능과 확장성을 염두에 두고 설계되었으며, 특히
 [[per-node-performance]]
 == 노드별 성능
 
-각 NetApp AFX 스토리지 노드는 읽기 및 쓰기에 대해 특정 처리량을 제공합니다. 클러스터에 노드가 추가됨에 따라 성능이 선형적으로 증가하며, 이는 이 문서의 "노드 성능의 선형 확장" 섹션에서 설명합니다.
+각 NetApp AFX 스토리지 노드는 읽기 및 쓰기에 대해 특정 처리량을 제공합니다. 클러스터에 노드가 추가됨에 따라 link:afx-architecture-independent-scale.html#linear-scaling-of-node-performance["노드 성능의 선형 확장"]에서 설명한 대로 성능이 선형적으로 증가합니다.
 
-현재 노드 유형은 link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 1K"^]이며 아래와 같이 읽기 및 쓰기 처리량을 제공합니다. NetApp AFX에 새로운 하드웨어가 추가되면 이러한 제한 사항이 변경될 수 있습니다. 참고: 최대 성능은 아래 "벤치마크 결과" 섹션에 표시된 것처럼 여러 클라이언트가 여러 파일을 읽고 쓰는 환경에서 달성되었습니다.
+현재 노드 유형은 link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 1K"^]와 link:https://www.netapp.com/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFX 2K"^]이며, 읽기 및 쓰기 처리량은 대략 아래와 같습니다*. NetApp AFX에 새로운 하드웨어가 추가되면 이러한 제한 사항이 변경될 수 있습니다.
+
+* link:https://github.com/breuner/elbencho["ElBencho"^] 벤치마크 툴과 순차 읽기/쓰기를 사용하여 얻은 성능 수치입니다.
+
+
+
+NOTE: 아래 link:#benchmark-results["벤치마크 결과"] 섹션에 나와 있는 것처럼 여러 클라이언트가 여러 파일을 읽고 쓰는 환경에서 최대 성능을 달성했습니다.
 
 *노드당 성능 예상치*
 
@@ -29,6 +35,9 @@ NetApp AFX는 성능과 확장성을 염두에 두고 설계되었으며, 특히
 
 
 | AFX 1K | ~35GB/s | ~10GB/s 
+
+
+| AFX 2K | ~35GB/s | 약 17GB/s (+70% 증가) 
 |===
 
 NOTE: 최신 성능 예상치는 NetApp 영업팀에 문의하십시오.
@@ -60,17 +69,17 @@ NOTE: 최신 성능 예상치는 NetApp 영업팀에 문의하십시오.
 
 이러한 "성능 밀도" 개념을 통해 스토리지 관리자는 스토리지 환경을 과도하게 프로비저닝할 필요 없이 보유한 하드웨어를 최대한 활용할 수 있습니다.
 
-예를 들어, 통합 ONTAP 클러스터에서는 각 노드가 자체 디스크 세트를 가지므로 성능은 해당 노드가 소유한 디스크에만 집중됩니다. 또한 하나의 노드만 하나의 디스크 세트에 접근할 수 있기 때문에 사용 가능한 디스크를 완전히 활용하여 최대 성능을 달성하지 못할 수도 있습니다.
-
 *Unified ONTAP – 성능 분배 방식*
 
 image:image32.png["이미지"]
 
-NetApp AFX는 모든 디스크를 단일 스토리지 가용 영역으로 통합하여 모든 노드가 모든 디스크를 활용할 수 있도록 합니다. 또한 디스크와 노드가 분리되어 있으므로 동일한 성능을 얻기 위해 필요한 쉘프 수가 줄어듭니다. 이를 통해 성능이 집중되고 쉘프의 최대 성능 잠재력을 극대화할 수 있습니다.
+예를 들어, 통합 ONTAP 클러스터에서 각 노드는 자체 전용 디스크 세트를 갖습니다. 결과적으로 성능은 해당 노드가 소유한 디스크에만 집중됩니다. 하나의 노드만 하나의 디스크 세트에 접근할 수 있으므로 성능은 해당 노드가 직접 접근할 수 있는 디스크로 제한됩니다.
 
 *NetApp AFX – 성능 밀도*
 
 image:image33.png["이미지"]
+
+NetApp AFX는 사용 가능한 모든 디스크를 SAZ(Storage Availability Zone)라는 단일 용량 풀로 통합합니다. 결과적으로 모든 노드는 사용 가능한 모든 디스크를 읽기 및 쓰기 작업에 활용할 수 있습니다. 디스크와 노드가 분리되어 있으므로 통합 ONTAP 아키텍처에 비해 동일하거나 더 나은 처리량 성능을 얻기 위해 필요한 디스크 쉘프 수가 더 적습니다. NetApp AFX의 분산형 아키텍처는 디스크 쉘프의 성능 잠재력을 극대화합니다.
 
 
 
@@ -81,7 +90,7 @@ Unified ONTAP 노드는 노드당 최소 한 세트의 디스크가 필요하며
 
 NetApp AFX는 모든 디스크 셸프를 모든 노드에 제공합니다. 각 셸프에는 16개의 100GB RoCE 지원 인터페이스가 있는 모듈이 포함되어 있어 셸프당 허용되는 총 성능을 향상시킵니다. 따라서 여러 노드가 동일한 디스크 세트에 읽기/쓰기 작업을 수행하여 단일 셸프의 성능을 최대한 활용할 수 있습니다.
 
-ONTAP 9.19.1 버전 기준으로 노드 대 쉘프 포화 비율은 약 4:1입니다.
+ONTAP 9.19.1 기준으로 노드:쉘프 포화 비율은 최소 4:1이며, 8:3도 가능합니다.
 
 
 
@@ -91,8 +100,8 @@ ONTAP 9.19.1 버전 기준으로 노드 대 쉘프 포화 비율은 약 4:1입�
 다음 섹션에서는 아래 구성 매개변수를 사용하는 NetApp AFX 클러스터의 벤치마크 결과를 다룹니다.
 
 * 4개 노드, 4개 데이터 인터페이스
-* 2개의 쉘프(7.6TB 드라이브)
-* ONTAP 9.19.1
+* 쉘프 2개
+* ONTAP 9.19.1GA
 * NFSv4.2(pNFS, 세션 트렁킹)
 * FlexGroup 볼륨
 * link:https://github.com/breuner/elbencho["ElBencho"^] 벤치마크
@@ -103,6 +112,9 @@ ONTAP 9.19.1 버전 기준으로 노드 대 쉘프 포화 비율은 약 4:1입�
 
 
 위 구성은 4노드 클러스터에서 사용 가능한 최대 읽기 속도(~134GB/s)에 매우 근접했으며, 노드당 허용된 최대 쓰기 속도(40GB/s)에 정확히 도달했습니다.
+
+
+NOTE: link:afx-performance-benchmarks.html["성능 벤치마크 팁"] 섹션에서 이러한 결과를 재현하는 방법에 대한 지침을 확인하십시오.
 
 *NetApp AFX – ElBencho 읽기 성능, 4개 노드*
 
@@ -146,7 +158,8 @@ NFS 버전 3은 1995년 공식 출시 이후 수십 년 동안 NFS 애플리케�
 
 하지만 NFSv3에도 한계가 있습니다. 프로토콜의 무상태성은 성능 향상과 스토리지 장애 조치 시 중단 최소화에는 좋지만, 데이터 일관성 및 잠금 관리에는 적합하지 않습니다. NFS 서버는 잠금 상태를 추적하지 않기 때문에 장애 발생 시 NFS 서버가 잠금을 해제할 수도 있고 해제하지 않을 수도 있으며, NFS 클라이언트는 파일이 잠겨 있는지 여부를 알 수 없을 수 있습니다.
 
- Security for NFSv3 is also a bit lacking. The protocol requires multiple open firewall ports to function properly and numeric IDs are sent in plaintext over the wire. Furthermore, NFS does not have robust ACL support, and does not include native file and folder auditing. As a result of these limitations, NFSv4 was created in 2003 via link:https://datatracker.ietf.org/doc/html/rfc3530[RFC-3530^] (obsoleted in 2015 by link:https://datatracker.ietf.org/doc/html/rfc7530[RFC-7530^]).
+NFSv3의 보안 또한 다소 부족합니다. 이 프로토콜은 제대로 작동하기 위해 여러 개의 방화벽 포트를 열어야 하며, 숫자 ID는 평문으로 전송됩니다. 또한 NFS는 강력한 ACL을 지원하지 않고, 파일 및 폴더 감사 기능도 기본적으로 제공하지 않습니다. 이러한 한계로 인해 2003년에 link:https://datatracker.ietf.org/doc/html/rfc3530["RFC-3530"^]을 통해 NFSv4가 개발되었습니다(2015년에 link:https://datatracker.ietf.org/doc/html/rfc7530["RFC-7530"^]에 의해 폐기됨).
+
 NFSv4.x는 20년 이상 존재해 왔지만, 몇 가지 이유로 아직 널리 채택되지 못했습니다.
 
 * ID 관리의 복잡성: 많은 환경에서 NFSv4.x의 이름 문자열 및 Kerberos 보안 요구 사항을 제대로 활용하기 위한 네임 서비스 인프라가 구축되어 있지 않습니다.
@@ -212,6 +225,13 @@ AFX ONTAP 9.18.1의 변경 사항으로 이러한 유형의 워크로드에 대�
 
 저희 성능 엔지니어링 팀은 표준 AI 이미지, EDA 및 소프트웨어 빌드 벤치마크의 성능을 비교한 결과 이전 ONTAP 릴리스 대비 상당한 성능 향상을 발견했습니다.
 
-*NetApp AFX – ONTAP 9.18.1에서의 NFSv4.1 메타데이터 IO 성능*
+*NetApp AFX – NetApp AFX에서의 NFSv4.1 메타데이터 IO 성능*
 
 image:image37.png["이미지"]
+
+[cols="1,1"]
+|===
+
+
+| link:afx-architecture-root-volume.html["이전: 루트 볼륨 변경"] | link:afx-performance-benchmarks.html["다음: 성능 벤치마크 팁"] 
+|===

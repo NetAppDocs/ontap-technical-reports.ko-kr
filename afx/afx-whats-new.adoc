@@ -11,7 +11,7 @@ summary: 이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하�
 
 
 [role="lead"]
-이 섹션에서는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 출시될 때마다 업데이트될 예정입니다. 새로운 정보를 확인하려면 정기적으로 이 페이지를 방문해 주시고, 버전 릴리스 노트도 참조하시기 바랍니다.
+이 섹션에서는 NetApp AFX의 최신 업데이트 정보를 제공하며, 새로운 릴리스가 나올 때마다 업데이트될 예정입니다. 새로운 정보를 확인하려면 정기적으로 이 페이지를 방문해 주세요. 또한 link:https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9191.html["ONTAP 9.19.1 AFX 릴리스 노트"^]도 확인해 보십시오.
 
 
 
@@ -20,16 +20,16 @@ summary: 이 페이지는 NetApp AFX의 최신 업데이트 정보를 제공하�
 
 최신 릴리스:
 
-ONTAP 9.19.1RC1(2026년 5월 기준)
+ONTAP 9.19.1GA (2026년 8월 기준)
 
 NetApp AFX의 새로운 기능:
 
-* 전역 중복 제거
-* 동적 스토리지 효율성
-* 고급 미리 읽기
-* 32개 노드 지원
-* 32PB 지원
-* FlexGroup 볼륨당 512개의 구성 볼륨
+* link:afx-architecture-storage-efficiency.html#deduplication-domains["전역 중복 제거"] (참조: link:https://docs.netapp.com/us-en/ontap-afx/administer/additional-ontap-svm.html#global-deduplication["AFX SVM 관리"^])
+* link:https://docs.netapp.com/us-en/ontap-afx/release-notes/whats-new-9191.html["동적 스토리지 효율성"^]
+* link:afx-performance.html#aggressive-read-ahead["고급 미리 읽기"] (파일 간 순차 읽기; 관련 항목 참조 link:https://docs.netapp.com/us-en/ontap-afx/administer/additional-ontap-svm.html#cross-file-sequential-read["AFX SVM 관리"^])
+* link:afx-architecture-cluster-scale.html#cluster-scale-and-expansion["32개 노드 지원"] (참고 항목 link:afx-limits.html["최대값 및 제한값"])
+* link:afx-limits.html["32PB 지원"]
+* link:afx-limits.html["FlexGroup 볼륨당 512개의 구성 볼륨"]
 
 
 
@@ -41,5 +41,14 @@ NetApp AFX의 새로운 기능:
 | 버전 | 날짜 | 문서 버전 기록 
 
 
+| 버전 1.1 | 2026년 8월 | ONTAP 9.19.1GA에 맞춰 이 기술 보고서를 업데이트했습니다. 새로운 AFX 기능, 32노드 및 32PB 확장성, AFX 1K 및 AFX 2K 성능 및 하드웨어, 클러스터 스위치 및 쉘프 크기 조정, 업데이트된 플랫폼 제한 사항, 성능 벤치마크 팁 페이지, 그리고 제품 설명서 링크가 포함되어 있습니다. 
+
+
 | 버전 1.0 | 2026년 6월 | 초기 릴리스 
+|===
+[cols="1,1"]
+|===
+
+
+| link:afx-learn-about.html["이전"] | link:afx-architecture.html["다음: 아키텍처"] 
 |===
