@@ -59,6 +59,8 @@ indexpage:
       url: nas.html
     - title: TLS를 통한 NFS
       url: "/nfs-tls/nfs-tls-overview.html"
+    - title: 파일 수가 많은 NAS 워크로드
+      url: high-file-count-workloads/high-file-count-workloads-01-overview.html
     - title: 추가 NAS 기술 보고서
       url: nas.html
   - title: 산

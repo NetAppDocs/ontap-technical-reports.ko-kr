@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-06-maxdirsize-volume-types.html 
+keywords: ONTAP, NAS, maxdir-size, maxdirsize, FlexVol, FlexGroup, volume language, utf8mb4, volume options 
+summary: 볼륨 유형, 볼륨 옵션 및 볼륨 언어가 ONTAP maxdir-size 동작에 어떤 영향을 미치는지 이해하십시오. 
+---
+= 볼륨 고려 사항
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+`maxdir-size`은 디렉터리별 용량 제한이지만, 해당 디렉터리 주변의 볼륨도 중요합니다. 볼륨 유형, 볼륨 옵션 및 볼륨 언어는 디렉터리 파일의 크기 증가 속도와 용량 제한 관리 방식에 영향을 미칩니다.
+
+
+
+[[volume-type]]
+== 볼륨 유형
+
+`maxdir-size`은 FlexVol 및 FlexGroup 볼륨 모두의 모든 디렉토리에 적용됩니다. FlexGroup 디렉토리 엔트리 및 구성 요소 레이아웃은 디렉토리 파일이 얼마나 빨리 커질 수 있는지를 변경합니다.
+
+
+
+[[flexvol-volumes]]
+=== FlexVol 볼륨
+
+FlexVol은 하나의 파일 시스템과 하나의 공용 inode를 가지고 있습니다. `maxdir-size` 이는 모든 디렉터리에 독립적으로 적용됩니다. 단일 핫 디렉터리는 해당 볼륨의 소유권 내에서 처리되며, 클러스터에 추가 노드가 포함되어 있다고 해서 병렬 처리 성능이 향상되는 것은 아닙니다.
+
+
+
+[[flexgroup-volumes]]
+=== FlexGroup 볼륨
+
+FlexGroup은 여러 FlexVol 구성 요소로 지원되는 하나의 네임스페이스를 제공합니다. 이를 통해 집계된 파일 수와 용량 확장성이 향상되고 노드와 디스크 전체에 데이터가 분산되지만, 하나의 논리 디렉터리 제한 (`maxdir-size`)이 구성 요소 수만큼 증가하지는 않습니다.
+
+다음 그림은 디렉터리 파일이 하나의 구성 요소에 유지되는 반면 해당 디렉터리 이름으로 지정된 파일 객체는 다른 구성 요소에 존재할 수 있음을 보여줍니다.
+
+[link=../media/high-file-count-workloads/flexgroup-directory-placement.png]
+image::flexgroup-directory-placement.png[단일 구성 요소에 하나의 디렉토리 inode와 디렉토리 파일이 있는 FlexGroup 의 다이어그램,700,and remote links counting against maxdir-size]
+
+다음과 같은 차이점을 고려하십시오.
+
+* 디렉터리 항목은 원격 구성 요소의 파일을 가리킬 수 있으며 로컬 FlexVol 항목보다 더 큰 디스크 표현이 필요할 수 있습니다.
+* 따라서 동일한 표시 파일 이름이 FlexVol과 다른 속도로 디렉토리 파일 공간을 소비할 수 있습니다.
+* 파일 및 inode 용량은 구성 요소별로 유지되므로 분포 및 구성 요소 압력이 중요합니다.
+* `maxdir-size`은(는) 구성 요소에서 직접 수정되는 것이 아니라 FlexGroup 수준에서 수정됩니다.
+* FlexGroup 볼륨을 사용하여 여러 디렉토리에 애플리케이션을 샤딩하면 ONTAP에서 작업과 파일을 배포할 수 있는 기회가 더 많아집니다.
+
+
+결론적으로, FlexGroup의 동일한 `maxdir-size` 설정은 원격 디렉터리 항목이 더 많은 공간을 차지하기 때문에 FlexVol보다 이름을 적게 보유하는 경우가 많습니다. 이러한 차이의 크기는 데이터 세트 레이아웃과 원격 배치 정도에 따라 달라집니다.
+
+FlexGroup 볼륨의 원격 하드 링크는 원격에 저장된 항목의 비율에 비례하여 디렉터리당 수치를 증가시킵니다. 대규모의 평면형 디렉터리(원격 항목 약 85%)의 경우 최대 약 2배의 상한선을 고려하여 계획하십시오. 이렇게 하면 320MB 기본값 기준으로 실제 상한선이 약 200만~260만 개link:high-file-count-workloads-02-maxdirsize.html#estimating-the-number-of-names-per-directory-file["일반적인 이름"]로 낮아지지만, FlexVol에서는 약 430만 개까지 가능합니다. 디렉터리 구조가 넓거나 깊으면 비율과 원격 하드 링크로 인한 증가분이 낮아집니다.  `stat`, `ls -ld` 또는 XCP를 사용하여 대표 디렉터리를 기준으로 검증하십시오.
+
+
+
+[[volume-options]]
+== 볼륨 옵션
+
+다음은 대규모 디렉토리를 계획하거나 문제를 해결할 때 가장 자주 등장하는 볼륨 관련 필드입니다.
+
+|===
+| 필드 | 설정 가능 및 권한 | 목적 
+
+
+| `maxdir-size` | 예, 고급입니다. | 디렉터리당 더 많은 파일에 대해 디렉터리당 더 큰 파일 크기를 허용합니다. 
+
+
+| `is-dir-index-transfer-enabled` | 네, 관리자님 | 지원되는 복제 및 복원 이식성을 위해 디렉터리 인덱스를 공용 inode 공간으로 이동합니다. 
+
+
+| `has-dir-index-public` | 아니요, 고급 | 공용 디렉터리 인덱스 inode가 존재하는지 여부를 보고합니다. 
+
+
+| `has-optimized-sparse-directories` | 아니요, 고급 | 해당 볼륨에 최적화된 홀 펀칭 스파스 디렉터리가 포함되어 있는지 여부를 보고합니다. 
+
+
+| `language` | 제한된, 관리자 | 이름 해석을 제어합니다. 비ASCII 이름과 4바이트 UTF-8 (`utf8mb4`) 문자는 디렉터리당 더 적은 수의 이름을 저장할 수 있습니다. 자세한 내용은 <<volume-language>>을 참조하십시오. 
+
+
+| `analytics-state` | 네, 관리자님 | 파일 시스템 분석을 활성화합니다. 네임스페이스 스캔은 파일 수가 많은 볼륨에서 추가 작업을 수행할 수 있지만 변경하지는 않습니다 `maxdir-size`. 
+|===
+
+
+[[volume-language]]
+== 볼륨 언어
+
+볼륨  `-language` 설정은 NFS가 클라이언트 인코딩과 디스크에 저장된 유니코드 이름 간에 이름을 변환하는 방식을 제어합니다. 볼륨은 생성 시  `-language`를 설정하지 않으면 SVM 기본값을 상속합니다. ONTAP 기본값은  `C.UTF-8`입니다. ONTAP 9.5부터는  `utf8mb4`가 추가 바이트를 bag-of-bits에 저장하는 대신 4바이트 UTF-8 이름(이모지 및 기타 유니코드 보조 문자)을 저장합니다.
+
+언어 코드 자체는 디렉터리에 저장되는 ASCII 이름의 개수를 변경하지 않습니다. `C.UTF-8`, `en_US.UTF-8`, `de.UTF-8`, `ja.UTF-8`, and `utf8mb4`는 모두 동일한 문자에 대해 동일한 유니코드 디렉터리 패킹을 사용합니다. 개수를 변경하는 것은 해당 언어가 저장하려는 이름의 문자입니다. 비 ASCII 텍스트는 더 넓은 형식으로 저장되고,  `utf8mb4`볼륨의 4바이트 보조 문자는 더욱 넓은 형식으로 저장됩니다. 볼륨 인코딩으로 이름을 표현할 수 없는 NFSv3 클라이언트는 ONTAP이 8자리의 NFS 대체 이름을 저장하게 할 수도 있으며, 이로 인해 디렉터리 공간이 더욱 많이 사용됩니다.
+
+다음 예시는 32자 길이의 이름을 320MB `maxdir-size` 크기로 사용하며 `.` 및 `..` 항목을 포함합니다. 이는 계획된 수치이며, 보장된 수치는 아닙니다.
+
+[cols="2,3,3,1,2,2"]
+|===
+| 볼륨 언어 | 일반적인 사용 | 예시: 32자 이름 스타일 | 4KiB 블록당 이름 수 | 하나의 디렉토리에 있는 이름 320MB | 기본 ASCII와 비교 
+
+
+| `C.UTF-8` (ONTAP 기본값) | UTF-8을 사용하는 POSIX C 로케일입니다. 새 SVM 및 볼륨은  `-language`이 설정되지 않은 경우 이 설정을 상속합니다. | ASCII 등 `project-alpha-run0142-input1.dat` | 53 | 4,341,758 | 기준선 
+
+
+| `en_US.UTF-8` | 미국 영어 UTF-8 | 동일한 ASCII 또는 기본 라틴어 이름 | 53 | 4,341,758 | ASCII 이름의 경우 기본값 대비 축소 없음 
+
+
+| `de.UTF-8` | 움라우트((`ä`, `ö`, `ü`, `ß`) 등을 포함한 독일어 UTF-8 | 악센트가 있는 라틴어(예: `Geschäftsbericht-2026-Q3-v03.docx` 등) | 26 | 2,129,918 | 기본 ASCII 개수의 약 49% 
+
+
+| `ja.UTF-8` | 일본어 UTF-8 (기본 다국어 평면의 CJK) | 길이가 같은 32자 일본어 이름 | 26 | 2,129,918 | 기본 ASCII 개수의 약 49% 
+
+
+| `utf8mb4` | 4바이트 UTF-8(ONTAP 9.5 이상). 이름에 이모티콘이나 기타 특수 문자가 포함된 경우에 사용합니다. | 일반적인 독일어나 일본어 텍스트는 위의 UTF-8 행과 같은 형태로 압축됩니다. 이모지 등 추가 문자를 포함하는 32자 이름은 더 넓은 범위에 걸쳐 압축됩니다. | 22 | 1,802,238 | 보조 문자가 있을 경우 기본 ASCII 값의 약 41%입니다. 
+|===
+이름이 기본 ASCII로 유지되는 경우, `C.UTF-8`에서 `en_US.UTF-8`, `de.UTF-8`, `ja.UTF-8` 또는 `utf8mb4`로 전환해도 디렉터리별 개수는 줄어들지 않습니다. NFS와 SMB를 혼합하여 액세스하는 경우, 이러한 수치에 NFS 대체 이름이나 SMB 8.3 별칭이 추가될 수 있습니다.
+
+테이블 뒤쪽의 포장 규칙은 link:high-file-count-workloads-02-maxdirsize.html#estimating-the-number-of-names-per-directory-file["디렉터리 파일당 이름 수 추정"]을 참조하십시오.
+
+[cols="<,>"]
+|===
+
+
+| link:high-file-count-workloads-05-maxdirsize-impact.html["← 이전: maxdir-size의 영향"] | link:high-file-count-workloads-07-maxdirsize-features-ems.html["다음: maxdir-size의 기능, EMS 및 모니터링 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:https://docs.netapp.com/us-en/ontap/smb-admin/multi-byte-file-directory-qtree-names-concept.html["SMB 멀티바이트 파일, 디렉터리 및 qtree 이름"^]
+* link:https://docs.netapp.com/us-en/ontap/flexgroup/index.html["FlexGroup 볼륨 관리"^]
+

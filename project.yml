@@ -27,6 +27,8 @@ sidebar:
     - title: 개요
       url: "/nfs.html"
     - section: nfs-tls
+  - title: 파일 수가 많은 NAS 워크로드
+    section: high-file-count-workloads
   - title: 산
     url: "/san.html"
   - title: 보안

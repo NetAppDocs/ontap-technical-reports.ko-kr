@@ -1,0 +1,170 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-09-maxfiles.html 
+keywords: ONTAP, NAS, maxfiles, files, inode, files-used, public inode, private inode 
+summary: ONTAP inode, 공용 및 개인 inode 유형, ACL inode 및 명명된 스트림에 대해 알아봅니다. 
+---
+= ONTAP inode 유형
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+ONTAP는 FlexVol 및 FlexGroup 볼륨에 있는 파일 시스템 오브젝트를 나타내기 위해 공용 inode를 사용합니다. 각 볼륨에는 정의된 최대 사용량 제한(참조 link:high-file-count-workloads-10-maxfiles-limits.html["Maxfiles 및 ONTAP inode 정보"])이 있으며, 파일 시스템에서 공용 inode는 해당 제한에 포함됩니다.
+
+
+
+[[what-is-an-inode]]
+== inode란 무엇입니까?
+
+일반적으로 inode는 오브젝트에 대한 파일 시스템 레코드입니다. 유형, 소유권, 타임스탬프, 권한 등의 ID 및 메타데이터를 저장하며 오브젝트의 데이터를 가리킵니다. 오브젝트의 이름은 inode 자체가 아니라 디렉터리에 저장됩니다.
+
+ONTAP에서 WAFL은 각 FlexVol 또는 FlexGroup 구성요소의 숨겨진 볼륨 수준 inode 파일에 해당 레코드를 저장합니다. 공용 inode는 일반적으로 maxfiles라고 하는 볼륨 `files` 설정에 포함됩니다. 공용 오브젝트를 생성하면 공용 inode 사용량이 증가하지만, 프라이빗 inode는 그렇지 않습니다. inode 파일의 용량 및 증가에 대해서는 link:high-file-count-workloads-08-maxfiles-high-file-counts.html#capacity-impact["용량 영향"]에 설명되어 있습니다.
+
+다음 그림은 공용 inode 파일이  `files-used`,  `inodefile-public-capacity`,  `files` 상한 및 볼륨에서 소비된 용량과 어떤 관련이 있는지 보여줍니다.
+
+[link=../media/high-file-count-workloads/ontap-inode-file.png]
+image::ontap-inode-file.png[ONTAP 볼륨 inode 파일의 다이어그램으로, inodefile-public-capacity 내부에 files-used가 중첩되어 있는 구조를 보여줍니다.,400,and files-maximum-possible]
+
+
+
+[[types-of-inodes-in-ontap]]
+== ONTAP의 inode 유형
+
+inode의 *유형*은 해당 inode가 나타내는 오브젝트의 종류를 설명합니다. ONTAP은 또한 각 inode를 *공용* 또는 *개인* inode 공간에 배치합니다. 공용 inode는 maxfiles 수에 포함되지만, 개인 inode는 포함되지 않습니다. 디렉터리 인덱스 inode는 볼륨 구성에 따라 두 공간 중 하나에 있을 수 있습니다.
+
+
+
+[[public-inodes]]
+=== 공용 이노드
+
+공용 inode는 볼륨의 공용 inode 파일에서 할당되며 `files` 및 `files-used`에 포함됩니다. 여기에는 클라이언트에서 볼 수 있는 오브젝트와 디렉터리 항목으로 나타나지 않는 공용 메타데이터 오브젝트가 포함됩니다.
+
+다음 표는 ONTAP에 있는 공용 inode 목록과 해당 inode에 대한 추가 정보를 보여줍니다. link:high-file-count-workloads-02-maxdirsize.html[`maxdir-size`] 열은 해당 오브젝트를 생성할 때 상위 디렉터리에 디렉터리 항목이 추가되어 상위 디렉터리 파일의 크기가 증가하는지 여부를 나타냅니다.
+
+|===
+| 유형 | 나타내는 내용 | 또한 link:high-file-count-workloads-02-maxdirsize.html[`maxdir-size`]에도 포함됩니다. 
+
+
+| 일반 파일 | 기본 파일 내용 및 속성 | *예.* 파일을 생성하면 상위 디렉터리에 이름이 추가됩니다. 
+
+
+| 디렉토리 | 디렉터리 이름과 디렉터리 자체의 inode | *네.* 디렉토리를 생성하면 상위 디렉토리에 이름이 추가됩니다. 또한 새 디렉토리는 자체적인 디렉토리 파일을 가지며, 이 파일은 `maxdir-size` 독립적으로 권한을 제한합니다. 
+
+
+| 심볼 링크 | 파일 데이터가 아닌 경로명 포인터 | *네.* ^{asterisk}^ 심볼 링크를 생성하면 상위 디렉터리에 이름이 추가됩니다. 
+
+
+| 특수 파일 | UNIX FIFO, 소켓 또는 장치 노드 | *예.* 특수 파일을 생성하면 상위 디렉터리에 이름이 추가됩니다. 
+
+
+| 이름이 지정된 스트림 | 파일의 기본 내용 외 추가 데이터(NTFS 대체 데이터 스트림) | *아니요.* 해당 스트림은 상위 사용자 디렉터리에 있는 이름이 아닙니다. 
+
+
+| 스트림 디렉토리 | 파일의 명명된 스트림 이름을 저장하는 숨겨진 컨테이너 | *아니요.* 사용자가 볼 수 있는 디렉터리 항목이 아닙니다. 
+
+
+| ACL (xinode) | NTFS 보안 설명자 또는 NFSv4 ACL은 액세스 제어 항목(ACE) 데이터로 저장됩니다. | *아니요.* ACL은 디렉터리 항목이 아닙니다. 
+
+
+| 디렉토리 색인(공개된 경우)^{asterisk}{asterisk}^ | Companion B+tree는 대규모 디렉토리에서 이름을 조회하는 데 사용됩니다. | *아니요.* 인덱스는 디렉토리 항목이 아닙니다. 
+|===
+
+NOTE: 심볼 링크는 자체적인 공용 inode와 디렉터리 항목을 갖습니다. 하드 링크는 이와 다릅니다. 하드 링크는 기존의 일반 파일 inode에 대한 다른 디렉터리 이름이며, 별도의 inode 유형이 아닙니다. 하드 링크를 생성하면 디렉터리 항목이 추가되고 상위 디렉터리 파일의 크기가 커지지만, 별도의 공용 inode를 할당하지는 않습니다.
+
+
+NOTE: ^**^ 디렉터리 인덱스 inode는 기본적으로 비공개입니다. link:high-file-count-workloads-04-maxdirsize-indexing.html#about-private-and-public-index-inodes["개인 및 공용 인덱스 inode에 대하여"]에 설명된 대로 공용 inode 공간으로 이동할 수 있습니다.
+
+
+
+==== ACL 이노드
+
+파일이나 디렉터리에 NTFS 보안 설명자 또는 NFSv4 ACL이 있는 경우, ONTAP는 해당 ACL을 별도의 ACL inode(확장 inode 또는 xinode라고도 함)로 저장합니다. ACL inode에는 ACE가 포함됩니다. ONTAP는 공용 inode 공간에서 이를 할당하므로, 이는 `files` 및 `files-used`에 포함됩니다. 파일 또는 디렉터리 inode는 해당 ACL inode를 참조합니다.
+
+
+NOTE: UNIX 모드 비트는 파일 또는 디렉터리 자체의 inode에 저장됩니다. 별도의 공용 inode를 할당하지 않습니다.
+
+ACL inode 사용은 파일이나 디렉터리와 항상 1:1 관계를 갖는 것은 아닙니다.
+
+* 저장된 보안 설명자가 동일한 파일이나 디렉터리는 ONTAP의 ACL 공유 최적화 기능이 이를 병합할 때 ACL inode를 공유할 수 있습니다. 상속을 통해 공유 대상이 되는 동일한 설명자가 생성되는 경우가 많습니다.
+* ACE, 소유자 또는 그룹 정보, 제어 플래그 또는 상속 결과가 서로 다를 경우 공유가 발생하지 않을 수 있습니다. 공유가 인식되기 전에 별도의 작업으로 생성되거나 업데이트된 경우와 같이 동일한 디스크립터라도 병합이 보장되지 않습니다.
+* 생성 요청은 자체 ACE를 제공하지 않고 부모 ACL에 상속 속성이 있는 경우 부모의 ACL을 상속할 수 있습니다.
+* NTFS 보안 스타일 볼륨은 기본적으로 NTFS ACL을 적용합니다. 새 파일과 디렉터리는 저장된 디스크립터가 동일한 경우 ACL inode를 공유할 수 있지만, 관리자는 모든 기본 또는 상속된 ACL이 하나의 inode를 공유한다고 가정해서는 안 됩니다.
+* UNIX 보안 스타일에서 모드 비트를 유지하는 오브젝트는 NFSv4 ACL이 저장될 때까지 ACL inode를 사용하지 않습니다. 혼합 보안 스타일은 모드 비트 전용 오브젝트와 ACL로 보호되는 오브젝트를 모두 포함할 수 있습니다.
+
+
+
+
+==== 이름이 지정된 스트림
+
+명명된 스트림은 사용자가 일반적으로 여는 콘텐츠 외에 파일에 첨부된 추가 데이터입니다. ONTAP에서 이는 NTFS 대체 데이터 스트림(ADS)의 WAFL 표현입니다. 파일의 기본 이름 없는 데이터는 기본 파일 inode에 있습니다. 각 추가 명명된 스트림은 별도의 공용 inode이며  `files` 및  `files-used`에 포함됩니다.
+
+명명된 스트림은 파일과 함께 유지됩니다. 이는 ONTAP가 파일을 열거나 복사하거나 저장할 때만 사용하는 임시 스크래치 영역이 아닙니다. 스트림은 해당 스트림이 삭제되거나 기본 파일이 삭제될 때까지 할당된 상태로 유지됩니다. 애플리케이션은 스트림을 생성한 후 제거할 수 있지만, ONTAP는 명명된 스트림을 자동으로 만료시키지 않습니다.
+
+몇 가지 유의사항:
+
+* SMB 워크로드는 명명된 스트림을 생성하고 사용합니다. Windows는 이러한 스트림을  `filename:stream_name`으로 참조하며, 예를 들어  `report.docx:Zone.Identifier`와 같습니다.  `Zone.Identifier`는 Windows 웹 표시(Mark of the Web) 메타데이터입니다. 인터넷에서 파일을 다운로드하면 Windows 또는 브라우저는 영역 ID(일반적으로 인터넷 영역)를 기록하여 Explorer, SmartScreen 및 Office에서 사용자가 차단을 해제할 때까지 해당 파일을 신뢰할 수 없는 파일로 처리할 수 있도록 합니다. 이 스트림은 파일에서 제거될 때까지 유지됩니다. 다른 일반적인 소스로는 백업 및 보안 애플리케이션, 그리고 사이드카 데이터를 ADS로 저장하는 애플리케이션이 있습니다. Microsoft Office의  `~$` 잠금 파일과 임시 저장 파일은 일반 파일 및 디렉터리 항목이며 명명된 스트림이 아닙니다. OneDrive에 의해 동기화된 파일이 반드시  `Zone.Identifier` 스트림을 수신하는 것은 아니며, 동작은 클라이언트와 전송 경로에 따라 다릅니다.
+* SMB에 액세스하는 macOS 클라이언트는 Finder 메타데이터 및 리소스 포크에 대해 명명된 스트림을 사용할 수 있으며, 이는 일반적으로  `AFP_AfpInfo` 및  `AFP_Resource`으로 표시됩니다.
+* 일반적인 목록에서는 명명된 스트림이 숨겨집니다. Windows 탐색기, macOS Finder, `dir` 및 NFS `ls` / `stat`는 기본 파일을 표시하므로 `files-used` 표시되는 수를 초과할 수 있습니다. Windows SMB 클라이언트에서 `dir /r` 또는 PowerShell `Get-Item <file> -Stream *`을 사용하여 스트림을 열거합니다. ONTAP는 NFSv4 명명된 속성을 지원하지 않으므로 NFS 클라이언트는 SMB 스트림을 추가 이름으로 인식하지 않지만 inode는 여전히 존재합니다.
+*  `vi`에 의해 생성된 숨겨진 파일, 스왑 파일 또는 백업 파일(예를 들어  `.file.swp`또는  `file~`)은 명명된 스트림이 아니라 일반 파일 및 디렉터리 항목입니다.
+* ONTAP 9.12.1부터 지원되는 NFSv4.2 확장 속성(xattrs)은 별개의 기능입니다. 이는 ACL inode가 아니며 ACL xinode로 간주해서는 안 됩니다.
+
+
+
+
+==== NDMP 백업 및 복원에 미치는 영향
+
+NDMP 덤프 및 복원 처리 과정에서 ONTAP은 일반 파일, 디렉터리, NT 스트림, 스트림 디렉터리, ACL inode 등의 오브젝트 클래스를 개별적으로 식별하여 각 오브젝트의 데이터와 메타데이터를 직렬화하고 덤프 통계에 보고하며 올바르게 복원할 수 있도록 합니다. 이러한 분류는 별도의 maxfiles 제한이나 별도의 `volume show` 카운터를 생성하지 않습니다. `files-used`는 결합된 공용 inode 합계로 유지됩니다.
+
+NDMP dump는 네임스페이스를 순회하며 해당 오브젝트를 하나씩 직렬화합니다. 복구는 동일한 방식으로 이를 재구성합니다. 따라서 볼륨의 데이터 용량이 적거나 표시되는 파일 수가 적어 보일 때도 public inode 수가 많으면 dump 및 복구 시간이 길어집니다. Windows 탐색기, Finder,  `dir` 또는  `ls`에 표시되지 않는 경우에도 명명된 스트림 및 ACL inode가 dump 및 복구되므로, dump 통계에는 단순한 디렉토리 목록이 제시하는 것보다 더 많은 스트림 및 ACL 오브젝트가 보고될 수 있습니다.
+
+이 작업은 처리량보다는 메타데이터에 의해 제약되는 경우가 많습니다. 수백만 개의 inode, ACL 및 스트림을 생성, 조회 및 재구성하는 작업은 오브젝트당 비교적 적은 데이터로 CPU, 메모리 및 스토리지 I/O를 소비합니다. 작은 파일, 밀집된 ACL 사용, 그리고 많은 명명된 스트림은 이러한 오버헤드를 증가시킵니다. 대규모 플랫 디렉터리는 덤프 시 열거 비용을 추가하며, 파일 수가 많은 볼륨을 복원할 때 오브젝트가 존재하는 상태에서 디렉터리 인덱스를 재구축하는 데에도 시간이 소요될 수 있습니다. 데이터 크기만으로 추정하는 대신 스트림과 ACL을 포함한 대표적인 오브젝트 수를 사용하여 덤프 및 복원 시간을 측정하십시오.
+
+
+
+[[private-inodes]]
+=== 프라이빗 inode
+
+개인 inode는 ONTAP 내부 메타데이터 레코드입니다. 이러한 inode는 별도의 개인 inode 공간에 저장되며,  `files` 또는  `files-used`에 포함되지 않고, 추가 클라이언트 파일로 사용할 수 없습니다.
+
+다음 표는 일반적인 개인 inode 유형을 보여줍니다.
+
+|===
+| 유형 | 나타내는 내용 | 또한 link:high-file-count-workloads-02-maxdirsize.html[`maxdir-size`]에도 포함됩니다. 
+
+
+| 디렉토리 인덱스(기본값)^{asterisk}^ | Companion B+tree는 대규모 디렉토리에서 이름을 조회하는 데 사용됩니다. | *아니요.* 
+
+
+| 개인 메타파일 | ONTAP에서 사용하는 숨겨진 WAFL 메타데이터 | *아니요.* 
+
+
+| 좀비 | 연결되지 않은 오브젝트는 참조 또는 비동기 삭제가 완료될 때까지 유지됩니다. | *아니요.* 
+|===
+
+NOTE: 디렉터리 인덱스는 기본적으로 비공개입니다. 공개 인덱스 전송에 대한 설명은 link:high-file-count-workloads-04-maxdirsize-indexing.html#about-private-and-public-index-inodes["개인 및 공용 인덱스 inode에 대하여"]에 있습니다.
+
+
+NOTE: 대부분의 경우 개인 inode는 maxfiles에 포함되지 않으므로 개인 inode 사용량을 모니터링할 필요가 없습니다. 단, NetApp 지원팀에서 모니터링을 지시하는 경우는 예외입니다.
+
+
+
+==== 좀비 이노드
+
+연결 해제된 파일은 항상 즉시 해제될 수 있는 것은 아닙니다. ONTAP은 참조 또는 비동기 작업이 완료될 때까지 해당 파일을 임시로 좀비 상태로 유지할 수 있습니다. 따라서 대규모 비동기 삭제 작업은 정리 작업이 진행되는 동안 프라이빗 inode 사용량을 증가시킬 수 있습니다. 다시 말씀드리지만, 프라이빗 inode는 볼륨에 허용된 총 `files` inode 수에 포함되지 않습니다.
+
+[cols="<,>"]
+|===
+
+
+| link:high-file-count-workloads-08-maxfiles-high-file-counts.html["← 이전: 높은 파일 수와 inode 용량"] | link:high-file-count-workloads-10-maxfiles-limits.html["다음: Maxfiles 및 ONTAP inode 정보 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:https://docs.netapp.com/us-en/ontap/nfs-admin/security-styles-their-effects-concept.html["ONTAP NAS 보안 스타일"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/audit-alternate-ntfs-data-streams-concept.html["대체 NTFS 데이터 스트림 감사"^]
+

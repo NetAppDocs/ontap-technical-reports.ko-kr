@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-07-maxdirsize-features-ems.html 
+keywords: ONTAP, NAS, maxdir-size, maxdirsize, EMS, wafl.dir.size, directory indexing 
+summary: ONTAP maxdir-size 릴리스 개선 사항, EMS 이벤트 및 대규모 디렉터리 모니터링 지침을 검토하십시오. 
+---
+= maxdir-size의 기능, EMS 및 모니터링
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+ONTAP 릴리스 기능, EMS 이벤트 및 디렉터리 크기 측정값을 사용하여 디렉터리 생성 실패 전에 대규모 디렉터리 증가를 감지하십시오.
+
+디렉터리 오브젝트의 현재 크기를 보는 방법은  `maxdir-size`link:high-file-count-workloads-03-maxdirsize-view.html["maxdir-size 및 현재 디렉토리 크기 보기"]를 참조하십시오.
+
+
+
+[[ontap-functionality-and-enhancements-related-to-maxdir-size]]
+== ONTAP maxdir-size 관련 기능 및 개선 사항
+
+|===
+| ONTAP 릴리스 | 기능 
+
+
+| ONTAP 9.2 | 영구 디렉터리 인덱싱 용량은 약 2MiB입니다. link:high-file-count-workloads-04-maxdirsize-indexing.html#why-directory-indexing-exists["디렉토리 인덱싱이 존재하는 이유"]을 참조하십시오. 
+
+
+| ONTAP 9.5 (문서화됨) | 최적화된 희소 디렉터리 (`-has-optimized-sparse-directories`): 인덱싱된 디렉터리에 빈 블록을 뚫습니다. 공개 문서에서는 이전에 도입되었다는 사실을 확인할 수 없습니다. link:high-file-count-workloads-04-maxdirsize-indexing.html#sparse-directories-and-hole-punching["희소 디렉토리 및 구멍 뚫기"]을 참조하십시오. 
+
+
+| ONTAP 9.14.1 | 기본값은 320MB  `maxdir-size`입니다. 증가 시 해당 릴리스 및 플랫폼에서 지원하는 최대 용량을 확인하십시오. link:high-file-count-workloads-02-maxdirsize.html#how-the-maxdir-size-cap-behaves["maxdir-size 제한의 작동 방식"] 및 link:high-file-count-workloads-02-maxdirsize.html#raising-the-maxdir-size-value["maxdir-size 값 높이기"]을 참조하십시오. 
+
+
+| ONTAP 9.17.1 | `-is-dir-index-transfer-enabled` 및 지원되는 SnapMirror 전송을 위한 공용 디렉터리 인덱스 inode. link:high-file-count-workloads-04-maxdirsize-indexing.html#about-private-and-public-index-inodes["개인 및 공용 인덱스 inode에 대하여"]을 참조하십시오. 
+|===
+
+
+[[ems-messages-related-to-maxdir-size]]
+== maxdir-size와 관련된 EMS 메시지
+
+
+
+[[wafl-dir-entries-warning]]
+=== `wafl.dir.entries.warning`
+
+디렉터리 항목 사용률이 설정된 경고 비율을 초과했습니다. 볼륨 및 파일 ID를 사용하여 디렉터리를 찾은 다음 항목 수, 현재 디렉터리 파일 크기 및 증가 패턴을 확인하십시오.
+
+
+
+[[wafl-dir-size-warning]]
+=== `wafl.dir.size.warning`
+
+디렉토리가 해당 `maxdir-size` 제한 값의 설정된 경고 비율(일반적으로 90%)에 도달했습니다. 이벤트의 볼륨 및 파일 ID를 사용하여 디렉토리 경로를 확인하십시오. 최대 한도에 도달하기 전에 네임스페이스를 재구성하거나 확장을 계획하십시오.
+
+
+
+[[wafl-dir-size-max-warning]]
+=== `wafl.dir.size.max.warning`
+
+디렉터리 사용량이 구성된 경고 비율(일반적으로 90%)에 도달했거나 초과했으며, 볼륨의 현재 `maxdir-size`은(는) 릴리스에서 정의된 기본값(EMS 참조에서는 시스템 메모리의 1%로 설명)보다 낮습니다. 이는 정상적인 `wafl.dir.size.warning` 상태와 다릅니다. 구성된 사용량 제한이 기본값보다 낮은 이유를 파악한 후 기본값으로 복원할지, 디렉터리 구조를 재구성할지, 또는 다른 지원되는 값을 선택할지 결정하십시오.
+
+
+
+[[wafl-dir-size-max]]
+=== `wafl.dir.size.max`
+
+디렉터리 용량 제한에 도달했습니다 `maxdir-size`. 슬롯을 재사용할 수 있게 되거나, 네임스페이스 구조가 재구성되거나, 제한이 상향 조정될 때까지 이름 추가 작업이 실패합니다.
+
+
+
+[[wafl-maxdirsize-boot-notice]]
+=== `wafl.maxdirsize.boot.notice`
+
+부팅 시 ONTAP는 구성된 값이 기본값보다 높은 볼륨에 대해 이 NOTICE 메시지를 출력합니다. 이는 매우 큰 디렉터리에 대한 작업으로 인해 성능 저하가 발생할 수 있음을 관리자에게 알려줍니다.
+
+
+
+[[sparse-readdir-events]]
+=== 스파스 `READDIR` 이벤트
+
+`wafl.readdir.expired` 및  `wafl.readdir.sparse`은(는) 대규모 희소 디렉터리의 비용이 많이 드는 열거 작업을 식별합니다. 이는 디렉터리 레이아웃 및 최대 사용량 동작과 관련이 있지만,  `maxdir-size` 자체에 도달했음을 의미하지는 않습니다.
+
+[cols="<,>"]
+|===
+
+
+| link:high-file-count-workloads-06-maxdirsize-volume-types.html["← 이전: 볼륨 고려 사항"] | link:high-file-count-workloads-08-maxfiles-high-file-counts.html["다음: 높은 파일 수와 inode 용량 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:https://docs.netapp.com/us-en/ontap-ems/wafl-dir-events.html["WAFL 디렉토리 EMS 이벤트"^]
+* link:https://docs.netapp.com/us-en/ontap-ems/wafl-maxdirsize-events.html[`wafl.maxdirsize` EMS 이벤트^]
+

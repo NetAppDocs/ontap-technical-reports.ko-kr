@@ -1,0 +1,139 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-10-maxfiles-limits.html 
+keywords: ONTAP, NAS, maxfiles, files-maximum-possible, FlexGroup, 64-bit file IDs 
+summary: ONTAP maxfiles 제한, NFS 파일 식별자 및 inode 고갈 시 동작 방식을 이해합니다. 
+---
+= Maxfiles 및 ONTAP inode 정보
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+ONTAP 볼륨에서 사용할 수 있는 최대 공용 inode 수는 볼륨 크기, 구성된  `files` 값, 해제 동작 및 절대 FlexVol 제한에 따라 제한됩니다.
+
+
+
+[[maxfiles-limits]]
+== 최대 파일 제한
+
+* 일반적인 기본값은 볼륨 크기를 기준으로 볼륨 용량 32KiB당 약 1개의 inode로 계산되며, ONTAP의 사용 가능 용량 계수 및 릴리스 동작에 따라 달라집니다.
+* `files-maximum-possible` ONTAP의 사용 가능 용량 조정을 적용하여 절대 용량 제한을 적용하기 전, 볼륨 용량 4KiB당 약 1개의 inode를 기준으로 합니다. 이 비율을 정확한 공식으로 취급하기보다는 해당 필드를 직접 조회하십시오.
+* FlexVol 볼륨은 최대 2,040,109,451개의 공용 inode를 가질 수 있습니다. ONTAP은 볼륨 크기 4KiB당 최대 약 1개의 inode만 허용하므로, FlexVol 또는 FlexGroup 구성 요소의 크기가 약 7.8TB 이상이어야 해당 절대값을 구성할 수 있습니다. 크기가 작은 볼륨은 더 낮은 `files-maximum-possible`을(를) 가집니다. 항상 해당 필드를 쿼리하십시오. 사용 가능 용량 조정으로 인해 크기가 정확히 4KiB 공식이 아닐 수 있습니다.
+* FlexGroup는 여러 구성 요소로 이루어져 있으며, 각 구성 요소는 자체 inode 파일과 적용된 제한을 가집니다. FlexGroup에서  `files`를 구성합니다. ONTAP는 반올림 및 기존 할당 제약 조건에 따라 FlexGroup의 총 용량을 구성 요소에 균등하게 분배합니다. 구성 요소가 2,040,109,451개의 공용 inode를 저장해야 하는 경우에도 동일한 약 7.8TB의 구성 요소 크기가 적용됩니다.
+* FlexGroup 전체의 합계는 유일한 운영상의 제약 조건이 아닙니다. 불균등한 배치로 인해 한 구성 요소는 할당된 inode 수에 거의 도달하거나 소진되는 반면 다른 구성 요소에는 여전히 여유 공간이 있을 수 있습니다.
+* NFS의 경우, FlexGroup 고유 파일 ID가 약 20억 개를 초과하는 FlexGroup 파일 수는 64비트 파일 식별자에 따라 달라집니다. 자세한 내용은 <<nfs-64-bit-file-identifiers-and-flexgroup-file-counts>>을 참조하십시오.
+
+
+특정 볼륨에서 이론적인 최대값을 설정할 수 있다고 가정하기보다는 항상 대상 시스템에 문의하십시오.
+
+[listing]
+----
+set -privilege advanced
+volume show -vserver <svm> -volume <volume> -fields files,files-used,files-maximum-possible,inodefile-public-capacity
+----
+
+
+[[nfs-64-bit-file-identifiers-and-flexgroup-file-counts]]
+== NFS 64비트 파일 식별자 및 FlexGroup 파일 개수
+
+`files` 및  `files-maximum-possible`은(는) inode 제한입니다. NFS 클라이언트는 *파일 ID*( `stat` 또는  `ls -i`에서 보고되는 inode 번호)도 볼 수 있습니다. 기본적으로 ONTAP NFS는 32비트 파일 ID를 사용합니다. 이 프로토콜 식별자는 동일한 파일 ID 구조를 사용하지 않는 SMB와는 독립적입니다.
+
+FlexVol(및 각 FlexGroup 구성 요소)은 최대 2,040,109,451개의 공용 inode로 제한되며, 이는 32비트 부호 있는 정수 최대값인 2,147,483,647보다 약간 적습니다. FlexGroup 네임스페이스는 여러 구성 요소로 이루어져 있으므로 *총* 파일 수는 20억 개를 초과할 수 있습니다(통합 ONTAP에서는 최대 4,000억 개, ONTAP 9.19.1 이상을 실행하는 AFX에서는 최대 1조 개). 32비트 NFS 파일 ID를 사용하는 경우:
+
+* 고유 ID 수가 2,147,483,647개 이하일 경우 수학적으로 충돌이 발생할 가능성은 없습니다.
+* ONTAP은 여전히 최대 32비트 부호 없는 정수인 4,294,967,295까지의 ID를 발급할 수 있습니다. 카운트가 해당 범위를 이동함에 따라 충돌 가능성이 높아지며, 부호 없는 정수 최대값에서는 충돌이 반드시 발생합니다.
+*  `files`를 FlexGroup에서 높이더라도 NFS가 32비트 ID를 래핑하는 것을 막지는 못합니다. ONTAP은 32비트 ID가 사용 중이라는 이유만으로 생성 횟수를 20억에서 중단하지 않습니다.
+
+
+충돌은 서로 다른 두 객체가 하나의 inode 번호를 공유하는 것처럼 보일 수 있습니다. 그러면 클라이언트는 오래된 파일 핸들,  `find` 또는  `rm` 중 순환 디렉터리 구조 오류, 목록 생성 실패 또는 애플리케이션 장애를 보고할 수 있습니다.
+
+NFS를 통해 20억 개 이상의 파일을 안전하게 저장하려면 SVM의 NFS 서버에서 64비트 파일 ID를 활성화하십시오(기존 32비트 애플리케이션 호환성을 위해 기본적으로 비활성화되어 있음). ONTAP 9.7부터 NFSv3 및 NFSv4.x에 대한 옵션이 별도로 제공됩니다. 두 프로토콜을 모두 사용하는 경우 두 옵션 모두 설정하십시오. 그렇지 않으면 한 프로토콜이 파일을 계속 생성하는 동안 다른 프로토콜에서 파일 충돌 오류가 발생할 수 있습니다.
+
+[listing]
+----
+set -privilege advanced
+vserver nfs modify -vserver <svm> -v3-64bit-identifiers enabled -v4-64bit-identifiers enabled
+----
+해당 옵션을 활성화 또는 비활성화한 후에는 NFS 클라이언트를 다시 마운트해야 합니다. 파일 시스템 ID는 변경되므로, 기존 마운트는 다시 마운트될 때까지 오래된 파일 핸들을 반환할 수 있습니다. 먼저 별도의 SVM에서 애플리케이션 및 OS 지원 여부를 테스트하십시오. 대부분의 최신 NFS 클라이언트는 64비트 ID를 지원합니다.
+
+64비트 ID를 사용하지 않아야 하는 경우 FlexGroup 전체의 NFS 가시 개수를 2,147,483,647 이하로 유지하십시오. 일부 볼륨에만 20억 개 이상의 파일이 필요한 경우 32비트 및 파일 수가 많은 NFS 워크로드를 서로 다른 SVM으로 분할하십시오.
+
+
+
+[[quota-safety-rail-for-32-bit-nfs-file-ids]]
+=== 32비트 NFS 파일 ID용 할당량 안전 장치
+
+ONTAP 9.5부터는 할당량 *파일* 제한으로 인해 NFS가 32비트 ID를 래핑하기 전에 파일 생성이 중단될 수 있습니다. 트리 할당량은 볼륨 루트에 생성된 파일에는 적용되지 않고, qtree에만 적용됩니다. 따라서:
+
+. 데이터셋을 저장할 qtree를 생성합니다.
+. 할당량 파일 제한을 2,000,000,000개(또는 2,147,483,647개)로 설정하는 트리 할당량 규칙을 생성합니다.
+. 할당량을 설정하고 크기를 조정합니다.
+. 볼륨 루트가 아닌 *qtree*를 내보내고 공유하고 마운트한 다음, 권한 또는 내보내기 정책을 사용하여 클라이언트가 볼륨 수준에서 생성할 수 없도록 하십시오.
+
+
+[listing]
+----
+qtree create -vserver <svm> -volume <flexgroup> -qtree <qtree>
+quota policy rule create -vserver <svm> -policy-name default -volume <flexgroup> -type tree -target <qtree> -file-limit 2000000000
+quota on -vserver <svm> -volume <flexgroup>
+quota resize -vserver <svm> -volume <flexgroup>
+----
+파일 생성자를 알고 있는 경우 사용자 또는 그룹 파일 제한 규칙을 사용할 수 있습니다. 이는 32비트 NFS ID에 대한 안전장치이며, 네임스페이스 파일 수가 20억 개를 초과할 것으로 예상되는 경우 64비트 식별자를 활성화하는 것을 대체하는 방법은 아닙니다.
+
+
+
+[[nfs-fsid-change]]
+=== NFS FSID 변경
+
+NFS는 파일 시스템 ID(FSID)를 사용하여 클라이언트가 파일 시스템을 서로 구분할 수 있도록 합니다. ONTAP에서 접합된 볼륨은 서로 다른 FSID를 가질 수 있습니다. 일부 구형 Linux 클라이언트는 `chown` 및 `chmod` 등의 작업에서 FSID 변경을 제대로 처리하지 못합니다.
+
+SVM NFS 옵션 `-v3-fsid-change` 및 `-v4-fsid-change`(후자는 ONTAP 9.7부터 NFSv4.x를 사용하는 FlexGroup에 적용됨)은 이러한 동작을 제어합니다. FlexGroup 및 기타 파일 수가 많은 SVM의 경우 이러한 옵션을 활성화 상태로 유지하십시오. FSID 변경이 활성화되면 각 볼륨에 고유한 파일 ID 풀이 할당되므로 각각 10억 개의 파일이 있는 10개의 볼륨이 하나의 32비트 ID 공간을 공유하지 않습니다. 이 옵션이 비활성화되면 32비트 또는 64비트 파일 ID가 *SVM*에 적용되어 모든 볼륨이 하나의 풀을 공유하게 되므로 충돌이 훨씬 빨리 발생합니다.
+
+레거시 클라이언트에 대해 FSID 변경을 비활성화해야 하는 경우, 먼저 해당 SVM에서 64비트 파일 ID를 활성화한 후 별도의 SVM에서 테스트하십시오. FSID 변경을 비활성화해도 NFSv3에서 스냅샷 FSID가 동일해지는 것은 아닙니다. 스냅샷 복사본은 여전히 서로 다른 FSID를 가집니다.
+
+
+
+[[what-happens-when-maxfiles-is-exceeded]]
+== 최대 파일 개수 제한을 초과하면 어떻게 됩니까?
+
+공용 inode를 사용할 수 없는 경우:
+
+* 공용 inode가 필요한 새 파일, 디렉터리 및 기타 개체를 만들 수 없습니다.
+* 데이터 용량이 충분히 남아 있더라도 클라이언트는 공간 부족 또는 파일 생성 오류를 수신할 수 있습니다.
+* 기존 객체 및 읽기 작업은 일반적으로 영향을 받지 않습니다.
+* 객체를 삭제하면 공용 inode를 재사용할 수 있게 되지만, inode 파일 용량은 할당된 상태로 유지됩니다.
+* 볼륨 크기와 ONTAP 제한이 허용하는 경우  `files`를 높이면 추가 객체를 위한 공간이 확보됩니다. link:high-file-count-workloads-11-maxfiles-controlling.html["maxfiles 제어"]을 참조하십시오.
+
+
+FlexGroup 볼륨에서 한 구성 요소가 다른 구성 요소보다 먼저 inode 공급량에 근접하거나 소진될 수 있습니다. ONTAP는 거의 가득 찬 구성 요소에 대한 배치를 줄이며, 이로 인해 불균형이 발생하고 사용 가능한 inode가 있는 구성 요소에 더 많은 작업이 라우팅될 수 있습니다. 구성 요소 `files` 및 `files-used`를 확인하고, FlexGroup 전체뿐만 아니라 단일 구성 요소가 아닌 FlexGroup에서 `files`를 높이십시오. link:high-file-count-workloads-12-maxfiles-monitoring.html#flexgroup-constituent-events["FlexGroup 구성 요소 이벤트"]를 참조하십시오.
+
+
+
+[[flexgroup-constituent-out-of-space]]
+== FlexGroup 구성 요소 공간 부족
+
+FlexGroup은 한 구성원이 가득 찼더라도 다른 구성원에는 여전히 여유 용량과 inode가 남아 있을 수 있습니다. 클라이언트는 종종 다음과 같은 이유로  `ENOSPC`(또는 이와 유사한 "디스크 용량 부족" 오류)를 여전히 보게 됩니다.
+
+* 해당 구성 요소에 도달하거나 해당 구성 요소에서 리디렉션될 수 없는 생성은 실패합니다.
+* 구성원 중 한 명이 *데이터* 용량을 초과하면 FlexGroup 전체에서 공간 부족을 보고할 수 있습니다.
+*  `ls`읽기 작업 외에도 다른 작업이 실패할 수 있습니다. FlexGroup는 메타데이터 캐시를 위해 소량의 쓰기 가능 공간(내부 RAL 예약 공간)이 필요합니다. 멤버가 100% 가득 차면 스냅샷 덮어쓰기 및 기타 우선순위가 높은 사용자가 해당 예약 공간을 사용할 수 있습니다.
+
+
+ `volume show-space` 및  `df`(또는  `volume show -volume-style-extended flexgroup-constituent`)를 사용하여 구성 요소를 검사하십시오. FlexGroup 수준의 사용률만 신뢰하지 마십시오. 전체 멤버의 여유 공간 또는 inode를 확보하거나 용량을 추가하십시오.  `maxdir-size`를 높이거나 네임스페이스가 전역적으로 가득 찼다고 가정하지 마십시오.
+
+[cols="<,>"]
+|===
+
+
+| link:high-file-count-workloads-09-maxfiles.html["← 이전: ONTAP inode 유형"] | link:high-file-count-workloads-11-maxfiles-controlling.html["다음: maxfiles 제어하기 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:https://docs.netapp.com/us-en/ontap/volumes/change-maximum-number-files-allowed-concept.html["FlexVol 볼륨에 허용되는 기본 및 최대 파일 수"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12385-tr4571.pdf["TR-4571: NetApp ONTAP FlexGroup 볼륨"^]
+

@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-13-planning.html 
+keywords: ONTAP, NAS, high file count, planning, maxfiles, maxdir-size, maxdirsize, inodes, metadata, XCP 
+summary: ONTAP에서 파일 수가 많은 NAS 워크로드의 크기를 조정하기 전에 inode, 디렉토리, 작업 속도 및 용량 추정치를 수집합니다. 
+---
+= 계획 접근법
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+파일 수가 많은 NAS를 계획할 때는 단일 파일 수 또는 용량 수치가 아닌 네 가지 개별 추정치를 사용하여 계획을 시작하십시오.
+
+. 워크로드 수명 주기 동안의 총 파일 시스템 오브젝트 수
+. 가장 큰 디렉토리에서 가장 많이 등록된 항목
+. 최대 생성, 조회, 열거 및 삭제 속도
+. 사용자 데이터, inode, 디렉터리, 디렉터리 인덱스, 스냅샷 복사본 및 증가 용량
+
+
+다음 방법을 사용하여 해당 입력값을 수집하십시오.
+
+
+
+[[find-total-objects-and-inode-headroom]]
+== 총 오브젝트 수 및 inode 헤드룸 찾기
+
+애플리케이션 인벤토리를 ONTAP의 공용 inode 카운터와 비교하십시오.
+
+[listing]
+----
+volume show -vserver <svm> -volume <volume> -fields files,files-used
+
+set -privilege advanced
+volume show -vserver <svm> -volume <volume> -fields files-maximum-possible,inodefile-public-capacity
+----
+FlexGroup의 경우, 구성된 총 사용량과 각 구성 요소의 사용량을 모두 확인하십시오.
+
+[listing]
+----
+volume show -vserver <svm> -volume-style-extended flexgroup-constituent -fields files,files-used
+----
+* 전체 예상치에는 예상 파일, 디렉터리, 스트림, ACL, 공용 디렉터리 인덱스, 임시 오브젝트 및 마이그레이션 중복을 포함하십시오.
+* ACL이 흔히 사용되는 경우, 예상되는 파일 및 디렉터리 수의 최대 두 배를  `files`의 보수적인 초기 추정치로 사용하십시오. 각 NTFS 또는 NFSv4 ACL은 추가 공용 inode를 사용할 수 있지만 link:high-file-count-workloads-09-maxfiles.html#acl-inodes["ACL 공유"]은(는) 실제 사용량을 줄일 수 있습니다. 대표적인 데이터를 사용하여 검증하십시오.
+* 애플리케이션의 인벤토리 또는 마이그레이션 평가를 사용하여 성장률을 예측하십시오. `files-used`은(는) 미래 최대값이 아닌 현재 사용량입니다.
+
+
+NetApp XCP는 현재 네임스페이스의 파일 및 디렉터리 수를 계산할 수 있습니다. XCP 1.5 이상 버전에서 가능합니다.
+
+[listing]
+----
+xcp scan -stats <host>:/<export>
+xcp scan -stats \\<server>\<share>
+----
+The `-stats` 보고서에는 파일 및 디렉터리 개수가 포함됩니다. 디렉터리 항목으로 나타나지 않는 ACL inode 또는 명명된 스트림은 포함되지 않으므로 애플리케이션 프로파일에서 해당 항목을 추가해야 합니다. 파일 수가 많은 데이터 세트의 경우 시간이 다소 소요될 수 있습니다. XCP는 총계를 출력하기 전에 디렉터리 트리를 스캔합니다. XCP 1.5 하위 명령 참고 사항 및 관련 스캔에 대한 자세한 내용은 link:high-file-count-workloads-03-maxdirsize-view.html#scan-directory-sizes-with-xcp["XCP를 사용하여 디렉토리 크기 스캔"]을 참조하십시오.
+
+
+
+[[find-the-largest-directories]]
+== 가장 큰 디렉토리 찾기
+
+* 애플리케이션 인벤토리, 마이그레이션 툴 또는 제어된 네임스페이스 스캔을 사용하여 항목이 가장 많은 디렉터리를 식별하십시오.
+* 검토 `wafl.dir.size.warning` 및 이미 한도에 가까워진 디렉토리에 대한 관련 EMS 이벤트.
+* link:high-file-count-workloads-03-maxdirsize-view.html["maxdir-size 및 현재 디렉토리 크기 보기"]에 설명된 대로 디렉터리 오브젝트 자체를 측정합니다.
+* 모델 파일 이름 길이 및 대체 이름은 link:high-file-count-workloads-02-maxdirsize.html["Maxdir-size 및 대용량 ONTAP 디렉터리"]에 설명된 대로입니다.
+
+
+XCP는 디렉터리를 항목 수 또는 디렉터리 파일 크기를 기준으로 순위를 매길 수 있습니다.  `-stats` 보고서에는 가장 큰 디렉터리의 항목 수가  `Dirsize`로 포함됩니다. 메타데이터 파일 크기와 함께 모든 디렉터리를 가장 큰 것부터 나열하려면 다음 명령을 사용하십시오.
+
+[listing]
+----
+xcp scan -match "type == d" -fmt "'{} {}'.format(used, x)" <host>:/<export> | sort -rn
+----
+선택한 항목 수(이 예에서는 2,000개) 이상의 디렉터리를 나열하려면:
+
+[listing]
+----
+xcp diag find --branch-match True -fmt "'{size} {name}'.format(size=x.digest, name=x)" <host>:/<export> 2>/dev/null | awk '{if ($1 > 2000) print $1 " " $2}'
+----
+이러한 스캔은 사용량이 많은 디렉토리를 찾아냅니다. 하지만 이름 길이 및 인코딩 모델링을 대체하는 것은 아닙니다 `maxdir-size`.
+
+
+
+[[measure-metadata-operation-rates]]
+== 메타데이터 작업 속도 측정
+
+* 애플리케이션 원격 측정, 클라이언트 워크로드 툴, 패킷 추적, ONTAP 성능 통계 또는 Harvest 등의 모니터링 툴을 사용하여 생성, 조회, 열기, 닫기, 속성, 열거, 이름 변경 및 삭제 속도를 측정하십시오.
+* 대표적인 동시 실행 성능과 웜 캐시 및 콜드 캐시 동작을 테스트합니다.
+* 처리량 측정만으로는 메타데이터가 많은 워크로드를 반드시 파악할 수는 없습니다. 작업 카운터가 단서가 될 수 있으며, 특히 `other_ops`.
+
+
+
+
+[[find-metadata-and-snapshot-capacity]]
+== 메타데이터 및 스냅샷 용량 찾기
+
+*  `volume show-space`을 사용하여 사용자 데이터, 파일 시스템 메타데이터, inode 및 스냅샷 예약을 분리합니다.
+*  `volume show-footprint`를 사용하여 볼륨의 애그리게이트 풋프린트를 검토합니다.
+* 원시 ONTAP 9 inode 레코드를  `peak allocated inodes × 288 bytes`로 추정한 다음 디렉터리 파일 크기를 더합니다.
+* 통합 ONTAP에서  `storage aggregate show-space`을(를) 사용하여 애그리게이트 메타데이터를 검토합니다.
+* AFX에서 스토리지 가용 영역 메타데이터를 검토하려면  `storage availability-zone show`을(를) 사용하십시오.
+* 호스트에서 인벤토리화할 수 없는 기타 시스템 메타데이터에 대해 용량의 약 1%를 할당하십시오.
+
+
+
+
+[[dont-conflate-maxdir-size-with-maxfiles]]
+== maxdir-size와 maxfiles를 혼동하지 마십시오.
+
+* `files` (maxfiles)는 FlexVol 또는 FlexGroup 구성 요소의 공용 inode 최대 개수입니다.
+* `maxdir-size`이는 볼륨 내 각 디렉터리 파일의 바이트 제한입니다. 파일 이름이 몇 개까지 저장 가능한지는 파일 이름 길이와 인코딩 방식에 따라 달라지며, 볼륨 파일 개수와는 관계가 없습니다.
+*  `maxdir-size`전체 볼륨 파일 수에서 도출하지 마십시오. 또한  `maxfiles`하나의 디렉터리에 몇 개의 이름이 들어갈 수 있는지 추정하는 데 사용하지 마십시오.
+
+
+설계 및 운영 권장 사항은 link:high-file-count-workloads-14-best-practices.html["파일 수가 많은 NAS 워크로드 최적 사례"]을 참조하십시오.
+
+[cols="<,>"]
+|===
+
+
+| link:high-file-count-workloads-12-maxfiles-monitoring.html["← 이전: maxfiles 모니터링, EMS 이벤트 및 ONTAP 개선 사항"] | link:high-file-count-workloads-14-best-practices.html["다음: 파일 수가 많은 NAS 워크로드 모범 사례 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:high-file-count-workloads-09-maxfiles.html["ONTAP inode 유형"]
+* link:high-file-count-workloads-03-maxdirsize-view.html["maxdir-size 및 현재 디렉토리 크기 보기"]
+* link:https://docs.netapp.com/us-en/ontap/volumes/display-file-inode-usage-task.html["ONTAP 볼륨의 파일 및 inode 사용량을 확인합니다"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12385-tr4571.pdf["TR-4571: NetApp ONTAP FlexGroup 볼륨"^]
+

@@ -1,0 +1,176 @@
+---
+sidebar: sidebar 
+permalink: high-file-count-workloads/high-file-count-workloads-01-overview.html 
+keywords: ONTAP, NAS, NFS, SMB, high file count, maxfiles, maxdir-size, maxdirsize, inodes, directory 
+summary: 파일 수가 많은 NAS 워크로드에서 ONTAP 메타데이터와 maxfiles 및 maxdir-size가 다양한 확장 한계를 정의하는 방식을 알아보십시오. 
+---
+= NetApp ONTAP NAS 볼륨의 높은 파일 수 워크로드
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/high-file-count-workloads/
+
+
+[role="lead"]
+파일 수가 많은 NAS 워크로드는 파일 수가 적고 용량이 큰 파일로 구성된 워크로드보다 네임스페이스 및 메타데이터 작업에 더 많은 비중을 둡니다. 이 문서 세트는 NetApp ONTAP가 대규모 파일 집합을 저장하고 관리하는 방법,  `maxfiles` 및  `maxdir-size` 한계를 구분하는 방법, 그리고 예측 가능한 용량과 성능을 위해 NAS 네임스페이스를 계획하는 방법을 설명합니다.
+
+
+
+[[what-is-meant-by-a-high-file-count-workload]]
+== 파일 수가 많은 워크로드란 무엇을 의미합니까?
+
+파일 수가 많다는 표현은 워크로드 자체를 설명하는 데 다소 부적절합니다. 모든 워크로드가 특정 파일 수 임계값을 넘어서면 '파일 수가 많은 워크로드'가 되는 것은 아닙니다. 그 판단은 단순히 총 파일 수 이상의 요소에 따라 달라집니다.
+
+예를 들어:
+
+* 해당 볼륨에 파일과 디렉터리가 몇 개나 있습니까?
+* 하나의 디렉토리에 얼마나 많은 이름이 집중되어 있습니까?
+* 파일 생성, 열기, 열거, 이름 변경 및 삭제 속도
+* 파일 이름 길이, 경로 길이, 문자 집합 및 프로토콜에서 생성된 대체 이름
+* 데이터 액세스가 디렉터리, FlexGroup 구성 요소 및 클러스터 노드에 분산되어 있는지 여부
+* 애플리케이션이 전체 네임스페이스를 스캔하거나 목록을 표시하는 빈도는 얼마나 됩니까?
+* 스냅샷 사본의 수와 보존 기간
+
+
+예상되는 네임스페이스가 inode 계획, 디렉터리 파일 증가, 메타데이터 용량, 클라이언트 작업 지연 시간, 백업 또는 복제 동작, 복구 시간에 실질적인 영향을 미칠 수 있는 경우 워크로드를 높은 파일 수로 처리해야 합니다.
+
+하지만 수백만 개의 파일이 여러 디렉터리에 분산되어 있는 워크로드는 동일한 수의 파일이 단일 디렉터리에 있는 워크로드와는 매우 다르게 동작할 수 있습니다.
+
+
+
+[[workloads-commonly-associated-with-high-file-counts]]
+== 파일 수가 많은 경우 일반적으로 연관된 워크로드
+
+모든 워크로드가 높은 파일 수 프로파일을 생성하는 것은 아니지만, 아래 목록은 파일 수가 많은 워크로드로 간주될 수 있는 일반적인 워크로드 몇 가지를 보여줍니다.
+
+* 전자 설계 자동화(EDA) 및 반도체 설계 흐름
+* 소프트웨어 소스 트리, 패키지 저장소 및 지속적 통합 빌드 영역
+* 이미지, 토큰, 체크포인트 또는 기타 소규모 오브젝트를 포함하는 인공지능 및 머신러닝 데이터셋
+* 유전체학 및 생명과학 파이프라인
+* 미디어 렌더링, 시각 효과 및 애니메이션 프레임 저장소
+* 홈 디렉토리, 부서별 공유 폴더 및 콘텐츠 관리 저장소
+* 수명이 짧은 파일을 많이 생성하는 분석, 원격 측정 및 로깅 환경
+* 과학 및 고성능 컴퓨팅용 스크래치 공간
+
+
+파일 크기가 워크로드의 파일 수 높음 여부를 결정하는 것은 아니지만, 파일 수가 높은 워크로드는 종종 여러 개의 작은 파일로 구성되며, 이 경우 데이터 세트는 단일 볼륨에서 많은 inode를 사용하면서도 용량 사용량은 적을 수 있습니다.
+
+
+
+[[high-file-count-challenges]]
+== 파일 수가 많은 경우 발생하는 문제점
+
+파일 수가 많은 워크로드는 파일 수나 처리량에 중점을 둔 워크로드에서는 나타나지 않는 여러 가지 독특하고 해결하기 어려운 문제점을 야기합니다.
+
+
+
+[[metadata-operations]]
+=== 메타데이터 작업
+
+각 파일이나 디렉터리에는 inode가 필요하며, 오브젝트의 이름은 inode 자체가 아닌 디렉터리에 저장됩니다. 파일 생성, 조회, 속성 검색, 이름 변경, 열거 및 삭제 등 일반적인 메타데이터 작업은 데이터 처리량이 낮더라도 파일 수가 많은 워크로드에서 큰 비중을 차지할 수 있습니다. 이러한 시나리오에서는 CPU 사용률, 작업의 직렬 처리, 네트워크 RTT가 성능 병목 현상이 될 수 있습니다. 프로토콜 동작 또한 중요합니다. NFS 및 SMB 클라이언트는 조회, 열기, 닫기, 속성 및 디렉터리 읽기 작업을 다양한 조합으로 실행할 수 있으며, 이러한 조합은 프로토콜 버전에 따라 달라지는 경우가 많습니다. 결과적으로, 유사한 파일 수가 많은 워크플로에서도 사용되는 프로토콜 및 프로토콜 버전에 따라 다른 결과가 나타날 수 있습니다.
+
+
+
+[[capacity]]
+=== 용량
+
+ONTAP는 숨겨진 시스템 관리 볼륨 수준 inode 파일에 공용 inode를 저장합니다.  각 ONTAP 9 inode는 288바이트를 사용하므로 inode 파일 자체도 볼륨의 사용 가능한 용량을 차지합니다.  할당된 공용 inode 백만 개는 약 288MB를 사용합니다.  오브젝트를 삭제하면 inode가 재사용을 위해 해제되지만 inode 파일의 크기는 줄어들지 않습니다.
+
+또한, 동일한 디렉터리에 많은 이름이 저장될 경우 디렉터리 파일이 용량을 소모합니다. 이러한 디렉터리 파일은 inode 파일의 일부가 아닙니다. 이름과 inode 번호 매핑 정보가 저장되며, `maxdir-size` 각 디렉터리 파일의 용량은 독립적으로 제한됩니다. 기본 설정값인 320MB는 예약 용량이 아니라 제한 용량입니다. 하나의 디렉터리 파일이 320MB의 디렉터리 파일 블록으로 커지면 해당 블록은 실제 볼륨 용량 320MB를 사용하게 됩니다.
+
+이 두 가지 구조는 용량을 크게 증가시킬 수 있습니다. 할당된 inode 수가 많을 경우, inode 파일 자체만으로도 수 GB에 달할 수 있으며, 하나 이상의 대형 디렉터리 파일이 그 위에 수백 메가바이트를 더할 수 있습니다. 또한, 모든 디렉터리의 크기는 작지만 inode 파일 크기는 큰 볼륨이나, inode 파일 크기는 작지만 하나의 디렉터리가 큰 경우도 있습니다. 이러한 메타데이터는 볼륨 용량을 소모하는데, 사용자 데이터 파일의 클라이언트 측 목록만 볼 경우 이를 간과하기 쉽습니다. inode 파일은 사용자에게 표시되지 않는 파일이며, 디렉터리 파일 크기는 디렉터리 오브젝트 자체에서 확인할 수 있습니다.
+
+
+
+[[directory-enumeration]]
+=== 디렉토리 열거
+
+큰 디렉터리는 작은 디렉터리보다 열거하는 데 시간이 더 오래 걸리며, 많은 파일이 삭제된 디렉터리도 스캔하는 데 여전히 많은 비용이 들 수 있습니다. 보고되는 디렉터리 파일 크기는 이름이 삭제된 후에도 최대 크기를 유지합니다. 인덱싱된 디렉터리에서 홀 펀칭을 수행하면 비어 있는 물리적 블록을 회수하고 `READDIR` 스캔 중에 건너뛸 수 있지만, 일반적으로 보고되는 크기를 줄이지는 않습니다. 자세한 내용은 link:high-file-count-workloads-02-maxdirsize.html#how-the-maxdir-size-cap-behaves["maxdir-size 제한의 작동 방식"] 및 link:high-file-count-workloads-04-maxdirsize-indexing.html#sparse-directories-and-hole-punching["희소 디렉토리 및 구멍 뚫기"]을 참조하십시오.
+
+
+
+[[failure-domain-concentration]]
+=== 장애 도메인 집중
+
+수백만 개의 항목을 하나의 디렉터리에 집중시키면 단일 디렉터리 확장 및 직렬화 지점이 생성되어 디렉터리 자체뿐만 아니라 해당 디렉터리를 소유한 노드(또는 볼륨)의 성능에도 영향을 미칠 수 있습니다. 파일을 여러 디렉터리 계층 구조에 분산시키면 병렬 처리가 향상되고 디렉터리 검사 범위가 줄어들며 운영 작업이 더 쉬워집니다.
+
+
+
+[[data-protection-and-recovery]]
+=== 데이터 보호 및 복구
+
+오브젝트 수가 많으면 네임스페이스 스캔, 백업 카탈로그 작성, 복제, 복원 처리 및 복원 후 디렉터리 인덱스 구축 시간이 길어질 수 있습니다. 예를 들어 NetApp SnapMirror는 파일 데이터뿐만 아니라 변경된 메타데이터도 복제하므로 파일 및 용량 사용량이 적더라도 생성, 삭제 또는 이름 변경이 많은 기준선 또는 업데이트 작업은 상당한 비용이 발생할 수 있습니다. 이러한 문제는 NDMP 기반 백업에도 적용될 수 있습니다.
+
+SnapMirror를 사용한 디렉토리 인덱스 전송에 대한 자세한 내용은 link:high-file-count-workloads-04-maxdirsize-indexing.html["ONTAP의 디렉토리 인덱싱"]을 참조하십시오.
+
+
+
+[[maxfiles-compared-with-maxdir-size]]
+== Maxfiles와 maxdir-size 비교
+
+ `maxfiles` 및  `maxdir-size` 개념은 ONTAP에서 서로 다른 리소스를 보호합니다. 이 둘은 서로 대체할 수 없지만, 종종 혼동을 일으킵니다. 이 섹션에서는 이러한 혼동을 명확히 설명하고자 합니다.
+
+볼륨에 충분한 사용 가능한 inode가 있더라도 특정 디렉터리에서 `maxdir-size` 용량이 부족해질 수 있습니다. 또한, 데이터 세트가 큰 디렉터리 크기를 갖지 않더라도 볼륨의 공용 inode 용량이 모두 소진될 수 있습니다. 클라이언트 측에서는 처음에는 비슷한 증상이 나타납니다. NFS는 일반적으로 `ENOSPC`를 반환하고, SMB는 일반적으로 `STATUS_DISK_FULL`를 반환합니다. 볼륨에 사용 가능한 inode와 데이터 용량이 충분히 남아 있더라도 가득 찬 디렉터리는 `STATUS_CANNOT_MAKE`를 반환할 수 있습니다.
+
+다음 표는 ONTAP에서 허용하는 일반적인 기본값과 최소 및 최대값을 보여줍니다. FlexVol `files` 최대값은 볼륨 크기에 따라 달라지므로 절대적인 최대값을 구성 가능한 값으로 간주하기 전에  `files-maximum-possible`를 반드시 확인하십시오. 자세한 내용은 link:high-file-count-workloads-10-maxfiles-limits.html["Maxfiles 및 ONTAP inode 정보"] 및 link:high-file-count-workloads-02-maxdirsize.html["Maxdir-size 및 대용량 ONTAP 디렉터리"]을 참조하십시오.
+
+[cols="2,2,3,3,3"]
+|===
+| 제한 | 적용 대상 | 기본값 | 최소 | 최대 
+
+
+| `maxfiles` (`-files`) | FlexVol | 볼륨 크기 32KiB당 약 하나의 공용 inode | 최소 구매 수량 제한 없음.  `files`은(는)  `inodefile-public-capacity` 이하로 낮출 수 없습니다. | 2,040,109,451개의 공용 inode가 있습니다. 볼륨 크기가 작을수록 공용 inode 수는 줄어들며 `files-maximum-possible`, 볼륨 크기 4 KiB당 약 1개의 inode가 할당됩니다. 2,040,109,451개의 inode를 구성하려면 볼륨 크기가 약 7.8 TB 이상이어야 합니다. 
+
+
+| `maxfiles` (`-files`) | FlexGroup | FlexGroup 전체 합계로 보고되는 동일한 구성요소별 밀도 | 구성원별 최저 기준은 동일합니다. 총액은 개별 구성원이 아닌 FlexGroup에 설정하십시오. | 통합 ONTAP에서는 최대 4,000억 개의 공용 inode를 지원하며, ONTAP 9.19.1 이상을 실행하는 AFX에서는 최대 1조 개의 공용 inode를 지원합니다. 각 구성 요소는 2,040,109,451개로 제한됩니다. 
+
+
+| `maxdir-size` | FlexVol 및 FlexGroup | 320 MB | 4 KiB | 4 GB 
+|===
+ `maxdir-size`은 FlexVol과 FlexGroup에서 동일한 상한입니다. FlexGroup은 해당 상한에 구성요소 수를 곱하지 않습니다. 상한을 높이기 전에 ONTAP 릴리스 및 플랫폼에서 지원되는 `maxdir-size` 최대값을 확인하십시오. link:high-file-count-workloads-07-maxdirsize-features-ems.html["maxdir-size의 기능, EMS 및 모니터링"]을 참조하십시오.
+
+
+
+[[what-is-maxdir-size]]
+=== maxdir-size란 무엇입니까?
+
+ `maxdir-size`은 해당 볼륨 내의 단일 디렉터리 파일이 커질 수 있는 볼륨별 최대 크기입니다. 이 값은 고정된 항목 수가 아닌 용량 값으로 표시되지만, 단일 디렉터리에 있는 이름 수는 디렉터리 크기를 증가시키는 요인 중 하나입니다. 파일 이름 길이, 유니코드 문자 표현 방식, SMB 8.3 별칭, NFS 대체 이름, FlexGroup 원격 항목 표현 방식 등이 모두 디렉터리 크기에 영향을 미칩니다. 볼륨의  `maxdir-size` 값을 늘리면 공간을 미리 할당하는 대신 디렉터리 단위로 크기 증가를 허용합니다.
+
+* maxdir-size 계산에 대한 자세한 내용은 link:high-file-count-workloads-02-maxdirsize.html["Maxdir-size 및 대용량 ONTAP 디렉터리"]을 참조하십시오.
+* 디렉터리 색인 정보는 link:high-file-count-workloads-04-maxdirsize-indexing.html["ONTAP의 디렉토리 인덱싱"]을 참조하십시오.
+* 용량, 성능 및 한도 초과 동작에 대해서는 link:high-file-count-workloads-05-maxdirsize-impact.html["maxdir-size의 영향"]을 참조하십시오.
+* FlexVol 및 FlexGroup 고려 사항은 link:high-file-count-workloads-06-maxdirsize-volume-types.html["볼륨 고려 사항"]을 참조하십시오.
+* 릴리스 개선 사항 및 EMS 이벤트에 대한 자세한 내용은 link:high-file-count-workloads-07-maxdirsize-features-ems.html["maxdir-size의 기능, EMS 및 모니터링"]을 참조하십시오.
+
+
+
+
+[[what-is-maxfiles]]
+=== maxfiles란 무엇입니까?
+
+`maxfiles`(볼륨 수준 옵션으로 구성됨 `-files`)은 단일 볼륨에서 사용 가능한 공용 inode 수에 대한 구성 가능한 상한값입니다. 이 개수에는 파일과 디렉터리뿐만 아니라 명명된 스트림, ACL 및 기타 공용 오브젝트(일반 디렉터리 목록에 표시되지 않는 오브젝트 포함)도 포함됩니다. 볼륨에는 이러한 레코드를 저장하는 숨겨진 inode 파일이 있습니다. ONTAP는 새 공용 inode가 필요하고 사용 가능한 레코드가 남아 있지 않으면  `-files` 설정값과 전체 볼륨 크기까지 inode 파일의 크기를 늘립니다. 구성 가능한 최대값은  `-files`볼륨 크기와 ONTAP 제한에 따라 달라집니다.
+
+* inode 카운터 및 용량에 대한 자세한 내용은 link:high-file-count-workloads-08-maxfiles-high-file-counts.html["높은 파일 수 및 inode 용량"]을 참조하십시오.
+* 공용 및 개인 inode 유형에 대한 자세한 내용은 link:high-file-count-workloads-09-maxfiles.html["ONTAP inode 유형"]을 참조하십시오.
+* 볼륨 크기 제한, NFS 파일 ID 및 용량 소진 동작에 대한 자세한 내용은 link:high-file-count-workloads-10-maxfiles-limits.html["Maxfiles 및 ONTAP inode 정보"]을 참조하십시오.
+* 설정 방법은  `-files`을(를) 참조하십시오. link:high-file-count-workloads-11-maxfiles-controlling.html["maxfiles 제어"].
+* EMS 이벤트 및 모니터링에 대해서는 link:high-file-count-workloads-12-maxfiles-monitoring.html["최대 파일, EMS 이벤트 및 ONTAP 개선 사항을 모니터링합니다."]을 참조하십시오.
+* inode, 디렉터리, 작업 속도 및 용량 추정치를 수집하는 방법에 대해서는 link:high-file-count-workloads-13-planning.html["계획 접근법"]을 참조하십시오.
+* 설계 및 운영 권장 사항은 link:high-file-count-workloads-14-best-practices.html["파일 수가 많은 NAS 워크로드 최적 사례"]을 참조하십시오.
+
+
+[cols=">"]
+|===
+
+
+| link:high-file-count-workloads-02-maxdirsize.html["다음: Maxdir-size와 대용량 ONTAP 디렉터리 →"] 
+|===
+
+
+[[related-information]]
+== 관련 정보
+
+* link:high-file-count-workloads-08-maxfiles-high-file-counts.html["높은 파일 수 및 inode 용량"]
+* link:https://docs.netapp.com/us-en/ontap/volumes/display-file-inode-usage-task.html["ONTAP 볼륨의 파일 및 inode 사용량을 확인합니다"^]
+* link:https://docs.netapp.com/us-en/ontap/volumes/cautions-increasing-maximum-directory-size-concept.html["FlexVol 볼륨의 최대 디렉터리 크기"^]
+* link:https://docs.netapp.com/us-en/ontap/flexgroup/index.html["FlexGroup 볼륨 관리"^]
+
