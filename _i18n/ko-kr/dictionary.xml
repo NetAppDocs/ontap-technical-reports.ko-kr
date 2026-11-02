@@ -2057,7 +2057,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="69bdc8c83ef26acac8abddded97f8b64" category="paragraph"><block ref="69bdc8c83ef26acac8abddded97f8b64" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8ccb316b5c1b78555f8a38a9affe4408" category="section-title">메타데이터 비중이 높은 워크로드 결과</block>
   <block id="3bd1fd712f75938356695de5aab35052" category="paragraph">AFX ONTAP 9.18.1의 변경 사항으로 이러한 유형의 워크로드에 대한 NFSv4.x 성능이 크게 향상되어 NFSv3 성능과의 격차를 15% 이내로 좁혔습니다.</block>
-  <block id="c583e153d978cb5844d41c32c86a31ff" category="paragraph">저희 성능 엔지니어링 팀은 표준 AI 이미지, EDA 및 소프트웨어 빌드 벤치마크의 성능을 비교한 결과 이전 ONTAP 릴리스 대비 상당한 성능 향상을 발견했습니다.</block>
   <block id="aa6ef0e541d33677fb78f28cb622a5b5" category="paragraph"><block ref="aa6ef0e541d33677fb78f28cb622a5b5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a6a8f697c065d890bf89843c649c7358" category="paragraph">NetApp AFX에서 스토리지를 표현하는 방식에는 아키텍처적으로 상당한 차이가 있지만, 기능 세트와 ONTAP 관리 방식은 사실상 변경되지 않았습니다. 이는 전적으로 의도적인 설계입니다. ONTAP은 ONTAP이므로 가능한 한 학습 곡선이 거의 없거나 전혀 없어야 합니다. 그리고 이 경우 NetApp AFX는 여전히 ONTAP을 실행하고 있습니다.</block>
   <block id="da7e3e739f578be1f4c13495e5461eff" category="section-title">관리 – CLI</block>
@@ -2962,7 +2961,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="4790820e71d568645bb04f281809cab5" category="paragraph">현재 노드 유형은 <block ref="9cf787ca68118452f94875110bf7c0d8" category="inline-link-macro-rx"></block>와 <block ref="a67c7f87cb090f0e7a2eb2e9e2ce04a7" category="inline-link-macro-rx"></block>이며, 읽기 및 쓰기 처리량은 대략 아래와 같습니다*. NetApp AFX에 새로운 하드웨어가 추가되면 이러한 제한 사항이 변경될 수 있습니다.</block>
   <block id="7243f720b1a11790b4333cc5b0935200" category="list-text"><block ref="451033c113f4cb2c96f7cf68d47e4bb7" category="inline-link-macro-rx"></block> 벤치마크 툴과 순차 읽기/쓰기를 사용하여 얻은 성능 수치입니다.</block>
   <block id="0afd336df6e2f35fa9136b405a81257e" category="admonition">아래 <block ref="b5e0ef07acc1f0284ac7885ebafed6e2" category="inline-link-macro-rx"></block> 섹션에 나와 있는 것처럼 여러 클라이언트가 여러 파일을 읽고 쓰는 환경에서 최대 성능을 달성했습니다.</block>
-  <block id="830183f90a7d21bc3023a5a607dc46b7" category="cell">약 17GB/s (+70% 증가)</block>
   <block id="913b914fe6c0068aa828d6146b79c0a5" category="paragraph">예를 들어, 통합 ONTAP 클러스터에서 각 노드는 자체 전용 디스크 세트를 갖습니다. 결과적으로 성능은 해당 노드가 소유한 디스크에만 집중됩니다. 하나의 노드만 하나의 디스크 세트에 접근할 수 있으므로 성능은 해당 노드가 직접 접근할 수 있는 디스크로 제한됩니다.</block>
   <block id="82f771d84cb467c143d321be8dbc7f21" category="paragraph">NetApp AFX는 사용 가능한 모든 디스크를 SAZ(Storage Availability Zone)라는 단일 용량 풀로 통합합니다. 결과적으로 모든 노드는 사용 가능한 모든 디스크를 읽기 및 쓰기 작업에 활용할 수 있습니다. 디스크와 노드가 분리되어 있으므로 통합 ONTAP 아키텍처에 비해 동일하거나 더 나은 처리량 성능을 얻기 위해 필요한 디스크 쉘프 수가 더 적습니다. NetApp AFX의 분산형 아키텍처는 디스크 쉘프의 성능 잠재력을 극대화합니다.</block>
   <block id="7f810f955c236680f67b2a1021577415" category="paragraph">ONTAP 9.19.1 기준으로 노드:쉘프 포화 비율은 최소 4:1이며, 8:3도 가능합니다.</block>
@@ -3844,4 +3842,6 @@ ONTAP는 인라인 압축, 무중단 하드웨어 업그레이드, 외부 스토
   <block id="8a7e0beccfabd338dccfddb2c0fbe7d2" category="sidebar">Inode 유형</block>
   <block id="9a00e15ca5553b10b87330540e61f76f" category="sidebar">모니터링, EMS 및 개선 사항</block>
   <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="sidebar">모범 사례</block>
+  <block id="047ac8d5a4555f864c4a724edbef5e44" category="cell">약 16GB/s (+60% 증가)</block>
+  <block id="d20323b4b266c4cb39fa13a0be177ac0" category="paragraph">저희 성능 엔지니어링 팀은 표준 AI, EDA 및 소프트웨어 빌드 벤치마크의 성능을 비교한 결과 이전 ONTAP 릴리스 대비 상당한 성능 향상을 발견했습니다.</block>
 </blocks>
